@@ -57,7 +57,7 @@ class HomeScreen: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .white.withAlphaComponent(0.97)
+        backgroundColor = .white.withAlphaComponent(0.93)
         addViews()
         configConstraints()
     }

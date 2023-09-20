@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DEA" translatesAutoresizingMaskIntoConstraints="NO" id="acW-Ot-Zyr">
-                                <rect key="frame" x="-127" y="-109" width="646" height="1071"/>
+                                <rect key="frame" x="-98" y="-53" width="588" height="959"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
