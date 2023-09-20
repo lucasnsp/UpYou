@@ -28,7 +28,10 @@ class LoginVC: UIViewController {
 
 extension LoginVC: LoginScreenDelegate {
     func tappedLoginButton() {
-        viewModel?.loginUser(email: screen?.emailTextField.text ?? "", password: screen?.passwordTextField.text ?? "")
+//        viewModel?.loginUser(email: screen?.emailTextField.text ?? "", password: screen?.passwordTextField.text ?? "")
+        let vc: TabBarVC = TabBarVC()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
         print(#function)
     }
     
@@ -43,7 +46,7 @@ extension LoginVC: LoginScreenDelegate {
 
 extension LoginVC: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-        viewModel?.textFieldLayout(textField)
+        viewModel?.textFieldLoginScreenLayout(textField)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -53,9 +56,9 @@ extension LoginVC: UITextFieldDelegate {
 }
 
 extension LoginVC: LoginViewModelDelegate {
-    func loginSucess() {
-        print("login com sucesso")
-    }
+//    func loginSucess() {
+//        print("login com sucesso")
+//    }
     
     func loginError(errorMessage: String) {
         AlertController(controller: self).getAlert(title: "Login Failed", message: errorMessage)

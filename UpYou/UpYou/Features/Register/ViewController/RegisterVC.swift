@@ -28,7 +28,6 @@ class RegisterVC: UIViewController {
 extension RegisterVC: RegisterScreenDelegate {
     func tappedRegisterButton() {
         viewModel?.registerUser(email: screen?.emailTextField.text ?? "", password: screen?.emailTextField.text ?? "")
-        print(#function)
     }
     
     func tappedLoginButton() {
@@ -40,7 +39,7 @@ extension RegisterVC: RegisterScreenDelegate {
 
 extension RegisterVC: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-        viewModel?.textFieldLayout(textField)
+        viewModel?.textFieldRegisterScreenLayout(textField)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -51,6 +50,9 @@ extension RegisterVC: UITextFieldDelegate {
 
 extension RegisterVC: RegisterViewModelDelegate {
     func registerSucess() {
+        let vc: TabBarVC = TabBarVC()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
         print("Cadastro concluido")
     }
     

@@ -24,16 +24,18 @@ class RegisterViewModel {
     }
     
     public func registerUser(email: String, password: String) {
-        auth.createUser(withEmail: email, password: password, completion: { authResult, error in
-            if error != nil {
-                self.delegate?.errorRegister(errorMessage: error?.localizedDescription ?? "")
-            } else {
+        auth.createUser(withEmail: email, password: password) { authResult, error in
+            if error == nil {
+                print("Sucesso cadastro")
                 self.delegate?.registerSucess()
+            } else {
+                print("Erro em cadastro \(error?.localizedDescription ?? "")")
+                self.delegate?.errorRegister(errorMessage: error?.localizedDescription ?? "")
             }
-        })
+        }
     }
     
-    public func textFieldLayout(_ textField: UITextField) {
+    public func textFieldRegisterScreenLayout(_ textField: UITextField) {
         if textField.text?.isEmpty ?? false {
             textField.layer.borderWidth = 1.5
             textField.layer.borderColor = UIColor.red.cgColor

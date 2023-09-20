@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 protocol LoginViewModelDelegate: AnyObject {
-    func loginSucess()
+//    func loginSucess()
     func loginError(errorMessage: String)
 }
 
@@ -26,15 +26,17 @@ class LoginViewModel {
     
     public func loginUser(email: String, password: String) {
         auth.signIn(withEmail: email, password: password) { authResult, error in
-            if error != nil {
-                self.delegate?.loginError(errorMessage: error?.localizedDescription ?? "")
+            if error == nil {
+                print("Sucesso no Login")
+//                self.delegate?.loginSucess()
             } else {
-                self.delegate?.loginSucess()
+                print("Erro no login, error: \(error?.localizedDescription ?? "")")
+                self.delegate?.loginError(errorMessage: error?.localizedDescription ?? "")
             }
         }
     }
     
-    public func textFieldLayout(_ textField: UITextField) {
+    public func textFieldLoginScreenLayout(_ textField: UITextField) {
         if textField.text?.isEmpty ?? false {
             textField.layer.borderWidth = 1.5
             textField.layer.borderColor = UIColor.red.cgColor
