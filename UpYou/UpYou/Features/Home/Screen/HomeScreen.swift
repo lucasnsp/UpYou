@@ -25,34 +25,28 @@ class HomeScreen: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
         label.text = "Home"
-        label.font = UIFont.boldSystemFont(ofSize: 24)
+        label.font = UIFont.boldSystemFont(ofSize: 27)
         return label
     }()
     
-    lazy var collectionView: UICollectionView = {
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.showsHorizontalScrollIndicator = false
-        collectionView.backgroundColor = .white
-        collectionView.clipsToBounds = true
-        collectionView.layer.cornerRadius = 14
-        collectionView.register(BalanceCollectionViewCell.self, forCellWithReuseIdentifier: BalanceCollectionViewCell.identifier)
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        collectionView.setCollectionViewLayout(layout, animated: false)
-        return collectionView
+    lazy var viewBackground: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .white
+        view.clipsToBounds = true
+        view.layer.cornerRadius = 14
+        return view
     }()
     
-    lazy var tableView: UITableView = {
-        let tableView = UITableView()
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.clipsToBounds = true
-        tableView.layer.cornerRadius = 14
-        // TO DO: Register
-        tableView.backgroundColor = .white
-        tableView.separatorStyle = .none
-        return tableView
+    lazy var balanceLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Balance"
+        label.textColor = .black
+        label.font = UIFont.boldSystemFont(ofSize: 20)
+        return label
     }()
+    
     
     lazy var addIncomeButton: UIButton = {
         let button = UIButton()
@@ -81,13 +75,17 @@ class HomeScreen: UIView {
         tf.translatesAutoresizingMaskIntoConstraints = false
         return tf
     }()
-
     
-    
-    public func configCollectionViewProtocols(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
-        collectionView.delegate = delegate
-        collectionView.dataSource = dataSource
-    }
+    lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.clipsToBounds = true
+        tableView.layer.cornerRadius = 14
+        // TO DO: Register
+        tableView.backgroundColor = .white
+        tableView.separatorStyle = .none
+        return tableView
+    }()
     
     public func configPersonalTableViewProtocols(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
         tableView.delegate = delegate
@@ -108,9 +106,10 @@ class HomeScreen: UIView {
     
     private func addViews() {
         addSubview(homeLabel)
-        addSubview(collectionView)
-        addSubview(addIncomeButton)
-        addSubview(incomeTextField)
+        addSubview(viewBackground)
+        viewBackground.addSubview(balanceLabel)
+        viewBackground.addSubview(addIncomeButton)
+        viewBackground.addSubview(incomeTextField)
         addSubview(tableView)
     }
     
@@ -119,21 +118,24 @@ class HomeScreen: UIView {
             homeLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 5),
             homeLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             
-            collectionView.topAnchor.constraint(equalTo: homeLabel.bottomAnchor, constant: 30),
-            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            collectionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            collectionView.heightAnchor.constraint(equalToConstant: 240),
+            viewBackground.topAnchor.constraint(equalTo: homeLabel.bottomAnchor, constant: 30),
+            viewBackground.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            viewBackground.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            viewBackground.heightAnchor.constraint(equalToConstant: 240),
             
-            incomeTextField.topAnchor.constraint(equalTo: collectionView.topAnchor, constant: 70),
-            incomeTextField.leadingAnchor.constraint(equalTo: collectionView.leadingAnchor, constant: 17),
-            incomeTextField.trailingAnchor.constraint(equalTo: collectionView.trailingAnchor, constant: -10),
+            incomeTextField.topAnchor.constraint(equalTo: viewBackground.topAnchor, constant: 70),
+            incomeTextField.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 17),
+            incomeTextField.trailingAnchor.constraint(equalTo: viewBackground.trailingAnchor, constant: -10),
             
-            addIncomeButton.bottomAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: -20),
+            balanceLabel.topAnchor.constraint(equalTo: viewBackground.topAnchor, constant: 15),
+            balanceLabel.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 17),
+            
+            addIncomeButton.bottomAnchor.constraint(equalTo: viewBackground.bottomAnchor, constant: -20),
             addIncomeButton.heightAnchor.constraint(equalToConstant: 50),
-            addIncomeButton.leadingAnchor.constraint(equalTo: collectionView.leadingAnchor, constant: 40),
-            addIncomeButton.trailingAnchor.constraint(equalTo: collectionView.trailingAnchor, constant: -40), 
+            addIncomeButton.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 40),
+            addIncomeButton.trailingAnchor.constraint(equalTo: viewBackground.trailingAnchor, constant: -40),
             
-            tableView.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 50),
+            tableView.topAnchor.constraint(equalTo: viewBackground.bottomAnchor, constant: 50),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),

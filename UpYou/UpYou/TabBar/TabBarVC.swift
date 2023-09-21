@@ -16,8 +16,9 @@ class TabBarVC: UITabBarController {
     
     private func setupBar() {
         let home = UINavigationController(rootViewController: HomeVC())
+        let savings = UINavigationController(rootViewController: OnboardingSavesVC())
         
-        setViewControllers([home], animated: false)
+        setViewControllers([home, savings], animated: false)
         tabBar.isTranslucent = false
         tabBar.tintColor = UIColor.black
         
@@ -37,9 +38,14 @@ class TabBarVC: UITabBarController {
         guard let items = tabBar.items else { return }
         
         let homeIcon = items[0]
+        let savingsIcon = items[1]
         
         homeIcon.image = UIImage(systemName: "house.fill")
         homeIcon.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
         homeIcon.title = nil
+        
+        savingsIcon.image = UIImage(systemName: "dollarsign.circle.fill")
+        savingsIcon.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
+        savingsIcon.title = nil
     }
 }

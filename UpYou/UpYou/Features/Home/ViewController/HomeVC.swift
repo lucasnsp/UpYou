@@ -23,29 +23,10 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        screen?.configCollectionViewProtocols(delegate: self, dataSource: self)
         screen?.configPersonalTableViewProtocols(delegate: self, dataSource: self)
         screen?.delegate(delegate: self)
         
     }
-}
-
-extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.numberOfItemsInSection
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BalanceCollectionViewCell.identifier, for: indexPath) as? BalanceCollectionViewCell
-        cell?.setupCell()
-        return cell ??  UICollectionViewCell()
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return viewModel.sizeForItem(indexPath: indexPath, frame: collectionView.frame)
-    }
-    
-    
 }
 
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {
@@ -64,6 +45,11 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension HomeVC: HomeScreenDelegate {
+    func tappedGoalsButton() {
+        let vc = OnboardingSavesVC()
+        navigationController?.pushViewController(vc, animated: false)
+    }
+    
     func tappedAddIncomeButton() {
         print(#function)
         
