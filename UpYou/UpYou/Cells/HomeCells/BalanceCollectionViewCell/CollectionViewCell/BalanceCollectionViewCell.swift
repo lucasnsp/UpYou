@@ -21,6 +21,7 @@ class BalanceCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         addViews()
         configConstraints()
+        screen.delegate(delegate: self)
     }
     
     required init?(coder: NSCoder) {
@@ -40,4 +41,15 @@ class BalanceCollectionViewCell: UICollectionViewCell {
         ])
     }
     
+    public func setupCell() {
+        screen.balanceLabel.text = "Balance"
+        screen.goalsLabel.text = "Goals & Expenses"
+        screen.goalsButton.setImage(UIImage(systemName: "greaterthan"), for: .normal)
+    }
+}
+
+extension BalanceCollectionViewCell: BalanceCollectionViewDelegate {
+    func tappedGoalsButton() {
+        print(#function)
+    }
 }

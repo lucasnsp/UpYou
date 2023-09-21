@@ -7,13 +7,23 @@
 
 import UIKit
 
+protocol BalanceCollectionViewDelegate: AnyObject {
+    func tappedGoalsButton()
+}
+
 class BalanceCollectionViewCellScreen: UIView {
+    
+    private weak var delegate: BalanceCollectionViewDelegate?
+    
+    public func delegate(delegate: BalanceCollectionViewDelegate?) {
+        self.delegate = delegate
+    }
+
     
     lazy var balanceLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
-        label.text = "Balance"
         label.font = UIFont.boldSystemFont(ofSize: 22)
         return label
     }()
@@ -22,7 +32,6 @@ class BalanceCollectionViewCellScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black.withAlphaComponent(0.8)
-        label.text = "Goals & Expenses"
         label.font = UIFont.systemFont(ofSize: 14)
         return label
     }()
@@ -38,37 +47,18 @@ class BalanceCollectionViewCellScreen: UIView {
     
     @objc
     func tappedGoalsButton() {
-        print(#function)
+        delegate?.tappedGoalsButton()
     }
     
-    lazy var incomeTextField: UITextField = {
-        let tf = UITextField()
-        tf.placeholder = "R$ 0.00"
-        tf.textColor = UIColor.black
-        tf.font = UIFont.boldSystemFont(ofSize: 44)
-        tf.keyboardType = .decimalPad
-        tf.translatesAutoresizingMaskIntoConstraints = false
-        return tf
-    }()
-    
-    lazy var addIncomeButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .gray.withAlphaComponent(0.2)
-        button.setTitle("Add Income", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-        button.clipsToBounds = true
-        button.layer.cornerRadius = 22
-        button.addTarget(self, action: #selector(tappedAddIncomeButton), for: .touchUpInside)
-        return button
-    }()
-    
-    @objc
-    func tappedAddIncomeButton() {
-        print(#function)
-    }
-    
+//    lazy var incomeTextField: UITextField = {
+//        let tf = UITextField()
+//        tf.placeholder = "R$ 0.00"
+//        tf.textColor = UIColor.black
+//        tf.font = UIFont.boldSystemFont(ofSize: 44)
+//        tf.keyboardType = .decimalPad
+//        tf.translatesAutoresizingMaskIntoConstraints = false
+//        return tf
+//    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -84,8 +74,6 @@ class BalanceCollectionViewCellScreen: UIView {
         addSubview(balanceLabel)
         addSubview(goalsLabel)
         addSubview(goalsButton)
-        addSubview(incomeTextField)
-        addSubview(addIncomeButton)
     }
     
     private func configConstraints() {
@@ -101,14 +89,6 @@ class BalanceCollectionViewCellScreen: UIView {
             goalsLabel.topAnchor.constraint(equalTo: goalsButton.topAnchor),
             goalsLabel.trailingAnchor.constraint(equalTo: goalsButton.leadingAnchor, constant: -12),
             
-            incomeTextField.topAnchor.constraint(equalTo: balanceLabel.bottomAnchor, constant: 22),
-            incomeTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 17),
-            incomeTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 10),
-            
-            addIncomeButton.topAnchor.constraint(equalTo: incomeTextField.bottomAnchor, constant: 30),
-            addIncomeButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 50),
-            addIncomeButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -50),
-            addIncomeButton.heightAnchor.constraint(equalToConstant: 50),
         ])
     }
 }

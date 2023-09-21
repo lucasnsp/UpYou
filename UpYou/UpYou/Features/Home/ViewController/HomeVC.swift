@@ -20,11 +20,12 @@ class HomeVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = true
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         screen?.configCollectionViewProtocols(delegate: self, dataSource: self)
         screen?.configPersonalTableViewProtocols(delegate: self, dataSource: self)
+        screen?.delegate(delegate: self)
         
     }
 }
@@ -36,6 +37,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BalanceCollectionViewCell.identifier, for: indexPath) as? BalanceCollectionViewCell
+        cell?.setupCell()
         return cell ??  UICollectionViewCell()
     }
     
@@ -60,3 +62,43 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     }
     
 }
+
+extension HomeVC: HomeScreenDelegate {
+    func tappedAddIncomeButton() {
+        print(#function)
+        
+        let alertController = UIAlertController(title: "Add Income", message: "Type your monthly income", preferredStyle: .alert)
+        
+        alertController.addTextField { textField in
+            textField.placeholder = "R$ 0,00"
+            textField.keyboardType = .decimalPad
+        }
+        
+        let addAction = UIAlertAction(title: "Save", style: .default) { [weak self] _ in
+            if let textField = alertController.textFields?.first, let incomeText = textField.text, let income = Double(incomeText) {
+                let formatter = NumberFormatter()
+                formatter.numberStyle = .currency
+                formatter.currencySymbol = "R$"
+                formatter.locale = Locale(identifier: "pt_BR")
+                
+                if let formattedIncome = formatter.string(from: NSNumber(value: income)) {
+                    self?.screen?.incomeTextField.text = formattedIncome
+                }
+            }
+        }
+        alertController.addAction(addAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+}
+
+
+
+
+
+
+
+

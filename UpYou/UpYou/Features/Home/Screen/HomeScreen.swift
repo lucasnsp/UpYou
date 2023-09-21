@@ -7,7 +7,18 @@
 
 import UIKit
 
+protocol HomeScreenDelegate: AnyObject {
+    func tappedAddIncomeButton()
+}
+
 class HomeScreen: UIView {
+    
+    private weak var delegate: HomeScreenDelegate?
+    
+    public func delegate(delegate: HomeScreenDelegate?) {
+        self.delegate = delegate
+    }
+
     
     lazy var homeLabel: UILabel = {
         let label = UILabel()
@@ -43,6 +54,35 @@ class HomeScreen: UIView {
         return tableView
     }()
     
+    lazy var addIncomeButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = .gray.withAlphaComponent(0.2)
+        button.setTitle("Add Income", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 22
+        button.addTarget(self, action: #selector(tappedAddIncomeButton), for: .touchUpInside)
+        return button
+    }()
+    
+    @objc
+    func tappedAddIncomeButton() {
+        delegate?.tappedAddIncomeButton()
+    }
+    
+    lazy var incomeTextField: UITextField = {
+        let tf = UITextField()
+        tf.placeholder = "R$ 0.00"
+        tf.textColor = UIColor.black
+        tf.font = UIFont.boldSystemFont(ofSize: 44)
+        tf.keyboardType = .decimalPad
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        return tf
+    }()
+
+    
     
     public func configCollectionViewProtocols(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
         collectionView.delegate = delegate
@@ -69,6 +109,8 @@ class HomeScreen: UIView {
     private func addViews() {
         addSubview(homeLabel)
         addSubview(collectionView)
+        addSubview(addIncomeButton)
+        addSubview(incomeTextField)
         addSubview(tableView)
     }
     
@@ -81,6 +123,15 @@ class HomeScreen: UIView {
             collectionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             collectionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             collectionView.heightAnchor.constraint(equalToConstant: 240),
+            
+            incomeTextField.topAnchor.constraint(equalTo: collectionView.topAnchor, constant: 70),
+            incomeTextField.leadingAnchor.constraint(equalTo: collectionView.leadingAnchor, constant: 17),
+            incomeTextField.trailingAnchor.constraint(equalTo: collectionView.trailingAnchor, constant: -10),
+            
+            addIncomeButton.bottomAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: -20),
+            addIncomeButton.heightAnchor.constraint(equalToConstant: 50),
+            addIncomeButton.leadingAnchor.constraint(equalTo: collectionView.leadingAnchor, constant: 40),
+            addIncomeButton.trailingAnchor.constraint(equalTo: collectionView.trailingAnchor, constant: -40), 
             
             tableView.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 50),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
