@@ -7,7 +7,17 @@
 
 import UIKit
 
+protocol SelfDevelopmentScreenDelegate: AnyObject {
+    func tappedContinueButton()
+}
+
 class SelfDevelopmentScreen: UIView {
+    
+    private weak var delegate: SelfDevelopmentScreenDelegate?
+    
+    public func delegate(delegate: SelfDevelopmentScreenDelegate) {
+        self.delegate = delegate
+    }
 
     lazy var sharkImageView: UIImageView = {
         let imageView = UIImageView()
@@ -63,7 +73,7 @@ class SelfDevelopmentScreen: UIView {
     
     @objc
     func tappedContinueButton() {
-        print(#function)
+        delegate?.tappedContinueButton()
     }
     
     override init(frame: CGRect) {

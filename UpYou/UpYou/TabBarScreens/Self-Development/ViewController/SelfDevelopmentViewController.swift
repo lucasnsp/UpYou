@@ -22,6 +22,17 @@ class SelfDevelopmentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        screen?.delegate(delegate: self)
     }
 
+}
+
+extension SelfDevelopmentViewController: SelfDevelopmentScreenDelegate {
+    func tappedContinueButton() {
+        let vc = PersonalDevelopmentVC()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: false)
+    }
+    
+    
 }

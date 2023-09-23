@@ -38,6 +38,8 @@
 		461BEF9C2ABC773E00C07847 /* OnboardingSavesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BEF9B2ABC773E00C07847 /* OnboardingSavesScreen.swift */; };
 		461BEFA02ABDD2B500C07847 /* SelfDevelopmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BEF9F2ABDD2B500C07847 /* SelfDevelopmentViewController.swift */; };
 		461BEFA22ABDD2C900C07847 /* SelfDevelopmentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BEFA12ABDD2C900C07847 /* SelfDevelopmentScreen.swift */; };
+		461BEFA72ABF107B00C07847 /* PersonalDevelopmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BEFA62ABF107B00C07847 /* PersonalDevelopmentVC.swift */; };
+		461BEFAB2ABF121900C07847 /* PersonalDevelopmentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BEFAA2ABF121900C07847 /* PersonalDevelopmentScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +73,8 @@
 		461BEF9B2ABC773E00C07847 /* OnboardingSavesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSavesScreen.swift; sourceTree = "<group>"; };
 		461BEF9F2ABDD2B500C07847 /* SelfDevelopmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfDevelopmentViewController.swift; sourceTree = "<group>"; };
 		461BEFA12ABDD2C900C07847 /* SelfDevelopmentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfDevelopmentScreen.swift; sourceTree = "<group>"; };
+		461BEFA62ABF107B00C07847 /* PersonalDevelopmentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDevelopmentVC.swift; sourceTree = "<group>"; };
+		461BEFAA2ABF121900C07847 /* PersonalDevelopmentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDevelopmentScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,6 +308,7 @@
 		461BEF722ABA783B00C07847 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				461BEFA52ABF104A00C07847 /* PersonalDevelopment */,
 				461BEF582ABA758900C07847 /* Register */,
 				461BEF4E2ABA758100C07847 /* Login */,
 			);
@@ -443,6 +448,31 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
+		461BEFA52ABF104A00C07847 /* PersonalDevelopment */ = {
+			isa = PBXGroup;
+			children = (
+				461BEFA82ABF11F600C07847 /* ViewController */,
+				461BEFA92ABF11FF00C07847 /* Screen */,
+			);
+			path = PersonalDevelopment;
+			sourceTree = "<group>";
+		};
+		461BEFA82ABF11F600C07847 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				461BEFA62ABF107B00C07847 /* PersonalDevelopmentVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		461BEFA92ABF11FF00C07847 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				461BEFAA2ABF121900C07847 /* PersonalDevelopmentScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -534,6 +564,7 @@
 				461BEF4D2ABA756000C07847 /* ThirdInfoViewController.swift in Sources */,
 				461BEF202ABA74F500C07847 /* SceneDelegate.swift in Sources */,
 				461BEF562ABA758100C07847 /* LoginScreen.swift in Sources */,
+				461BEFAB2ABF121900C07847 /* PersonalDevelopmentScreen.swift in Sources */,
 				461BEFA22ABDD2C900C07847 /* SelfDevelopmentScreen.swift in Sources */,
 				461BEF9A2ABC772800C07847 /* OnboardingSavesVC.swift in Sources */,
 				461BEF642ABA758F00C07847 /* AlertController.swift in Sources */,
@@ -544,6 +575,7 @@
 				461BEFA02ABDD2B500C07847 /* SelfDevelopmentViewController.swift in Sources */,
 				461BEF5F2ABA758900C07847 /* RegisterViewModel.swift in Sources */,
 				461BEF572ABA758100C07847 /* LoginVC.swift in Sources */,
+				461BEFA72ABF107B00C07847 /* PersonalDevelopmentVC.swift in Sources */,
 				461BEF4C2ABA756000C07847 /* ThirdInfoScreen.swift in Sources */,
 				461BEF492ABA756000C07847 /* SecondInfoViewController.swift in Sources */,
 				461BEF472ABA756000C07847 /* FirstInfoViewController.swift in Sources */,
