@@ -9,6 +9,10 @@ import UIKit
 
 protocol PersonalDevelopmentScreenDelegate: AnyObject {
     func tappedBackButton()
+    func tappedDeepWorkButton()
+    func tappedHabitButton()
+    func tappedStoicButton()
+    
 }
 
 class PersonalDevelopmentScreen: UIView {
@@ -38,7 +42,7 @@ class PersonalDevelopmentScreen: UIView {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 16
+        imageView.layer.cornerRadius = 20
         imageView.image = UIImage(named: "mulher_meditando1")
         return imageView
     }()
@@ -48,7 +52,7 @@ class PersonalDevelopmentScreen: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .white
         view.clipsToBounds = true
-        view.layer.cornerRadius = 14
+        view.layer.cornerRadius = 20
         return view
     }()
     
@@ -92,7 +96,7 @@ class PersonalDevelopmentScreen: UIView {
     
     @objc
     func tappedDeepWorkButton() {
-        print(#function)
+        delegate?.tappedDeepWorkButton()
     }
     
     lazy var habitImageView: UIImageView = {
@@ -135,8 +139,68 @@ class PersonalDevelopmentScreen: UIView {
     
     @objc
     func tappedHabitButton() {
-        print(#function)
+        delegate?.tappedHabitButton()
     }
+    
+    lazy var stoicImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 14
+        imageView.image = UIImage(named: "lampada")
+        return imageView
+    }()
+    
+    lazy var stoicTitleLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .black
+        label.text = "Stoicism"
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.textAlignment = .left
+        return label
+    }()
+    
+    lazy var stoicSubTitlelabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .black
+        label.text = "Embrace serenity and resilience."
+        label.font = UIFont.systemFont(ofSize: 13)
+        label.textAlignment = .left
+        return label
+    }()
+    
+    lazy var stoicButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        button.addTarget(self, action: #selector(tappedStoicButton), for: .touchUpInside)
+        button.tintColor = UIColor.black
+        return button
+    }()
+    
+    @objc
+    func tappedStoicButton() {
+        delegate?.tappedStoicButton()
+    }
+    
+    lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.register(PersonalDevelopmentTableViewCell.self, forCellReuseIdentifier: PersonalDevelopmentTableViewCell.identifier)
+        tableView.clipsToBounds = true
+        tableView.layer.cornerRadius = 20
+        tableView.backgroundColor = .lightGray.withAlphaComponent(0.45)
+        tableView.separatorStyle = .none
+        return tableView
+    }()
+    
+    public func configTableViewProtocols(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
+        tableView.delegate = delegate
+        tableView.dataSource = dataSource
+    }
+
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -162,6 +226,11 @@ class PersonalDevelopmentScreen: UIView {
         viewMidBackground.addSubview(habitTitleLabel)
         viewMidBackground.addSubview(habitSubTitlelabel)
         viewMidBackground.addSubview(habitButton)
+        viewMidBackground.addSubview(stoicImageView)
+        viewMidBackground.addSubview(stoicTitleLabel)
+        viewMidBackground.addSubview(stoicSubTitlelabel)
+        viewMidBackground.addSubview(stoicButton)
+        addSubview(tableView)
     }
     
     private func configConstraints() {
@@ -198,8 +267,8 @@ class PersonalDevelopmentScreen: UIView {
             
             habitImageView.topAnchor.constraint(equalTo: targetImageView.bottomAnchor, constant: 20),
             habitImageView.leadingAnchor.constraint(equalTo: targetImageView.leadingAnchor),
-            habitImageView.heightAnchor.constraint(equalToConstant: 40),
-            habitImageView.widthAnchor.constraint(equalToConstant: 40),
+            habitImageView.heightAnchor.constraint(equalTo: targetImageView.heightAnchor),
+            habitImageView.widthAnchor.constraint(equalTo: targetImageView.widthAnchor),
             
             habitTitleLabel.topAnchor.constraint(equalTo: habitImageView.topAnchor),
             habitTitleLabel.leadingAnchor.constraint(equalTo: habitImageView.trailingAnchor, constant: 15),
@@ -209,8 +278,29 @@ class PersonalDevelopmentScreen: UIView {
             
             habitButton.topAnchor.constraint(equalTo: habitImageView.topAnchor, constant: 12),
             habitButton.trailingAnchor.constraint(equalTo: deepWorkButton.trailingAnchor),
-            habitButton.heightAnchor.constraint(equalToConstant: 20),
-            habitButton.widthAnchor.constraint(equalToConstant: 20),
+            habitButton.heightAnchor.constraint(equalTo: deepWorkButton.heightAnchor),
+            habitButton.widthAnchor.constraint(equalTo: deepWorkButton.widthAnchor),
+            
+            stoicImageView.topAnchor.constraint(equalTo: habitImageView.bottomAnchor, constant: 20),
+            stoicImageView.leadingAnchor.constraint(equalTo: targetImageView.leadingAnchor),
+            stoicImageView.heightAnchor.constraint(equalTo: targetImageView.heightAnchor),
+            stoicImageView.widthAnchor.constraint(equalTo: targetImageView.widthAnchor),
+            
+            stoicTitleLabel.topAnchor.constraint(equalTo: stoicImageView.topAnchor),
+            stoicTitleLabel.leadingAnchor.constraint(equalTo: stoicImageView.trailingAnchor, constant: 15),
+            
+            stoicSubTitlelabel.topAnchor.constraint(equalTo: stoicTitleLabel.bottomAnchor, constant: 5),
+            stoicSubTitlelabel.leadingAnchor.constraint(equalTo: stoicTitleLabel.leadingAnchor),
+            
+            stoicButton.topAnchor.constraint(equalTo: stoicImageView.topAnchor, constant: 12),
+            stoicButton.trailingAnchor.constraint(equalTo: deepWorkButton.trailingAnchor),
+            stoicButton.heightAnchor.constraint(equalTo: deepWorkButton.heightAnchor),
+            stoicButton.widthAnchor.constraint(equalTo: deepWorkButton.widthAnchor),
+            
+            tableView.topAnchor.constraint(equalTo: viewMidBackground.bottomAnchor, constant: 40),
+            tableView.leadingAnchor.constraint(equalTo: viewMidBackground.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: viewMidBackground.trailingAnchor),
+            tableView.heightAnchor.constraint(equalToConstant: 140),
         ])
     }
     
