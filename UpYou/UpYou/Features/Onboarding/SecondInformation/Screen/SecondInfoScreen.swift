@@ -18,8 +18,15 @@ class SecondInfoScreen: UIView {
     public func delegate(delegate: SecondInfoDelegate?) {
         self.delegate = delegate
     }
+    
+    lazy var subImageView: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(named: "background")
+        return image
+    }()
 
-    lazy var walletImageView: UIImageView = {
+    lazy var safeImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
@@ -32,7 +39,7 @@ class SecondInfoScreen: UIView {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .black
+        label.textColor = .white
         label.text = "Not just a Finance App"
         label.font = UIFont.boldSystemFont(ofSize: 28)
         label.textAlignment = .center
@@ -42,7 +49,7 @@ class SecondInfoScreen: UIView {
     lazy var textLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .black
+        label.textColor = .white
         label.text = "At UpYou, it's not just about tracking expenses, but also about creating and building the right mindset to succed in life."
         label.numberOfLines = 0
         label.textAlignment = .center
@@ -53,12 +60,12 @@ class SecondInfoScreen: UIView {
     lazy var continueButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .black.withAlphaComponent(0.6)
+        button.backgroundColor = .gray.withAlphaComponent(0.2)
+        button.setTitle("There's more", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.clipsToBounds = true
         button.layer.cornerRadius = 24
-        button.setTitle("There's more", for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-        button.titleLabel?.textColor = .black
         button.addTarget(self, action: #selector(tappedContinueButton), for: .touchUpInside)
         return button
     }()
@@ -80,7 +87,8 @@ class SecondInfoScreen: UIView {
     }
     
     private func addViews() {
-        addSubview(walletImageView)
+        addSubview(subImageView)
+        addSubview(safeImageView)
         addSubview(titleLabel)
         addSubview(textLabel)
         addSubview(continueButton)
@@ -88,12 +96,17 @@ class SecondInfoScreen: UIView {
     
     private func configConstraints() {
         NSLayoutConstraint.activate([
-            walletImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 30),
-            walletImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            walletImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            walletImageView.heightAnchor.constraint(equalToConstant: 350),
+            subImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            subImageView.topAnchor.constraint(equalTo: topAnchor),
+            subImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            subImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            titleLabel.topAnchor.constraint(equalTo: walletImageView.bottomAnchor, constant: 45),
+            safeImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 30),
+            safeImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            safeImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            safeImageView.heightAnchor.constraint(equalToConstant: 350),
+            
+            titleLabel.topAnchor.constraint(equalTo: safeImageView.bottomAnchor, constant: 45),
             titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
             textLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 45),

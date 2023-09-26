@@ -42,6 +42,18 @@ extension PersonalDevelopmentVC: PersonalDevelopmentViewModelDelegate {
 }
 
 extension PersonalDevelopmentVC: PersonalDevelopmentScreenDelegate {
+    func tappedSleepButton() {
+        print(#function)
+    }
+    
+    func tappedEnvironmentButton() {
+        print(#function)
+    }
+    
+    func tappedBooksButton() {
+        print(#function)
+    }
+    
     func tappedDeepWorkButton() {
         print(#function)
     }

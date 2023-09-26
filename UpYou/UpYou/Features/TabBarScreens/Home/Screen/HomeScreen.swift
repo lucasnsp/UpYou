@@ -18,12 +18,18 @@ class HomeScreen: UIView {
     public func delegate(delegate: HomeScreenDelegate?) {
         self.delegate = delegate
     }
-
+    
+    lazy var subImageView: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(named: "background")
+        return image
+    }()
     
     lazy var homeLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .black
+        label.textColor = .white
         label.text = "Home"
         label.font = UIFont.boldSystemFont(ofSize: 27)
         return label
@@ -32,7 +38,7 @@ class HomeScreen: UIView {
     lazy var viewTopBackground: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .white
+        view.backgroundColor = .black.withAlphaComponent(0.6)
         view.clipsToBounds = true
         view.layer.cornerRadius = 14
         return view
@@ -42,7 +48,7 @@ class HomeScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Balance"
-        label.textColor = .black
+        label.textColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 20)
         return label
     }()
@@ -53,7 +59,7 @@ class HomeScreen: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .gray.withAlphaComponent(0.2)
         button.setTitle("Add Income", for: .normal)
-        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.clipsToBounds = true
         button.layer.cornerRadius = 22
@@ -68,45 +74,17 @@ class HomeScreen: UIView {
     
     lazy var incomeTextField: UITextField = {
         let tf = UITextField()
-        tf.attributedPlaceholder = NSAttributedString(string: "R$ 0.00", attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
-        tf.textColor = UIColor.black
+        tf.attributedPlaceholder = NSAttributedString(string: "R$ 0.00", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        tf.textColor = UIColor.white
         tf.font = UIFont.boldSystemFont(ofSize: 40)
         tf.keyboardType = .decimalPad
         tf.isEnabled = false
         tf.translatesAutoresizingMaskIntoConstraints = false
         return tf
     }()
-    
-    lazy var viewMidBackground: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .white
-        view.clipsToBounds = true
-        view.layer.cornerRadius = 14
-        return view
-    }()
-    
-    lazy var developmentImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(named: "development_card11")
-        return imageView
-    }()
-    
-
-    lazy var viewBottomBackground: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .white
-        view.clipsToBounds = true
-        view.layer.cornerRadius = 14
-        return view
-    }()
-
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .white.withAlphaComponent(0.92)
         addViews()
         configConstraints()
     }
@@ -116,18 +94,21 @@ class HomeScreen: UIView {
     }
     
     private func addViews() {
+        addSubview(subImageView)
         addSubview(homeLabel)
         addSubview(viewTopBackground)
         viewTopBackground.addSubview(balanceLabel)
         viewTopBackground.addSubview(addIncomeButton)
         viewTopBackground.addSubview(incomeTextField)
-        addSubview(viewMidBackground)
-        viewMidBackground.addSubview(developmentImageView)
-        addSubview(viewBottomBackground)
     }
     
     private func configConstraints() {
         NSLayoutConstraint.activate([
+            subImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            subImageView.topAnchor.constraint(equalTo: topAnchor),
+            subImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            subImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            
             homeLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 5),
             homeLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             
@@ -147,22 +128,6 @@ class HomeScreen: UIView {
             addIncomeButton.heightAnchor.constraint(equalToConstant: 50),
             addIncomeButton.leadingAnchor.constraint(equalTo: viewTopBackground.leadingAnchor, constant: 40),
             addIncomeButton.trailingAnchor.constraint(equalTo: viewTopBackground.trailingAnchor, constant: -40),
-            
-            viewMidBackground.topAnchor.constraint(equalTo: viewTopBackground.bottomAnchor, constant: 35),
-            viewMidBackground.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            viewMidBackground.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            viewMidBackground.heightAnchor.constraint(equalToConstant: 180),
-            
-            developmentImageView.topAnchor.constraint(equalTo: viewMidBackground.topAnchor),
-            developmentImageView.leadingAnchor.constraint(equalTo: viewMidBackground.leadingAnchor),
-            developmentImageView.trailingAnchor.constraint(equalTo: viewMidBackground.trailingAnchor),
-            developmentImageView.bottomAnchor.constraint(equalTo: viewMidBackground.bottomAnchor),
-            
-            viewBottomBackground.topAnchor.constraint(equalTo: viewMidBackground.bottomAnchor, constant: 35),
-            viewBottomBackground.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            viewBottomBackground.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            viewBottomBackground.heightAnchor.constraint(equalToConstant: 180),
-            
         ])
     }
 

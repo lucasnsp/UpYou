@@ -19,7 +19,6 @@ class PersonalDevelopmentTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
         addViews()
         configConstraints()
     }
@@ -46,9 +45,9 @@ class PersonalDevelopmentTableViewCell: UITableViewCell {
         screen.quoteLabel.text = data.quote
         screen.authorNamelabel.text = "- \(data.author ?? "")"
         screen.openQuotationMarkImageView.image = UIImage(systemName: "quote.opening")
-        screen.openQuotationMarkImageView.tintColor = .black
+        screen.openQuotationMarkImageView.tintColor = .white
         screen.closeQuotationMarkImageView.image = UIImage(systemName: "quote.closing")
-        screen.closeQuotationMarkImageView.tintColor = .black
+        screen.closeQuotationMarkImageView.tintColor = .white
     }
 
 }

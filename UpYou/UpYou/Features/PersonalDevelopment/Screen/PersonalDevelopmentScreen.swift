@@ -9,10 +9,12 @@ import UIKit
 
 protocol PersonalDevelopmentScreenDelegate: AnyObject {
     func tappedBackButton()
+    func tappedBooksButton()
     func tappedDeepWorkButton()
+    func tappedEnvironmentButton()
     func tappedHabitButton()
     func tappedStoicButton()
-    
+    func tappedSleepButton()
 }
 
 class PersonalDevelopmentScreen: UIView {
@@ -24,10 +26,17 @@ class PersonalDevelopmentScreen: UIView {
     }
     
     
+    lazy var subImageView: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(named: "background")
+        return image
+    }()
+    
     lazy var backButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.tintColor = .black
+        button.tintColor = .gray
         button.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
         button.addTarget(self, action: #selector(tappedBackButton), for: .touchUpInside)
         return button
@@ -38,25 +47,60 @@ class PersonalDevelopmentScreen: UIView {
         delegate?.tappedBackButton()
     }
     
-    lazy var meditationImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 20
-        imageView.image = UIImage(named: "mulher_meditando1")
-        return imageView
-    }()
-    
     lazy var viewMidBackground: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .white
+        view.backgroundColor = .black.withAlphaComponent(0.6)
         view.clipsToBounds = true
         view.layer.cornerRadius = 20
         return view
     }()
     
-    lazy var targetImageView: UIImageView = {
+    lazy var booksImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 14
+        imageView.image = UIImage(named: "books")
+        return imageView
+    }()
+    
+    lazy var booksTitleLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        label.text = "Books"
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.textAlignment = .left
+        return label
+    }()
+    
+    lazy var booksSubTitlelabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        label.text = "A book is a dream in your hand."
+        label.font = UIFont.systemFont(ofSize: 13)
+        label.textAlignment = .left
+        return label
+    }()
+    
+    lazy var booksButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        button.addTarget(self, action: #selector(tappedBooksButton), for: .touchUpInside)
+        button.tintColor = UIColor.white
+        return button
+    }()
+    
+    @objc
+    func tappedBooksButton() {
+        delegate?.tappedBooksButton()
+    }
+    
+    
+    lazy var deepWorkImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
@@ -68,7 +112,7 @@ class PersonalDevelopmentScreen: UIView {
     lazy var deepWorkTitleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .black
+        label.textColor = .white
         label.text = "Deep Work"
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textAlignment = .left
@@ -78,7 +122,7 @@ class PersonalDevelopmentScreen: UIView {
     lazy var deepWorkSubTitlelabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .black
+        label.textColor = .white
         label.text = "Understand the power of deep focus."
         label.font = UIFont.systemFont(ofSize: 13)
         label.textAlignment = .left
@@ -90,13 +134,56 @@ class PersonalDevelopmentScreen: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
         button.addTarget(self, action: #selector(tappedDeepWorkButton), for: .touchUpInside)
-        button.tintColor = UIColor.black
+        button.tintColor = UIColor.white
         return button
     }()
     
     @objc
     func tappedDeepWorkButton() {
         delegate?.tappedDeepWorkButton()
+    }
+    
+    lazy var environmentImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 14
+        imageView.image = UIImage(named: "ambiente")
+        return imageView
+    }()
+    
+    lazy var environmentTitleLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        label.text = "Environment"
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.textAlignment = .left
+        return label
+    }()
+    
+    lazy var environmentSubTitlelabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        label.text = "Our environment shapes us deeply."
+        label.font = UIFont.systemFont(ofSize: 13)
+        label.textAlignment = .left
+        return label
+    }()
+    
+    lazy var environmentButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        button.addTarget(self, action: #selector(tappedEnvironmentButton), for: .touchUpInside)
+        button.tintColor = UIColor.white
+        return button
+    }()
+    
+    @objc
+    func tappedEnvironmentButton() {
+        delegate?.tappedEnvironmentButton()
     }
     
     lazy var habitImageView: UIImageView = {
@@ -111,7 +198,7 @@ class PersonalDevelopmentScreen: UIView {
     lazy var habitTitleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .black
+        label.textColor = .white
         label.text = "Habits"
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textAlignment = .left
@@ -121,7 +208,7 @@ class PersonalDevelopmentScreen: UIView {
     lazy var habitSubTitlelabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .black
+        label.textColor = .white
         label.text = "Good habits will change your life."
         label.font = UIFont.systemFont(ofSize: 13)
         label.textAlignment = .left
@@ -133,7 +220,7 @@ class PersonalDevelopmentScreen: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
         button.addTarget(self, action: #selector(tappedHabitButton), for: .touchUpInside)
-        button.tintColor = UIColor.black
+        button.tintColor = UIColor.white
         return button
     }()
     
@@ -142,19 +229,62 @@ class PersonalDevelopmentScreen: UIView {
         delegate?.tappedHabitButton()
     }
     
+    lazy var sleepImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 14
+        imageView.image = UIImage(named: "sono")
+        return imageView
+    }()
+    
+    lazy var sleepTitleLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        label.text = "Sleep"
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.textAlignment = .left
+        return label
+    }()
+    
+    lazy var sleepSubTitlelabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        label.text = "Good sleep is vital for success."
+        label.font = UIFont.systemFont(ofSize: 13)
+        label.textAlignment = .left
+        return label
+    }()
+    
+    lazy var sleepButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        button.addTarget(self, action: #selector(tappedSleepButton), for: .touchUpInside)
+        button.tintColor = UIColor.white
+        return button
+    }()
+    
+    @objc
+    func tappedSleepButton() {
+        delegate?.tappedSleepButton()
+    }
+    
     lazy var stoicImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 14
-        imageView.image = UIImage(named: "lampada")
+        imageView.image = UIImage(named: "stoicism")
         return imageView
     }()
     
     lazy var stoicTitleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .black
+        label.textColor = .white
         label.text = "Stoicism"
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textAlignment = .left
@@ -164,7 +294,7 @@ class PersonalDevelopmentScreen: UIView {
     lazy var stoicSubTitlelabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .black
+        label.textColor = .white
         label.text = "Embrace serenity and resilience."
         label.font = UIFont.systemFont(ofSize: 13)
         label.textAlignment = .left
@@ -176,7 +306,7 @@ class PersonalDevelopmentScreen: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
         button.addTarget(self, action: #selector(tappedStoicButton), for: .touchUpInside)
-        button.tintColor = UIColor.black
+        button.tintColor = UIColor.white
         return button
     }()
     
@@ -191,7 +321,7 @@ class PersonalDevelopmentScreen: UIView {
         tableView.register(PersonalDevelopmentTableViewCell.self, forCellReuseIdentifier: PersonalDevelopmentTableViewCell.identifier)
         tableView.clipsToBounds = true
         tableView.layer.cornerRadius = 20
-        tableView.backgroundColor = .lightGray.withAlphaComponent(0.45)
+        tableView.backgroundColor = .black.withAlphaComponent(0.6)
         tableView.separatorStyle = .none
         return tableView
     }()
@@ -200,11 +330,10 @@ class PersonalDevelopmentScreen: UIView {
         tableView.delegate = delegate
         tableView.dataSource = dataSource
     }
-
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .white.withAlphaComponent(0.92)
         addViews()
         configConstraints()
         
@@ -215,60 +344,109 @@ class PersonalDevelopmentScreen: UIView {
     }
     
     private func addViews() {
+        addSubview(subImageView)
         addSubview(backButton)
-        addSubview(meditationImageView)
+        addSubview(tableView)
         addSubview(viewMidBackground)
-        viewMidBackground.addSubview(targetImageView)
+        viewMidBackground.addSubview(booksImageView)
+        viewMidBackground.addSubview(booksTitleLabel)
+        viewMidBackground.addSubview(booksSubTitlelabel)
+        viewMidBackground.addSubview(booksButton)
+        viewMidBackground.addSubview(deepWorkImageView)
         viewMidBackground.addSubview(deepWorkTitleLabel)
         viewMidBackground.addSubview(deepWorkSubTitlelabel)
         viewMidBackground.addSubview(deepWorkButton)
+        viewMidBackground.addSubview(environmentImageView)
+        viewMidBackground.addSubview(environmentTitleLabel)
+        viewMidBackground.addSubview(environmentSubTitlelabel)
+        viewMidBackground.addSubview(environmentButton)
         viewMidBackground.addSubview(habitImageView)
         viewMidBackground.addSubview(habitTitleLabel)
         viewMidBackground.addSubview(habitSubTitlelabel)
         viewMidBackground.addSubview(habitButton)
+        viewMidBackground.addSubview(sleepImageView)
+        viewMidBackground.addSubview(sleepTitleLabel)
+        viewMidBackground.addSubview(sleepSubTitlelabel)
+        viewMidBackground.addSubview(sleepButton)
         viewMidBackground.addSubview(stoicImageView)
         viewMidBackground.addSubview(stoicTitleLabel)
         viewMidBackground.addSubview(stoicSubTitlelabel)
         viewMidBackground.addSubview(stoicButton)
-        addSubview(tableView)
     }
     
     private func configConstraints() {
         NSLayoutConstraint.activate([
+            subImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            subImageView.topAnchor.constraint(equalTo: topAnchor),
+            subImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            subImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            
             backButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 5),
             backButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
             backButton.heightAnchor.constraint(equalToConstant: 35),
             
-            meditationImageView.topAnchor.constraint(equalTo: backButton.bottomAnchor, constant: 25),
-            meditationImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
-            meditationImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25),
-            meditationImageView.heightAnchor.constraint(equalToConstant: 230),
+            tableView.topAnchor.constraint(equalTo: backButton.bottomAnchor, constant: 25),
+            tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
+            tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25),
+            tableView.heightAnchor.constraint(equalToConstant: 140),
             
-            viewMidBackground.topAnchor.constraint(equalTo: meditationImageView.bottomAnchor, constant: 40),
-            viewMidBackground.leadingAnchor.constraint(equalTo: meditationImageView.leadingAnchor),
-            viewMidBackground.trailingAnchor.constraint(equalTo: meditationImageView.trailingAnchor),
-            viewMidBackground.heightAnchor.constraint(equalToConstant: 195),
+            viewMidBackground.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 40),
+            viewMidBackground.leadingAnchor.constraint(equalTo: tableView.leadingAnchor),
+            viewMidBackground.trailingAnchor.constraint(equalTo: tableView.trailingAnchor),
+            viewMidBackground.heightAnchor.constraint(equalToConstant: 380),
             
-            targetImageView.topAnchor.constraint(equalTo: viewMidBackground.topAnchor, constant: 15),
-            targetImageView.leadingAnchor.constraint(equalTo: viewMidBackground.leadingAnchor, constant: 12),
-            targetImageView.heightAnchor.constraint(equalToConstant: 40),
-            targetImageView.widthAnchor.constraint(equalToConstant: 40),
+            booksImageView.topAnchor.constraint(equalTo: viewMidBackground.topAnchor, constant: 20),
+            booksImageView.leadingAnchor.constraint(equalTo: viewMidBackground.leadingAnchor, constant: 12),
+            booksImageView.heightAnchor.constraint(equalToConstant: 40),
+            booksImageView.widthAnchor.constraint(equalToConstant: 40),
             
-            deepWorkTitleLabel.topAnchor.constraint(equalTo: targetImageView.topAnchor),
-            deepWorkTitleLabel.leadingAnchor.constraint(equalTo: targetImageView.trailingAnchor, constant: 15),
+            booksTitleLabel.topAnchor.constraint(equalTo: booksImageView.topAnchor),
+            booksTitleLabel.leadingAnchor.constraint(equalTo: booksImageView.trailingAnchor, constant: 15),
+            
+            booksSubTitlelabel.topAnchor.constraint(equalTo: booksTitleLabel.bottomAnchor, constant: 5),
+            booksSubTitlelabel.leadingAnchor.constraint(equalTo: booksTitleLabel.leadingAnchor),
+            
+            booksButton.topAnchor.constraint(equalTo: booksImageView.topAnchor, constant: 12),
+            booksButton.trailingAnchor.constraint(equalTo: viewMidBackground.trailingAnchor, constant: -12),
+            booksButton.heightAnchor.constraint(equalToConstant: 20),
+            booksButton.widthAnchor.constraint(equalToConstant: 20),
+            
+            deepWorkImageView.topAnchor.constraint(equalTo: booksImageView.bottomAnchor, constant: 20),
+            deepWorkImageView.leadingAnchor.constraint(equalTo: booksImageView.leadingAnchor),
+            deepWorkImageView.heightAnchor.constraint(equalTo: booksImageView.heightAnchor),
+            deepWorkImageView.widthAnchor.constraint(equalTo: booksImageView.widthAnchor),
+            
+            deepWorkTitleLabel.topAnchor.constraint(equalTo: deepWorkImageView.topAnchor),
+            deepWorkTitleLabel.leadingAnchor.constraint(equalTo: deepWorkImageView.trailingAnchor, constant: 15),
             
             deepWorkSubTitlelabel.topAnchor.constraint(equalTo: deepWorkTitleLabel.bottomAnchor, constant: 5),
             deepWorkSubTitlelabel.leadingAnchor.constraint(equalTo: deepWorkTitleLabel.leadingAnchor),
             
-            deepWorkButton.topAnchor.constraint(equalTo: viewMidBackground.topAnchor, constant: 25),
+            deepWorkButton.topAnchor.constraint(equalTo: deepWorkImageView.topAnchor, constant: 12),
             deepWorkButton.trailingAnchor.constraint(equalTo: viewMidBackground.trailingAnchor, constant: -12),
-            deepWorkButton.heightAnchor.constraint(equalToConstant: 20),
-            deepWorkButton.widthAnchor.constraint(equalToConstant: 20),
+            deepWorkButton.heightAnchor.constraint(equalTo: booksButton.heightAnchor),
+            deepWorkButton.widthAnchor.constraint(equalTo: booksButton.widthAnchor),
             
-            habitImageView.topAnchor.constraint(equalTo: targetImageView.bottomAnchor, constant: 20),
-            habitImageView.leadingAnchor.constraint(equalTo: targetImageView.leadingAnchor),
-            habitImageView.heightAnchor.constraint(equalTo: targetImageView.heightAnchor),
-            habitImageView.widthAnchor.constraint(equalTo: targetImageView.widthAnchor),
+            environmentImageView.topAnchor.constraint(equalTo: deepWorkImageView.bottomAnchor, constant: 20),
+            environmentImageView.leadingAnchor.constraint(equalTo: deepWorkImageView.leadingAnchor),
+            environmentImageView.heightAnchor.constraint(equalTo: booksImageView.heightAnchor),
+            environmentImageView.widthAnchor.constraint(equalTo: booksImageView.widthAnchor),
+            
+            environmentTitleLabel.topAnchor.constraint(equalTo: environmentImageView.topAnchor),
+            environmentTitleLabel.leadingAnchor.constraint(equalTo: environmentImageView.trailingAnchor, constant: 15),
+            
+            environmentSubTitlelabel.topAnchor.constraint(equalTo: environmentTitleLabel.bottomAnchor, constant: 5),
+            environmentSubTitlelabel.leadingAnchor.constraint(equalTo: environmentTitleLabel.leadingAnchor),
+            
+            environmentButton.topAnchor.constraint(equalTo: environmentImageView.topAnchor, constant: 12),
+            environmentButton.trailingAnchor.constraint(equalTo: deepWorkButton.trailingAnchor),
+            environmentButton.heightAnchor.constraint(equalTo: booksButton.heightAnchor),
+            environmentButton.widthAnchor.constraint(equalTo: booksButton.widthAnchor),
+            
+            habitImageView.topAnchor.constraint(equalTo: environmentImageView.bottomAnchor, constant: 20),
+            habitImageView.leadingAnchor.constraint(equalTo: environmentImageView.leadingAnchor),
+            habitImageView.heightAnchor.constraint(equalTo: booksImageView.heightAnchor),
+            habitImageView.widthAnchor.constraint(equalTo: booksImageView.widthAnchor),
             
             habitTitleLabel.topAnchor.constraint(equalTo: habitImageView.topAnchor),
             habitTitleLabel.leadingAnchor.constraint(equalTo: habitImageView.trailingAnchor, constant: 15),
@@ -277,14 +455,30 @@ class PersonalDevelopmentScreen: UIView {
             habitSubTitlelabel.leadingAnchor.constraint(equalTo: habitTitleLabel.leadingAnchor),
             
             habitButton.topAnchor.constraint(equalTo: habitImageView.topAnchor, constant: 12),
-            habitButton.trailingAnchor.constraint(equalTo: deepWorkButton.trailingAnchor),
-            habitButton.heightAnchor.constraint(equalTo: deepWorkButton.heightAnchor),
-            habitButton.widthAnchor.constraint(equalTo: deepWorkButton.widthAnchor),
+            habitButton.trailingAnchor.constraint(equalTo: booksButton.trailingAnchor),
+            habitButton.heightAnchor.constraint(equalTo: booksButton.heightAnchor),
+            habitButton.widthAnchor.constraint(equalTo: booksButton.widthAnchor),
             
-            stoicImageView.topAnchor.constraint(equalTo: habitImageView.bottomAnchor, constant: 20),
-            stoicImageView.leadingAnchor.constraint(equalTo: targetImageView.leadingAnchor),
-            stoicImageView.heightAnchor.constraint(equalTo: targetImageView.heightAnchor),
-            stoicImageView.widthAnchor.constraint(equalTo: targetImageView.widthAnchor),
+            sleepImageView.topAnchor.constraint(equalTo: habitImageView.bottomAnchor, constant: 20),
+            sleepImageView.leadingAnchor.constraint(equalTo: deepWorkImageView.leadingAnchor),
+            sleepImageView.heightAnchor.constraint(equalTo: booksImageView.heightAnchor),
+            sleepImageView.widthAnchor.constraint(equalTo: booksImageView.widthAnchor),
+            
+            sleepTitleLabel.topAnchor.constraint(equalTo: sleepImageView.topAnchor),
+            sleepTitleLabel.leadingAnchor.constraint(equalTo: sleepImageView.trailingAnchor, constant: 15),
+            
+            sleepSubTitlelabel.topAnchor.constraint(equalTo: sleepTitleLabel.bottomAnchor, constant: 5),
+            sleepSubTitlelabel.leadingAnchor.constraint(equalTo: sleepTitleLabel.leadingAnchor),
+            
+            sleepButton.topAnchor.constraint(equalTo: sleepImageView.topAnchor, constant: 12),
+            sleepButton.trailingAnchor.constraint(equalTo: booksButton.trailingAnchor),
+            sleepButton.heightAnchor.constraint(equalTo: booksButton.heightAnchor),
+            sleepButton.widthAnchor.constraint(equalTo: booksButton.widthAnchor),
+            
+            stoicImageView.topAnchor.constraint(equalTo: sleepImageView.bottomAnchor, constant: 20),
+            stoicImageView.leadingAnchor.constraint(equalTo: booksImageView.leadingAnchor),
+            stoicImageView.heightAnchor.constraint(equalTo: booksImageView.heightAnchor),
+            stoicImageView.widthAnchor.constraint(equalTo: booksImageView.widthAnchor),
             
             stoicTitleLabel.topAnchor.constraint(equalTo: stoicImageView.topAnchor),
             stoicTitleLabel.leadingAnchor.constraint(equalTo: stoicImageView.trailingAnchor, constant: 15),
@@ -294,13 +488,8 @@ class PersonalDevelopmentScreen: UIView {
             
             stoicButton.topAnchor.constraint(equalTo: stoicImageView.topAnchor, constant: 12),
             stoicButton.trailingAnchor.constraint(equalTo: deepWorkButton.trailingAnchor),
-            stoicButton.heightAnchor.constraint(equalTo: deepWorkButton.heightAnchor),
-            stoicButton.widthAnchor.constraint(equalTo: deepWorkButton.widthAnchor),
-            
-            tableView.topAnchor.constraint(equalTo: viewMidBackground.bottomAnchor, constant: 40),
-            tableView.leadingAnchor.constraint(equalTo: viewMidBackground.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: viewMidBackground.trailingAnchor),
-            tableView.heightAnchor.constraint(equalToConstant: 140),
+            stoicButton.heightAnchor.constraint(equalTo: booksButton.heightAnchor),
+            stoicButton.widthAnchor.constraint(equalTo: booksButton.widthAnchor),
         ])
     }
     

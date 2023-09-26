@@ -1,29 +1,35 @@
 //
-//  OnboardingSavesScreen.swift
+//  SelfDevelopmentScreen.swift
 //  UpYou
 //
-//  Created by Lucas Neves dos santos pompeu on 21/09/23.
+//  Created by Lucas Neves dos santos pompeu on 22/09/23.
 //
 
 import UIKit
 
-protocol OnboardingSavesScreenDelegate: AnyObject {
+protocol SelfDevelopmentScreenDelegate: AnyObject {
     func tappedContinueButton()
 }
 
-class OnboardingSavesScreen: UIView {
+class SelfDevelopmentScreen: UIView {
     
-    private weak var delegate: OnboardingSavesScreenDelegate?
+    private weak var delegate: SelfDevelopmentScreenDelegate?
     
-    public func delegate(delegate: OnboardingSavesScreenDelegate?) {
+    public func delegate(delegate: SelfDevelopmentScreenDelegate) {
         self.delegate = delegate
     }
-
     
-    lazy var moneyImageView: UIImageView = {
+    lazy var subImageView: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(named: "background")
+        return image
+    }()
+
+    lazy var sharkImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(named: "macaco_dinheiro")
+        imageView.image = UIImage(named: "tubarão_treinando")
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 35
@@ -35,8 +41,8 @@ class OnboardingSavesScreen: UIView {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Pay yourself first"
-        label.textColor = .black
+        label.text = "1% Better everyday"
+        label.textColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 24)
         return label
     }()
@@ -44,26 +50,26 @@ class OnboardingSavesScreen: UIView {
     lazy var descriptionLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Set aside 10% of your income for yourself, this is the first golden rule of the richest man in Babylon."
-        label.textColor = .darkGray
+        label.text = "Discover the Keys to Self-Improvement: Unleash Your Potential, Cultivate Habits, and Master Self-Knowledge."
+        label.textColor = .white
         label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 16)
         return label
     }()
     
-    lazy var bagOfMoneyImageView: UIImageView = {
+    lazy var developmentImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 16
-        imageView.image = UIImage(named: "saco_de_dinheiro")
+        imageView.image = UIImage(named: "gestão_pessoal")
         return imageView
     }()
     
     lazy var continueButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .systemGreen
+        button.backgroundColor = .systemBlue
         button.clipsToBounds = true
         button.layer.cornerRadius = 24
         button.setTitle("Continue", for: .normal)
@@ -89,22 +95,28 @@ class OnboardingSavesScreen: UIView {
     }
     
     private func addViews() {
-        addSubview(moneyImageView)
+        addSubview(subImageView)
+        addSubview(sharkImageView)
         addSubview(titleLabel)
         addSubview(descriptionLabel)
-        addSubview(bagOfMoneyImageView)
+        addSubview(developmentImageView)
         addSubview(continueButton)
     }
     
     private func configConstraints() {
         NSLayoutConstraint.activate([
             
-            moneyImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 5),
-            moneyImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            moneyImageView.heightAnchor.constraint(equalToConstant: 65),
-            moneyImageView.widthAnchor.constraint(equalToConstant: 70),
+            subImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            subImageView.topAnchor.constraint(equalTo: topAnchor),
+            subImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            subImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            titleLabel.topAnchor.constraint(equalTo: moneyImageView.bottomAnchor, constant: 30),
+            sharkImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 5),
+            sharkImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            sharkImageView.heightAnchor.constraint(equalToConstant: 65),
+            sharkImageView.widthAnchor.constraint(equalToConstant: 70),
+            
+            titleLabel.topAnchor.constraint(equalTo: sharkImageView.bottomAnchor, constant: 30),
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
             
@@ -112,12 +124,12 @@ class OnboardingSavesScreen: UIView {
             descriptionLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
             descriptionLabel.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
             
-            bagOfMoneyImageView.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 45),
-            bagOfMoneyImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 35),
-            bagOfMoneyImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -35),
-            bagOfMoneyImageView.heightAnchor.constraint(equalToConstant: 280),
+            developmentImageView.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 45),
+            developmentImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 35),
+            developmentImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -35),
+            developmentImageView.heightAnchor.constraint(equalToConstant: 280),
             
-            continueButton.topAnchor.constraint(equalTo: bagOfMoneyImageView.bottomAnchor, constant: 60),
+            continueButton.topAnchor.constraint(equalTo: developmentImageView.bottomAnchor, constant: 60),
             continueButton.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
             continueButton.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
             continueButton.heightAnchor.constraint(equalToConstant: 55),

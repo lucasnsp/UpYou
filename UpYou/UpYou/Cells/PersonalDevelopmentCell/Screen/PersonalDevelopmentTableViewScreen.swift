@@ -12,7 +12,7 @@ class PersonalDevelopmentTableViewScreen: UIView {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .black
+        label.textColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 15)
         label.textAlignment = .center
         return label
@@ -27,7 +27,7 @@ class PersonalDevelopmentTableViewScreen: UIView {
     lazy var quoteLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .black.withAlphaComponent(0.8)
+        label.textColor = .white
         label.font = UIFont.italicSystemFont(ofSize: 15)
         label.numberOfLines = 0
         return label
@@ -36,7 +36,7 @@ class PersonalDevelopmentTableViewScreen: UIView {
     lazy var authorNamelabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .gray
+        label.textColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 12)
         return label
     }()
@@ -50,7 +50,7 @@ class PersonalDevelopmentTableViewScreen: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .white
+        backgroundColor = .black.withAlphaComponent(0.98)
         addViews()
         configConstraints()
     }

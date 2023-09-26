@@ -1,5 +1,5 @@
 //
-//  ApresentationScreen.swift
+//  ThirdInfoScreen.swift
 //  SafeApp
 //
 //  Created by Lucas Neves dos santos pompeu on 18/09/23.
@@ -7,33 +7,40 @@
 
 import UIKit
 
-protocol FirstInfoDelegate: AnyObject {
+protocol ThirdInfoDelegate: AnyObject {
     func tappedContinueButton()
 }
 
-class FirstInfoScreen: UIView {
+class ThirdInfoScreen: UIView {
+
+    private weak var delegate: ThirdInfoDelegate?
     
-    private weak var delegate: FirstInfoDelegate?
-    
-    public func delegate(delegate: FirstInfoDelegate?) {
+    public func delegate(delegate: ThirdInfoDelegate?) {
         self.delegate = delegate
     }
     
-    lazy var walletImageView: UIImageView = {
+    lazy var subImageView: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(named: "background")
+        return image
+    }()
+
+    lazy var treasureImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 20
         imageView.contentMode = .scaleAspectFill
-        imageView.image = UIImage(named: "carteira_dinheiro")
+        imageView.image = UIImage(named: "mapa_do_tesouro")
         return imageView
     }()
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .black
-        label.text = "Welcome to UpYou"
+        label.textColor = .white
+        label.text = "Discover your path"
         label.font = UIFont.boldSystemFont(ofSize: 28)
         label.textAlignment = .center
         return label
@@ -42,8 +49,8 @@ class FirstInfoScreen: UIView {
     lazy var textLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .black
-        label.text = "Here, you manage your finances smartly.\n Let's start building a more solid financial future together."
+        label.textColor = .white
+        label.text = "We'll guide you on the journey to achieve your goals, step by step, creating good habits, learning how to save money and reaching your full potential."
         label.numberOfLines = 0
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 16.5, weight: .semibold)
@@ -53,12 +60,12 @@ class FirstInfoScreen: UIView {
     lazy var continueButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .black.withAlphaComponent(0.6)
+        button.backgroundColor = .gray.withAlphaComponent(0.2)
+        button.setTitle("Are you ready?", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.clipsToBounds = true
         button.layer.cornerRadius = 24
-        button.setTitle("Continue", for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-        button.titleLabel?.textColor = .black
         button.addTarget(self, action: #selector(tappedContinueButton), for: .touchUpInside)
         return button
     }()
@@ -80,7 +87,8 @@ class FirstInfoScreen: UIView {
     }
     
     private func addViews() {
-        addSubview(walletImageView)
+        addSubview(subImageView)
+        addSubview(treasureImageView)
         addSubview(titleLabel)
         addSubview(textLabel)
         addSubview(continueButton)
@@ -88,12 +96,17 @@ class FirstInfoScreen: UIView {
     
     private func configConstraints() {
         NSLayoutConstraint.activate([
-            walletImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 30),
-            walletImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            walletImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            walletImageView.heightAnchor.constraint(equalToConstant: 350),
+            subImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            subImageView.topAnchor.constraint(equalTo: topAnchor),
+            subImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            subImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            titleLabel.topAnchor.constraint(equalTo: walletImageView.bottomAnchor, constant: 45),
+            treasureImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 30),
+            treasureImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            treasureImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            treasureImageView.heightAnchor.constraint(equalToConstant: 350),
+            
+            titleLabel.topAnchor.constraint(equalTo: treasureImageView.bottomAnchor, constant: 45),
             titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
             textLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 45),
@@ -106,5 +119,5 @@ class FirstInfoScreen: UIView {
             continueButton.heightAnchor.constraint(equalToConstant: 50),
         ])
     }
-    
+
 }

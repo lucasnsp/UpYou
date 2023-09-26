@@ -1,5 +1,5 @@
 //
-//  ThirdInfoScreen.swift
+//  ApresentationScreen.swift
 //  SafeApp
 //
 //  Created by Lucas Neves dos santos pompeu on 18/09/23.
@@ -7,17 +7,24 @@
 
 import UIKit
 
-protocol ThirdInfoDelegate: AnyObject {
+protocol FirstInfoDelegate: AnyObject {
     func tappedContinueButton()
 }
 
-class ThirdInfoScreen: UIView {
-
-    private weak var delegate: ThirdInfoDelegate?
+class FirstInfoScreen: UIView {
     
-    public func delegate(delegate: ThirdInfoDelegate?) {
+    private weak var delegate: FirstInfoDelegate?
+    
+    public func delegate(delegate: FirstInfoDelegate?) {
         self.delegate = delegate
     }
+    
+    lazy var subImageView: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(named: "background")
+        return image
+    }()
 
     lazy var walletImageView: UIImageView = {
         let imageView = UIImageView()
@@ -25,15 +32,15 @@ class ThirdInfoScreen: UIView {
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 20
         imageView.contentMode = .scaleAspectFill
-        imageView.image = UIImage(named: "mapa_do_tesouro")
+        imageView.image = UIImage(named: "carteira_dinheiro")
         return imageView
     }()
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .black
-        label.text = "Discover your path"
+        label.textColor = .white
+        label.text = "Welcome to UpYou"
         label.font = UIFont.boldSystemFont(ofSize: 28)
         label.textAlignment = .center
         return label
@@ -42,8 +49,8 @@ class ThirdInfoScreen: UIView {
     lazy var textLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .black
-        label.text = "We'll guide you on the journey to achieve your goals, step by step, creating good habits, learning how to save money and reaching your full potential."
+        label.textColor = .white
+        label.text = "Here, you manage your finances smartly.\n Let's start building a more solid financial future together."
         label.numberOfLines = 0
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 16.5, weight: .semibold)
@@ -53,12 +60,12 @@ class ThirdInfoScreen: UIView {
     lazy var continueButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .black.withAlphaComponent(0.6)
+        button.backgroundColor = .gray.withAlphaComponent(0.2)
+        button.setTitle("Continue", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.clipsToBounds = true
         button.layer.cornerRadius = 24
-        button.setTitle("Are you ready?", for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-        button.titleLabel?.textColor = .black
         button.addTarget(self, action: #selector(tappedContinueButton), for: .touchUpInside)
         return button
     }()
@@ -80,6 +87,7 @@ class ThirdInfoScreen: UIView {
     }
     
     private func addViews() {
+        addSubview(subImageView)
         addSubview(walletImageView)
         addSubview(titleLabel)
         addSubview(textLabel)
@@ -88,6 +96,11 @@ class ThirdInfoScreen: UIView {
     
     private func configConstraints() {
         NSLayoutConstraint.activate([
+            subImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            subImageView.topAnchor.constraint(equalTo: topAnchor),
+            subImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            subImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            
             walletImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 30),
             walletImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             walletImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
@@ -106,5 +119,5 @@ class ThirdInfoScreen: UIView {
             continueButton.heightAnchor.constraint(equalToConstant: 50),
         ])
     }
-
+    
 }

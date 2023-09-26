@@ -54,7 +54,7 @@ extension HomeVC: HomeScreenDelegate {
         }
         alertController.addAction(addAction)
         
-        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alertController.addAction(cancelAction)
         
         self.present(alertController, animated: true, completion: nil)

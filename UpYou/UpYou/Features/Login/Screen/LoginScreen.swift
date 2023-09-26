@@ -25,6 +25,13 @@ class LoginScreen: UIView {
         passwordTextField.delegate = delegate
     }
     
+    lazy var subImageView: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(named: "background")
+        return image
+    }()
+    
     lazy var rocketImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -39,7 +46,7 @@ class LoginScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Login Now"
-        label.textColor = .black
+        label.textColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 28)
         label.textAlignment = .center
         return label
@@ -48,7 +55,7 @@ class LoginScreen: UIView {
     lazy var loginDescriptionLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .black.withAlphaComponent(0.7)
+        label.textColor = .white.withAlphaComponent(0.7)
         label.text = "Please login to continue using our app"
         label.font = UIFont.systemFont(ofSize: 12)
         label.textAlignment = .center
@@ -90,11 +97,12 @@ class LoginScreen: UIView {
     lazy var loginButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .black.withAlphaComponent(0.6)
+        button.backgroundColor = .white.withAlphaComponent(0.2)
+        button.setTitle("Login", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 26)
         button.clipsToBounds = true
         button.layer.cornerRadius = 24
-        button.setTitle("Login", for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 26)
         button.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
         return button
     }()
@@ -108,7 +116,7 @@ class LoginScreen: UIView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Don't have an account? Sign Up", for: .normal)
-        button.setTitleColor(.darkGray, for: .normal)
+        button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         button.addTarget(self, action: #selector(tappedSignUpButton), for: .touchUpInside)
         return button
@@ -122,7 +130,6 @@ class LoginScreen: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .white
         addViews()
         configConstraints()
     }
@@ -132,6 +139,7 @@ class LoginScreen: UIView {
     }
     
     private func addViews() {
+        addSubview(subImageView)
         addSubview(rocketImageView)
         addSubview(loginLabel)
         addSubview(loginDescriptionLabel)
@@ -143,6 +151,11 @@ class LoginScreen: UIView {
     
     private func configConstraints() {
         NSLayoutConstraint.activate([
+            subImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            subImageView.topAnchor.constraint(equalTo: topAnchor),
+            subImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            subImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            
             rocketImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 35),
             rocketImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             rocketImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
