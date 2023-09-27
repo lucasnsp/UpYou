@@ -37,7 +37,7 @@ class PersonalDevelopmentViewModel {
     }
     
     public var heightForRowAt: CGFloat {
-        return 140 
+        return 145
     }
     
     public func fetchAllRequest() {
@@ -50,5 +50,4 @@ class PersonalDevelopmentViewModel {
             }
         }
     }
-
 }

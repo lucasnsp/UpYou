@@ -13,6 +13,15 @@
 		460583962AC1C4ED00446A6F /* QuoteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460583952AC1C4ED00446A6F /* QuoteData.swift */; };
 		460583982AC1C50000446A6F /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460583972AC1C50000446A6F /* Quote.swift */; };
 		4605839B2AC1C7F900446A6F /* PersonalDevelopmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4605839A2AC1C7F900446A6F /* PersonalDevelopmentViewModel.swift */; };
+		460583A02AC4602200446A6F /* SavingMoneyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4605839F2AC4602200446A6F /* SavingMoneyVC.swift */; };
+		460583A22AC4603100446A6F /* SavingMoneyScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460583A12AC4603100446A6F /* SavingMoneyScreen.swift */; };
+		460583AD2AC4784800446A6F /* MoneyPhrasesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460583AC2AC4784800446A6F /* MoneyPhrasesService.swift */; };
+		460583B02AC47A5700446A6F /* SavingMoneyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460583AF2AC47A5700446A6F /* SavingMoneyViewModel.swift */; };
+		460583B52AC47EB300446A6F /* SavingMoneyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460583B42AC47EB300446A6F /* SavingMoneyTableViewCell.swift */; };
+		460583B72AC47ED000446A6F /* SavingMoneyTableViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460583B62AC47ED000446A6F /* SavingMoneyTableViewScreen.swift */; };
+		460583BF2AC48E0400446A6F /* MoneyPhrases.json in Resources */ = {isa = PBXBuildFile; fileRef = 460583BE2AC48E0400446A6F /* MoneyPhrases.json */; };
+		460583C12AC48EA000446A6F /* MoneyPhrasesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460583C02AC48EA000446A6F /* MoneyPhrasesData.swift */; };
+		460583C32AC48EB300446A6F /* Phrase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460583C22AC48EB300446A6F /* Phrase.swift */; };
 		461BEF1E2ABA74F500C07847 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BEF1D2ABA74F500C07847 /* AppDelegate.swift */; };
 		461BEF202ABA74F500C07847 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BEF1F2ABA74F500C07847 /* SceneDelegate.swift */; };
 		461BEF272ABA74F700C07847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 461BEF262ABA74F700C07847 /* Assets.xcassets */; };
@@ -55,6 +64,15 @@
 		460583952AC1C4ED00446A6F /* QuoteData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteData.swift; sourceTree = "<group>"; };
 		460583972AC1C50000446A6F /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		4605839A2AC1C7F900446A6F /* PersonalDevelopmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDevelopmentViewModel.swift; sourceTree = "<group>"; };
+		4605839F2AC4602200446A6F /* SavingMoneyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingMoneyVC.swift; sourceTree = "<group>"; };
+		460583A12AC4603100446A6F /* SavingMoneyScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingMoneyScreen.swift; sourceTree = "<group>"; };
+		460583AC2AC4784800446A6F /* MoneyPhrasesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyPhrasesService.swift; sourceTree = "<group>"; };
+		460583AF2AC47A5700446A6F /* SavingMoneyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingMoneyViewModel.swift; sourceTree = "<group>"; };
+		460583B42AC47EB300446A6F /* SavingMoneyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingMoneyTableViewCell.swift; sourceTree = "<group>"; };
+		460583B62AC47ED000446A6F /* SavingMoneyTableViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingMoneyTableViewScreen.swift; sourceTree = "<group>"; };
+		460583BE2AC48E0400446A6F /* MoneyPhrases.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MoneyPhrases.json; sourceTree = "<group>"; };
+		460583C02AC48EA000446A6F /* MoneyPhrasesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyPhrasesData.swift; sourceTree = "<group>"; };
+		460583C22AC48EB300446A6F /* Phrase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phrase.swift; sourceTree = "<group>"; };
 		461BEF1A2ABA74F500C07847 /* UpYou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpYou.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		461BEF1D2ABA74F500C07847 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		461BEF1F2ABA74F500C07847 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				460583902AC1C3E300446A6F /* QuotesService.swift */,
+				460583AC2AC4784800446A6F /* MoneyPhrasesService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -139,8 +158,8 @@
 		460583922AC1C4A200446A6F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				460583952AC1C4ED00446A6F /* QuoteData.swift */,
-				460583972AC1C50000446A6F /* Quote.swift */,
+				460583A72AC477B400446A6F /* SavingMoney */,
+				460583A62AC477A600446A6F /* PersonalDevelopment */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -151,6 +170,92 @@
 				4605839A2AC1C7F900446A6F /* PersonalDevelopmentViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4605839C2AC45FAC00446A6F /* SavingMoney */ = {
+			isa = PBXGroup;
+			children = (
+				4605839D2AC45FEC00446A6F /* ViewController */,
+				4605839E2AC45FF100446A6F /* Screen */,
+				460583AE2AC47A1A00446A6F /* ViewModel */,
+			);
+			path = SavingMoney;
+			sourceTree = "<group>";
+		};
+		4605839D2AC45FEC00446A6F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4605839F2AC4602200446A6F /* SavingMoneyVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4605839E2AC45FF100446A6F /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				460583A12AC4603100446A6F /* SavingMoneyScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		460583A32AC4610900446A6F /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				461BEFA32ABDD2D000C07847 /* ViewController */,
+				461BEFA42ABDD2DB00C07847 /* Screen */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		460583A62AC477A600446A6F /* PersonalDevelopment */ = {
+			isa = PBXGroup;
+			children = (
+				460583952AC1C4ED00446A6F /* QuoteData.swift */,
+				460583972AC1C50000446A6F /* Quote.swift */,
+			);
+			path = PersonalDevelopment;
+			sourceTree = "<group>";
+		};
+		460583A72AC477B400446A6F /* SavingMoney */ = {
+			isa = PBXGroup;
+			children = (
+				460583C02AC48EA000446A6F /* MoneyPhrasesData.swift */,
+				460583C22AC48EB300446A6F /* Phrase.swift */,
+			);
+			path = SavingMoney;
+			sourceTree = "<group>";
+		};
+		460583AE2AC47A1A00446A6F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				460583AF2AC47A5700446A6F /* SavingMoneyViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		460583B12AC47DBE00446A6F /* SavingMoneyCell */ = {
+			isa = PBXGroup;
+			children = (
+				460583B22AC47DD400446A6F /* TableView */,
+				460583B32AC47DD900446A6F /* Screen */,
+			);
+			path = SavingMoneyCell;
+			sourceTree = "<group>";
+		};
+		460583B22AC47DD400446A6F /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				460583B42AC47EB300446A6F /* SavingMoneyTableViewCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		460583B32AC47DD900446A6F /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				460583B62AC47ED000446A6F /* SavingMoneyTableViewScreen.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 		461BEF112ABA74F500C07847 = {
@@ -371,10 +476,11 @@
 			isa = PBXGroup;
 			children = (
 				461BEF312ABA756000C07847 /* Onboarding */,
-				461BEF9E2ABDD28100C07847 /* TabBarScreens */,
-				461BEFA52ABF104A00C07847 /* PersonalDevelopment */,
-				461BEF582ABA758900C07847 /* Register */,
 				461BEF4E2ABA758100C07847 /* Login */,
+				461BEF582ABA758900C07847 /* Register */,
+				461BEF732ABB4DBF00C07847 /* Home */,
+				461BEF9D2ABDD23B00C07847 /* Self-Development */,
+				461BEF952ABC743C00C07847 /* Savings */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -425,6 +531,7 @@
 			isa = PBXGroup;
 			children = (
 				461BEF862ABB914900C07847 /* Quote.json */,
+				460583BE2AC48E0400446A6F /* MoneyPhrases.json */,
 			);
 			path = Json;
 			sourceTree = "<group>";
@@ -432,6 +539,7 @@
 		461BEF882ABB9A1C00C07847 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				460583B12AC47DBE00446A6F /* SavingMoneyCell */,
 				460583872AC1C0BF00446A6F /* PersonalDevelopmentCell */,
 			);
 			path = Cells;
@@ -441,6 +549,7 @@
 			isa = PBXGroup;
 			children = (
 				461BEF982ABC770D00C07847 /* Onboarding */,
+				4605839C2AC45FAC00446A6F /* SavingMoney */,
 			);
 			path = Savings;
 			sourceTree = "<group>";
@@ -473,20 +582,10 @@
 		461BEF9D2ABDD23B00C07847 /* Self-Development */ = {
 			isa = PBXGroup;
 			children = (
-				461BEFA32ABDD2D000C07847 /* ViewController */,
-				461BEFA42ABDD2DB00C07847 /* Screen */,
+				460583A32AC4610900446A6F /* Onboarding */,
+				461BEFA52ABF104A00C07847 /* PersonalDevelopment */,
 			);
 			path = "Self-Development";
-			sourceTree = "<group>";
-		};
-		461BEF9E2ABDD28100C07847 /* TabBarScreens */ = {
-			isa = PBXGroup;
-			children = (
-				461BEF732ABB4DBF00C07847 /* Home */,
-				461BEF952ABC743C00C07847 /* Savings */,
-				461BEF9D2ABDD23B00C07847 /* Self-Development */,
-			);
-			path = TabBarScreens;
 			sourceTree = "<group>";
 		};
 		461BEFA32ABDD2D000C07847 /* ViewController */ = {
@@ -601,6 +700,7 @@
 				461BEF2A2ABA74F700C07847 /* LaunchScreen.storyboard in Resources */,
 				461BEF872ABB914900C07847 /* Quote.json in Resources */,
 				461BEF272ABA74F700C07847 /* Assets.xcassets in Resources */,
+				460583BF2AC48E0400446A6F /* MoneyPhrases.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,16 +712,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				461BEF602ABA758900C07847 /* RegisterScreen.swift in Sources */,
+				460583B52AC47EB300446A6F /* SavingMoneyTableViewCell.swift in Sources */,
 				461BEF7F2ABB679400C07847 /* HomeViewModel.swift in Sources */,
 				461BEF9C2ABC773E00C07847 /* OnboardingSavesScreen.swift in Sources */,
+				460583B72AC47ED000446A6F /* SavingMoneyTableViewScreen.swift in Sources */,
 				461BEF7B2ABB677500C07847 /* HomeVC.swift in Sources */,
 				461BEF7D2ABB678900C07847 /* HomeScreen.swift in Sources */,
+				460583A02AC4602200446A6F /* SavingMoneyVC.swift in Sources */,
 				461BEF482ABA756000C07847 /* SecondInfoScreen.swift in Sources */,
+				460583B02AC47A5700446A6F /* SavingMoneyViewModel.swift in Sources */,
 				461BEF1E2ABA74F500C07847 /* AppDelegate.swift in Sources */,
 				461BEF552ABA758100C07847 /* LoginViewModel.swift in Sources */,
 				461BEF4D2ABA756000C07847 /* ThirdInfoViewController.swift in Sources */,
 				461BEF202ABA74F500C07847 /* SceneDelegate.swift in Sources */,
 				461BEF562ABA758100C07847 /* LoginScreen.swift in Sources */,
+				460583AD2AC4784800446A6F /* MoneyPhrasesService.swift in Sources */,
 				461BEFAB2ABF121900C07847 /* PersonalDevelopmentScreen.swift in Sources */,
 				461BEFA22ABDD2C900C07847 /* SelfDevelopmentScreen.swift in Sources */,
 				461BEF9A2ABC772800C07847 /* OnboardingSavesVC.swift in Sources */,
@@ -631,7 +736,10 @@
 				461BEF682ABA759A00C07847 /* String+Extension.swift in Sources */,
 				461BEF612ABA758900C07847 /* RegisterVC.swift in Sources */,
 				4605838D2AC1C1EA00446A6F /* PersonalDevelopmentTableViewScreen.swift in Sources */,
+				460583C12AC48EA000446A6F /* MoneyPhrasesData.swift in Sources */,
+				460583C32AC48EB300446A6F /* Phrase.swift in Sources */,
 				461BEF462ABA756000C07847 /* FirstInfoScreen.swift in Sources */,
+				460583A22AC4603100446A6F /* SavingMoneyScreen.swift in Sources */,
 				461BEF842ABB7D7000C07847 /* TabBarVC.swift in Sources */,
 				461BEFA02ABDD2B500C07847 /* SelfDevelopmentViewController.swift in Sources */,
 				461BEF5F2ABA758900C07847 /* RegisterViewModel.swift in Sources */,

@@ -388,7 +388,7 @@ class PersonalDevelopmentScreen: UIView {
             tableView.topAnchor.constraint(equalTo: backButton.bottomAnchor, constant: 25),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25),
-            tableView.heightAnchor.constraint(equalToConstant: 140),
+            tableView.heightAnchor.constraint(equalToConstant: 145),
             
             viewMidBackground.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 40),
             viewMidBackground.leadingAnchor.constraint(equalTo: tableView.leadingAnchor),
