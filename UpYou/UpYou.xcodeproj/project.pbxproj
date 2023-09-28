@@ -55,6 +55,9 @@
 		461BEFA22ABDD2C900C07847 /* SelfDevelopmentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BEFA12ABDD2C900C07847 /* SelfDevelopmentScreen.swift */; };
 		461BEFA72ABF107B00C07847 /* PersonalDevelopmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BEFA62ABF107B00C07847 /* PersonalDevelopmentVC.swift */; };
 		461BEFAB2ABF121900C07847 /* PersonalDevelopmentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BEFAA2ABF121900C07847 /* PersonalDevelopmentScreen.swift */; };
+		467D1D852AC5B638009E0B04 /* BooksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467D1D842AC5B638009E0B04 /* BooksVC.swift */; };
+		467D1D872AC5B683009E0B04 /* BooksScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467D1D862AC5B683009E0B04 /* BooksScreen.swift */; };
+		467D1D892AC5B90B009E0B04 /* Books.json in Resources */ = {isa = PBXBuildFile; fileRef = 467D1D882AC5B90B009E0B04 /* Books.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +108,9 @@
 		461BEFA12ABDD2C900C07847 /* SelfDevelopmentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfDevelopmentScreen.swift; sourceTree = "<group>"; };
 		461BEFA62ABF107B00C07847 /* PersonalDevelopmentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDevelopmentVC.swift; sourceTree = "<group>"; };
 		461BEFAA2ABF121900C07847 /* PersonalDevelopmentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDevelopmentScreen.swift; sourceTree = "<group>"; };
+		467D1D842AC5B638009E0B04 /* BooksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksVC.swift; sourceTree = "<group>"; };
+		467D1D862AC5B683009E0B04 /* BooksScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksScreen.swift; sourceTree = "<group>"; };
+		467D1D882AC5B90B009E0B04 /* Books.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Books.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -532,6 +538,7 @@
 			children = (
 				461BEF862ABB914900C07847 /* Quote.json */,
 				460583BE2AC48E0400446A6F /* MoneyPhrases.json */,
+				467D1D882AC5B90B009E0B04 /* Books.json */,
 			);
 			path = Json;
 			sourceTree = "<group>";
@@ -584,6 +591,7 @@
 			children = (
 				460583A32AC4610900446A6F /* Onboarding */,
 				461BEFA52ABF104A00C07847 /* PersonalDevelopment */,
+				467D1D802AC5B5F3009E0B04 /* Sections */,
 			);
 			path = "Self-Development";
 			sourceTree = "<group>";
@@ -628,6 +636,47 @@
 				461BEFAA2ABF121900C07847 /* PersonalDevelopmentScreen.swift */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		467D1D7F2AC5B5E1009E0B04 /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				467D1D812AC5B607009E0B04 /* ViewController */,
+				467D1D822AC5B610009E0B04 /* Screen */,
+				467D1D832AC5B617009E0B04 /* ViewModel */,
+			);
+			path = Books;
+			sourceTree = "<group>";
+		};
+		467D1D802AC5B5F3009E0B04 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				467D1D7F2AC5B5E1009E0B04 /* Books */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		467D1D812AC5B607009E0B04 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				467D1D842AC5B638009E0B04 /* BooksVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		467D1D822AC5B610009E0B04 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				467D1D862AC5B683009E0B04 /* BooksScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		467D1D832AC5B617009E0B04 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -696,6 +745,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				467D1D892AC5B90B009E0B04 /* Books.json in Resources */,
 				461BEF6A2ABA763A00C07847 /* GoogleService-Info.plist in Resources */,
 				461BEF2A2ABA74F700C07847 /* LaunchScreen.storyboard in Resources */,
 				461BEF872ABB914900C07847 /* Quote.json in Resources */,
@@ -735,7 +785,9 @@
 				4605839B2AC1C7F900446A6F /* PersonalDevelopmentViewModel.swift in Sources */,
 				461BEF682ABA759A00C07847 /* String+Extension.swift in Sources */,
 				461BEF612ABA758900C07847 /* RegisterVC.swift in Sources */,
+				467D1D852AC5B638009E0B04 /* BooksVC.swift in Sources */,
 				4605838D2AC1C1EA00446A6F /* PersonalDevelopmentTableViewScreen.swift in Sources */,
+				467D1D872AC5B683009E0B04 /* BooksScreen.swift in Sources */,
 				460583C12AC48EA000446A6F /* MoneyPhrasesData.swift in Sources */,
 				460583C32AC48EB300446A6F /* Phrase.swift in Sources */,
 				461BEF462ABA756000C07847 /* FirstInfoScreen.swift in Sources */,

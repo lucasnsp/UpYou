@@ -42,6 +42,26 @@ extension SavingMoneyVC: SavingMoneyViewModelDelegate {
 }
 
 extension SavingMoneyVC: SavingMoneyScreenDelegate {
+    func tappedRendaFixaButton() {
+        print(#function)
+    }
+    
+    func tappedFllsButton() {
+        print(#function)
+    }
+    
+    func tappedStocksButton() {
+        print(#function)
+    }
+    
+    func tappedGoldenRulesButton() {
+        print(#function)
+    }
+    
+    func tappedCryptoButton() {
+        print(#function)
+    }
+    
     func tappedExpensesButton() {
         print(#function)
     }

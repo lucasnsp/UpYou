@@ -51,7 +51,9 @@ extension PersonalDevelopmentVC: PersonalDevelopmentScreenDelegate {
     }
     
     func tappedBooksButton() {
-        print(#function)
+        let vc: BooksVC = BooksVC()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
     
     func tappedDeepWorkButton() {

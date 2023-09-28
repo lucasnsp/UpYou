@@ -124,14 +124,14 @@ class SelfDevelopmentScreen: UIView {
             descriptionLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
             descriptionLabel.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
             
-            developmentImageView.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 45),
             developmentImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 35),
             developmentImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -35),
             developmentImageView.heightAnchor.constraint(equalToConstant: 280),
+            developmentImageView.bottomAnchor.constraint(equalTo: continueButton.topAnchor, constant: -110),
             
-            continueButton.topAnchor.constraint(equalTo: developmentImageView.bottomAnchor, constant: 70),
             continueButton.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
             continueButton.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
+            continueButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -50),
             continueButton.heightAnchor.constraint(equalToConstant: 55),
         ])
     }

@@ -11,6 +11,11 @@ protocol SavingMoneyScreenDelegate: AnyObject {
     func tappedBackButton()
     func tappedSetAGoalButton()
     func tappedExpensesButton()
+    func tappedCryptoButton()
+    func tappedGoldenRulesButton()
+    func tappedFllsButton()
+    func tappedStocksButton()
+    func tappedRendaFixaButton()
 }
 
 class SavingMoneyScreen: UIView {
@@ -161,7 +166,221 @@ class SavingMoneyScreen: UIView {
         view.layer.cornerRadius = 20
         return view
     }()
-
+    
+    lazy var cryptoImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 14
+        imageView.image = UIImage(named: "crypto")
+        return imageView
+    }()
+    
+    lazy var cryptoTitleLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        label.text = "Cryptocurrency"
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.textAlignment = .left
+        return label
+    }()
+    
+    lazy var cryptoSubTitlelabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        label.text = "Understand the future now. "
+        label.font = UIFont.systemFont(ofSize: 13)
+        label.textAlignment = .left
+        return label
+    }()
+    
+    lazy var cryptoButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        button.addTarget(self, action: #selector(tappedCryptoButton), for: .touchUpInside)
+        button.tintColor = UIColor.white
+        return button
+    }()
+    
+    @objc
+    func tappedCryptoButton() {
+        delegate?.tappedCryptoButton()
+    }
+    
+    lazy var goldenRulesImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 14
+        imageView.image = UIImage(named: "goldenrules1")
+        return imageView
+    }()
+    
+    lazy var goldenRulesTitleLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        label.text = "Golden rules from Babylon"
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.textAlignment = .left
+        return label
+    }()
+    
+    lazy var goldenRulesSubTitlelabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        label.text = "Learn from Babylon's richest man."
+        label.font = UIFont.systemFont(ofSize: 13)
+        label.textAlignment = .left
+        return label
+    }()
+    
+    lazy var goldenRulesButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        button.addTarget(self, action: #selector(tappedGoldenRulesButton), for: .touchUpInside)
+        button.tintColor = UIColor.white
+        return button
+    }()
+    
+    @objc
+    func tappedGoldenRulesButton() {
+        delegate?.tappedGoldenRulesButton()
+    }
+    
+    lazy var fllsImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 14
+        imageView.image = UIImage(named: "flls")
+        return imageView
+    }()
+    
+    lazy var fllsTitleLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        label.text = "Flls"
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.textAlignment = .left
+        return label
+    }()
+    
+    lazy var fllsSubTitlelabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        label.text = "Building wealth through property."
+        label.font = UIFont.systemFont(ofSize: 13)
+        label.textAlignment = .left
+        return label
+    }()
+    
+    lazy var fllsButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        button.addTarget(self, action: #selector(tappedFllsButton), for: .touchUpInside)
+        button.tintColor = UIColor.white
+        return button
+    }()
+    
+    @objc
+    func tappedFllsButton() {
+        delegate?.tappedFllsButton()
+    }
+    
+    lazy var stocksImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 14
+        imageView.image = UIImage(named: "stocks2")
+        return imageView
+    }()
+    
+    lazy var stocksTitleLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        label.text = "Stocks"
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.textAlignment = .left
+        return label
+    }()
+    
+    lazy var stocksSubTitlelabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        label.text = "Engaging in Financial Markets."
+        label.font = UIFont.systemFont(ofSize: 13)
+        label.textAlignment = .left
+        return label
+    }()
+    
+    lazy var stocksButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        button.addTarget(self, action: #selector(tappedStocksButton), for: .touchUpInside)
+        button.tintColor = UIColor.white
+        return button
+    }()
+    
+    @objc
+    func tappedStocksButton() {
+        delegate?.tappedStocksButton()
+    }
+    
+    lazy var fixedIncomeImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 14
+        imageView.image = UIImage(named: "fixedIncome")
+        return imageView
+    }()
+    
+    lazy var fixedIncomeTitleLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        label.text = "Fixed Income"
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.textAlignment = .left
+        return label
+    }()
+    
+    lazy var fixedIncomeSubTitlelabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        label.text = "Predictable way to grow your wealth."
+        label.font = UIFont.systemFont(ofSize: 13)
+        label.textAlignment = .left
+        return label
+    }()
+    
+    lazy var fixedIncomeButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        button.addTarget(self, action: #selector(tappedRendaFixaButton), for: .touchUpInside)
+        button.tintColor = UIColor.white
+        return button
+    }()
+    
+    @objc
+    func tappedRendaFixaButton() {
+        delegate?.tappedRendaFixaButton()
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -187,6 +406,26 @@ class SavingMoneyScreen: UIView {
         viewMidBackground.addSubview(expensesSubTitlelabel)
         viewMidBackground.addSubview(expensesButton)
         addSubview(viewBottomBackground)
+        viewBottomBackground.addSubview(cryptoImageView)
+        viewBottomBackground.addSubview(cryptoTitleLabel)
+        viewBottomBackground.addSubview(cryptoSubTitlelabel)
+        viewBottomBackground.addSubview(cryptoButton)
+        viewBottomBackground.addSubview(goldenRulesImageView)
+        viewBottomBackground.addSubview(goldenRulesTitleLabel)
+        viewBottomBackground.addSubview(goldenRulesSubTitlelabel)
+        viewBottomBackground.addSubview(goldenRulesButton)
+        viewBottomBackground.addSubview(fllsImageView)
+        viewBottomBackground.addSubview(fllsTitleLabel)
+        viewBottomBackground.addSubview(fllsSubTitlelabel)
+        viewBottomBackground.addSubview(fllsButton)
+        viewBottomBackground.addSubview(stocksImageView)
+        viewBottomBackground.addSubview(stocksTitleLabel)
+        viewBottomBackground.addSubview(stocksSubTitlelabel)
+        viewBottomBackground.addSubview(stocksButton)
+        viewBottomBackground.addSubview(fixedIncomeImageView)
+        viewBottomBackground.addSubview(fixedIncomeTitleLabel)
+        viewBottomBackground.addSubview(fixedIncomeSubTitlelabel)
+        viewBottomBackground.addSubview(fixedIncomeButton)
     }
     
     private func configConstraints() {
@@ -203,7 +442,7 @@ class SavingMoneyScreen: UIView {
             tableView.topAnchor.constraint(equalTo: backButton.bottomAnchor, constant: 20),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25),
-            tableView.heightAnchor.constraint(equalToConstant: 135),
+            tableView.heightAnchor.constraint(equalToConstant: 145),
             
             viewMidBackground.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 40),
             viewMidBackground.leadingAnchor.constraint(equalTo: tableView.leadingAnchor),
@@ -245,7 +484,89 @@ class SavingMoneyScreen: UIView {
             viewBottomBackground.topAnchor.constraint(equalTo: viewMidBackground.bottomAnchor, constant: 40),
             viewBottomBackground.leadingAnchor.constraint(equalTo: viewMidBackground.leadingAnchor),
             viewBottomBackground.trailingAnchor.constraint(equalTo: viewMidBackground.trailingAnchor),
-            viewBottomBackground.heightAnchor.constraint(equalToConstant: 345),
+            viewBottomBackground.heightAnchor.constraint(equalToConstant: 320),
+            
+            cryptoImageView.topAnchor.constraint(equalTo: viewBottomBackground.topAnchor, constant: 20),
+            cryptoImageView.leadingAnchor.constraint(equalTo: viewBottomBackground.leadingAnchor, constant: 12),
+            cryptoImageView.heightAnchor.constraint(equalToConstant: 40),
+            cryptoImageView.widthAnchor.constraint(equalToConstant: 40),
+            
+            cryptoTitleLabel.topAnchor.constraint(equalTo: cryptoImageView.topAnchor),
+            cryptoTitleLabel.leadingAnchor.constraint(equalTo: cryptoImageView.trailingAnchor, constant: 15),
+            
+            cryptoSubTitlelabel.topAnchor.constraint(equalTo: cryptoTitleLabel.bottomAnchor, constant: 5),
+            cryptoSubTitlelabel.leadingAnchor.constraint(equalTo: cryptoTitleLabel.leadingAnchor),
+            
+            cryptoButton.topAnchor.constraint(equalTo: cryptoImageView.topAnchor, constant: 12),
+            cryptoButton.trailingAnchor.constraint(equalTo: viewBottomBackground.trailingAnchor, constant: -12),
+            cryptoButton.heightAnchor.constraint(equalTo: setAGoalButton.heightAnchor),
+            cryptoButton.widthAnchor.constraint(equalTo: setAGoalButton.widthAnchor),
+            
+            goldenRulesImageView.topAnchor.constraint(equalTo: cryptoImageView.bottomAnchor, constant: 20),
+            goldenRulesImageView.leadingAnchor.constraint(equalTo: cryptoImageView.leadingAnchor),
+            goldenRulesImageView.heightAnchor.constraint(equalToConstant: 40),
+            goldenRulesImageView.widthAnchor.constraint(equalToConstant: 40),
+            
+            goldenRulesTitleLabel.topAnchor.constraint(equalTo: goldenRulesImageView.topAnchor),
+            goldenRulesTitleLabel.leadingAnchor.constraint(equalTo: goldenRulesImageView.trailingAnchor, constant: 15),
+            
+            goldenRulesSubTitlelabel.topAnchor.constraint(equalTo: goldenRulesTitleLabel.bottomAnchor, constant: 5),
+            goldenRulesSubTitlelabel.leadingAnchor.constraint(equalTo: goldenRulesTitleLabel.leadingAnchor),
+            
+            goldenRulesButton.topAnchor.constraint(equalTo: goldenRulesImageView.topAnchor, constant: 12),
+            goldenRulesButton.trailingAnchor.constraint(equalTo: cryptoButton.trailingAnchor),
+            goldenRulesButton.heightAnchor.constraint(equalTo: setAGoalButton.heightAnchor),
+            goldenRulesButton.widthAnchor.constraint(equalTo: setAGoalButton.widthAnchor),
+            
+            fllsImageView.topAnchor.constraint(equalTo: goldenRulesImageView.bottomAnchor, constant: 20),
+            fllsImageView.leadingAnchor.constraint(equalTo: cryptoImageView.leadingAnchor),
+            fllsImageView.heightAnchor.constraint(equalToConstant: 40),
+            fllsImageView.widthAnchor.constraint(equalToConstant: 40),
+            
+            fllsTitleLabel.topAnchor.constraint(equalTo: fllsImageView.topAnchor),
+            fllsTitleLabel.leadingAnchor.constraint(equalTo: fllsImageView.trailingAnchor, constant: 15),
+            
+            fllsSubTitlelabel.topAnchor.constraint(equalTo: fllsTitleLabel.bottomAnchor, constant: 5),
+            fllsSubTitlelabel.leadingAnchor.constraint(equalTo: fllsTitleLabel.leadingAnchor),
+            
+            fllsButton.topAnchor.constraint(equalTo: fllsImageView.topAnchor, constant: 12),
+            fllsButton.trailingAnchor.constraint(equalTo: cryptoButton.trailingAnchor),
+            fllsButton.heightAnchor.constraint(equalTo: setAGoalButton.heightAnchor),
+            fllsButton.widthAnchor.constraint(equalTo: setAGoalButton.widthAnchor),
+            
+            fixedIncomeImageView.topAnchor.constraint(equalTo: fllsImageView.bottomAnchor, constant: 20),
+            fixedIncomeImageView.leadingAnchor.constraint(equalTo: cryptoImageView.leadingAnchor),
+            fixedIncomeImageView.heightAnchor.constraint(equalToConstant: 40),
+            fixedIncomeImageView.widthAnchor.constraint(equalToConstant: 40),
+
+            fixedIncomeTitleLabel.topAnchor.constraint(equalTo: fixedIncomeImageView.topAnchor),
+            fixedIncomeTitleLabel.leadingAnchor.constraint(equalTo: fixedIncomeImageView.trailingAnchor, constant: 15),
+
+            fixedIncomeSubTitlelabel.topAnchor.constraint(equalTo: fixedIncomeTitleLabel.bottomAnchor, constant: 5),
+            fixedIncomeSubTitlelabel.leadingAnchor.constraint(equalTo: fixedIncomeTitleLabel.leadingAnchor),
+
+            fixedIncomeButton.topAnchor.constraint(equalTo: fixedIncomeImageView.topAnchor, constant: 12),
+            fixedIncomeButton.trailingAnchor.constraint(equalTo: cryptoButton.trailingAnchor),
+            fixedIncomeButton.heightAnchor.constraint(equalTo: setAGoalButton.heightAnchor),
+            fixedIncomeButton.widthAnchor.constraint(equalTo: setAGoalButton.widthAnchor),
+            
+            stocksImageView.topAnchor.constraint(equalTo: fixedIncomeImageView.bottomAnchor, constant: 20),
+            stocksImageView.leadingAnchor.constraint(equalTo: cryptoImageView.leadingAnchor),
+            stocksImageView.heightAnchor.constraint(equalToConstant: 40),
+            stocksImageView.widthAnchor.constraint(equalToConstant: 40),
+
+            stocksTitleLabel.topAnchor.constraint(equalTo: stocksImageView.topAnchor),
+            stocksTitleLabel.leadingAnchor.constraint(equalTo: stocksImageView.trailingAnchor, constant: 15),
+
+            stocksSubTitlelabel.topAnchor.constraint(equalTo: stocksTitleLabel.bottomAnchor, constant: 5),
+            stocksSubTitlelabel.leadingAnchor.constraint(equalTo: stocksTitleLabel.leadingAnchor),
+
+            stocksButton.topAnchor.constraint(equalTo: stocksImageView.topAnchor, constant: 12),
+            stocksButton.trailingAnchor.constraint(equalTo: cryptoButton.trailingAnchor),
+            stocksButton.heightAnchor.constraint(equalTo: setAGoalButton.heightAnchor),
+            stocksButton.widthAnchor.constraint(equalTo: setAGoalButton.widthAnchor),
+            
+           
         ])
     }
     

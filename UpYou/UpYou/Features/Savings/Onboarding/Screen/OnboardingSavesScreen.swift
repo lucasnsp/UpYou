@@ -18,7 +18,7 @@ class OnboardingSavesScreen: UIView {
     public func delegate(delegate: OnboardingSavesScreenDelegate?) {
         self.delegate = delegate
     }
-
+    
     lazy var subImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -122,16 +122,16 @@ class OnboardingSavesScreen: UIView {
             descriptionLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
             descriptionLabel.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
             
-            bagOfMoneyImageView.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 50),
             bagOfMoneyImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 35),
             bagOfMoneyImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -35),
             bagOfMoneyImageView.heightAnchor.constraint(equalToConstant: 280),
+            bagOfMoneyImageView.bottomAnchor.constraint(equalTo: continueButton.topAnchor, constant: -110),
             
-            continueButton.topAnchor.constraint(equalTo: bagOfMoneyImageView.bottomAnchor, constant: 70),
             continueButton.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
             continueButton.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
+            continueButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -50),
             continueButton.heightAnchor.constraint(equalToConstant: 55),
         ])
     }
-
+    
 }
