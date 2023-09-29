@@ -1,0 +1,52 @@
+{
+    "books": [
+        {
+            "bookImage": "deepWork",
+            "bookName": "Deep Work",
+            "bookDescription": "Deep Work takes the reader on a journey through memorable stories-from Carl Jung building a stone tower in the woods to focus his mind.",
+            "bookScore": "9.8"
+        },
+        {
+            "bookImage": "richestManInBabylon",
+            "bookName": "The Richest Man in Babylon",
+            "bookDescription": "Money is plentiful for those who understand the simple rules of its acquisition. If you follow the wisdom of Babylon, financial peace and a life of freedom are just seven steps away.",
+            "bookScore": "10"
+        },
+        {
+            "bookImage": "EgoisTheEnemy",
+            "bookName": "Ego Is the Enemy",
+            "bookDescription": "Many of us insist the main impediment to a full, successful life is the outside world. In fact, the most common enemy lies within: our ego.",
+            "bookScore": "9.0"
+        },
+        {
+            "bookImage": "theOnlyThing",
+            "bookName": "The One Thing",
+            "bookDescription": "The ONE Thing delivers extraordinary results in every area of your life—work, personal, family, and spiritual. WHAT’S YOUR ONE THING?",
+            "bookScore": "10"
+        },
+        {
+            "bookImage": "TheCourageToBeDisliked",
+            "bookName": "The Courage To Be Disliked",
+            "bookDescription": "The Japanese phenomenon that teaches us the simple yet profound lessons required to liberate our real selves and find lasting happiness.",
+            "bookScore": "10"
+        },
+        {
+            "bookImage": "PsychologyOfMoney",
+            "bookName": "The Psychology of Money",
+            "bookDescription": "Doing well with money isn’t necessarily about what you know. It’s about how you behave. And behavior is hard to teach, even to really smart people.",
+            "bookScore": "9.5"
+        },
+        {
+            "bookImage": "LivesOfTheStoics",
+            "bookName": "Lives Of The Stoics",
+            "bookDescription": "From the bestselling authors of The Daily Stoic comes an inspiring guide to the lives of the Stoics, and what the ancients can teach us about happiness, success, resilience and virtue.",
+            "bookScore": "9.8"
+        },
+        {
+            "bookImage": "thinkAgain",
+            "bookName": "Think Again",
+            "bookDescription": "THIS. This is the right book for right now. Yes, learning requires focus. But, unlearning and relearning requires much more—it requires choosing courage over comfort.",
+            "bookScore": "9.5"
+        }
+    ]
+}

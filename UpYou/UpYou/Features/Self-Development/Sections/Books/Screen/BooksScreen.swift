@@ -19,13 +19,6 @@ class BooksScreen: UIView {
         self.delegate = delegate
     }
     
-    lazy var subImageView: UIImageView = {
-        let image = UIImageView()
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "background")
-        return image
-    }()
-    
     lazy var backButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -40,6 +33,31 @@ class BooksScreen: UIView {
         delegate?.tappedBackButton()
     }
     
+    lazy var titleLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Books Recomendations"
+        label.textColor = .white
+        label.font = UIFont.boldSystemFont(ofSize: 23)
+        label.textAlignment = .center
+        return label
+    }()
+    
+    lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.register(BooksTableViewCell.self, forCellReuseIdentifier: BooksTableViewCell.identifier)
+        tableView.backgroundColor = .black.withAlphaComponent(0.6)
+        tableView.separatorStyle = .none
+        return tableView
+    }()
+    
+    public func configTableViewProtocols(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
+        tableView.delegate = delegate
+        tableView.dataSource = dataSource
+    }
+
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         addViews()
@@ -51,20 +69,24 @@ class BooksScreen: UIView {
     }
     
     private func addViews() {
-        addSubview(subImageView)
         addSubview(backButton)
+        addSubview(titleLabel)
+        addSubview(tableView)
     }
     
     private func configConstraints() {
         NSLayoutConstraint.activate([
-            subImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            subImageView.topAnchor.constraint(equalTo: topAnchor),
-            subImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            subImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            
             backButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 5),
             backButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
             backButton.heightAnchor.constraint(equalToConstant: 35),
+            
+            titleLabel.topAnchor.constraint(equalTo: backButton.bottomAnchor, constant: 20),
+            titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            
+            tableView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 25),
+            tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
     }
     

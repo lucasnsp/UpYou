@@ -58,6 +58,12 @@
 		467D1D852AC5B638009E0B04 /* BooksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467D1D842AC5B638009E0B04 /* BooksVC.swift */; };
 		467D1D872AC5B683009E0B04 /* BooksScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467D1D862AC5B683009E0B04 /* BooksScreen.swift */; };
 		467D1D892AC5B90B009E0B04 /* Books.json in Resources */ = {isa = PBXBuildFile; fileRef = 467D1D882AC5B90B009E0B04 /* Books.json */; };
+		467D1D8B2AC6F571009E0B04 /* BooksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467D1D8A2AC6F571009E0B04 /* BooksService.swift */; };
+		467D1D8E2AC6F687009E0B04 /* BooksData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467D1D8D2AC6F687009E0B04 /* BooksData.swift */; };
+		467D1D902AC6F690009E0B04 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467D1D8F2AC6F690009E0B04 /* Book.swift */; };
+		467D1D922AC6F86B009E0B04 /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467D1D912AC6F86A009E0B04 /* BooksViewModel.swift */; };
+		467D1D972AC700AD009E0B04 /* BooksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467D1D962AC700AD009E0B04 /* BooksTableViewCell.swift */; };
+		467D1D992AC700BE009E0B04 /* BooksTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467D1D982AC700BE009E0B04 /* BooksTableViewCellScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +117,12 @@
 		467D1D842AC5B638009E0B04 /* BooksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksVC.swift; sourceTree = "<group>"; };
 		467D1D862AC5B683009E0B04 /* BooksScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksScreen.swift; sourceTree = "<group>"; };
 		467D1D882AC5B90B009E0B04 /* Books.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Books.json; sourceTree = "<group>"; };
+		467D1D8A2AC6F571009E0B04 /* BooksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksService.swift; sourceTree = "<group>"; };
+		467D1D8D2AC6F687009E0B04 /* BooksData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksData.swift; sourceTree = "<group>"; };
+		467D1D8F2AC6F690009E0B04 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		467D1D912AC6F86A009E0B04 /* BooksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewModel.swift; sourceTree = "<group>"; };
+		467D1D962AC700AD009E0B04 /* BooksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksTableViewCell.swift; sourceTree = "<group>"; };
+		467D1D982AC700BE009E0B04 /* BooksTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksTableViewCellScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,18 +142,18 @@
 		460583872AC1C0BF00446A6F /* PersonalDevelopmentCell */ = {
 			isa = PBXGroup;
 			children = (
-				460583882AC1C0CA00446A6F /* TableView */,
+				460583882AC1C0CA00446A6F /* TableViewCell */,
 				460583892AC1C0CE00446A6F /* Screen */,
 			);
 			path = PersonalDevelopmentCell;
 			sourceTree = "<group>";
 		};
-		460583882AC1C0CA00446A6F /* TableView */ = {
+		460583882AC1C0CA00446A6F /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				4605838A2AC1C0E900446A6F /* PersonalDevelopmentTableViewCell.swift */,
 			);
-			path = TableView;
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		460583892AC1C0CE00446A6F /* Screen */ = {
@@ -155,8 +167,9 @@
 		4605838E2AC1C3A600446A6F /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				460583902AC1C3E300446A6F /* QuotesService.swift */,
+				467D1D8A2AC6F571009E0B04 /* BooksService.swift */,
 				460583AC2AC4784800446A6F /* MoneyPhrasesService.swift */,
+				460583902AC1C3E300446A6F /* QuotesService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -164,6 +177,7 @@
 		460583922AC1C4A200446A6F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				467D1D8C2AC6F665009E0B04 /* Books */,
 				460583A72AC477B400446A6F /* SavingMoney */,
 				460583A62AC477A600446A6F /* PersonalDevelopment */,
 			);
@@ -242,18 +256,18 @@
 		460583B12AC47DBE00446A6F /* SavingMoneyCell */ = {
 			isa = PBXGroup;
 			children = (
-				460583B22AC47DD400446A6F /* TableView */,
+				460583B22AC47DD400446A6F /* TableViewCell */,
 				460583B32AC47DD900446A6F /* Screen */,
 			);
 			path = SavingMoneyCell;
 			sourceTree = "<group>";
 		};
-		460583B22AC47DD400446A6F /* TableView */ = {
+		460583B22AC47DD400446A6F /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				460583B42AC47EB300446A6F /* SavingMoneyTableViewCell.swift */,
 			);
-			path = TableView;
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		460583B32AC47DD900446A6F /* Screen */ = {
@@ -284,13 +298,12 @@
 			isa = PBXGroup;
 			children = (
 				461BEF722ABA783B00C07847 /* Features */,
-				461BEF882ABB9A1C00C07847 /* Cells */,
-				461BEF622ABA758F00C07847 /* Alert */,
 				460583922AC1C4A200446A6F /* Model */,
 				4605838E2AC1C3A600446A6F /* Service */,
 				461BEF742ABB4DCE00C07847 /* TabBar */,
 				461BEF652ABA759A00C07847 /* Utils */,
 				461BEF852ABB913100C07847 /* Json */,
+				461BEF622ABA758F00C07847 /* Alert */,
 				461BEF692ABA763A00C07847 /* GoogleService-Info.plist */,
 				461BEF1D2ABA74F500C07847 /* AppDelegate.swift */,
 				461BEF1F2ABA74F500C07847 /* SceneDelegate.swift */,
@@ -482,6 +495,7 @@
 			isa = PBXGroup;
 			children = (
 				461BEF312ABA756000C07847 /* Onboarding */,
+				461BEF882ABB9A1C00C07847 /* Cells */,
 				461BEF4E2ABA758100C07847 /* Login */,
 				461BEF582ABA758900C07847 /* Register */,
 				461BEF732ABB4DBF00C07847 /* Home */,
@@ -546,6 +560,7 @@
 		461BEF882ABB9A1C00C07847 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				467D1D932AC70068009E0B04 /* BooksCell */,
 				460583B12AC47DBE00446A6F /* SavingMoneyCell */,
 				460583872AC1C0BF00446A6F /* PersonalDevelopmentCell */,
 			);
@@ -675,8 +690,43 @@
 		467D1D832AC5B617009E0B04 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				467D1D912AC6F86A009E0B04 /* BooksViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		467D1D8C2AC6F665009E0B04 /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				467D1D8D2AC6F687009E0B04 /* BooksData.swift */,
+				467D1D8F2AC6F690009E0B04 /* Book.swift */,
+			);
+			path = Books;
+			sourceTree = "<group>";
+		};
+		467D1D932AC70068009E0B04 /* BooksCell */ = {
+			isa = PBXGroup;
+			children = (
+				467D1D942AC70073009E0B04 /* TableViewCell */,
+				467D1D952AC70093009E0B04 /* Screen */,
+			);
+			path = BooksCell;
+			sourceTree = "<group>";
+		};
+		467D1D942AC70073009E0B04 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				467D1D962AC700AD009E0B04 /* BooksTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		467D1D952AC70093009E0B04 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				467D1D982AC700BE009E0B04 /* BooksTableViewCellScreen.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -771,9 +821,11 @@
 				460583A02AC4602200446A6F /* SavingMoneyVC.swift in Sources */,
 				461BEF482ABA756000C07847 /* SecondInfoScreen.swift in Sources */,
 				460583B02AC47A5700446A6F /* SavingMoneyViewModel.swift in Sources */,
+				467D1D992AC700BE009E0B04 /* BooksTableViewCellScreen.swift in Sources */,
 				461BEF1E2ABA74F500C07847 /* AppDelegate.swift in Sources */,
 				461BEF552ABA758100C07847 /* LoginViewModel.swift in Sources */,
 				461BEF4D2ABA756000C07847 /* ThirdInfoViewController.swift in Sources */,
+				467D1D8B2AC6F571009E0B04 /* BooksService.swift in Sources */,
 				461BEF202ABA74F500C07847 /* SceneDelegate.swift in Sources */,
 				461BEF562ABA758100C07847 /* LoginScreen.swift in Sources */,
 				460583AD2AC4784800446A6F /* MoneyPhrasesService.swift in Sources */,
@@ -783,6 +835,7 @@
 				461BEF642ABA758F00C07847 /* AlertController.swift in Sources */,
 				460583912AC1C3E300446A6F /* QuotesService.swift in Sources */,
 				4605839B2AC1C7F900446A6F /* PersonalDevelopmentViewModel.swift in Sources */,
+				467D1D902AC6F690009E0B04 /* Book.swift in Sources */,
 				461BEF682ABA759A00C07847 /* String+Extension.swift in Sources */,
 				461BEF612ABA758900C07847 /* RegisterVC.swift in Sources */,
 				467D1D852AC5B638009E0B04 /* BooksVC.swift in Sources */,
@@ -792,12 +845,15 @@
 				460583C32AC48EB300446A6F /* Phrase.swift in Sources */,
 				461BEF462ABA756000C07847 /* FirstInfoScreen.swift in Sources */,
 				460583A22AC4603100446A6F /* SavingMoneyScreen.swift in Sources */,
+				467D1D922AC6F86B009E0B04 /* BooksViewModel.swift in Sources */,
 				461BEF842ABB7D7000C07847 /* TabBarVC.swift in Sources */,
 				461BEFA02ABDD2B500C07847 /* SelfDevelopmentViewController.swift in Sources */,
 				461BEF5F2ABA758900C07847 /* RegisterViewModel.swift in Sources */,
 				461BEF572ABA758100C07847 /* LoginVC.swift in Sources */,
+				467D1D972AC700AD009E0B04 /* BooksTableViewCell.swift in Sources */,
 				460583982AC1C50000446A6F /* Quote.swift in Sources */,
 				460583962AC1C4ED00446A6F /* QuoteData.swift in Sources */,
+				467D1D8E2AC6F687009E0B04 /* BooksData.swift in Sources */,
 				461BEFA72ABF107B00C07847 /* PersonalDevelopmentVC.swift in Sources */,
 				461BEF4C2ABA756000C07847 /* ThirdInfoScreen.swift in Sources */,
 				461BEF492ABA756000C07847 /* SecondInfoViewController.swift in Sources */,

@@ -33,7 +33,7 @@ class QuotesService {
             if response.statusCode == 200 {
                 do {
                     let quoteData: QuoteData = try JSONDecoder().decode(QuoteData.self, from: dataResult)
-                    print("SUCESS -> \(#function)")
+                    print("SUCCESS -> \(#function)")
                     completion(quoteData, nil)
                 } catch  {
                     print("ERROR -> \(#function)")
