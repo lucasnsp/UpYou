@@ -31,7 +31,7 @@ class BooksViewModel: NSObject {
     }
     
     public var heightForRowAt: CGFloat {
-        return 420
+        return 600
     }
     
     public func loadCurrentBooks(indexPath: IndexPath) -> Book {

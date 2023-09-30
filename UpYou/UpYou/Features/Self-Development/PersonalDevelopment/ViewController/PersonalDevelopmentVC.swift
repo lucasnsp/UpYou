@@ -47,8 +47,9 @@ extension PersonalDevelopmentVC: PersonalDevelopmentScreenDelegate {
     }
     
     func tappedEnvironmentButton() {
-        print(#function)
-    }
+        let vc: EnvironmentVC = EnvironmentVC()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)    }
     
     func tappedBooksButton() {
         let vc: BooksVC = BooksVC()

@@ -92,12 +92,12 @@ class BooksTableViewCellScreen: UIView {
             bookImageView.topAnchor.constraint(equalTo: viewBackground.topAnchor),
             bookImageView.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor),
             bookImageView.trailingAnchor.constraint(equalTo: viewBackground.trailingAnchor),
-            bookImageView.heightAnchor.constraint(equalToConstant: 250),
+            bookImageView.heightAnchor.constraint(equalToConstant: 400),
             
             bookNamelabel.topAnchor.constraint(equalTo: bookImageView.bottomAnchor, constant: 15),
             bookNamelabel.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 15),
             
-            bookDescriptionLabel.topAnchor.constraint(equalTo: bookNamelabel.bottomAnchor, constant: 5),
+            bookDescriptionLabel.topAnchor.constraint(equalTo: bookNamelabel.bottomAnchor, constant: 15),
             bookDescriptionLabel.leadingAnchor.constraint(equalTo: bookNamelabel.leadingAnchor),
             bookDescriptionLabel.trailingAnchor.constraint(equalTo: viewBackground.trailingAnchor, constant: -15),
             

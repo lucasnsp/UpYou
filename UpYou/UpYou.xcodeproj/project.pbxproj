@@ -28,6 +28,14 @@
 		460B7ACC2AC857770059EA44 /* DeepWorkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460B7ACB2AC857770059EA44 /* DeepWorkService.swift */; };
 		460B7AD12AC85B4B0059EA44 /* DeepWorkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460B7AD02AC85B4B0059EA44 /* DeepWorkTableViewCell.swift */; };
 		460B7AD32AC85B620059EA44 /* DeepWorkTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460B7AD22AC85B620059EA44 /* DeepWorkTableViewCellScreen.swift */; };
+		460B7AD92AC8746E0059EA44 /* Environment.json in Resources */ = {isa = PBXBuildFile; fileRef = 460B7AD82AC8746E0059EA44 /* Environment.json */; };
+		460B7ADD2AC877490059EA44 /* EnvironmentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460B7ADC2AC877490059EA44 /* EnvironmentData.swift */; };
+		460B7ADF2AC877760059EA44 /* EnvironmentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460B7ADE2AC877760059EA44 /* EnvironmentService.swift */; };
+		460B7AE12AC8787F0059EA44 /* EnvironmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460B7AE02AC8787F0059EA44 /* EnvironmentVC.swift */; };
+		460B7AE32AC878990059EA44 /* EnvironmentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460B7AE22AC878990059EA44 /* EnvironmentScreen.swift */; };
+		460B7AE52AC878D40059EA44 /* EnvironmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460B7AE42AC878D40059EA44 /* EnvironmentViewModel.swift */; };
+		460B7AEA2AC87D650059EA44 /* EnvironmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460B7AE92AC87D650059EA44 /* EnvironmentTableViewCell.swift */; };
+		460B7AEC2AC87D750059EA44 /* EnvironmentTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460B7AEB2AC87D750059EA44 /* EnvironmentTableViewCellScreen.swift */; };
 		461BEF1E2ABA74F500C07847 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BEF1D2ABA74F500C07847 /* AppDelegate.swift */; };
 		461BEF202ABA74F500C07847 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BEF1F2ABA74F500C07847 /* SceneDelegate.swift */; };
 		461BEF272ABA74F700C07847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 461BEF262ABA74F700C07847 /* Assets.xcassets */; };
@@ -93,6 +101,14 @@
 		460B7ACB2AC857770059EA44 /* DeepWorkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepWorkService.swift; sourceTree = "<group>"; };
 		460B7AD02AC85B4B0059EA44 /* DeepWorkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepWorkTableViewCell.swift; sourceTree = "<group>"; };
 		460B7AD22AC85B620059EA44 /* DeepWorkTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepWorkTableViewCellScreen.swift; sourceTree = "<group>"; };
+		460B7AD82AC8746E0059EA44 /* Environment.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Environment.json; sourceTree = "<group>"; };
+		460B7ADC2AC877490059EA44 /* EnvironmentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentData.swift; sourceTree = "<group>"; };
+		460B7ADE2AC877760059EA44 /* EnvironmentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentService.swift; sourceTree = "<group>"; };
+		460B7AE02AC8787F0059EA44 /* EnvironmentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentVC.swift; sourceTree = "<group>"; };
+		460B7AE22AC878990059EA44 /* EnvironmentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentScreen.swift; sourceTree = "<group>"; };
+		460B7AE42AC878D40059EA44 /* EnvironmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentViewModel.swift; sourceTree = "<group>"; };
+		460B7AE92AC87D650059EA44 /* EnvironmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentTableViewCell.swift; sourceTree = "<group>"; };
+		460B7AEB2AC87D750059EA44 /* EnvironmentTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentTableViewCellScreen.swift; sourceTree = "<group>"; };
 		461BEF1A2ABA74F500C07847 /* UpYou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpYou.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		461BEF1D2ABA74F500C07847 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		461BEF1F2ABA74F500C07847 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -181,6 +197,7 @@
 				460583AC2AC4784800446A6F /* MoneyPhrasesService.swift */,
 				460583902AC1C3E300446A6F /* QuotesService.swift */,
 				460B7ACB2AC857770059EA44 /* DeepWorkService.swift */,
+				460B7ADE2AC877760059EA44 /* EnvironmentService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -192,6 +209,7 @@
 				460583C02AC48EA000446A6F /* MoneyPhrasesData.swift */,
 				467D1D8D2AC6F687009E0B04 /* BooksData.swift */,
 				460B7AC92AC857400059EA44 /* DeepWorkData.swift */,
+				460B7ADC2AC877490059EA44 /* EnvironmentData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -327,6 +345,65 @@
 			isa = PBXGroup;
 			children = (
 				460B7AD22AC85B620059EA44 /* DeepWorkTableViewCellScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		460B7AD42AC873C00059EA44 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				460B7AD52AC873C80059EA44 /* ViewController */,
+				460B7AD62AC873CD0059EA44 /* Screen */,
+				460B7AD72AC873D50059EA44 /* ViewModel */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		460B7AD52AC873C80059EA44 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				460B7AE02AC8787F0059EA44 /* EnvironmentVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		460B7AD62AC873CD0059EA44 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				460B7AE22AC878990059EA44 /* EnvironmentScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		460B7AD72AC873D50059EA44 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				460B7AE42AC878D40059EA44 /* EnvironmentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		460B7AE62AC87CDE0059EA44 /* EnvironmentCell */ = {
+			isa = PBXGroup;
+			children = (
+				460B7AE72AC87CE60059EA44 /* TableViewCell */,
+				460B7AE82AC87CEE0059EA44 /* Screen */,
+			);
+			path = EnvironmentCell;
+			sourceTree = "<group>";
+		};
+		460B7AE72AC87CE60059EA44 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				460B7AE92AC87D650059EA44 /* EnvironmentTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		460B7AE82AC87CEE0059EA44 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				460B7AEB2AC87D750059EA44 /* EnvironmentTableViewCellScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -607,6 +684,7 @@
 				460583BE2AC48E0400446A6F /* MoneyPhrases.json */,
 				467D1D882AC5B90B009E0B04 /* Books.json */,
 				460B7AC72AC852200059EA44 /* DeepWork.json */,
+				460B7AD82AC8746E0059EA44 /* Environment.json */,
 			);
 			path = Json;
 			sourceTree = "<group>";
@@ -614,10 +692,11 @@
 		461BEF882ABB9A1C00C07847 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				460B7ACD2AC85B1C0059EA44 /* DeepWorkCell */,
-				467D1D932AC70068009E0B04 /* BooksCell */,
-				460583B12AC47DBE00446A6F /* SavingMoneyCell */,
 				460583872AC1C0BF00446A6F /* PersonalDevelopmentCell */,
+				460583B12AC47DBE00446A6F /* SavingMoneyCell */,
+				467D1D932AC70068009E0B04 /* BooksCell */,
+				460B7ACD2AC85B1C0059EA44 /* DeepWorkCell */,
+				460B7AE62AC87CDE0059EA44 /* EnvironmentCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -723,6 +802,7 @@
 			children = (
 				467D1D7F2AC5B5E1009E0B04 /* Books */,
 				460B7ABD2AC848EC0059EA44 /* DeepWork */,
+				460B7AD42AC873C00059EA44 /* Environment */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -847,6 +927,7 @@
 				461BEF2A2ABA74F700C07847 /* LaunchScreen.storyboard in Resources */,
 				461BEF872ABB914900C07847 /* Quote.json in Resources */,
 				461BEF272ABA74F700C07847 /* Assets.xcassets in Resources */,
+				460B7AD92AC8746E0059EA44 /* Environment.json in Resources */,
 				460583BF2AC48E0400446A6F /* MoneyPhrases.json in Resources */,
 				460B7AC82AC852200059EA44 /* DeepWork.json in Resources */,
 			);
@@ -873,15 +954,20 @@
 				467D1D992AC700BE009E0B04 /* BooksTableViewCellScreen.swift in Sources */,
 				461BEF1E2ABA74F500C07847 /* AppDelegate.swift in Sources */,
 				461BEF552ABA758100C07847 /* LoginViewModel.swift in Sources */,
+				460B7AE12AC8787F0059EA44 /* EnvironmentVC.swift in Sources */,
 				461BEF4D2ABA756000C07847 /* ThirdInfoViewController.swift in Sources */,
 				467D1D8B2AC6F571009E0B04 /* BooksService.swift in Sources */,
+				460B7AEC2AC87D750059EA44 /* EnvironmentTableViewCellScreen.swift in Sources */,
 				461BEF202ABA74F500C07847 /* SceneDelegate.swift in Sources */,
 				461BEF562ABA758100C07847 /* LoginScreen.swift in Sources */,
 				460583AD2AC4784800446A6F /* MoneyPhrasesService.swift in Sources */,
 				461BEFAB2ABF121900C07847 /* PersonalDevelopmentScreen.swift in Sources */,
 				461BEFA22ABDD2C900C07847 /* SelfDevelopmentScreen.swift in Sources */,
 				460B7ACA2AC857400059EA44 /* DeepWorkData.swift in Sources */,
+				460B7AE32AC878990059EA44 /* EnvironmentScreen.swift in Sources */,
 				461BEF9A2ABC772800C07847 /* OnboardingSavesVC.swift in Sources */,
+				460B7ADF2AC877760059EA44 /* EnvironmentService.swift in Sources */,
+				460B7ADD2AC877490059EA44 /* EnvironmentData.swift in Sources */,
 				461BEF642ABA758F00C07847 /* AlertController.swift in Sources */,
 				460583912AC1C3E300446A6F /* QuotesService.swift in Sources */,
 				4605839B2AC1C7F900446A6F /* PersonalDevelopmentViewModel.swift in Sources */,
@@ -904,6 +990,7 @@
 				461BEF5F2ABA758900C07847 /* RegisterViewModel.swift in Sources */,
 				461BEF572ABA758100C07847 /* LoginVC.swift in Sources */,
 				467D1D972AC700AD009E0B04 /* BooksTableViewCell.swift in Sources */,
+				460B7AEA2AC87D650059EA44 /* EnvironmentTableViewCell.swift in Sources */,
 				460583962AC1C4ED00446A6F /* QuoteData.swift in Sources */,
 				467D1D8E2AC6F687009E0B04 /* BooksData.swift in Sources */,
 				461BEFA72ABF107B00C07847 /* PersonalDevelopmentVC.swift in Sources */,
@@ -911,6 +998,7 @@
 				461BEF492ABA756000C07847 /* SecondInfoViewController.swift in Sources */,
 				461BEF472ABA756000C07847 /* FirstInfoViewController.swift in Sources */,
 				4605838B2AC1C0E900446A6F /* PersonalDevelopmentTableViewCell.swift in Sources */,
+				460B7AE52AC878D40059EA44 /* EnvironmentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

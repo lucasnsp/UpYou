@@ -42,14 +42,19 @@ class DeepWorkTableViewCell: UITableViewCell {
     
     public func setupCell(data: Focus) {
         screen.focusTitleLabel.text = data.focusTitle
+        
         screen.focusOneTitleLabel.text = "• \(data.focusTopicOneTitle ?? "")"
         screen.focusOneLabel.text = data.focusTopicOne
+        
         screen.focusTwoTitleLabel.text = "• \(data.focusTopicTwoTitle ?? "")"
         screen.focusTwoLabel.text = data.focusTopicTwo
+        
         screen.focusThreeTitleLabel.text = "• \(data.focusTopicThreeTitle ?? "")"
         screen.focusThreeLabel.text = data.focusTopicThree
+        
         screen.focusFourTitleLabel.text = "• \(data.focusTopicFourTitle ?? "")"
         screen.focusFourLabel.text = data.focusTopicFour
+        
         screen.focusFiveTitleLabel.text = "• \(data.focusTopicFiveTitle ?? "")"
         screen.focusFiveLabel.text = data.focusTopicFive
     }
