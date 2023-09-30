@@ -21,7 +21,7 @@ class BooksTableViewCellScreen: UIView {
     lazy var subImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "background")
+        image.image = UIImage(named: "background2")
         return image
     }()
     
@@ -80,8 +80,8 @@ class BooksTableViewCellScreen: UIView {
     private func configConstraints() {
         NSLayoutConstraint.activate([
             viewBackground.topAnchor.constraint(equalTo: topAnchor, constant: 25),
-            viewBackground.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
-            viewBackground.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
+            viewBackground.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            viewBackground.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             viewBackground.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
                         
             subImageView.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor),

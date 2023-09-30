@@ -12,3 +12,9 @@ import Foundation
 struct QuoteData: Codable {
     var quotes: [Quote]?
 }
+
+// MARK: - Quote
+struct Quote: Codable {
+    var quote: String?
+    var author: String?
+}

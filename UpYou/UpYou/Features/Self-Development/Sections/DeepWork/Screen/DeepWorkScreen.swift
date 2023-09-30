@@ -1,31 +1,24 @@
 //
-//  BooksScreen.swift
+//  DeepWorkScreen.swift
 //  UpYou
 //
-//  Created by Lucas Neves dos santos pompeu on 28/09/23.
+//  Created by Lucas Neves dos santos pompeu on 30/09/23.
 //
 
 import UIKit
 
-protocol BooksScreenDelegate: AnyObject {
+protocol DeepWorkScreenDelegate: AnyObject {
     func tappedBackButton()
 }
 
-class BooksScreen: UIView {
+class DeepWorkScreen: UIView {
     
-    private weak var delegate: BooksScreenDelegate?
+    private weak var delegate: DeepWorkScreenDelegate?
     
-    public func delegate(delegate: BooksScreenDelegate?) {
+    public func delegate(delegate: DeepWorkScreenDelegate?) {
         self.delegate = delegate
     }
-    
-    lazy var subImageView: UIImageView = {
-        let image = UIImageView()
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "background2")
-        return image
-    }()
-    
+
     lazy var backButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -40,11 +33,18 @@ class BooksScreen: UIView {
         delegate?.tappedBackButton()
     }
     
+    lazy var subImageView: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(named: "background2")
+        return image
+    }()
+    
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Books"
         label.textColor = .white
+        label.text = "Deep Work"
         label.font = UIFont.boldSystemFont(ofSize: 30)
         return label
     }()
@@ -52,8 +52,9 @@ class BooksScreen: UIView {
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(BooksTableViewCell.self, forCellReuseIdentifier: BooksTableViewCell.identifier)
+        tableView.register(DeepWorkTableViewCell.self, forCellReuseIdentifier: DeepWorkTableViewCell.identifier)
         tableView.backgroundColor = .black.withAlphaComponent(0.6)
+        tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
         return tableView
     }()
@@ -62,7 +63,6 @@ class BooksScreen: UIView {
         tableView.delegate = delegate
         tableView.dataSource = dataSource
     }
-
     
     override init(frame: CGRect) {
         super.init(frame: frame)

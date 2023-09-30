@@ -12,3 +12,8 @@ import Foundation
 struct MoneyPhrasesData: Codable {
     var phrases: [Phrase]?
 }
+
+// MARK: - Phrase
+struct Phrase: Codable {
+    var phrase, author: String?
+}

@@ -57,7 +57,9 @@ extension PersonalDevelopmentVC: PersonalDevelopmentScreenDelegate {
     }
     
     func tappedDeepWorkButton() {
-        print(#function)
+        let vc: DeepWorkVC = DeepWorkVC()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
     
     func tappedHabitButton() {
