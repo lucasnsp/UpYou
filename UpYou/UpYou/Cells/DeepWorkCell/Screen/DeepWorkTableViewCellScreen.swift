@@ -43,12 +43,20 @@ class DeepWorkTableViewCellScreen: UIView {
         return label
     }()
     
+    lazy var focusOneImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 22
+        return imageView
+    }()
+    
     lazy var focusOneLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
         label.numberOfLines = 0
-        label.font = UIFont.systemFont(ofSize: 15)
+        label.font = UIFont.systemFont(ofSize: 16)
         return label
     }()
     
@@ -61,12 +69,20 @@ class DeepWorkTableViewCellScreen: UIView {
         return label
     }()
     
+    lazy var focusTwoImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 22
+        return imageView
+    }()
+    
     lazy var focusTwoLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
         label.numberOfLines = 0
-        label.font = UIFont.systemFont(ofSize: 15)
+        label.font = UIFont.systemFont(ofSize: 16)
         return label
     }()
     
@@ -79,12 +95,20 @@ class DeepWorkTableViewCellScreen: UIView {
         return label
     }()
     
+    lazy var focusThreeImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 22
+        return imageView
+    }()
+    
     lazy var focusThreeLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
         label.numberOfLines = 0
-        label.font = UIFont.systemFont(ofSize: 15)
+        label.font = UIFont.systemFont(ofSize: 16)
         return label
     }()
     
@@ -97,12 +121,20 @@ class DeepWorkTableViewCellScreen: UIView {
         return label
     }()
     
+    lazy var focusFourImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 22
+        return imageView
+    }()
+    
     lazy var focusFourLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
         label.numberOfLines = 0
-        label.font = UIFont.systemFont(ofSize: 15)
+        label.font = UIFont.systemFont(ofSize: 16)
         return label
     }()
     
@@ -115,12 +147,20 @@ class DeepWorkTableViewCellScreen: UIView {
         return label
     }()
     
+    lazy var focusFiveImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 22
+        return imageView
+    }()
+    
     lazy var focusFiveLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
         label.numberOfLines = 0
-        label.font = UIFont.systemFont(ofSize: 15)
+        label.font = UIFont.systemFont(ofSize: 16)
         return label
     }()
 
@@ -140,14 +180,19 @@ class DeepWorkTableViewCellScreen: UIView {
         viewBackground.addSubview(subImageView)
         viewBackground.addSubview(focusTitleLabel)
         viewBackground.addSubview(focusOneTitleLabel)
+        viewBackground.addSubview(focusOneImageView)
         viewBackground.addSubview(focusOneLabel)
         viewBackground.addSubview(focusTwoTitleLabel)
+        viewBackground.addSubview(focusTwoImageView)
         viewBackground.addSubview(focusTwoLabel)
         viewBackground.addSubview(focusThreeTitleLabel)
+        viewBackground.addSubview(focusThreeImageView)
         viewBackground.addSubview(focusThreeLabel)
         viewBackground.addSubview(focusFourTitleLabel)
+        viewBackground.addSubview(focusFourImageView)
         viewBackground.addSubview(focusFourLabel)
         viewBackground.addSubview(focusFiveTitleLabel)
+        viewBackground.addSubview(focusFiveImageView)
         viewBackground.addSubview(focusFiveLabel)
     }
     
@@ -170,35 +215,60 @@ class DeepWorkTableViewCellScreen: UIView {
             focusOneTitleLabel.topAnchor.constraint(equalTo: focusTitleLabel.bottomAnchor, constant: 30),
             focusOneTitleLabel.leadingAnchor.constraint(equalTo: focusTitleLabel.leadingAnchor),
             
-            focusOneLabel.topAnchor.constraint(equalTo: focusOneTitleLabel.bottomAnchor, constant: 15),
+            focusOneImageView.topAnchor.constraint(equalTo: focusOneTitleLabel.bottomAnchor, constant: 25),
+            focusOneImageView.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 30),
+            focusOneImageView.trailingAnchor.constraint(equalTo: viewBackground.trailingAnchor, constant: -30),
+            focusOneImageView.heightAnchor.constraint(equalToConstant: 250),
+            
+            focusOneLabel.topAnchor.constraint(equalTo: focusOneImageView.bottomAnchor, constant: 25),
             focusOneLabel.leadingAnchor.constraint(equalTo: focusTitleLabel.leadingAnchor),
             focusOneLabel.trailingAnchor.constraint(equalTo: focusTitleLabel.trailingAnchor),
             
             focusTwoTitleLabel.topAnchor.constraint(equalTo: focusOneLabel.bottomAnchor, constant: 30),
             focusTwoTitleLabel.leadingAnchor.constraint(equalTo: focusTitleLabel.leadingAnchor),
             
-            focusTwoLabel.topAnchor.constraint(equalTo: focusTwoTitleLabel.bottomAnchor, constant: 15),
+            focusTwoImageView.topAnchor.constraint(equalTo: focusTwoTitleLabel.bottomAnchor, constant: 25),
+            focusTwoImageView.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 30),
+            focusTwoImageView.trailingAnchor.constraint(equalTo: viewBackground.trailingAnchor, constant: -30),
+            focusTwoImageView.heightAnchor.constraint(equalToConstant: 250),
+            
+            focusTwoLabel.topAnchor.constraint(equalTo: focusTwoImageView.bottomAnchor, constant: 25),
             focusTwoLabel.leadingAnchor.constraint(equalTo: focusTitleLabel.leadingAnchor),
             focusTwoLabel.trailingAnchor.constraint(equalTo: focusTitleLabel.trailingAnchor),
             
             focusThreeTitleLabel.topAnchor.constraint(equalTo: focusTwoLabel.bottomAnchor, constant: 30),
             focusThreeTitleLabel.leadingAnchor.constraint(equalTo: focusTitleLabel.leadingAnchor),
             
-            focusThreeLabel.topAnchor.constraint(equalTo: focusThreeTitleLabel.bottomAnchor, constant: 15),
+            focusThreeImageView.topAnchor.constraint(equalTo: focusThreeTitleLabel.bottomAnchor, constant: 25),
+            focusThreeImageView.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 30),
+            focusThreeImageView.trailingAnchor.constraint(equalTo: viewBackground.trailingAnchor, constant: -30),
+            focusThreeImageView.heightAnchor.constraint(equalToConstant: 250),
+            
+            focusThreeLabel.topAnchor.constraint(equalTo: focusThreeImageView.bottomAnchor, constant: 25),
             focusThreeLabel.leadingAnchor.constraint(equalTo: focusTitleLabel.leadingAnchor),
             focusThreeLabel.trailingAnchor.constraint(equalTo: focusTitleLabel.trailingAnchor),
             
             focusFourTitleLabel.topAnchor.constraint(equalTo: focusThreeLabel.bottomAnchor, constant: 30),
             focusFourTitleLabel.leadingAnchor.constraint(equalTo: focusTitleLabel.leadingAnchor),
             
-            focusFourLabel.topAnchor.constraint(equalTo: focusFourTitleLabel.bottomAnchor, constant: 15),
+            focusFourImageView.topAnchor.constraint(equalTo: focusFourTitleLabel.bottomAnchor, constant: 25),
+            focusFourImageView.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 30),
+            focusFourImageView.trailingAnchor.constraint(equalTo: viewBackground.trailingAnchor, constant: -30),
+            focusFourImageView.heightAnchor.constraint(equalToConstant: 250),
+            
+            focusFourLabel.topAnchor.constraint(equalTo: focusFourImageView.bottomAnchor, constant: 25),
             focusFourLabel.leadingAnchor.constraint(equalTo: focusTitleLabel.leadingAnchor),
             focusFourLabel.trailingAnchor.constraint(equalTo: focusTitleLabel.trailingAnchor),
             
             focusFiveTitleLabel.topAnchor.constraint(equalTo: focusFourLabel.bottomAnchor, constant: 30),
             focusFiveTitleLabel.leadingAnchor.constraint(equalTo: focusTitleLabel.leadingAnchor),
             
-            focusFiveLabel.topAnchor.constraint(equalTo: focusFiveTitleLabel.bottomAnchor, constant: 15),
+            focusFiveImageView.topAnchor.constraint(equalTo: focusFiveTitleLabel.bottomAnchor, constant: 25),
+            focusFiveImageView.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 30),
+            focusFiveImageView.trailingAnchor.constraint(equalTo: viewBackground.trailingAnchor, constant: -30),
+            focusFiveImageView.heightAnchor.constraint(equalToConstant: 250),
+            
+            focusFiveLabel.topAnchor.constraint(equalTo: focusFiveImageView.bottomAnchor, constant: 25),
             focusFiveLabel.leadingAnchor.constraint(equalTo: focusTitleLabel.leadingAnchor),
             focusFiveLabel.trailingAnchor.constraint(equalTo: focusTitleLabel.trailingAnchor),
         ])

@@ -32,7 +32,7 @@ class DeepWorkViewModel {
     }
     
     public var heightForRowAt: CGFloat {
-        return 750
+        return 2280
     }
     
     public func loadCurrentFocus(indexPath: IndexPath) -> Focus {

@@ -44,18 +44,23 @@ class DeepWorkTableViewCell: UITableViewCell {
         screen.focusTitleLabel.text = data.focusTitle
         
         screen.focusOneTitleLabel.text = "• \(data.focusTopicOneTitle ?? "")"
+        screen.focusOneImageView.image = UIImage(named: data.focusTopicOneImage ?? "")
         screen.focusOneLabel.text = data.focusTopicOne
         
         screen.focusTwoTitleLabel.text = "• \(data.focusTopicTwoTitle ?? "")"
+        screen.focusTwoImageView.image = UIImage(named: data.focusTopicTwoImage ?? "")
         screen.focusTwoLabel.text = data.focusTopicTwo
         
         screen.focusThreeTitleLabel.text = "• \(data.focusTopicThreeTitle ?? "")"
+        screen.focusThreeImageView.image = UIImage(named: data.focusTopicThreeImage ?? "")
         screen.focusThreeLabel.text = data.focusTopicThree
         
         screen.focusFourTitleLabel.text = "• \(data.focusTopicFourTitle ?? "")"
+        screen.focusFourImageView.image = UIImage(named: data.focusTopicFourImage ?? "")
         screen.focusFourLabel.text = data.focusTopicFour
         
         screen.focusFiveTitleLabel.text = "• \(data.focusTopicFiveTitle ?? "")"
+        screen.focusFiveImageView.image = UIImage(named: data.focusTopicFiveImage ?? "")
         screen.focusFiveLabel.text = data.focusTopicFive
     }
 }

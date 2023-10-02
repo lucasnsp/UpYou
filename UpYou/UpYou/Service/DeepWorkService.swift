@@ -10,7 +10,7 @@ import UIKit
 class DeepWorkService: NSObject {
     
     func getDeepWorkService(completion: @escaping (DeepWorkData?, Error?) -> Void) {
-        let urlString: String = "https://run.mocky.io/v3/8a190e27-2afc-41f0-b79d-b328a8730b23"
+        let urlString: String = "https://run.mocky.io/v3/75f162c6-c9f9-47c0-84e2-aba156754c92"
         
         guard let url: URL = URL(string: urlString) else { return completion(nil, ErrorDetail.errorURL(urlString: urlString))}
         
