@@ -43,6 +43,14 @@ class EnvironmentTableViewCellScreen: UIView {
         return label
     }()
     
+    lazy var environmentOneImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 22
+        return imageView
+    }()
+    
     lazy var environmentOneLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -59,6 +67,14 @@ class EnvironmentTableViewCellScreen: UIView {
         label.numberOfLines = 0
         label.font = UIFont.boldSystemFont(ofSize: 20)
         return label
+    }()
+    
+    lazy var environmentTwoImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 22
+        return imageView
     }()
     
     lazy var environmentTwoLabel: UILabel = {
@@ -79,6 +95,14 @@ class EnvironmentTableViewCellScreen: UIView {
         return label
     }()
     
+    lazy var environmentThreeImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 22
+        return imageView
+    }()
+    
     lazy var environmentThreeLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -95,6 +119,14 @@ class EnvironmentTableViewCellScreen: UIView {
         label.numberOfLines = 0
         label.font = UIFont.boldSystemFont(ofSize: 20)
         return label
+    }()
+    
+    lazy var environmentFourImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 22
+        return imageView
     }()
     
     lazy var environmentFourLabel: UILabel = {
@@ -115,6 +147,14 @@ class EnvironmentTableViewCellScreen: UIView {
         return label
     }()
     
+    lazy var environmentFiveImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 22
+        return imageView
+    }()
+    
     lazy var environmentFiveLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -131,6 +171,14 @@ class EnvironmentTableViewCellScreen: UIView {
         label.numberOfLines = 0
         label.font = UIFont.boldSystemFont(ofSize: 20)
         return label
+    }()
+    
+    lazy var environmentSixImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 22
+        return imageView
     }()
     
     lazy var environmentSixLabel: UILabel = {
@@ -158,16 +206,22 @@ class EnvironmentTableViewCellScreen: UIView {
         viewBackground.addSubview(subImageView)
         viewBackground.addSubview(environmentTitleLabel)
         viewBackground.addSubview(environmentOneTitleLabel)
+        viewBackground.addSubview(environmentOneImageView)
         viewBackground.addSubview(environmentOneLabel)
         viewBackground.addSubview(environmentTwoTitleLabel)
+        viewBackground.addSubview(environmentTwoImageView)
         viewBackground.addSubview(environmentTwoLabel)
         viewBackground.addSubview(environmentThreeTitleLabel)
+        viewBackground.addSubview(environmentThreeImageView)
         viewBackground.addSubview(environmentThreeLabel)
         viewBackground.addSubview(environmentFourTitleLabel)
+        viewBackground.addSubview(environmentFourImageView)
         viewBackground.addSubview(environmentFourLabel)
         viewBackground.addSubview(environmentFiveTitleLabel)
+        viewBackground.addSubview(environmentFiveImageView)
         viewBackground.addSubview(environmentFiveLabel)
         viewBackground.addSubview(environmentSixTitleLabel)
+        viewBackground.addSubview(environmentSixImageView)
         viewBackground.addSubview(environmentSixLabel)
         
     }
@@ -191,42 +245,72 @@ class EnvironmentTableViewCellScreen: UIView {
             environmentOneTitleLabel.topAnchor.constraint(equalTo: environmentTitleLabel.bottomAnchor, constant: 30),
             environmentOneTitleLabel.leadingAnchor.constraint(equalTo: environmentTitleLabel.leadingAnchor),
             
-            environmentOneLabel.topAnchor.constraint(equalTo: environmentOneTitleLabel.bottomAnchor, constant: 15),
+            environmentOneImageView.topAnchor.constraint(equalTo: environmentOneTitleLabel.bottomAnchor, constant: 25),
+            environmentOneImageView.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 30),
+            environmentOneImageView.trailingAnchor.constraint(equalTo: viewBackground.trailingAnchor, constant: -30),
+            environmentOneImageView.heightAnchor.constraint(equalToConstant: 250),
+            
+            environmentOneLabel.topAnchor.constraint(equalTo: environmentOneImageView.bottomAnchor, constant: 25),
             environmentOneLabel.leadingAnchor.constraint(equalTo: environmentTitleLabel.leadingAnchor),
             environmentOneLabel.trailingAnchor.constraint(equalTo: environmentTitleLabel.trailingAnchor),
             
             environmentTwoTitleLabel.topAnchor.constraint(equalTo: environmentOneLabel.bottomAnchor, constant: 30),
             environmentTwoTitleLabel.leadingAnchor.constraint(equalTo: environmentTitleLabel.leadingAnchor),
             
-            environmentTwoLabel.topAnchor.constraint(equalTo: environmentTwoTitleLabel.bottomAnchor, constant: 15),
+            environmentTwoImageView.topAnchor.constraint(equalTo: environmentTwoTitleLabel.bottomAnchor, constant: 25),
+            environmentTwoImageView.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 30),
+            environmentTwoImageView.trailingAnchor.constraint(equalTo: viewBackground.trailingAnchor, constant: -30),
+            environmentTwoImageView.heightAnchor.constraint(equalToConstant: 250),
+
+            environmentTwoLabel.topAnchor.constraint(equalTo: environmentTwoImageView.bottomAnchor, constant: 25),
             environmentTwoLabel.leadingAnchor.constraint(equalTo: environmentTitleLabel.leadingAnchor),
             environmentTwoLabel.trailingAnchor.constraint(equalTo: environmentTitleLabel.trailingAnchor),
             
             environmentThreeTitleLabel.topAnchor.constraint(equalTo: environmentTwoLabel.bottomAnchor, constant: 30),
             environmentThreeTitleLabel.leadingAnchor.constraint(equalTo: environmentTitleLabel.leadingAnchor),
             
-            environmentThreeLabel.topAnchor.constraint(equalTo: environmentThreeTitleLabel.bottomAnchor, constant: 15),
+            environmentThreeImageView.topAnchor.constraint(equalTo: environmentThreeTitleLabel.bottomAnchor, constant: 25),
+            environmentThreeImageView.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 30),
+            environmentThreeImageView.trailingAnchor.constraint(equalTo: viewBackground.trailingAnchor, constant: -30),
+            environmentThreeImageView.heightAnchor.constraint(equalToConstant: 250),
+            
+            environmentThreeLabel.topAnchor.constraint(equalTo: environmentThreeImageView.bottomAnchor, constant: 25),
             environmentThreeLabel.leadingAnchor.constraint(equalTo: environmentTitleLabel.leadingAnchor),
             environmentThreeLabel.trailingAnchor.constraint(equalTo: environmentTitleLabel.trailingAnchor),
             
             environmentFourTitleLabel.topAnchor.constraint(equalTo: environmentThreeLabel.bottomAnchor, constant: 30),
             environmentFourTitleLabel.leadingAnchor.constraint(equalTo: environmentTitleLabel.leadingAnchor),
             
-            environmentFourLabel.topAnchor.constraint(equalTo: environmentFourTitleLabel.bottomAnchor, constant: 15),
+            environmentFourImageView.topAnchor.constraint(equalTo: environmentFourTitleLabel.bottomAnchor, constant: 25),
+            environmentFourImageView.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 30),
+            environmentFourImageView.trailingAnchor.constraint(equalTo: viewBackground.trailingAnchor, constant: -30),
+            environmentFourImageView.heightAnchor.constraint(equalToConstant: 250),
+            
+            environmentFourLabel.topAnchor.constraint(equalTo: environmentFourImageView.bottomAnchor, constant: 25),
             environmentFourLabel.leadingAnchor.constraint(equalTo: environmentTitleLabel.leadingAnchor),
             environmentFourLabel.trailingAnchor.constraint(equalTo: environmentTitleLabel.trailingAnchor),
             
             environmentFiveTitleLabel.topAnchor.constraint(equalTo: environmentFourLabel.bottomAnchor, constant: 30),
             environmentFiveTitleLabel.leadingAnchor.constraint(equalTo: environmentTitleLabel.leadingAnchor),
             
-            environmentFiveLabel.topAnchor.constraint(equalTo: environmentFiveTitleLabel.bottomAnchor, constant: 15),
+            environmentFiveImageView.topAnchor.constraint(equalTo: environmentFiveTitleLabel.bottomAnchor, constant: 25),
+            environmentFiveImageView.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 30),
+            environmentFiveImageView.trailingAnchor.constraint(equalTo: viewBackground.trailingAnchor, constant: -30),
+            environmentFiveImageView.heightAnchor.constraint(equalToConstant: 250),
+            
+            environmentFiveLabel.topAnchor.constraint(equalTo: environmentFiveImageView.bottomAnchor, constant: 25),
             environmentFiveLabel.leadingAnchor.constraint(equalTo: environmentTitleLabel.leadingAnchor),
             environmentFiveLabel.trailingAnchor.constraint(equalTo: environmentTitleLabel.trailingAnchor),
             
             environmentSixTitleLabel.topAnchor.constraint(equalTo: environmentFiveLabel.bottomAnchor, constant: 30),
             environmentSixTitleLabel.leadingAnchor.constraint(equalTo: environmentTitleLabel.leadingAnchor),
             
-            environmentSixLabel.topAnchor.constraint(equalTo: environmentSixTitleLabel.bottomAnchor, constant: 15),
+            environmentSixImageView.topAnchor.constraint(equalTo: environmentSixTitleLabel.bottomAnchor, constant: 25),
+            environmentSixImageView.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 30),
+            environmentSixImageView.trailingAnchor.constraint(equalTo: viewBackground.trailingAnchor, constant: -30),
+            environmentSixImageView.heightAnchor.constraint(equalToConstant: 250),
+            
+            environmentSixLabel.topAnchor.constraint(equalTo: environmentSixImageView.bottomAnchor, constant: 25),
             environmentSixLabel.leadingAnchor.constraint(equalTo: environmentTitleLabel.leadingAnchor),
             environmentSixLabel.trailingAnchor.constraint(equalTo: environmentTitleLabel.trailingAnchor),
         ])

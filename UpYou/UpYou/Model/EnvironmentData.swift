@@ -14,8 +14,9 @@ struct EnvironmentData: Codable {
 
 // MARK: - Environment
 struct Environment: Codable {
-    var environmentTitle, environmentTopicOneTitle, environmentTopicOne, environmentTopicTwoTitle: String?
-    var environmentTopicTwo, environmentTopicThreeTitle, environmentTopicThree, environmentTopicFourTitle: String?
-    var environmentTopicFour, environmentTopicFiveTitle, environmentTopicFive, environmentTopicSixTitle: String?
-    var environmentTopicSix: String?
+    var environmentTitle, environmentTopicOneTitle, environmentTopicOneImage, environmentTopicOne: String?
+    var environmentTopicTwoTitle, environmentTopicTwoImage, environmentTopicTwo, environmentTopicThreeTitle: String?
+    var environmentTopicThreeImage, environmentTopicThree, environmentTopicFourTitle, environmentTopicFourImage: String?
+    var environmentTopicFour, environmentTopicFiveTitle, environmentTopicFiveImage, environmentTopicFive: String?
+    var environmentTopicSixTitle, environmentTopicSixImage, environmentTopicSix: String?
 }

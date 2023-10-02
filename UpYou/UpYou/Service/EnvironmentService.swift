@@ -10,7 +10,7 @@ import UIKit
 class EnvironmentService: NSObject {
     
     func getEnvironmentService(completion: @escaping (EnvironmentData?, Error?) -> Void) {
-        let urlString: String = "https://run.mocky.io/v3/9369c0cd-76df-4f21-8620-d6f40865a9a7"
+        let urlString: String = "https://run.mocky.io/v3/b0ad5ceb-ad3f-4be0-bbf3-eaf7839493d2"
         
         guard let url: URL = URL(string: urlString) else { return completion(nil, ErrorDetail.errorURL(urlString: urlString))}
         

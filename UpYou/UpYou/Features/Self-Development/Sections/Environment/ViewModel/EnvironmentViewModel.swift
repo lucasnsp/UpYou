@@ -32,7 +32,7 @@ class EnvironmentViewModel {
     }
     
     public var heightForRowAt: CGFloat {
-        return 1050
+        return 2750
     }
     
     public func loadCurrentEnvironment(indexPath: IndexPath) -> Environment {

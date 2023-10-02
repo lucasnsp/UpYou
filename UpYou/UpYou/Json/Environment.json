@@ -3,18 +3,22 @@
         {
             "environmentTitle": "Influence of Environment on Growth & Productivity",
             "environmentTopicOneTitle": "Environmental Impact:",
+            "environmentTopicOneImage": "mulher_sorrindo",
             "environmentTopicOne": "Acknowledge that your physical and social environment significantly impacts your thoughts, actions, and emotions. Awareness is the first step toward making positive changes.",
             "environmentTopicTwoTitle": "Avoiding Toxic Environments:",
+            "environmentTopicTwoImage": "toxico",
             "environmentTopicTwo": "Identify and distance yourself from toxic environments that breed negativity, stress, or unhealthy habits. This could include workplaces with a toxic culture or social circles that are detrimental to your growth.",
             "environmentTopicThreeTitle": "Cultivating a Positive Space:",
+            "environmentTopicThreeImage": "concentracao",
             "environmentTopicThree": "Create a home and workspace that promote well-being. Incorporate elements that inspire you, such as artwork, plants, or calming colors. Keep your space organized to reduce stress.",
             "environmentTopicFourTitle": "Choosing Your Inner Circle:",
+            "environmentTopicFourImage": "pessoas_felizes",
             "environmentTopicFour": "Surround yourself with individuals who have a positive influence on your life. Seek out friends, mentors, and colleagues who share your goals and values, and who can offer support and encouragement.",
             "environmentTopicFiveTitle": "Emulating Productive Role Models:",
-            "environmentTopicFive": "Observe the habits and routines of highly productive people you admire. Learn from their strategies for time management, goal-setting, and continuous self-improvement.",
-            "environmentTopicFiveTitle": "Emulating Productive Role Models:",
+            "environmentTopicFiveImage": "role_models",
             "environmentTopicFive": "Observe the habits and routines of highly productive people you admire. Learn from their strategies for time management, goal-setting, and continuous self-improvement.",
             "environmentTopicSixTitle": "Continuous Self-Reflection:",
+            "environmentTopicSixImage": "reflexao",
             "environmentTopicSix": "Periodically reflect on how your environment and the people around you are influencing your progress and well-being. Adjust your surroundings and connections as needed to support your growth."
         }
     ]

@@ -44,21 +44,27 @@ class EnvironmentTableViewCell: UITableViewCell {
         screen.environmentTitleLabel.text = data.environmentTitle
         
         screen.environmentOneTitleLabel.text = "• \(data.environmentTopicOneTitle ?? "")"
+        screen.environmentOneImageView.image = UIImage(named: data.environmentTopicOneImage ?? "")
         screen.environmentOneLabel.text = data.environmentTopicOne
         
         screen.environmentTwoTitleLabel.text = "• \(data.environmentTopicTwoTitle ?? "")"
+        screen.environmentTwoImageView.image = UIImage(named: data.environmentTopicTwoImage ?? "")
         screen.environmentTwoLabel.text = data.environmentTopicTwo
         
         screen.environmentThreeTitleLabel.text = "• \(data.environmentTopicThreeTitle ?? "")"
+        screen.environmentThreeImageView.image = UIImage(named: data.environmentTopicThreeImage ?? "")
         screen.environmentThreeLabel.text = data.environmentTopicThree
         
         screen.environmentFourTitleLabel.text = "• \(data.environmentTopicFourTitle ?? "")"
+        screen.environmentFourImageView.image = UIImage(named: data.environmentTopicFourImage ?? "")
         screen.environmentFourLabel.text = data.environmentTopicFour
         
         screen.environmentFiveTitleLabel.text = "• \(data.environmentTopicFiveTitle ?? "")"
+        screen.environmentFiveImageView.image = UIImage(named: data.environmentTopicFiveImage ?? "")
         screen.environmentFiveLabel.text = data.environmentTopicFive
         
         screen.environmentSixTitleLabel.text = "• \(data.environmentTopicSixTitle ?? "")"
+        screen.environmentSixImageView.image = UIImage(named: data.environmentTopicSixImage ?? "")
         screen.environmentSixLabel.text = data.environmentTopicSix
     }
 }
