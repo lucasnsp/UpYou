@@ -64,7 +64,9 @@ extension PersonalDevelopmentVC: PersonalDevelopmentScreenDelegate {
     }
     
     func tappedHabitButton() {
-        print(#function)
+        let vc: HabitsVC = HabitsVC()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
     
     func tappedStoicButton() {

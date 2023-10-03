@@ -214,6 +214,7 @@ class DeepWorkTableViewCellScreen: UIView {
             
             focusOneTitleLabel.topAnchor.constraint(equalTo: focusTitleLabel.bottomAnchor, constant: 30),
             focusOneTitleLabel.leadingAnchor.constraint(equalTo: focusTitleLabel.leadingAnchor),
+            focusOneTitleLabel.trailingAnchor.constraint(equalTo: focusTitleLabel.trailingAnchor),
             
             focusOneImageView.topAnchor.constraint(equalTo: focusOneTitleLabel.bottomAnchor, constant: 25),
             focusOneImageView.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 30),
@@ -226,6 +227,7 @@ class DeepWorkTableViewCellScreen: UIView {
             
             focusTwoTitleLabel.topAnchor.constraint(equalTo: focusOneLabel.bottomAnchor, constant: 30),
             focusTwoTitleLabel.leadingAnchor.constraint(equalTo: focusTitleLabel.leadingAnchor),
+            focusTwoTitleLabel.trailingAnchor.constraint(equalTo: focusTitleLabel.trailingAnchor),
             
             focusTwoImageView.topAnchor.constraint(equalTo: focusTwoTitleLabel.bottomAnchor, constant: 25),
             focusTwoImageView.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 30),
@@ -238,6 +240,7 @@ class DeepWorkTableViewCellScreen: UIView {
             
             focusThreeTitleLabel.topAnchor.constraint(equalTo: focusTwoLabel.bottomAnchor, constant: 30),
             focusThreeTitleLabel.leadingAnchor.constraint(equalTo: focusTitleLabel.leadingAnchor),
+            focusThreeTitleLabel.trailingAnchor.constraint(equalTo: focusTitleLabel.trailingAnchor),
             
             focusThreeImageView.topAnchor.constraint(equalTo: focusThreeTitleLabel.bottomAnchor, constant: 25),
             focusThreeImageView.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 30),
@@ -250,6 +253,7 @@ class DeepWorkTableViewCellScreen: UIView {
             
             focusFourTitleLabel.topAnchor.constraint(equalTo: focusThreeLabel.bottomAnchor, constant: 30),
             focusFourTitleLabel.leadingAnchor.constraint(equalTo: focusTitleLabel.leadingAnchor),
+            focusFourTitleLabel.trailingAnchor.constraint(equalTo: focusTitleLabel.trailingAnchor),
             
             focusFourImageView.topAnchor.constraint(equalTo: focusFourTitleLabel.bottomAnchor, constant: 25),
             focusFourImageView.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 30),
@@ -262,6 +266,7 @@ class DeepWorkTableViewCellScreen: UIView {
             
             focusFiveTitleLabel.topAnchor.constraint(equalTo: focusFourLabel.bottomAnchor, constant: 30),
             focusFiveTitleLabel.leadingAnchor.constraint(equalTo: focusTitleLabel.leadingAnchor),
+            focusFiveTitleLabel.trailingAnchor.constraint(equalTo: focusTitleLabel.trailingAnchor),
             
             focusFiveImageView.topAnchor.constraint(equalTo: focusFiveTitleLabel.bottomAnchor, constant: 25),
             focusFiveImageView.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 30),

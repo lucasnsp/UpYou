@@ -77,6 +77,14 @@
 		467D1D922AC6F86B009E0B04 /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467D1D912AC6F86A009E0B04 /* BooksViewModel.swift */; };
 		467D1D972AC700AD009E0B04 /* BooksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467D1D962AC700AD009E0B04 /* BooksTableViewCell.swift */; };
 		467D1D992AC700BE009E0B04 /* BooksTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467D1D982AC700BE009E0B04 /* BooksTableViewCellScreen.swift */; };
+		46DA2CD92ACC399C00DEA703 /* HabitsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DA2CD82ACC399C00DEA703 /* HabitsVC.swift */; };
+		46DA2CDB2ACC39AE00DEA703 /* HabitsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DA2CDA2ACC39AE00DEA703 /* HabitsScreen.swift */; };
+		46DA2CDE2ACC39C900DEA703 /* HabitsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DA2CDD2ACC39C900DEA703 /* HabitsViewModel.swift */; };
+		46DA2CE42ACC3C3D00DEA703 /* Habits.json in Resources */ = {isa = PBXBuildFile; fileRef = 46DA2CE32ACC3C3D00DEA703 /* Habits.json */; };
+		46DA2CE62ACC426300DEA703 /* HabitsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DA2CE52ACC426300DEA703 /* HabitsData.swift */; };
+		46DA2CE82ACC429100DEA703 /* HabitsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DA2CE72ACC429100DEA703 /* HabitsService.swift */; };
+		46DA2CED2ACC46D200DEA703 /* HabitsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DA2CEC2ACC46D200DEA703 /* HabitsTableViewCell.swift */; };
+		46DA2CEF2ACC472000DEA703 /* HabitsTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DA2CEE2ACC472000DEA703 /* HabitsTableViewCellScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -149,6 +157,14 @@
 		467D1D912AC6F86A009E0B04 /* BooksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewModel.swift; sourceTree = "<group>"; };
 		467D1D962AC700AD009E0B04 /* BooksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksTableViewCell.swift; sourceTree = "<group>"; };
 		467D1D982AC700BE009E0B04 /* BooksTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksTableViewCellScreen.swift; sourceTree = "<group>"; };
+		46DA2CD82ACC399C00DEA703 /* HabitsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsVC.swift; sourceTree = "<group>"; };
+		46DA2CDA2ACC39AE00DEA703 /* HabitsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsScreen.swift; sourceTree = "<group>"; };
+		46DA2CDD2ACC39C900DEA703 /* HabitsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsViewModel.swift; sourceTree = "<group>"; };
+		46DA2CE32ACC3C3D00DEA703 /* Habits.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Habits.json; sourceTree = "<group>"; };
+		46DA2CE52ACC426300DEA703 /* HabitsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsData.swift; sourceTree = "<group>"; };
+		46DA2CE72ACC429100DEA703 /* HabitsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsService.swift; sourceTree = "<group>"; };
+		46DA2CEC2ACC46D200DEA703 /* HabitsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsTableViewCell.swift; sourceTree = "<group>"; };
+		46DA2CEE2ACC472000DEA703 /* HabitsTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsTableViewCellScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +214,7 @@
 				460583902AC1C3E300446A6F /* QuotesService.swift */,
 				460B7ACB2AC857770059EA44 /* DeepWorkService.swift */,
 				460B7ADE2AC877760059EA44 /* EnvironmentService.swift */,
+				46DA2CE72ACC429100DEA703 /* HabitsService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -210,6 +227,7 @@
 				467D1D8D2AC6F687009E0B04 /* BooksData.swift */,
 				460B7AC92AC857400059EA44 /* DeepWorkData.swift */,
 				460B7ADC2AC877490059EA44 /* EnvironmentData.swift */,
+				46DA2CE52ACC426300DEA703 /* HabitsData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -685,6 +703,7 @@
 				467D1D882AC5B90B009E0B04 /* Books.json */,
 				460B7AC72AC852200059EA44 /* DeepWork.json */,
 				460B7AD82AC8746E0059EA44 /* Environment.json */,
+				46DA2CE32ACC3C3D00DEA703 /* Habits.json */,
 			);
 			path = Json;
 			sourceTree = "<group>";
@@ -692,11 +711,12 @@
 		461BEF882ABB9A1C00C07847 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				460583872AC1C0BF00446A6F /* PersonalDevelopmentCell */,
 				460583B12AC47DBE00446A6F /* SavingMoneyCell */,
+				460583872AC1C0BF00446A6F /* PersonalDevelopmentCell */,
 				467D1D932AC70068009E0B04 /* BooksCell */,
 				460B7ACD2AC85B1C0059EA44 /* DeepWorkCell */,
 				460B7AE62AC87CDE0059EA44 /* EnvironmentCell */,
+				46DA2CE92ACC468E00DEA703 /* HabitsCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -803,6 +823,7 @@
 				467D1D7F2AC5B5E1009E0B04 /* Books */,
 				460B7ABD2AC848EC0059EA44 /* DeepWork */,
 				460B7AD42AC873C00059EA44 /* Environment */,
+				46DA2CD42ACC395800DEA703 /* Habits */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -852,6 +873,65 @@
 			isa = PBXGroup;
 			children = (
 				467D1D982AC700BE009E0B04 /* BooksTableViewCellScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		46DA2CD42ACC395800DEA703 /* Habits */ = {
+			isa = PBXGroup;
+			children = (
+				46DA2CD52ACC397400DEA703 /* ViewController */,
+				46DA2CD62ACC397C00DEA703 /* Screen */,
+				46DA2CD72ACC398300DEA703 /* ViewModel */,
+			);
+			path = Habits;
+			sourceTree = "<group>";
+		};
+		46DA2CD52ACC397400DEA703 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				46DA2CD82ACC399C00DEA703 /* HabitsVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		46DA2CD62ACC397C00DEA703 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				46DA2CDA2ACC39AE00DEA703 /* HabitsScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		46DA2CD72ACC398300DEA703 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				46DA2CDD2ACC39C900DEA703 /* HabitsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		46DA2CE92ACC468E00DEA703 /* HabitsCell */ = {
+			isa = PBXGroup;
+			children = (
+				46DA2CEA2ACC46B700DEA703 /* TableViewCell */,
+				46DA2CEB2ACC46C100DEA703 /* Screen */,
+			);
+			path = HabitsCell;
+			sourceTree = "<group>";
+		};
+		46DA2CEA2ACC46B700DEA703 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				46DA2CEC2ACC46D200DEA703 /* HabitsTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		46DA2CEB2ACC46C100DEA703 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				46DA2CEE2ACC472000DEA703 /* HabitsTableViewCellScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -922,6 +1002,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46DA2CE42ACC3C3D00DEA703 /* Habits.json in Resources */,
 				467D1D892AC5B90B009E0B04 /* Books.json in Resources */,
 				461BEF6A2ABA763A00C07847 /* GoogleService-Info.plist in Resources */,
 				461BEF2A2ABA74F700C07847 /* LaunchScreen.storyboard in Resources */,
@@ -941,6 +1022,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				461BEF602ABA758900C07847 /* RegisterScreen.swift in Sources */,
+				46DA2CD92ACC399C00DEA703 /* HabitsVC.swift in Sources */,
 				460583B52AC47EB300446A6F /* SavingMoneyTableViewCell.swift in Sources */,
 				461BEF7F2ABB679400C07847 /* HomeViewModel.swift in Sources */,
 				461BEF9C2ABC773E00C07847 /* OnboardingSavesScreen.swift in Sources */,
@@ -956,7 +1038,9 @@
 				461BEF552ABA758100C07847 /* LoginViewModel.swift in Sources */,
 				460B7AE12AC8787F0059EA44 /* EnvironmentVC.swift in Sources */,
 				461BEF4D2ABA756000C07847 /* ThirdInfoViewController.swift in Sources */,
+				46DA2CDE2ACC39C900DEA703 /* HabitsViewModel.swift in Sources */,
 				467D1D8B2AC6F571009E0B04 /* BooksService.swift in Sources */,
+				46DA2CED2ACC46D200DEA703 /* HabitsTableViewCell.swift in Sources */,
 				460B7AEC2AC87D750059EA44 /* EnvironmentTableViewCellScreen.swift in Sources */,
 				461BEF202ABA74F500C07847 /* SceneDelegate.swift in Sources */,
 				461BEF562ABA758100C07847 /* LoginScreen.swift in Sources */,
@@ -964,10 +1048,12 @@
 				461BEFAB2ABF121900C07847 /* PersonalDevelopmentScreen.swift in Sources */,
 				461BEFA22ABDD2C900C07847 /* SelfDevelopmentScreen.swift in Sources */,
 				460B7ACA2AC857400059EA44 /* DeepWorkData.swift in Sources */,
+				46DA2CE82ACC429100DEA703 /* HabitsService.swift in Sources */,
 				460B7AE32AC878990059EA44 /* EnvironmentScreen.swift in Sources */,
 				461BEF9A2ABC772800C07847 /* OnboardingSavesVC.swift in Sources */,
 				460B7ADF2AC877760059EA44 /* EnvironmentService.swift in Sources */,
 				460B7ADD2AC877490059EA44 /* EnvironmentData.swift in Sources */,
+				46DA2CEF2ACC472000DEA703 /* HabitsTableViewCellScreen.swift in Sources */,
 				461BEF642ABA758F00C07847 /* AlertController.swift in Sources */,
 				460583912AC1C3E300446A6F /* QuotesService.swift in Sources */,
 				4605839B2AC1C7F900446A6F /* PersonalDevelopmentViewModel.swift in Sources */,
@@ -985,6 +1071,7 @@
 				460583A22AC4603100446A6F /* SavingMoneyScreen.swift in Sources */,
 				467D1D922AC6F86B009E0B04 /* BooksViewModel.swift in Sources */,
 				460B7AD12AC85B4B0059EA44 /* DeepWorkTableViewCell.swift in Sources */,
+				46DA2CDB2ACC39AE00DEA703 /* HabitsScreen.swift in Sources */,
 				461BEF842ABB7D7000C07847 /* TabBarVC.swift in Sources */,
 				461BEFA02ABDD2B500C07847 /* SelfDevelopmentViewController.swift in Sources */,
 				461BEF5F2ABA758900C07847 /* RegisterViewModel.swift in Sources */,
@@ -995,6 +1082,7 @@
 				467D1D8E2AC6F687009E0B04 /* BooksData.swift in Sources */,
 				461BEFA72ABF107B00C07847 /* PersonalDevelopmentVC.swift in Sources */,
 				461BEF4C2ABA756000C07847 /* ThirdInfoScreen.swift in Sources */,
+				46DA2CE62ACC426300DEA703 /* HabitsData.swift in Sources */,
 				461BEF492ABA756000C07847 /* SecondInfoViewController.swift in Sources */,
 				461BEF472ABA756000C07847 /* FirstInfoViewController.swift in Sources */,
 				4605838B2AC1C0E900446A6F /* PersonalDevelopmentTableViewCell.swift in Sources */,

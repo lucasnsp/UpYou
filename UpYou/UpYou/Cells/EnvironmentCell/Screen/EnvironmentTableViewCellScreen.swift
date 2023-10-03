@@ -244,6 +244,7 @@ class EnvironmentTableViewCellScreen: UIView {
             
             environmentOneTitleLabel.topAnchor.constraint(equalTo: environmentTitleLabel.bottomAnchor, constant: 30),
             environmentOneTitleLabel.leadingAnchor.constraint(equalTo: environmentTitleLabel.leadingAnchor),
+            environmentOneTitleLabel.trailingAnchor.constraint(equalTo: environmentTitleLabel.trailingAnchor),
             
             environmentOneImageView.topAnchor.constraint(equalTo: environmentOneTitleLabel.bottomAnchor, constant: 25),
             environmentOneImageView.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 30),
@@ -256,6 +257,7 @@ class EnvironmentTableViewCellScreen: UIView {
             
             environmentTwoTitleLabel.topAnchor.constraint(equalTo: environmentOneLabel.bottomAnchor, constant: 30),
             environmentTwoTitleLabel.leadingAnchor.constraint(equalTo: environmentTitleLabel.leadingAnchor),
+            environmentTwoTitleLabel.trailingAnchor.constraint(equalTo: environmentTitleLabel.trailingAnchor),
             
             environmentTwoImageView.topAnchor.constraint(equalTo: environmentTwoTitleLabel.bottomAnchor, constant: 25),
             environmentTwoImageView.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 30),
@@ -268,6 +270,7 @@ class EnvironmentTableViewCellScreen: UIView {
             
             environmentThreeTitleLabel.topAnchor.constraint(equalTo: environmentTwoLabel.bottomAnchor, constant: 30),
             environmentThreeTitleLabel.leadingAnchor.constraint(equalTo: environmentTitleLabel.leadingAnchor),
+            environmentThreeTitleLabel.trailingAnchor.constraint(equalTo: environmentTitleLabel.trailingAnchor),
             
             environmentThreeImageView.topAnchor.constraint(equalTo: environmentThreeTitleLabel.bottomAnchor, constant: 25),
             environmentThreeImageView.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 30),
@@ -280,6 +283,7 @@ class EnvironmentTableViewCellScreen: UIView {
             
             environmentFourTitleLabel.topAnchor.constraint(equalTo: environmentThreeLabel.bottomAnchor, constant: 30),
             environmentFourTitleLabel.leadingAnchor.constraint(equalTo: environmentTitleLabel.leadingAnchor),
+            environmentFourTitleLabel.trailingAnchor.constraint(equalTo: environmentTitleLabel.trailingAnchor),
             
             environmentFourImageView.topAnchor.constraint(equalTo: environmentFourTitleLabel.bottomAnchor, constant: 25),
             environmentFourImageView.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 30),
@@ -292,6 +296,7 @@ class EnvironmentTableViewCellScreen: UIView {
             
             environmentFiveTitleLabel.topAnchor.constraint(equalTo: environmentFourLabel.bottomAnchor, constant: 30),
             environmentFiveTitleLabel.leadingAnchor.constraint(equalTo: environmentTitleLabel.leadingAnchor),
+            environmentFiveTitleLabel.trailingAnchor.constraint(equalTo: environmentTitleLabel.trailingAnchor),
             
             environmentFiveImageView.topAnchor.constraint(equalTo: environmentFiveTitleLabel.bottomAnchor, constant: 25),
             environmentFiveImageView.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 30),
@@ -304,6 +309,7 @@ class EnvironmentTableViewCellScreen: UIView {
             
             environmentSixTitleLabel.topAnchor.constraint(equalTo: environmentFiveLabel.bottomAnchor, constant: 30),
             environmentSixTitleLabel.leadingAnchor.constraint(equalTo: environmentTitleLabel.leadingAnchor),
+            environmentSixTitleLabel.trailingAnchor.constraint(equalTo: environmentTitleLabel.trailingAnchor),
             
             environmentSixImageView.topAnchor.constraint(equalTo: environmentSixTitleLabel.bottomAnchor, constant: 25),
             environmentSixImageView.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 30),
