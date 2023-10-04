@@ -40,7 +40,7 @@ class FirstInfoScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Welcome to UpYou"
+        label.text = "Bem-Vindo ao UPYOU"
         label.font = UIFont.boldSystemFont(ofSize: 28)
         label.textAlignment = .center
         return label
@@ -50,7 +50,7 @@ class FirstInfoScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Here, you manage your finances smartly.\n Let's start building a more solid financial future together."
+        label.text = "Aqui, você poderá manejar as suas finanças de forma inteligente. Vamos construir juntos um futuro financeiro mais sólido."
         label.numberOfLines = 0
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 16.5, weight: .semibold)
@@ -61,7 +61,7 @@ class FirstInfoScreen: UIView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .gray.withAlphaComponent(0.2)
-        button.setTitle("Continue", for: .normal)
+        button.setTitle("Continuar", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.clipsToBounds = true

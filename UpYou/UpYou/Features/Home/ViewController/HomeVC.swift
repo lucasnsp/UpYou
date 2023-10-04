@@ -33,14 +33,14 @@ extension HomeVC: HomeScreenDelegate {
     func tappedAddIncomeButton() {
         print(#function)
         
-        let alertController = UIAlertController(title: "Add Income", message: "Type your monthly income", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Adicionar Renda", message: "Digite a sua Renda Mensal", preferredStyle: .alert)
         
         alertController.addTextField { textField in
             textField.placeholder = "R$ 0,00"
             textField.keyboardType = .decimalPad
         }
         
-        let addAction = UIAlertAction(title: "Save", style: .default) { [weak self] _ in
+        let addAction = UIAlertAction(title: "Salvar", style: .default) { [weak self] _ in
             if let textField = alertController.textFields?.first, let incomeText = textField.text, let income = Double(incomeText) {
                 let formatter = NumberFormatter()
                 formatter.numberStyle = .currency
@@ -54,7 +54,7 @@ extension HomeVC: HomeScreenDelegate {
         }
         alertController.addAction(addAction)
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
         alertController.addAction(cancelAction)
         
         self.present(alertController, animated: true, completion: nil)

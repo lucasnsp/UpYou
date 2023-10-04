@@ -41,7 +41,7 @@ class SelfDevelopmentScreen: UIView {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "1% Better Everyday"
+        label.text = "1% melhor a cada dia"
         label.textColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 24)
         return label
@@ -50,7 +50,7 @@ class SelfDevelopmentScreen: UIView {
     lazy var descriptionLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Discover the keys to self-improvement: Unleash your potential, cultivate Habits, and master self-knowledge."
+        label.text = "Liberte o seu potencial, cultive hábitos e domine o auto-conhecimento."
         label.textColor = .white
         label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 16)
@@ -72,7 +72,7 @@ class SelfDevelopmentScreen: UIView {
         button.backgroundColor = .systemBlue
         button.clipsToBounds = true
         button.layer.cornerRadius = 24
-        button.setTitle("Continue", for: .normal)
+        button.setTitle("Continuar", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.addTarget(self, action: #selector(tappedContinueButton), for: .touchUpInside)
         return button

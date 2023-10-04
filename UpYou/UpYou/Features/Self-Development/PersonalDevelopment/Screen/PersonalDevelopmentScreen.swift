@@ -69,7 +69,7 @@ class PersonalDevelopmentScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Books"
+        label.text = "Livros"
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textAlignment = .left
         return label
@@ -79,7 +79,7 @@ class PersonalDevelopmentScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "A book is a dream in your hand."
+        label.text = "Um livro é um sonho na sua mão."
         label.font = UIFont.systemFont(ofSize: 13)
         label.textAlignment = .left
         return label
@@ -113,7 +113,7 @@ class PersonalDevelopmentScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Deep Work"
+        label.text = "Trabalho Focado"
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textAlignment = .left
         return label
@@ -123,7 +123,7 @@ class PersonalDevelopmentScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Understand the power of deep focus."
+        label.text = "Compreenda o poder do foco."
         label.font = UIFont.systemFont(ofSize: 13)
         label.textAlignment = .left
         return label
@@ -156,7 +156,7 @@ class PersonalDevelopmentScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Environment"
+        label.text = "Ambiente"
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textAlignment = .left
         return label
@@ -166,7 +166,7 @@ class PersonalDevelopmentScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Our environment shapes us deeply."
+        label.text = "O ambiente importa muito!."
         label.font = UIFont.systemFont(ofSize: 13)
         label.textAlignment = .left
         return label
@@ -199,7 +199,7 @@ class PersonalDevelopmentScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Habits"
+        label.text = "Habitos"
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textAlignment = .left
         return label
@@ -209,7 +209,7 @@ class PersonalDevelopmentScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Good habits will change your life."
+        label.text = "Bons hábitos mudarão a sua vida."
         label.font = UIFont.systemFont(ofSize: 13)
         label.textAlignment = .left
         return label
@@ -242,7 +242,7 @@ class PersonalDevelopmentScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Sleep"
+        label.text = "Sono"
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textAlignment = .left
         return label
@@ -252,7 +252,7 @@ class PersonalDevelopmentScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Good sleep is vital for success."
+        label.text = "Dormir bem é essencial para o sucesso."
         label.font = UIFont.systemFont(ofSize: 13)
         label.textAlignment = .left
         return label
@@ -285,7 +285,7 @@ class PersonalDevelopmentScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Stoicism"
+        label.text = "Estoicismo"
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textAlignment = .left
         return label
@@ -295,7 +295,7 @@ class PersonalDevelopmentScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Embrace serenity and resilience."
+        label.text = "Abrace a serenidade e a resiliência."
         label.font = UIFont.systemFont(ofSize: 13)
         label.textAlignment = .left
         return label
@@ -395,8 +395,24 @@ class PersonalDevelopmentScreen: UIView {
             viewMidBackground.trailingAnchor.constraint(equalTo: tableView.trailingAnchor),
             viewMidBackground.heightAnchor.constraint(equalToConstant: 380),
             
-            booksImageView.topAnchor.constraint(equalTo: viewMidBackground.topAnchor, constant: 20),
-            booksImageView.leadingAnchor.constraint(equalTo: viewMidBackground.leadingAnchor, constant: 12),
+            environmentImageView.topAnchor.constraint(equalTo: viewMidBackground.topAnchor, constant: 20),
+            environmentImageView.leadingAnchor.constraint(equalTo: viewMidBackground.leadingAnchor, constant: 12),
+            environmentImageView.heightAnchor.constraint(equalToConstant: 40),
+            environmentImageView.widthAnchor.constraint(equalToConstant: 40),
+            
+            environmentTitleLabel.topAnchor.constraint(equalTo: environmentImageView.topAnchor),
+            environmentTitleLabel.leadingAnchor.constraint(equalTo: environmentImageView.trailingAnchor, constant: 15),
+            
+            environmentSubTitlelabel.topAnchor.constraint(equalTo: environmentTitleLabel.bottomAnchor, constant: 5),
+            environmentSubTitlelabel.leadingAnchor.constraint(equalTo: environmentTitleLabel.leadingAnchor),
+            
+            environmentButton.topAnchor.constraint(equalTo: environmentImageView.topAnchor, constant: 12),
+            environmentButton.trailingAnchor.constraint(equalTo: viewMidBackground.trailingAnchor, constant: -12),
+            environmentButton.heightAnchor.constraint(equalToConstant: 20),
+            environmentButton.widthAnchor.constraint(equalToConstant: 20),
+            
+            booksImageView.topAnchor.constraint(equalTo: habitImageView.bottomAnchor, constant: 20),
+            booksImageView.leadingAnchor.constraint(equalTo: environmentImageView.leadingAnchor),
             booksImageView.heightAnchor.constraint(equalToConstant: 40),
             booksImageView.widthAnchor.constraint(equalToConstant: 40),
             
@@ -411,8 +427,8 @@ class PersonalDevelopmentScreen: UIView {
             booksButton.heightAnchor.constraint(equalToConstant: 20),
             booksButton.widthAnchor.constraint(equalToConstant: 20),
             
-            deepWorkImageView.topAnchor.constraint(equalTo: booksImageView.bottomAnchor, constant: 20),
-            deepWorkImageView.leadingAnchor.constraint(equalTo: booksImageView.leadingAnchor),
+            deepWorkImageView.topAnchor.constraint(equalTo: sleepImageView.bottomAnchor, constant: 20),
+            deepWorkImageView.leadingAnchor.constraint(equalTo: environmentImageView.leadingAnchor),
             deepWorkImageView.heightAnchor.constraint(equalTo: booksImageView.heightAnchor),
             deepWorkImageView.widthAnchor.constraint(equalTo: booksImageView.widthAnchor),
             
@@ -427,23 +443,7 @@ class PersonalDevelopmentScreen: UIView {
             deepWorkButton.heightAnchor.constraint(equalTo: booksButton.heightAnchor),
             deepWorkButton.widthAnchor.constraint(equalTo: booksButton.widthAnchor),
             
-            environmentImageView.topAnchor.constraint(equalTo: deepWorkImageView.bottomAnchor, constant: 20),
-            environmentImageView.leadingAnchor.constraint(equalTo: deepWorkImageView.leadingAnchor),
-            environmentImageView.heightAnchor.constraint(equalTo: booksImageView.heightAnchor),
-            environmentImageView.widthAnchor.constraint(equalTo: booksImageView.widthAnchor),
-            
-            environmentTitleLabel.topAnchor.constraint(equalTo: environmentImageView.topAnchor),
-            environmentTitleLabel.leadingAnchor.constraint(equalTo: environmentImageView.trailingAnchor, constant: 15),
-            
-            environmentSubTitlelabel.topAnchor.constraint(equalTo: environmentTitleLabel.bottomAnchor, constant: 5),
-            environmentSubTitlelabel.leadingAnchor.constraint(equalTo: environmentTitleLabel.leadingAnchor),
-            
-            environmentButton.topAnchor.constraint(equalTo: environmentImageView.topAnchor, constant: 12),
-            environmentButton.trailingAnchor.constraint(equalTo: deepWorkButton.trailingAnchor),
-            environmentButton.heightAnchor.constraint(equalTo: booksButton.heightAnchor),
-            environmentButton.widthAnchor.constraint(equalTo: booksButton.widthAnchor),
-            
-            habitImageView.topAnchor.constraint(equalTo: environmentImageView.bottomAnchor, constant: 20),
+            habitImageView.topAnchor.constraint(equalTo: stoicImageView.bottomAnchor, constant: 20),
             habitImageView.leadingAnchor.constraint(equalTo: environmentImageView.leadingAnchor),
             habitImageView.heightAnchor.constraint(equalTo: booksImageView.heightAnchor),
             habitImageView.widthAnchor.constraint(equalTo: booksImageView.widthAnchor),
@@ -459,8 +459,8 @@ class PersonalDevelopmentScreen: UIView {
             habitButton.heightAnchor.constraint(equalTo: booksButton.heightAnchor),
             habitButton.widthAnchor.constraint(equalTo: booksButton.widthAnchor),
             
-            sleepImageView.topAnchor.constraint(equalTo: habitImageView.bottomAnchor, constant: 20),
-            sleepImageView.leadingAnchor.constraint(equalTo: deepWorkImageView.leadingAnchor),
+            sleepImageView.topAnchor.constraint(equalTo: booksImageView.bottomAnchor, constant: 20),
+            sleepImageView.leadingAnchor.constraint(equalTo: environmentImageView.leadingAnchor),
             sleepImageView.heightAnchor.constraint(equalTo: booksImageView.heightAnchor),
             sleepImageView.widthAnchor.constraint(equalTo: booksImageView.widthAnchor),
             
@@ -475,8 +475,8 @@ class PersonalDevelopmentScreen: UIView {
             sleepButton.heightAnchor.constraint(equalTo: booksButton.heightAnchor),
             sleepButton.widthAnchor.constraint(equalTo: booksButton.widthAnchor),
             
-            stoicImageView.topAnchor.constraint(equalTo: sleepImageView.bottomAnchor, constant: 20),
-            stoicImageView.leadingAnchor.constraint(equalTo: booksImageView.leadingAnchor),
+            stoicImageView.topAnchor.constraint(equalTo: environmentImageView.bottomAnchor, constant: 20),
+            stoicImageView.leadingAnchor.constraint(equalTo: environmentImageView.leadingAnchor),
             stoicImageView.heightAnchor.constraint(equalTo: booksImageView.heightAnchor),
             stoicImageView.widthAnchor.constraint(equalTo: booksImageView.widthAnchor),
             

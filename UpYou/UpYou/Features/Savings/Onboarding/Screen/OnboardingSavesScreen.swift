@@ -41,7 +41,7 @@ class OnboardingSavesScreen: UIView {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Unlock Financial Freedom"
+        label.text = "Independência Financeira"
         label.textColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 24)
         return label
@@ -50,7 +50,7 @@ class OnboardingSavesScreen: UIView {
     lazy var descriptionLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Empower yourself with investment insights and financial management tips."
+        label.text = "Capacite-se com conhecimentos sobre investimentos e dicas de gestão financeira."
         label.textColor = .white
         label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 16)
@@ -72,7 +72,7 @@ class OnboardingSavesScreen: UIView {
         button.backgroundColor = .systemGreen
         button.clipsToBounds = true
         button.layer.cornerRadius = 24
-        button.setTitle("Continue", for: .normal)
+        button.setTitle("Continuar", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.addTarget(self, action: #selector(tappedContinueButton), for: .touchUpInside)
         return button

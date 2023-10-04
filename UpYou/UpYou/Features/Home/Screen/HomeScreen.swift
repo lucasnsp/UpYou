@@ -47,7 +47,7 @@ class HomeScreen: UIView {
     lazy var balanceLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Balance"
+        label.text = "Saldo"
         label.textColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 20)
         return label
@@ -58,7 +58,7 @@ class HomeScreen: UIView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .gray.withAlphaComponent(0.2)
-        button.setTitle("Add Income", for: .normal)
+        button.setTitle("Adicionar Renda", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.clipsToBounds = true

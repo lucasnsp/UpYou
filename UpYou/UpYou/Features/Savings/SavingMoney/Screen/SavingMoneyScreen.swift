@@ -85,7 +85,7 @@ class SavingMoneyScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Set a Goal"
+        label.text = "Metas"
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textAlignment = .left
         return label
@@ -95,7 +95,7 @@ class SavingMoneyScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Set financial goals for your future."
+        label.text = "Defina objetivos financeiros."
         label.font = UIFont.systemFont(ofSize: 13)
         label.textAlignment = .left
         return label
@@ -128,7 +128,7 @@ class SavingMoneyScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Expenses"
+        label.text = "Despesas"
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textAlignment = .left
         return label
@@ -138,7 +138,7 @@ class SavingMoneyScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Define your expenses in categories."
+        label.text = "Organize as suas despesas."
         label.font = UIFont.systemFont(ofSize: 13)
         label.textAlignment = .left
         return label
@@ -180,7 +180,7 @@ class SavingMoneyScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Cryptocurrency"
+        label.text = "CriptoMoedas"
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textAlignment = .left
         return label
@@ -190,7 +190,7 @@ class SavingMoneyScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Understand the future now. "
+        label.text = "Conheça o futuro agora."
         label.font = UIFont.systemFont(ofSize: 13)
         label.textAlignment = .left
         return label
@@ -223,7 +223,7 @@ class SavingMoneyScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Golden rules from Babylon"
+        label.text = "Regras de ouro da Babilônia"
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textAlignment = .left
         return label
@@ -233,7 +233,7 @@ class SavingMoneyScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Learn from Babylon's richest man."
+        label.text = "Dicas que mudam vidas."
         label.font = UIFont.systemFont(ofSize: 13)
         label.textAlignment = .left
         return label
@@ -266,7 +266,7 @@ class SavingMoneyScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Flls"
+        label.text = "Fundos Imobiliários"
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textAlignment = .left
         return label
@@ -276,7 +276,7 @@ class SavingMoneyScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Building wealth through property."
+        label.text = "Crie um patrimônio através de imóveis."
         label.font = UIFont.systemFont(ofSize: 13)
         label.textAlignment = .left
         return label
@@ -309,7 +309,7 @@ class SavingMoneyScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Stocks"
+        label.text = "Ações"
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textAlignment = .left
         return label
@@ -319,7 +319,7 @@ class SavingMoneyScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Engaging in Financial Markets."
+        label.text = "Conheça mais sobre ações."
         label.font = UIFont.systemFont(ofSize: 13)
         label.textAlignment = .left
         return label
@@ -352,7 +352,7 @@ class SavingMoneyScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Fixed Income"
+        label.text = "Renda Fixa"
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textAlignment = .left
         return label
@@ -362,7 +362,7 @@ class SavingMoneyScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Predictable way to grow your wealth."
+        label.text = "Entenda o que é e seus tipos."
         label.font = UIFont.systemFont(ofSize: 13)
         label.textAlignment = .left
         return label
@@ -486,7 +486,23 @@ class SavingMoneyScreen: UIView {
             viewBottomBackground.trailingAnchor.constraint(equalTo: viewMidBackground.trailingAnchor),
             viewBottomBackground.heightAnchor.constraint(equalToConstant: 320),
             
-            cryptoImageView.topAnchor.constraint(equalTo: viewBottomBackground.topAnchor, constant: 20),
+            stocksImageView.topAnchor.constraint(equalTo: viewBottomBackground.topAnchor, constant: 20),
+            stocksImageView.leadingAnchor.constraint(equalTo: viewBottomBackground.leadingAnchor, constant: 12),
+            stocksImageView.heightAnchor.constraint(equalToConstant: 40),
+            stocksImageView.widthAnchor.constraint(equalToConstant: 40),
+            
+            stocksTitleLabel.topAnchor.constraint(equalTo: stocksImageView.topAnchor),
+            stocksTitleLabel.leadingAnchor.constraint(equalTo: stocksImageView.trailingAnchor, constant: 15),
+            
+            stocksSubTitlelabel.topAnchor.constraint(equalTo: stocksTitleLabel.bottomAnchor, constant: 5),
+            stocksSubTitlelabel.leadingAnchor.constraint(equalTo: stocksTitleLabel.leadingAnchor),
+            
+            stocksButton.topAnchor.constraint(equalTo: stocksImageView.topAnchor, constant: 12),
+            stocksButton.trailingAnchor.constraint(equalTo: viewBottomBackground.trailingAnchor, constant: -12),
+            stocksButton.heightAnchor.constraint(equalTo: setAGoalButton.heightAnchor),
+            stocksButton.widthAnchor.constraint(equalTo: setAGoalButton.widthAnchor),
+            
+            cryptoImageView.topAnchor.constraint(equalTo: stocksImageView.bottomAnchor, constant: 20),
             cryptoImageView.leadingAnchor.constraint(equalTo: viewBottomBackground.leadingAnchor, constant: 12),
             cryptoImageView.heightAnchor.constraint(equalToConstant: 40),
             cryptoImageView.widthAnchor.constraint(equalToConstant: 40),
@@ -502,23 +518,7 @@ class SavingMoneyScreen: UIView {
             cryptoButton.heightAnchor.constraint(equalTo: setAGoalButton.heightAnchor),
             cryptoButton.widthAnchor.constraint(equalTo: setAGoalButton.widthAnchor),
             
-            goldenRulesImageView.topAnchor.constraint(equalTo: cryptoImageView.bottomAnchor, constant: 20),
-            goldenRulesImageView.leadingAnchor.constraint(equalTo: cryptoImageView.leadingAnchor),
-            goldenRulesImageView.heightAnchor.constraint(equalToConstant: 40),
-            goldenRulesImageView.widthAnchor.constraint(equalToConstant: 40),
-            
-            goldenRulesTitleLabel.topAnchor.constraint(equalTo: goldenRulesImageView.topAnchor),
-            goldenRulesTitleLabel.leadingAnchor.constraint(equalTo: goldenRulesImageView.trailingAnchor, constant: 15),
-            
-            goldenRulesSubTitlelabel.topAnchor.constraint(equalTo: goldenRulesTitleLabel.bottomAnchor, constant: 5),
-            goldenRulesSubTitlelabel.leadingAnchor.constraint(equalTo: goldenRulesTitleLabel.leadingAnchor),
-            
-            goldenRulesButton.topAnchor.constraint(equalTo: goldenRulesImageView.topAnchor, constant: 12),
-            goldenRulesButton.trailingAnchor.constraint(equalTo: cryptoButton.trailingAnchor),
-            goldenRulesButton.heightAnchor.constraint(equalTo: setAGoalButton.heightAnchor),
-            goldenRulesButton.widthAnchor.constraint(equalTo: setAGoalButton.widthAnchor),
-            
-            fllsImageView.topAnchor.constraint(equalTo: goldenRulesImageView.bottomAnchor, constant: 20),
+            fllsImageView.topAnchor.constraint(equalTo: cryptoImageView.bottomAnchor, constant: 20),
             fllsImageView.leadingAnchor.constraint(equalTo: cryptoImageView.leadingAnchor),
             fllsImageView.heightAnchor.constraint(equalToConstant: 40),
             fllsImageView.widthAnchor.constraint(equalToConstant: 40),
@@ -534,7 +534,23 @@ class SavingMoneyScreen: UIView {
             fllsButton.heightAnchor.constraint(equalTo: setAGoalButton.heightAnchor),
             fllsButton.widthAnchor.constraint(equalTo: setAGoalButton.widthAnchor),
             
-            fixedIncomeImageView.topAnchor.constraint(equalTo: fllsImageView.bottomAnchor, constant: 20),
+            goldenRulesImageView.topAnchor.constraint(equalTo: fllsImageView.bottomAnchor, constant: 20),
+            goldenRulesImageView.leadingAnchor.constraint(equalTo: cryptoImageView.leadingAnchor),
+            goldenRulesImageView.heightAnchor.constraint(equalToConstant: 40),
+            goldenRulesImageView.widthAnchor.constraint(equalToConstant: 40),
+            
+            goldenRulesTitleLabel.topAnchor.constraint(equalTo: goldenRulesImageView.topAnchor),
+            goldenRulesTitleLabel.leadingAnchor.constraint(equalTo: goldenRulesImageView.trailingAnchor, constant: 15),
+            
+            goldenRulesSubTitlelabel.topAnchor.constraint(equalTo: goldenRulesTitleLabel.bottomAnchor, constant: 5),
+            goldenRulesSubTitlelabel.leadingAnchor.constraint(equalTo: goldenRulesTitleLabel.leadingAnchor),
+            
+            goldenRulesButton.topAnchor.constraint(equalTo: goldenRulesImageView.topAnchor, constant: 12),
+            goldenRulesButton.trailingAnchor.constraint(equalTo: cryptoButton.trailingAnchor),
+            goldenRulesButton.heightAnchor.constraint(equalTo: setAGoalButton.heightAnchor),
+            goldenRulesButton.widthAnchor.constraint(equalTo: setAGoalButton.widthAnchor),
+            
+            fixedIncomeImageView.topAnchor.constraint(equalTo: goldenRulesImageView.bottomAnchor, constant: 20),
             fixedIncomeImageView.leadingAnchor.constraint(equalTo: cryptoImageView.leadingAnchor),
             fixedIncomeImageView.heightAnchor.constraint(equalToConstant: 40),
             fixedIncomeImageView.widthAnchor.constraint(equalToConstant: 40),
@@ -549,24 +565,6 @@ class SavingMoneyScreen: UIView {
             fixedIncomeButton.trailingAnchor.constraint(equalTo: cryptoButton.trailingAnchor),
             fixedIncomeButton.heightAnchor.constraint(equalTo: setAGoalButton.heightAnchor),
             fixedIncomeButton.widthAnchor.constraint(equalTo: setAGoalButton.widthAnchor),
-            
-            stocksImageView.topAnchor.constraint(equalTo: fixedIncomeImageView.bottomAnchor, constant: 20),
-            stocksImageView.leadingAnchor.constraint(equalTo: cryptoImageView.leadingAnchor),
-            stocksImageView.heightAnchor.constraint(equalToConstant: 40),
-            stocksImageView.widthAnchor.constraint(equalToConstant: 40),
-
-            stocksTitleLabel.topAnchor.constraint(equalTo: stocksImageView.topAnchor),
-            stocksTitleLabel.leadingAnchor.constraint(equalTo: stocksImageView.trailingAnchor, constant: 15),
-
-            stocksSubTitlelabel.topAnchor.constraint(equalTo: stocksTitleLabel.bottomAnchor, constant: 5),
-            stocksSubTitlelabel.leadingAnchor.constraint(equalTo: stocksTitleLabel.leadingAnchor),
-
-            stocksButton.topAnchor.constraint(equalTo: stocksImageView.topAnchor, constant: 12),
-            stocksButton.trailingAnchor.constraint(equalTo: cryptoButton.trailingAnchor),
-            stocksButton.heightAnchor.constraint(equalTo: setAGoalButton.heightAnchor),
-            stocksButton.widthAnchor.constraint(equalTo: setAGoalButton.widthAnchor),
-            
-           
         ])
     }
     

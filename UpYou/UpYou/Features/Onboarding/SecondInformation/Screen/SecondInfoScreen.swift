@@ -40,7 +40,7 @@ class SecondInfoScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Not just a Finance App"
+        label.text = "Mais que um App de Finanças"
         label.font = UIFont.boldSystemFont(ofSize: 28)
         label.textAlignment = .center
         return label
@@ -50,7 +50,7 @@ class SecondInfoScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "At UpYou, it's not just about tracking expenses, but also about creating and building the right mindset to succed in life."
+        label.text = "No UpYou, não se trata apenas de controlar as despesas, mas também de criar e desenvolver a mentalidade certa para ter sucesso na vida."
         label.numberOfLines = 0
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 16.5, weight: .semibold)
@@ -61,7 +61,7 @@ class SecondInfoScreen: UIView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .gray.withAlphaComponent(0.2)
-        button.setTitle("There's more", for: .normal)
+        button.setTitle("Continuar", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.clipsToBounds = true

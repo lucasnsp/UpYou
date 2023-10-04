@@ -45,7 +45,7 @@ class RegisterScreen: UIView {
     lazy var loginLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Sign Up Now"
+        label.text = "Registre-se"
         label.textColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 28)
         label.textAlignment = .center
@@ -56,7 +56,7 @@ class RegisterScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white.withAlphaComponent(0.7)
-        label.text = "Please create a free account to use the app. "
+        label.text = "Crie uma conta gratuita para utilizar o app. "
         label.font = UIFont.systemFont(ofSize: 12)
         label.textAlignment = .center
         return label
@@ -85,7 +85,7 @@ class RegisterScreen: UIView {
         tf.backgroundColor = .white
         tf.borderStyle = .roundedRect
         tf.isSecureTextEntry = true
-        tf.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray.withAlphaComponent(0.6)])
+        tf.attributedPlaceholder = NSAttributedString(string: "Senha", attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray.withAlphaComponent(0.6)])
         tf.textColor = .darkGray
         tf.clipsToBounds = true
         tf.layer.cornerRadius = 24
@@ -98,7 +98,7 @@ class RegisterScreen: UIView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .white.withAlphaComponent(0.2)
-        button.setTitle("Sign Up", for: .normal)
+        button.setTitle("Registrar", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 26)
         button.clipsToBounds = true
@@ -115,7 +115,7 @@ class RegisterScreen: UIView {
     lazy var loginButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Already have an account? Login", for: .normal)
+        button.setTitle("Já tem uma conta? Iniciar sessão", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         button.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)

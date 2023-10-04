@@ -40,7 +40,7 @@ class ThirdInfoScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Discover your path"
+        label.text = "Descubra o seu caminho"
         label.font = UIFont.boldSystemFont(ofSize: 28)
         label.textAlignment = .center
         return label
@@ -50,7 +50,7 @@ class ThirdInfoScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "We'll guide you on the journey to achieve your goals, step by step, creating good habits, learning how to save money and reaching your full potential."
+        label.text = "Vamos guiá-lo nessa jornada para atingir os seus objetivos, passo a passo, criando bons hábitos, aprendendo a poupar dinheiro e atingindo todo o seu potencial."
         label.numberOfLines = 0
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 16.5, weight: .semibold)
@@ -61,7 +61,7 @@ class ThirdInfoScreen: UIView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .gray.withAlphaComponent(0.2)
-        button.setTitle("Are you ready?", for: .normal)
+        button.setTitle("Você está pronto?", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.clipsToBounds = true
