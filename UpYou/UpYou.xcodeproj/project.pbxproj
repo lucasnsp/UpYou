@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		460536972ACEEE62003FC929 /* Stoicism.json in Resources */ = {isa = PBXBuildFile; fileRef = 460536962ACEEE62003FC929 /* Stoicism.json */; };
+		4605369C2ACEF65A003FC929 /* StoicismData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4605369B2ACEF65A003FC929 /* StoicismData.swift */; };
+		460536A22ACEF6D0003FC929 /* StoicismVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460536A12ACEF6D0003FC929 /* StoicismVC.swift */; };
+		460536A42ACEF6E8003FC929 /* StoicismScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460536A32ACEF6E8003FC929 /* StoicismScreen.swift */; };
+		460536A62ACEF6F9003FC929 /* StoicismViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460536A52ACEF6F9003FC929 /* StoicismViewModel.swift */; };
+		460536AB2ACEF938003FC929 /* StoicismTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460536AA2ACEF938003FC929 /* StoicismTableViewCell.swift */; };
+		460536AD2ACEF94F003FC929 /* StoicismTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460536AC2ACEF94F003FC929 /* StoicismTableViewCellScreen.swift */; };
 		4605838B2AC1C0E900446A6F /* PersonalDevelopmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4605838A2AC1C0E900446A6F /* PersonalDevelopmentTableViewCell.swift */; };
 		4605838D2AC1C1EA00446A6F /* PersonalDevelopmentTableViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4605838C2AC1C1EA00446A6F /* PersonalDevelopmentTableViewScreen.swift */; };
 		460583912AC1C3E300446A6F /* QuotesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460583902AC1C3E300446A6F /* QuotesService.swift */; };
@@ -88,6 +95,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		460536962ACEEE62003FC929 /* Stoicism.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Stoicism.json; sourceTree = "<group>"; };
+		4605369B2ACEF65A003FC929 /* StoicismData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoicismData.swift; sourceTree = "<group>"; };
+		460536A12ACEF6D0003FC929 /* StoicismVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoicismVC.swift; sourceTree = "<group>"; };
+		460536A32ACEF6E8003FC929 /* StoicismScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoicismScreen.swift; sourceTree = "<group>"; };
+		460536A52ACEF6F9003FC929 /* StoicismViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoicismViewModel.swift; sourceTree = "<group>"; };
+		460536AA2ACEF938003FC929 /* StoicismTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoicismTableViewCell.swift; sourceTree = "<group>"; };
+		460536AC2ACEF94F003FC929 /* StoicismTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoicismTableViewCellScreen.swift; sourceTree = "<group>"; };
 		4605838A2AC1C0E900446A6F /* PersonalDevelopmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDevelopmentTableViewCell.swift; sourceTree = "<group>"; };
 		4605838C2AC1C1EA00446A6F /* PersonalDevelopmentTableViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDevelopmentTableViewScreen.swift; sourceTree = "<group>"; };
 		460583902AC1C3E300446A6F /* QuotesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesService.swift; sourceTree = "<group>"; };
@@ -181,6 +195,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4605369D2ACEF67C003FC929 /* Stoicism */ = {
+			isa = PBXGroup;
+			children = (
+				4605369E2ACEF696003FC929 /* ViewController */,
+				4605369F2ACEF69D003FC929 /* Screen */,
+				460536A02ACEF6A1003FC929 /* ViewModel */,
+			);
+			path = Stoicism;
+			sourceTree = "<group>";
+		};
+		4605369E2ACEF696003FC929 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				460536A12ACEF6D0003FC929 /* StoicismVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4605369F2ACEF69D003FC929 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				460536A32ACEF6E8003FC929 /* StoicismScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		460536A02ACEF6A1003FC929 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				460536A52ACEF6F9003FC929 /* StoicismViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		460536A72ACEF8F6003FC929 /* StoicismCell */ = {
+			isa = PBXGroup;
+			children = (
+				460536A82ACEF914003FC929 /* TableViewCell */,
+				460536A92ACEF91B003FC929 /* Screen */,
+			);
+			path = StoicismCell;
+			sourceTree = "<group>";
+		};
+		460536A82ACEF914003FC929 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				460536AA2ACEF938003FC929 /* StoicismTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		460536A92ACEF91B003FC929 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				460536AC2ACEF94F003FC929 /* StoicismTableViewCellScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		460583872AC1C0BF00446A6F /* PersonalDevelopmentCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +301,7 @@
 				460B7AC92AC857400059EA44 /* DeepWorkData.swift */,
 				460B7ADC2AC877490059EA44 /* EnvironmentData.swift */,
 				46DA2CE52ACC426300DEA703 /* HabitsData.swift */,
+				4605369B2ACEF65A003FC929 /* StoicismData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -704,6 +778,7 @@
 				460B7AC72AC852200059EA44 /* DeepWork.json */,
 				460B7AD82AC8746E0059EA44 /* Environment.json */,
 				46DA2CE32ACC3C3D00DEA703 /* Habits.json */,
+				460536962ACEEE62003FC929 /* Stoicism.json */,
 			);
 			path = Json;
 			sourceTree = "<group>";
@@ -717,6 +792,7 @@
 				460B7ACD2AC85B1C0059EA44 /* DeepWorkCell */,
 				460B7AE62AC87CDE0059EA44 /* EnvironmentCell */,
 				46DA2CE92ACC468E00DEA703 /* HabitsCell */,
+				460536A72ACEF8F6003FC929 /* StoicismCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -824,6 +900,7 @@
 				460B7ABD2AC848EC0059EA44 /* DeepWork */,
 				460B7AD42AC873C00059EA44 /* Environment */,
 				46DA2CD42ACC395800DEA703 /* Habits */,
+				4605369D2ACEF67C003FC929 /* Stoicism */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -1006,6 +1083,7 @@
 				467D1D892AC5B90B009E0B04 /* Books.json in Resources */,
 				461BEF6A2ABA763A00C07847 /* GoogleService-Info.plist in Resources */,
 				461BEF2A2ABA74F700C07847 /* LaunchScreen.storyboard in Resources */,
+				460536972ACEEE62003FC929 /* Stoicism.json in Resources */,
 				461BEF872ABB914900C07847 /* Quote.json in Resources */,
 				461BEF272ABA74F700C07847 /* Assets.xcassets in Resources */,
 				460B7AD92AC8746E0059EA44 /* Environment.json in Resources */,
@@ -1030,8 +1108,10 @@
 				461BEF7B2ABB677500C07847 /* HomeVC.swift in Sources */,
 				461BEF7D2ABB678900C07847 /* HomeScreen.swift in Sources */,
 				460583A02AC4602200446A6F /* SavingMoneyVC.swift in Sources */,
+				460536AB2ACEF938003FC929 /* StoicismTableViewCell.swift in Sources */,
 				461BEF482ABA756000C07847 /* SecondInfoScreen.swift in Sources */,
 				460B7AC62AC851C00059EA44 /* DeepWorkViewModel.swift in Sources */,
+				4605369C2ACEF65A003FC929 /* StoicismData.swift in Sources */,
 				460583B02AC47A5700446A6F /* SavingMoneyViewModel.swift in Sources */,
 				467D1D992AC700BE009E0B04 /* BooksTableViewCellScreen.swift in Sources */,
 				461BEF1E2ABA74F500C07847 /* AppDelegate.swift in Sources */,
@@ -1041,6 +1121,7 @@
 				46DA2CDE2ACC39C900DEA703 /* HabitsViewModel.swift in Sources */,
 				467D1D8B2AC6F571009E0B04 /* BooksService.swift in Sources */,
 				46DA2CED2ACC46D200DEA703 /* HabitsTableViewCell.swift in Sources */,
+				460536AD2ACEF94F003FC929 /* StoicismTableViewCellScreen.swift in Sources */,
 				460B7AEC2AC87D750059EA44 /* EnvironmentTableViewCellScreen.swift in Sources */,
 				461BEF202ABA74F500C07847 /* SceneDelegate.swift in Sources */,
 				461BEF562ABA758100C07847 /* LoginScreen.swift in Sources */,
@@ -1068,6 +1149,8 @@
 				460583C12AC48EA000446A6F /* MoneyPhrasesData.swift in Sources */,
 				461BEF462ABA756000C07847 /* FirstInfoScreen.swift in Sources */,
 				460B7AC32AC8492E0059EA44 /* DeepWorkScreen.swift in Sources */,
+				460536A42ACEF6E8003FC929 /* StoicismScreen.swift in Sources */,
+				460536A62ACEF6F9003FC929 /* StoicismViewModel.swift in Sources */,
 				460583A22AC4603100446A6F /* SavingMoneyScreen.swift in Sources */,
 				467D1D922AC6F86B009E0B04 /* BooksViewModel.swift in Sources */,
 				460B7AD12AC85B4B0059EA44 /* DeepWorkTableViewCell.swift in Sources */,
@@ -1087,6 +1170,7 @@
 				461BEF472ABA756000C07847 /* FirstInfoViewController.swift in Sources */,
 				4605838B2AC1C0E900446A6F /* PersonalDevelopmentTableViewCell.swift in Sources */,
 				460B7AE52AC878D40059EA44 /* EnvironmentViewModel.swift in Sources */,
+				460536A22ACEF6D0003FC929 /* StoicismVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,50 +2,50 @@
     "books": [
         {
             "bookImage": "deepWork",
-            "bookName": "Deep Work",
-            "bookDescription": "Deep Work takes the reader on a journey through memorable stories-from Carl Jung building a stone tower in the woods to focus his mind.",
+            "bookName": "Trabalho Profundo",
+            "bookDescription": "Trabalho Profundo leva o leitor a uma jornada através de histórias memoráveis - desde Carl Jung construindo uma torre de pedra na floresta para focar sua mente.",
             "bookScore": "9.8"
         },
         {
             "bookImage": "richestManInBabylon",
-            "bookName": "The Richest Man in Babylon",
-            "bookDescription": "Money is plentiful for those who understand the simple rules of its acquisition. If you follow the wisdom of Babylon, financial peace and a life of freedom are just seven steps away.",
+            "bookName": "O Homem Mais Rico da Babilônia",
+            "bookDescription": "O dinheiro é abundante para aqueles que entendem as regras simples de sua aquisição. Se você seguir a sabedoria da Babilônia, a paz financeira e uma vida de liberdade estão a apenas sete passos de distância.",
             "bookScore": "10"
         },
         {
             "bookImage": "EgoisTheEnemy",
-            "bookName": "Ego Is the Enemy",
-            "bookDescription": "Many of us insist the main impediment to a full, successful life is the outside world. In fact, the most common enemy lies within: our ego.",
+            "bookName": "O Ego É o Inimigo",
+            "bookDescription": "Muitos de nós insistem que o principal obstáculo para uma vida plena e bem-sucedida está no mundo exterior. Na verdade, o inimigo mais comum está dentro de nós: nosso ego.",
             "bookScore": "9.0"
         },
         {
             "bookImage": "theOnlyThing",
-            "bookName": "The One Thing",
-            "bookDescription": "The ONE Thing delivers extraordinary results in every area of your life—work, personal, family, and spiritual. WHAT’S YOUR ONE THING?",
+            "bookName": "A Única Coisa",
+            "bookDescription": "A ÚNICA Coisa oferece resultados extraordinários em todas as áreas de sua vida - trabalho, pessoal, familiar e espiritual. QUAL É A SUA ÚNICA COISA?",
             "bookScore": "10"
         },
         {
             "bookImage": "TheCourageToBeDisliked",
-            "bookName": "The Courage To Be Disliked",
-            "bookDescription": "The Japanese phenomenon that teaches us the simple yet profound lessons required to liberate our real selves and find lasting happiness.",
+            "bookName": "A Coragem de não agradar",
+            "bookDescription": "O fenômeno japonês que nos ensina as lições simples, porém profundas, necessárias para liberar nosso verdadeiro eu e encontrar felicidade duradoura.",
             "bookScore": "10"
         },
         {
             "bookImage": "PsychologyOfMoney",
-            "bookName": "The Psychology of Money",
-            "bookDescription": "Doing well with money isn’t necessarily about what you know. It’s about how you behave. And behavior is hard to teach, even to really smart people.",
+            "bookName": "A Psicologia Financeira",
+            "bookDescription": "Ter sucesso com o dinheiro não se trata necessariamente do que você sabe. Trata-se de como você se comporta. E o comportamento é difícil de ensinar, mesmo para pessoas muito inteligentes.",
             "bookScore": "9.5"
         },
         {
             "bookImage": "LivesOfTheStoics",
-            "bookName": "Lives Of The Stoics",
-            "bookDescription": "From the bestselling authors of The Daily Stoic comes an inspiring guide to the lives of the Stoics, and what the ancients can teach us about happiness, success, resilience and virtue.",
+            "bookName": "A Vida dos Estoicos",
+            "bookDescription": "Dos autores best-sellers de O Estoico Diário, vem um guia inspirador para as vidas dos estoicos e o que os antigos podem nos ensinar sobre felicidade, sucesso, resiliência e virtude.",
             "bookScore": "9.8"
         },
         {
             "bookImage": "thinkAgain",
-            "bookName": "Think Again",
-            "bookDescription": "THIS. This is the right book for right now. Yes, learning requires focus. But, unlearning and relearning requires much more—it requires choosing courage over comfort.",
+            "bookName": "Pense de novo",
+            "bookDescription": "ISTO. Este é o livro certo para o momento certo. Sim, aprender requer foco. Mas desaprender e reaprender requer muito mais - requer escolher a coragem em vez do conforto.",
             "bookScore": "9.5"
         }
     ]

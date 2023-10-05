@@ -70,7 +70,9 @@ extension PersonalDevelopmentVC: PersonalDevelopmentScreenDelegate {
     }
     
     func tappedStoicButton() {
-        print(#function)
+        let vc: StoicismVC = StoicismVC()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
     
     func tappedBackButton() {

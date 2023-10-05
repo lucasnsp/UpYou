@@ -44,7 +44,7 @@ class DeepWorkScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Deep Work"
+        label.text = "Trabalho Focado"
         label.font = UIFont.boldSystemFont(ofSize: 30)
         return label
     }()

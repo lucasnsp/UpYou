@@ -44,7 +44,7 @@ class HabitsScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Habits"
+        label.text = "Hábitos"
         label.font = UIFont.boldSystemFont(ofSize: 30)
         return label
     }()

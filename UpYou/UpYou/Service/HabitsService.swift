@@ -10,7 +10,7 @@ import UIKit
 class HabitsService {
     
     func getHabitsService(completion: @escaping (HabitsData?, Error?) -> Void) {
-        let urlString: String = "https://run.mocky.io/v3/8e21735f-7001-492a-b653-9c6f2bdb8073"
+        let urlString: String = "https://run.mocky.io/v3/0af28733-74e0-4d4f-aec9-7efb369212ba"
         
         guard let url: URL = URL(string: urlString) else { return completion(nil, ErrorDetail.errorURL(urlString: urlString))}
         

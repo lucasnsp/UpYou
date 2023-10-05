@@ -10,7 +10,7 @@ import UIKit
 class BooksService {
     
     func getBookService(completion: @escaping (BooksData?, Error?) -> Void) {
-        let urlString: String = "https://run.mocky.io/v3/4df0f702-8364-40b3-a69e-d9900053a4b6"
+        let urlString: String = "https://run.mocky.io/v3/3ebec21f-3c82-4ffa-9a2c-80f7d7b09b04"
         
         guard let url: URL = URL(string: urlString) else { return completion(nil, ErrorDetail.errorURL(urlString: urlString))}
         
