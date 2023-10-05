@@ -1,31 +1,56 @@
 {
-    "phrases": [
-
-{
-       "phrase":"Wealth does not consist in having great possessions, but in having few needs.","author":"Cicero"},
-{
-       "phrase":"Frugality includes all of the other virtues.","author":"Epicteto"},
-{
-       "phrase":"The poor man is not the man who has little, but the man who longs for more.","author":"Sêneca"},
-{
-       "phrase":"I'd like to live like a poor man with a lot of money.","author":"Pablo Picasso"},
-{
-       "phrase":"Money is useless unless you know its value from experience.","author":"P.T. Barnum"},
-{
-       "phrase":"Many people spend money they haven't earned to buy things they don't want, to impress people they don't like.","author":"Will Rogers"},
-{
-       "phrase":"Money has never made man happy, nor will it. There is nothing in its nature that produces happiness. The more you have, the more you want.","author":"Benjamin Franklin"},
-{
-       "phrase":"Happiness does not lie in the mere possession of money, but in the joy of fulfillment, in the thrill of creative effort.","author":"Franklin D. Roosevelt"},
-{
-       "phrase":"Money doesn't create success, but the freedom to create success does.","author":"Nelson Mandela"},
-{
-       "phrase":"The opportunity is missed by most people because it comes dressed in overalls and looks like work.","author":"Thomas Edison"},
-{
-       "phrase":"Never spend your money before you've earned it.","author":"Thomas Jefferson"},
-{
-       "phrase":"Money passes from those who don't manage it to those who do.","author":"Dave Ramsey"},
-{
-       "phrase":"We become what we think about.","author":"Earl Nightingale"}
-]
+  "phrases": [
+    {
+      "phrase": "Riqueza não consiste em ter grandes posses, mas em ter poucas necessidades.",
+      "author": "Cicero"
+    },
+    {
+      "phrase": "A frugalidade inclui todas as outras virtudes.",
+      "author": "Epicteto"
+    },
+    {
+      "phrase": "O homem pobre não é aquele que tem pouco, mas aquele que anseia por mais.",
+      "author": "Sêneca"
+    },
+    {
+      "phrase": "Eu gostaria de viver como um homem pobre com muito dinheiro.",
+      "author": "Pablo Picasso"
+    },
+    {
+      "phrase": "O dinheiro é inútil a menos que você conheça seu valor pela experiência.",
+      "author": "P.T. Barnum"
+    },
+    {
+      "phrase": "Muitas pessoas gastam dinheiro que não ganharam para comprar coisas que não querem, para impressionar pessoas que não gostam.",
+      "author": "Will Rogers"
+    },
+    {
+      "phrase": "O dinheiro nunca fez o homem feliz, nem fará. Não há nada em sua natureza que produza felicidade. Quanto mais você tem, mais você quer.",
+      "author": "Benjamin Franklin"
+    },
+    {
+      "phrase": "A felicidade não está na mera posse de dinheiro, mas na alegria da realização, na empolgação do esforço criativo.",
+      "author": "Franklin D. Roosevelt"
+    },
+    {
+      "phrase": "O dinheiro não cria sucesso, mas a liberdade para criar sucesso cria.",
+      "author": "Nelson Mandela"
+    },
+    {
+      "phrase": "A oportunidade é perdida pela maioria das pessoas porque ela se veste com macacões e parece trabalho.",
+      "author": "Thomas Edison"
+    },
+    {
+      "phrase": "Nunca gaste seu dinheiro antes de tê-lo ganho.",
+      "author": "Thomas Jefferson"
+    },
+    {
+      "phrase": "O dinheiro passa daqueles que não o gerenciam para aqueles que o fazem.",
+      "author": "Dave Ramsey"
+    },
+    {
+      "phrase": "Nós nos tornamos o que pensamos.",
+      "author": "Earl Nightingale"
+    }
+  ]
 }

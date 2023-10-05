@@ -15,7 +15,7 @@ enum ErrorDetailMoney: Swift.Error {
 class MoneyPhrasesService {
     
     func getMoneyPhrasesService(completion: @escaping (MoneyPhrasesData?, Error?) -> Void) {
-        let urlString: String = "https://run.mocky.io/v3/70d4609f-482a-4544-8d2a-f1f8f9a006a0"
+        let urlString: String = "https://run.mocky.io/v3/e2a47013-a2b0-456e-bab1-bbcf6342ffd5"
         
         guard let url: URL = URL(string: urlString) else { return completion(nil, ErrorDetailMoney.errorURL(urlString: urlString))}
         

@@ -15,7 +15,7 @@ enum ErrorDetail: Swift.Error {
 class QuotesService {
     
     func getQuoteService(completion: @escaping (QuoteData?, Error?) -> Void) {
-        let urlString: String = "https://gist.githubusercontent.com/nasrulhazim/54b659e43b1035215cd0ba1d4577ee80/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json"
+        let urlString: String = "https://run.mocky.io/v3/a8da3a69-775e-4215-b485-bc2f9a898951"
         
         guard let url: URL = URL(string: urlString) else { return completion(nil, ErrorDetail.errorURL(urlString: urlString))}
         
