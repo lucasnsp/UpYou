@@ -1,25 +1,25 @@
 {
     "environment": [
         {
-            "environmentTitle": "Influence of Environment on Growth & Productivity",
-            "environmentTopicOneTitle": "Environmental Impact:",
+            "environmentTitle": "Influência do Ambiente no Crescimento e na Produtividade",
+            "environmentTopicOneTitle": "Impacto Ambiental:",
             "environmentTopicOneImage": "mulher_sorrindo",
-            "environmentTopicOne": "Acknowledge that your physical and social environment significantly impacts your thoughts, actions, and emotions. Awareness is the first step toward making positive changes.",
-            "environmentTopicTwoTitle": "Avoiding Toxic Environments:",
+            "environmentTopicOne": "Reconheça que seu ambiente físico e social impacta significativamente seus pensamentos, ações e emoções. A conscientização é o primeiro passo para fazer mudanças positivas.",
+            "environmentTopicTwoTitle": "Evitando Ambientes Tóxicos:",
             "environmentTopicTwoImage": "toxico",
-            "environmentTopicTwo": "Identify and distance yourself from toxic environments that breed negativity, stress, or unhealthy habits. This could include workplaces with a toxic culture or social circles that are detrimental to your growth.",
-            "environmentTopicThreeTitle": "Cultivating a Positive Space:",
+            "environmentTopicTwo": "Identifique e afaste-se de ambientes tóxicos que promovem negatividade, estresse ou hábitos não saudáveis. Isso pode incluir locais de trabalho com uma cultura tóxica ou círculos sociais que são prejudiciais ao seu crescimento.",
+            "environmentTopicThreeTitle": "Cultivando um Espaço Positivo:",
             "environmentTopicThreeImage": "concentracao",
-            "environmentTopicThree": "Create a home and workspace that promote well-being. Incorporate elements that inspire you, such as artwork, plants, or calming colors. Keep your space organized to reduce stress.",
-            "environmentTopicFourTitle": "Choosing Your Inner Circle:",
+            "environmentTopicThree": "Crie um lar e um espaço de trabalho que promovam o bem-estar. Incorpore elementos que o inspirem, como obras de arte, plantas ou cores tranquilas. Mantenha seu espaço organizado para reduzir o estresse.",
+            "environmentTopicFourTitle": "Escolhendo seu Círculo Interno:",
             "environmentTopicFourImage": "pessoas_felizes",
-            "environmentTopicFour": "Surround yourself with individuals who have a positive influence on your life. Seek out friends, mentors, and colleagues who share your goals and values, and who can offer support and encouragement.",
-            "environmentTopicFiveTitle": "Emulating Productive Role Models:",
+            "environmentTopicFour": "Cerque-se de pessoas que têm uma influência positiva em sua vida. Procure amigos, mentores e colegas que compartilhem seus objetivos e valores e que possam oferecer apoio e incentivo.",
+            "environmentTopicFiveTitle": "Emulando Modelos Produtivos:",
             "environmentTopicFiveImage": "role_models",
-            "environmentTopicFive": "Observe the habits and routines of highly productive people you admire. Learn from their strategies for time management, goal-setting, and continuous self-improvement.",
-            "environmentTopicSixTitle": "Continuous Self-Reflection:",
+            "environmentTopicFive": "Observe os hábitos e rotinas de pessoas altamente produtivas que você admira. Aprenda com suas estratégias de gerenciamento de tempo, estabelecimento de metas e melhoria contínua.",
+            "environmentTopicSixTitle": "Reflexão Contínua sobre Si Mesmo:",
             "environmentTopicSixImage": "reflexao",
-            "environmentTopicSix": "Periodically reflect on how your environment and the people around you are influencing your progress and well-being. Adjust your surroundings and connections as needed to support your growth."
+            "environmentTopicSix": "Faça reflexões periódicas sobre como seu ambiente e as pessoas ao seu redor estão influenciando seu progresso e bem-estar. Ajuste seu entorno e conexões conforme necessário para apoiar seu crescimento."
         }
     ]
 }

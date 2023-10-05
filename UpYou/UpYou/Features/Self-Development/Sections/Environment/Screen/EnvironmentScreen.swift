@@ -44,7 +44,7 @@ class EnvironmentScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Environment"
+        label.text = "Ambiente"
         label.font = UIFont.boldSystemFont(ofSize: 30)
         return label
     }()

@@ -29,7 +29,7 @@ class PersonalDevelopmentViewModel {
     }
     
     public func loadCurrentQuotes(indexPath: IndexPath) -> Quote {
-        quote[indexPath.row]
+        return quote[indexPath.row]
     }
     
     public var numberOfRowsInSection: Int {
@@ -43,8 +43,12 @@ class PersonalDevelopmentViewModel {
     public func fetchAllRequest() {
         service.getQuoteService { quoteData, error in
             if error == nil {
-                self.quote = quoteData?.quotes ?? []
-                self.delegate?.success()
+                if let quotes = quoteData?.quotes {
+                    self.quote = [quotes.randomElement()!]
+                    self.delegate?.success()
+                } else {
+                    self.delegate?.error()
+                }
             } else {
                 self.delegate?.error()
             }

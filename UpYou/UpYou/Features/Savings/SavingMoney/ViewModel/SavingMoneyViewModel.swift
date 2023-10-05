@@ -18,7 +18,7 @@ class SavingMoneyViewModel {
     private var phrase = [Phrase]()
     
     private weak var delegate: SavingMoneyViewModelDelegate?
-
+    
     public func delegate(delegate: SavingMoneyViewModelDelegate?) {
         self.delegate = delegate
     }
@@ -42,12 +42,15 @@ class SavingMoneyViewModel {
     public func fetchAllResquest() {
         service.getMoneyPhrasesService { moneyPhrasesData, error in
             if error == nil {
-                self.phrase = moneyPhrasesData?.phrases ?? []
-                self.delegate?.success()
+                if let phrases = moneyPhrasesData?.phrases {
+                    self.phrase = [phrases.randomElement()!]
+                    self.delegate?.success()
+                } else {
+                    self.delegate?.error()
+                }
             } else {
                 self.delegate?.error()
             }
         }
     }
-
 }
