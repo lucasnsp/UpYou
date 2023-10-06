@@ -43,13 +43,16 @@ extension PersonalDevelopmentVC: PersonalDevelopmentViewModelDelegate {
 
 extension PersonalDevelopmentVC: PersonalDevelopmentScreenDelegate {
     func tappedSleepButton() {
-        print(#function)
+        let vc: SleepVC = SleepVC()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
     
     func tappedEnvironmentButton() {
         let vc: EnvironmentVC = EnvironmentVC()
         vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true)    }
+        present(vc, animated: true)
+    }
     
     func tappedBooksButton() {
         let vc: BooksVC = BooksVC()
