@@ -7,6 +7,47 @@
 
 import UIKit
 
-class StoicismViewModel {
+protocol StoicismViewModelDelegate: AnyObject {
+    func success()
+    func error()
+}
 
+class StoicismViewModel {
+    
+    private var service = StoicismService()
+    private var stoic = [Stoicism]()
+    
+    public var getHabits: [Stoicism] {
+        stoic
+    }
+    
+    private weak var delegate: StoicismViewModelDelegate?
+    
+    public func delegate(delegate: StoicismViewModelDelegate?) {
+        self.delegate = delegate
+    }
+
+    
+    public var numberOfRowsInSection: Int {
+        return stoic.count
+    }
+    
+    public var heightForRowAt: CGFloat {
+        return 2800
+    }
+    
+    public func loadCurrentStoic(indexPath: IndexPath) -> Stoicism {
+        stoic[indexPath.row]
+    }
+    
+    public func fetchAllRequest() {
+        service.getStoicismService { stoicismData, error in
+            if error == nil {
+                self.stoic = stoicismData?.stoicism ?? []
+                self.delegate?.success()
+            } else {
+                self.delegate?.error()
+            }
+        }
+    }
 }

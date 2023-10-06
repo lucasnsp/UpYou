@@ -53,7 +53,7 @@ class StoicismScreen: UIView {
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-//        tableView.register(HabitsTableViewCell.self, forCellReuseIdentifier: HabitsTableViewCell.identifier)
+        tableView.register(StoicismTableViewCell.self, forCellReuseIdentifier: StoicismTableViewCell.identifier)
         tableView.backgroundColor = .black.withAlphaComponent(0.6)
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
