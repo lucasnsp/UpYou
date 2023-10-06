@@ -18,6 +18,7 @@
 		460536B52AD04B05003FC929 /* SleepVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460536B42AD04B05003FC929 /* SleepVC.swift */; };
 		460536B72AD04B14003FC929 /* SleepScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460536B62AD04B14003FC929 /* SleepScreen.swift */; };
 		460536B92AD04B22003FC929 /* SleepViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460536B82AD04B22003FC929 /* SleepViewModel.swift */; };
+		460536BB2AD04E21003FC929 /* Sleep.json in Resources */ = {isa = PBXBuildFile; fileRef = 460536BA2AD04E21003FC929 /* Sleep.json */; };
 		4605838B2AC1C0E900446A6F /* PersonalDevelopmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4605838A2AC1C0E900446A6F /* PersonalDevelopmentTableViewCell.swift */; };
 		4605838D2AC1C1EA00446A6F /* PersonalDevelopmentTableViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4605838C2AC1C1EA00446A6F /* PersonalDevelopmentTableViewScreen.swift */; };
 		460583912AC1C3E300446A6F /* QuotesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460583902AC1C3E300446A6F /* QuotesService.swift */; };
@@ -110,6 +111,7 @@
 		460536B42AD04B05003FC929 /* SleepVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepVC.swift; sourceTree = "<group>"; };
 		460536B62AD04B14003FC929 /* SleepScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepScreen.swift; sourceTree = "<group>"; };
 		460536B82AD04B22003FC929 /* SleepViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepViewModel.swift; sourceTree = "<group>"; };
+		460536BA2AD04E21003FC929 /* Sleep.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Sleep.json; sourceTree = "<group>"; };
 		4605838A2AC1C0E900446A6F /* PersonalDevelopmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDevelopmentTableViewCell.swift; sourceTree = "<group>"; };
 		4605838C2AC1C1EA00446A6F /* PersonalDevelopmentTableViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDevelopmentTableViewScreen.swift; sourceTree = "<group>"; };
 		460583902AC1C3E300446A6F /* QuotesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesService.swift; sourceTree = "<group>"; };
@@ -822,6 +824,7 @@
 				460B7AD82AC8746E0059EA44 /* Environment.json */,
 				46DA2CE32ACC3C3D00DEA703 /* Habits.json */,
 				460536962ACEEE62003FC929 /* Stoicism.json */,
+				460536BA2AD04E21003FC929 /* Sleep.json */,
 			);
 			path = Json;
 			sourceTree = "<group>";
@@ -1129,6 +1132,7 @@
 				461BEF2A2ABA74F700C07847 /* LaunchScreen.storyboard in Resources */,
 				460536972ACEEE62003FC929 /* Stoicism.json in Resources */,
 				461BEF872ABB914900C07847 /* Quote.json in Resources */,
+				460536BB2AD04E21003FC929 /* Sleep.json in Resources */,
 				461BEF272ABA74F700C07847 /* Assets.xcassets in Resources */,
 				460B7AD92AC8746E0059EA44 /* Environment.json in Resources */,
 				460583BF2AC48E0400446A6F /* MoneyPhrases.json in Resources */,
