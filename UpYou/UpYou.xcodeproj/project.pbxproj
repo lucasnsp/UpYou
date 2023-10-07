@@ -81,6 +81,10 @@
 		461BEFA22ABDD2C900C07847 /* SelfDevelopmentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BEFA12ABDD2C900C07847 /* SelfDevelopmentScreen.swift */; };
 		461BEFA72ABF107B00C07847 /* PersonalDevelopmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BEFA62ABF107B00C07847 /* PersonalDevelopmentVC.swift */; };
 		461BEFAB2ABF121900C07847 /* PersonalDevelopmentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BEFAA2ABF121900C07847 /* PersonalDevelopmentScreen.swift */; };
+		461C713F2AD1ADAB00E18558 /* SleepData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461C713E2AD1ADAB00E18558 /* SleepData.swift */; };
+		461C71412AD1AE0D00E18558 /* SleepService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461C71402AD1AE0D00E18558 /* SleepService.swift */; };
+		461C71482AD1B07700E18558 /* SleepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461C71472AD1B07700E18558 /* SleepTableViewCell.swift */; };
+		461C714A2AD1B08400E18558 /* SleepTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461C71492AD1B08400E18558 /* SleepTableViewCellScreen.swift */; };
 		467D1D852AC5B638009E0B04 /* BooksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467D1D842AC5B638009E0B04 /* BooksVC.swift */; };
 		467D1D872AC5B683009E0B04 /* BooksScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467D1D862AC5B683009E0B04 /* BooksScreen.swift */; };
 		467D1D892AC5B90B009E0B04 /* Books.json in Resources */ = {isa = PBXBuildFile; fileRef = 467D1D882AC5B90B009E0B04 /* Books.json */; };
@@ -173,6 +177,10 @@
 		461BEFA12ABDD2C900C07847 /* SelfDevelopmentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfDevelopmentScreen.swift; sourceTree = "<group>"; };
 		461BEFA62ABF107B00C07847 /* PersonalDevelopmentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDevelopmentVC.swift; sourceTree = "<group>"; };
 		461BEFAA2ABF121900C07847 /* PersonalDevelopmentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDevelopmentScreen.swift; sourceTree = "<group>"; };
+		461C713E2AD1ADAB00E18558 /* SleepData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepData.swift; sourceTree = "<group>"; };
+		461C71402AD1AE0D00E18558 /* SleepService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepService.swift; sourceTree = "<group>"; };
+		461C71472AD1B07700E18558 /* SleepTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepTableViewCell.swift; sourceTree = "<group>"; };
+		461C71492AD1B08400E18558 /* SleepTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepTableViewCellScreen.swift; sourceTree = "<group>"; };
 		467D1D842AC5B638009E0B04 /* BooksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksVC.swift; sourceTree = "<group>"; };
 		467D1D862AC5B683009E0B04 /* BooksScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksScreen.swift; sourceTree = "<group>"; };
 		467D1D882AC5B90B009E0B04 /* Books.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Books.json; sourceTree = "<group>"; };
@@ -326,13 +334,8 @@
 		4605838E2AC1C3A600446A6F /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				467D1D8A2AC6F571009E0B04 /* BooksService.swift */,
-				460583AC2AC4784800446A6F /* MoneyPhrasesService.swift */,
-				460583902AC1C3E300446A6F /* QuotesService.swift */,
-				460B7ACB2AC857770059EA44 /* DeepWorkService.swift */,
-				460B7ADE2AC877760059EA44 /* EnvironmentService.swift */,
-				46DA2CE72ACC429100DEA703 /* HabitsService.swift */,
-				460536AE2AD0421E003FC929 /* StoicismService.swift */,
+				461C714E2AD1B7A300E18558 /* Finance Section */,
+				461C714D2AD1B79500E18558 /* Personal Development Section */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -340,13 +343,8 @@
 		460583922AC1C4A200446A6F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				460583952AC1C4ED00446A6F /* QuoteData.swift */,
-				460583C02AC48EA000446A6F /* MoneyPhrasesData.swift */,
-				467D1D8D2AC6F687009E0B04 /* BooksData.swift */,
-				460B7AC92AC857400059EA44 /* DeepWorkData.swift */,
-				460B7ADC2AC877490059EA44 /* EnvironmentData.swift */,
-				46DA2CE52ACC426300DEA703 /* HabitsData.swift */,
-				4605369B2ACEF65A003FC929 /* StoicismData.swift */,
+				461C714F2AD1B7CD00E18558 /* Finance Section */,
+				461C71502AD1B7DE00E18558 /* Personal Development Section */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -766,8 +764,8 @@
 				461BEF4E2ABA758100C07847 /* Login */,
 				461BEF582ABA758900C07847 /* Register */,
 				461BEF732ABB4DBF00C07847 /* Home */,
-				461BEF9D2ABDD23B00C07847 /* Self-Development */,
-				461BEF952ABC743C00C07847 /* Savings */,
+				461BEF9D2ABDD23B00C07847 /* Personal Development Section */,
+				461BEF952ABC743C00C07847 /* Finance Section */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -832,24 +830,19 @@
 		461BEF882ABB9A1C00C07847 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				460583B12AC47DBE00446A6F /* SavingMoneyCell */,
-				460583872AC1C0BF00446A6F /* PersonalDevelopmentCell */,
-				467D1D932AC70068009E0B04 /* BooksCell */,
-				460B7ACD2AC85B1C0059EA44 /* DeepWorkCell */,
-				460B7AE62AC87CDE0059EA44 /* EnvironmentCell */,
-				46DA2CE92ACC468E00DEA703 /* HabitsCell */,
-				460536A72ACEF8F6003FC929 /* StoicismCell */,
+				461C714C2AD1B77000E18558 /* Finance Section */,
+				461C714B2AD1B75900E18558 /* Personal Development Section */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		461BEF952ABC743C00C07847 /* Savings */ = {
+		461BEF952ABC743C00C07847 /* Finance Section */ = {
 			isa = PBXGroup;
 			children = (
 				461BEF982ABC770D00C07847 /* Onboarding */,
 				4605839C2AC45FAC00446A6F /* SavingMoney */,
 			);
-			path = Savings;
+			path = "Finance Section";
 			sourceTree = "<group>";
 		};
 		461BEF962ABC746700C07847 /* ViewController */ = {
@@ -877,14 +870,14 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
-		461BEF9D2ABDD23B00C07847 /* Self-Development */ = {
+		461BEF9D2ABDD23B00C07847 /* Personal Development Section */ = {
 			isa = PBXGroup;
 			children = (
 				460583A32AC4610900446A6F /* Onboarding */,
 				461BEFA52ABF104A00C07847 /* PersonalDevelopment */,
 				467D1D802AC5B5F3009E0B04 /* Sections */,
 			);
-			path = "Self-Development";
+			path = "Personal Development Section";
 			sourceTree = "<group>";
 		};
 		461BEFA32ABDD2D000C07847 /* ViewController */ = {
@@ -927,6 +920,97 @@
 				461BEFAA2ABF121900C07847 /* PersonalDevelopmentScreen.swift */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		461C71422AD1B02700E18558 /* SleepCell */ = {
+			isa = PBXGroup;
+			children = (
+				461C71432AD1B03D00E18558 /* TableViewCell */,
+				461C71442AD1B04200E18558 /* Screen */,
+			);
+			path = SleepCell;
+			sourceTree = "<group>";
+		};
+		461C71432AD1B03D00E18558 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				461C71472AD1B07700E18558 /* SleepTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		461C71442AD1B04200E18558 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				461C71492AD1B08400E18558 /* SleepTableViewCellScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		461C714B2AD1B75900E18558 /* Personal Development Section */ = {
+			isa = PBXGroup;
+			children = (
+				460583872AC1C0BF00446A6F /* PersonalDevelopmentCell */,
+				467D1D932AC70068009E0B04 /* BooksCell */,
+				460B7ACD2AC85B1C0059EA44 /* DeepWorkCell */,
+				460B7AE62AC87CDE0059EA44 /* EnvironmentCell */,
+				46DA2CE92ACC468E00DEA703 /* HabitsCell */,
+				460536A72ACEF8F6003FC929 /* StoicismCell */,
+				461C71422AD1B02700E18558 /* SleepCell */,
+			);
+			path = "Personal Development Section";
+			sourceTree = "<group>";
+		};
+		461C714C2AD1B77000E18558 /* Finance Section */ = {
+			isa = PBXGroup;
+			children = (
+				460583B12AC47DBE00446A6F /* SavingMoneyCell */,
+			);
+			path = "Finance Section";
+			sourceTree = "<group>";
+		};
+		461C714D2AD1B79500E18558 /* Personal Development Section */ = {
+			isa = PBXGroup;
+			children = (
+				467D1D8A2AC6F571009E0B04 /* BooksService.swift */,
+				460583902AC1C3E300446A6F /* QuotesService.swift */,
+				460B7ACB2AC857770059EA44 /* DeepWorkService.swift */,
+				460B7ADE2AC877760059EA44 /* EnvironmentService.swift */,
+				46DA2CE72ACC429100DEA703 /* HabitsService.swift */,
+				460536AE2AD0421E003FC929 /* StoicismService.swift */,
+				461C71402AD1AE0D00E18558 /* SleepService.swift */,
+			);
+			path = "Personal Development Section";
+			sourceTree = "<group>";
+		};
+		461C714E2AD1B7A300E18558 /* Finance Section */ = {
+			isa = PBXGroup;
+			children = (
+				460583AC2AC4784800446A6F /* MoneyPhrasesService.swift */,
+			);
+			path = "Finance Section";
+			sourceTree = "<group>";
+		};
+		461C714F2AD1B7CD00E18558 /* Finance Section */ = {
+			isa = PBXGroup;
+			children = (
+				460583C02AC48EA000446A6F /* MoneyPhrasesData.swift */,
+			);
+			path = "Finance Section";
+			sourceTree = "<group>";
+		};
+		461C71502AD1B7DE00E18558 /* Personal Development Section */ = {
+			isa = PBXGroup;
+			children = (
+				460583952AC1C4ED00446A6F /* QuoteData.swift */,
+				467D1D8D2AC6F687009E0B04 /* BooksData.swift */,
+				460B7AC92AC857400059EA44 /* DeepWorkData.swift */,
+				460B7ADC2AC877490059EA44 /* EnvironmentData.swift */,
+				46DA2CE52ACC426300DEA703 /* HabitsData.swift */,
+				4605369B2ACEF65A003FC929 /* StoicismData.swift */,
+				461C713E2AD1ADAB00E18558 /* SleepData.swift */,
+			);
+			path = "Personal Development Section";
 			sourceTree = "<group>";
 		};
 		467D1D7F2AC5B5E1009E0B04 /* Books */ = {
@@ -1149,6 +1233,7 @@
 			files = (
 				461BEF602ABA758900C07847 /* RegisterScreen.swift in Sources */,
 				46DA2CD92ACC399C00DEA703 /* HabitsVC.swift in Sources */,
+				461C713F2AD1ADAB00E18558 /* SleepData.swift in Sources */,
 				460583B52AC47EB300446A6F /* SavingMoneyTableViewCell.swift in Sources */,
 				461BEF7F2ABB679400C07847 /* HomeViewModel.swift in Sources */,
 				461BEF9C2ABC773E00C07847 /* OnboardingSavesScreen.swift in Sources */,
@@ -1167,6 +1252,7 @@
 				461BEF552ABA758100C07847 /* LoginViewModel.swift in Sources */,
 				460B7AE12AC8787F0059EA44 /* EnvironmentVC.swift in Sources */,
 				461BEF4D2ABA756000C07847 /* ThirdInfoViewController.swift in Sources */,
+				461C714A2AD1B08400E18558 /* SleepTableViewCellScreen.swift in Sources */,
 				46DA2CDE2ACC39C900DEA703 /* HabitsViewModel.swift in Sources */,
 				467D1D8B2AC6F571009E0B04 /* BooksService.swift in Sources */,
 				46DA2CED2ACC46D200DEA703 /* HabitsTableViewCell.swift in Sources */,
@@ -1201,6 +1287,7 @@
 				460B7AC32AC8492E0059EA44 /* DeepWorkScreen.swift in Sources */,
 				460536A42ACEF6E8003FC929 /* StoicismScreen.swift in Sources */,
 				460536A62ACEF6F9003FC929 /* StoicismViewModel.swift in Sources */,
+				461C71412AD1AE0D00E18558 /* SleepService.swift in Sources */,
 				460583A22AC4603100446A6F /* SavingMoneyScreen.swift in Sources */,
 				467D1D922AC6F86B009E0B04 /* BooksViewModel.swift in Sources */,
 				460B7AD12AC85B4B0059EA44 /* DeepWorkTableViewCell.swift in Sources */,
@@ -1211,6 +1298,7 @@
 				461BEF5F2ABA758900C07847 /* RegisterViewModel.swift in Sources */,
 				461BEF572ABA758100C07847 /* LoginVC.swift in Sources */,
 				467D1D972AC700AD009E0B04 /* BooksTableViewCell.swift in Sources */,
+				461C71482AD1B07700E18558 /* SleepTableViewCell.swift in Sources */,
 				460B7AEA2AC87D650059EA44 /* EnvironmentTableViewCell.swift in Sources */,
 				460583962AC1C4ED00446A6F /* QuoteData.swift in Sources */,
 				467D1D8E2AC6F687009E0B04 /* BooksData.swift in Sources */,

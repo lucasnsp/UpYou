@@ -1,26 +1,30 @@
 {
-    "Sleep": [
+    "sleep": [
         {
-            "sleepTitle": "Encontrando Equilíbrio e Sabedoria na Vida Diária",
-            "sleepTopicOneTitle": "Introdução ao Estoicismo:",
-            "sleepTopicOneImage": "introducao_estoicismo",
-            "sleepTopicOne": "O estoicismo é uma filosofia antiga que se concentra no desenvolvimento pessoal, na autodisciplina e na sabedoria para alcançar uma vida mais virtuosa e equilibrada. Foi fundado na Grécia antiga por filósofos como Epicteto, Sêneca e Marco Aurélio.",
+            "sleepTitle": "Como dormir melhor",
+            "sleepTopicOneTitle": "Crie uma rotina de sono consistente:",
+            "sleepTopicOneImage": "insomnia",
+            "sleepTopicOne": "Estabeleça um horário regular para ir para a cama e acordar, mesmo nos fins de semana. Isso ajuda a regular o seu relógio biológico e melhora a consistência do seu sono.",
             
-            "sleepTopicTwoTitle": "Princípios Básicos:",
-            "sleepTopicTwoImage": "basicos_estoicismo",
-            "sleepTopicTwo": "O estoicismo ensina que devemos focar no que podemos controlar e aceitar o que não podemos. Isso significa que devemos direcionar nossa atenção para nossas ações, pensamentos e valores, em vez de nos preocuparmos excessivamente com eventos externos ou coisas fora de nosso controle.",
+            "sleepTopicTwoTitle": "Crie um ambiente propício para o sono:",
+            "sleepTopicTwoImage": "dormindo",
+            "sleepTopicTwo": "Mantenha seu quarto escuro, fresco e silencioso. Use cortinas opacas, ajuste a temperatura para um nível confortável e considere o uso de protetores auriculares ou máquina de ruído branco para bloquear sons indesejados.",
             
-            "sleepTopicThreeTitle": "Dicas para Praticar:",
-            "sleepTopicThreeImage": "conhecimento",
-            "sleepTopicThree": "Desenvolver a virtude da sabedoria: Busque conhecimento e autoconhecimento constantemente. Praticar a autodisciplina: Cultive hábitos que promovam o autocontrole e a moderação. Viver de acordo com a natureza: Aprenda a aceitar a impermanência da vida e a se adaptar às circunstâncias. Manter o controle sobre as emoções: Aprenda a lidar com as emoções de maneira equilibrada e racional. Viver o momento presente: Concentre-se no aqui e agora, evitando preocupações excessivas com o passado ou o futuro.",
+            "sleepTopicThreeTitle": "Limite a exposição à luz antes de dormir",
+            "sleepTopicThreeImage": "luz_apagada",
+            "sleepTopicThree": "Evite telas de dispositivos eletrônicos como smartphones, tablets e computadores pelo menos uma hora antes de dormir, pois a luz azul pode interferir na produção de melatonina, um hormônio importante para o sono.",
             
-            "sleepTopicFourTitle": "Benefícios do Estoicismo:",
-            "sleepTopicFourImage": "macaco_animado",
-            "sleepTopicFour": "Resiliência emocional: O estoicismo ajuda as pessoas a lidar com adversidades, estresses e frustrações de maneira mais tranquila e controlada. Melhoria nas relações: A ênfase na empatia e na compreensão ajuda a melhorar os relacionamentos interpessoais. Maior autoconhecimento: A prática do estoicismo incentiva a reflexão e o autoexame, levando a um melhor entendimento de si mesmo. Senso de propósito: O estoicismo auxilia na definição de metas claras e valores pessoais, criando um senso de direção na vida. Felicidade duradoura: Ao se concentrar no que é verdadeiramente importante e nas próprias ações, muitas pessoas relatam uma sensação mais duradoura de contentamento e satisfação.",
+            "sleepTopicFourTitle": "Evite estimulantes e álcool antes de dormir:",
+            "sleepTopicFourImage": "cafe",
+            "sleepTopicFour": "Evite consumir cafeína e alimentos ricos em cafeína, como café, chá e refrigerantes, durante a tarde e à noite. Além disso, limite o consumo de álcool antes de dormir, pois pode prejudicar a qualidade do sono.",
             
-            "sleepTopicFiveTitle": "Como Integrar o Estoicismo:",
-            "sleepTopicFiveImage": "reflexao2",
-            "sleepTopicFive": "Comece com a leitura de obras estoicas clássicas, como 'Meditações' de Marco Aurélio ou os ensinamentos de Epicteto e Sêneca. Pratique a reflexão diária, analisando seus pensamentos e ações, identificando áreas onde pode melhorar. Mantenha um diário onde você registra suas experiências e reflexões. Desenvolva o hábito de perguntar a si mesmo: 'Isso está sob meu controle?' e aja de acordo com essa perspectiva. Compartilhe suas experiências e aprendizados com outros para fortalecer seu compromisso com os princípios estoicos."
+            "sleepTopicFiveTitle": "Regule seu ciclo cicardiano:",
+            "sleepTopicFiveImage": "ciclo_cicardiano",
+            "sleepTopicFive": "Expor-se à luz natural pela manhã é essencial para regular o ciclo circadiano, melhorar o desempenho diurno, equilibrar os hormônios do sono e do estresse, e promover um sono noturno mais profundo e reparador.",
+            
+            "sleepTopicSixTitle": "A importância de dormir bem na alta perfomance:",
+            "sleepTopicSixImage": "rise",
+            "sleepTopicSix": "A qualidade do sono desempenha um papel crucial na alta performance, afetando o desempenho cognitivo, a resistência física, o sistema imunológico, o humor, a criatividade, a motivação e o bem-estar geral. Priorizar um sono bem regulado é fundamental para alcançar um desempenho superior em todas as áreas da vida."
         }
     ]
 }
