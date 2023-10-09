@@ -31,7 +31,7 @@ class GoldenRulesViewModel {
     }
     
     public var heightForRowAt: CGFloat {
-        return 2580
+        return 2650
     }
     
     public func loadCurrentFocus(indexPath: IndexPath) -> Rule {
