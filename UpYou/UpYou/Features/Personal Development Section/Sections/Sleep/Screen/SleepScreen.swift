@@ -23,7 +23,7 @@ class SleepScreen: UIView {
     lazy var backButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.tintColor = .white
+        button.tintColor = .gray
         button.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
         button.addTarget(self, action: #selector(tappedBackButton), for: .touchUpInside)
         return button

@@ -322,6 +322,7 @@ class PersonalDevelopmentScreen: UIView {
         tableView.clipsToBounds = true
         tableView.layer.cornerRadius = 20
         tableView.backgroundColor = .black.withAlphaComponent(0.6)
+        tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
         return tableView
     }()

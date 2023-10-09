@@ -1,21 +1,21 @@
 //
-//  HabitsScreen.swift
+//  GoldenRulesScreen.swift
 //  UpYou
 //
-//  Created by Lucas Neves dos santos pompeu on 03/10/23.
+//  Created by Lucas Neves dos santos pompeu on 09/10/23.
 //
 
 import UIKit
 
-protocol HabitsScreenDelegate: AnyObject {
+protocol GoldenRulesScreenDelegate: AnyObject {
     func tappedBackButton()
 }
 
-class HabitsScreen: UIView {
+class GoldenRulesScreen: UIView {
     
-    private weak var delegate: HabitsScreenDelegate?
+    private weak var delegate: GoldenRulesScreenDelegate?
     
-    public func delegate(delegate: HabitsScreenDelegate?) {
+    public func delegate(delegate: GoldenRulesScreenDelegate?) {
         self.delegate = delegate
     }
 
@@ -44,7 +44,7 @@ class HabitsScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Hábitos"
+        label.text = "Leis do Ouro"
         label.font = UIFont.boldSystemFont(ofSize: 30)
         return label
     }()
@@ -52,7 +52,7 @@ class HabitsScreen: UIView {
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(HabitsTableViewCell.self, forCellReuseIdentifier: HabitsTableViewCell.identifier)
+        tableView.register(GoldenRulesTableViewCell.self, forCellReuseIdentifier: GoldenRulesTableViewCell.identifier)
         tableView.backgroundColor = .black.withAlphaComponent(0.6)
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
@@ -63,7 +63,7 @@ class HabitsScreen: UIView {
         tableView.delegate = delegate
         tableView.dataSource = dataSource
     }
-    
+        
     override init(frame: CGRect) {
         super.init(frame: frame)
         addViews()
@@ -101,4 +101,5 @@ class HabitsScreen: UIView {
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
     }
+
 }

@@ -55,7 +55,9 @@ extension SavingMoneyVC: SavingMoneyScreenDelegate {
     }
     
     func tappedGoldenRulesButton() {
-        print(#function)
+        let vc: GoldenRulesVC = GoldenRulesVC()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
     
     func tappedCryptoButton() {

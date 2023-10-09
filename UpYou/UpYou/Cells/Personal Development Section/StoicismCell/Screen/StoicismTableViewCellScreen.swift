@@ -194,7 +194,6 @@ class StoicismTableViewCellScreen: UIView {
         viewBackground.addSubview(stoicismFiveTitleLabel)
         viewBackground.addSubview(stoicismFiveImageView)
         viewBackground.addSubview(stoicismFiveLabel)
-
     }
     
     private func configConstraints() {
