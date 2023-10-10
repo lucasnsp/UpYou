@@ -43,7 +43,9 @@ extension SavingMoneyVC: SavingMoneyViewModelDelegate {
 
 extension SavingMoneyVC: SavingMoneyScreenDelegate {
     func tappedRendaFixaButton() {
-        print(#function)
+        let vc: FixedIncomeVC = FixedIncomeVC()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
     
     func tappedFllsButton() {

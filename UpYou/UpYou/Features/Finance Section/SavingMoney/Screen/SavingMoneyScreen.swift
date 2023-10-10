@@ -26,14 +26,14 @@ class SavingMoneyScreen: UIView {
         self.delegate = delegate
     }
     
-    lazy var subImageView: UIImageView = {
+    private lazy var subImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(named: "background")
         return image
     }()
     
-    lazy var backButton: UIButton = {
+    private lazy var backButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.tintColor = .gray
@@ -63,7 +63,7 @@ class SavingMoneyScreen: UIView {
         tableView.dataSource = dataSource
     }
     
-    lazy var viewMidBackground: UIView = {
+    private lazy var viewMidBackground: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .black.withAlphaComponent(0.6)
@@ -72,7 +72,7 @@ class SavingMoneyScreen: UIView {
         return view
     }()
     
-    lazy var setAGoalImageView: UIImageView = {
+    private lazy var setAGoalImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
@@ -81,7 +81,7 @@ class SavingMoneyScreen: UIView {
         return imageView
     }()
     
-    lazy var setAGoalTitleLabel: UILabel = {
+    private lazy var setAGoalTitleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
@@ -91,7 +91,7 @@ class SavingMoneyScreen: UIView {
         return label
     }()
     
-    lazy var setAGoalSubTitlelabel: UILabel = {
+    private lazy var setAGoalSubTitlelabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
@@ -101,7 +101,7 @@ class SavingMoneyScreen: UIView {
         return label
     }()
     
-    lazy var setAGoalButton: UIButton = {
+    private lazy var setAGoalButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
@@ -115,7 +115,7 @@ class SavingMoneyScreen: UIView {
         delegate?.tappedSetAGoalButton()
     }
     
-    lazy var expensesImageView: UIImageView = {
+    private lazy var expensesImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
@@ -124,7 +124,7 @@ class SavingMoneyScreen: UIView {
         return imageView
     }()
     
-    lazy var expensesTitleLabel: UILabel = {
+    private lazy var expensesTitleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
@@ -134,7 +134,7 @@ class SavingMoneyScreen: UIView {
         return label
     }()
     
-    lazy var expensesSubTitlelabel: UILabel = {
+    private lazy var expensesSubTitlelabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
@@ -144,7 +144,7 @@ class SavingMoneyScreen: UIView {
         return label
     }()
     
-    lazy var expensesButton: UIButton = {
+    private lazy var expensesButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
@@ -158,7 +158,7 @@ class SavingMoneyScreen: UIView {
         delegate?.tappedExpensesButton()
     }
     
-    lazy var viewBottomBackground: UIView = {
+    private lazy var viewBottomBackground: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .black.withAlphaComponent(0.6)
@@ -167,7 +167,7 @@ class SavingMoneyScreen: UIView {
         return view
     }()
     
-    lazy var cryptoImageView: UIImageView = {
+    private lazy var cryptoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
@@ -176,7 +176,7 @@ class SavingMoneyScreen: UIView {
         return imageView
     }()
     
-    lazy var cryptoTitleLabel: UILabel = {
+    private lazy var cryptoTitleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
@@ -186,7 +186,7 @@ class SavingMoneyScreen: UIView {
         return label
     }()
     
-    lazy var cryptoSubTitlelabel: UILabel = {
+    private lazy var cryptoSubTitlelabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
@@ -196,7 +196,7 @@ class SavingMoneyScreen: UIView {
         return label
     }()
     
-    lazy var cryptoButton: UIButton = {
+    private lazy var cryptoButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
@@ -210,7 +210,7 @@ class SavingMoneyScreen: UIView {
         delegate?.tappedCryptoButton()
     }
     
-    lazy var goldenRulesImageView: UIImageView = {
+    private lazy var goldenRulesImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
@@ -219,17 +219,17 @@ class SavingMoneyScreen: UIView {
         return imageView
     }()
     
-    lazy var goldenRulesTitleLabel: UILabel = {
+    private lazy var goldenRulesTitleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "As Leis de Ouro da Babilônia"
+        label.text = "As Leis de Ouro da Babilo"
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textAlignment = .left
         return label
     }()
     
-    lazy var goldenRulesSubTitlelabel: UILabel = {
+    private lazy var goldenRulesSubTitlelabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
@@ -239,7 +239,7 @@ class SavingMoneyScreen: UIView {
         return label
     }()
     
-    lazy var goldenRulesButton: UIButton = {
+    private lazy var goldenRulesButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
@@ -253,7 +253,7 @@ class SavingMoneyScreen: UIView {
         delegate?.tappedGoldenRulesButton()
     }
     
-    lazy var fllsImageView: UIImageView = {
+    private lazy var fllsImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
@@ -262,7 +262,7 @@ class SavingMoneyScreen: UIView {
         return imageView
     }()
     
-    lazy var fllsTitleLabel: UILabel = {
+    private lazy var fllsTitleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
@@ -272,7 +272,7 @@ class SavingMoneyScreen: UIView {
         return label
     }()
     
-    lazy var fllsSubTitlelabel: UILabel = {
+    private lazy var fllsSubTitlelabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
@@ -282,7 +282,7 @@ class SavingMoneyScreen: UIView {
         return label
     }()
     
-    lazy var fllsButton: UIButton = {
+    private lazy var fllsButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
@@ -296,7 +296,7 @@ class SavingMoneyScreen: UIView {
         delegate?.tappedFllsButton()
     }
     
-    lazy var stocksImageView: UIImageView = {
+    private lazy var stocksImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
@@ -305,7 +305,7 @@ class SavingMoneyScreen: UIView {
         return imageView
     }()
     
-    lazy var stocksTitleLabel: UILabel = {
+    private lazy var stocksTitleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
@@ -315,7 +315,7 @@ class SavingMoneyScreen: UIView {
         return label
     }()
     
-    lazy var stocksSubTitlelabel: UILabel = {
+    private lazy var stocksSubTitlelabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
@@ -325,7 +325,7 @@ class SavingMoneyScreen: UIView {
         return label
     }()
     
-    lazy var stocksButton: UIButton = {
+    private lazy var stocksButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
@@ -339,7 +339,7 @@ class SavingMoneyScreen: UIView {
         delegate?.tappedStocksButton()
     }
     
-    lazy var fixedIncomeImageView: UIImageView = {
+    private lazy var fixedIncomeImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
@@ -348,7 +348,7 @@ class SavingMoneyScreen: UIView {
         return imageView
     }()
     
-    lazy var fixedIncomeTitleLabel: UILabel = {
+    private lazy var fixedIncomeTitleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
@@ -358,7 +358,7 @@ class SavingMoneyScreen: UIView {
         return label
     }()
     
-    lazy var fixedIncomeSubTitlelabel: UILabel = {
+    private lazy var fixedIncomeSubTitlelabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
@@ -368,7 +368,7 @@ class SavingMoneyScreen: UIView {
         return label
     }()
     
-    lazy var fixedIncomeButton: UIButton = {
+    private lazy var fixedIncomeButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(systemName: "chevron.right"), for: .normal)

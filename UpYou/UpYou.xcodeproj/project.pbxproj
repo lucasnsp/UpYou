@@ -109,6 +109,9 @@
 		46EEDCCB2AD43655005A7164 /* GoldenRulesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDCCA2AD43655005A7164 /* GoldenRulesData.swift */; };
 		46EEDCD02AD436BF005A7164 /* GoldenRulesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDCCF2AD436BF005A7164 /* GoldenRulesTableViewCell.swift */; };
 		46EEDCD22AD436CD005A7164 /* GoldenRulesTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDCD12AD436CD005A7164 /* GoldenRulesTableViewCellScreen.swift */; };
+		46EEDCDA2AD57804005A7164 /* FixedIncomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDCD92AD57804005A7164 /* FixedIncomeVC.swift */; };
+		46EEDCDC2AD57812005A7164 /* FixedIncomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDCDB2AD57812005A7164 /* FixedIncomeScreen.swift */; };
+		46EEDCE22AD58DB4005A7164 /* CDB.json in Resources */ = {isa = PBXBuildFile; fileRef = 46EEDCE12AD58DB4005A7164 /* CDB.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -213,6 +216,9 @@
 		46EEDCCA2AD43655005A7164 /* GoldenRulesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldenRulesData.swift; sourceTree = "<group>"; };
 		46EEDCCF2AD436BF005A7164 /* GoldenRulesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldenRulesTableViewCell.swift; sourceTree = "<group>"; };
 		46EEDCD12AD436CD005A7164 /* GoldenRulesTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldenRulesTableViewCellScreen.swift; sourceTree = "<group>"; };
+		46EEDCD92AD57804005A7164 /* FixedIncomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedIncomeVC.swift; sourceTree = "<group>"; };
+		46EEDCDB2AD57812005A7164 /* FixedIncomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedIncomeScreen.swift; sourceTree = "<group>"; };
+		46EEDCE12AD58DB4005A7164 /* CDB.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CDB.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -832,6 +838,7 @@
 				460536962ACEEE62003FC929 /* Stoicism.json */,
 				460536BA2AD04E21003FC929 /* Sleep.json */,
 				46EEDCBB2AD42AF4005A7164 /* goldenRules.json */,
+				46EEDCE12AD58DB4005A7164 /* CDB.json */,
 			);
 			path = Json;
 			sourceTree = "<group>";
@@ -1161,6 +1168,7 @@
 			isa = PBXGroup;
 			children = (
 				46EEDCBE2AD43184005A7164 /* GoldenRules */,
+				46EEDCD32AD57780005A7164 /* RendaFixa */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -1222,6 +1230,71 @@
 				46EEDCD12AD436CD005A7164 /* GoldenRulesTableViewCellScreen.swift */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		46EEDCD32AD57780005A7164 /* RendaFixa */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDCD42AD5778F005A7164 /* ViewController */,
+				46EEDCD52AD57797005A7164 /* Screen */,
+				46EEDCD72AD577C7005A7164 /* Sections */,
+			);
+			path = RendaFixa;
+			sourceTree = "<group>";
+		};
+		46EEDCD42AD5778F005A7164 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDCD92AD57804005A7164 /* FixedIncomeVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		46EEDCD52AD57797005A7164 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDCDB2AD57812005A7164 /* FixedIncomeScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		46EEDCD72AD577C7005A7164 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDCDD2AD58D2A005A7164 /* CDB */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		46EEDCDD2AD58D2A005A7164 /* CDB */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDCDE2AD58D32005A7164 /* ViewController */,
+				46EEDCDF2AD58D37005A7164 /* Screen */,
+				46EEDCE02AD58D3D005A7164 /* ViewModel */,
+			);
+			path = CDB;
+			sourceTree = "<group>";
+		};
+		46EEDCDE2AD58D32005A7164 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		46EEDCDF2AD58D37005A7164 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		46EEDCE02AD58D3D005A7164 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1297,6 +1370,7 @@
 				46EEDCBC2AD42AF4005A7164 /* goldenRules.json in Resources */,
 				460536972ACEEE62003FC929 /* Stoicism.json in Resources */,
 				461BEF872ABB914900C07847 /* Quote.json in Resources */,
+				46EEDCE22AD58DB4005A7164 /* CDB.json in Resources */,
 				460536BB2AD04E21003FC929 /* Sleep.json in Resources */,
 				461BEF272ABA74F700C07847 /* Assets.xcassets in Resources */,
 				460B7AD92AC8746E0059EA44 /* Environment.json in Resources */,
@@ -1330,6 +1404,7 @@
 				4605369C2ACEF65A003FC929 /* StoicismData.swift in Sources */,
 				460583B02AC47A5700446A6F /* SavingMoneyViewModel.swift in Sources */,
 				467D1D992AC700BE009E0B04 /* BooksTableViewCellScreen.swift in Sources */,
+				46EEDCDA2AD57804005A7164 /* FixedIncomeVC.swift in Sources */,
 				461BEF1E2ABA74F500C07847 /* AppDelegate.swift in Sources */,
 				461BEF552ABA758100C07847 /* LoginViewModel.swift in Sources */,
 				460B7AE12AC8787F0059EA44 /* EnvironmentVC.swift in Sources */,
@@ -1342,6 +1417,7 @@
 				460536AD2ACEF94F003FC929 /* StoicismTableViewCellScreen.swift in Sources */,
 				460B7AEC2AC87D750059EA44 /* EnvironmentTableViewCellScreen.swift in Sources */,
 				461BEF202ABA74F500C07847 /* SceneDelegate.swift in Sources */,
+				46EEDCDC2AD57812005A7164 /* FixedIncomeScreen.swift in Sources */,
 				461BEF562ABA758100C07847 /* LoginScreen.swift in Sources */,
 				460583AD2AC4784800446A6F /* MoneyPhrasesService.swift in Sources */,
 				461BEFAB2ABF121900C07847 /* PersonalDevelopmentScreen.swift in Sources */,
