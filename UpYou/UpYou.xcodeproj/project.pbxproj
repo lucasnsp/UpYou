@@ -112,6 +112,7 @@
 		46EEDCDA2AD57804005A7164 /* FixedIncomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDCD92AD57804005A7164 /* FixedIncomeVC.swift */; };
 		46EEDCDC2AD57812005A7164 /* FixedIncomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDCDB2AD57812005A7164 /* FixedIncomeScreen.swift */; };
 		46EEDCE22AD58DB4005A7164 /* CDB.json in Resources */ = {isa = PBXBuildFile; fileRef = 46EEDCE12AD58DB4005A7164 /* CDB.json */; };
+		46EEDCE42AD59654005A7164 /* CdbData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDCE32AD59654005A7164 /* CdbData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -219,6 +220,7 @@
 		46EEDCD92AD57804005A7164 /* FixedIncomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedIncomeVC.swift; sourceTree = "<group>"; };
 		46EEDCDB2AD57812005A7164 /* FixedIncomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedIncomeScreen.swift; sourceTree = "<group>"; };
 		46EEDCE12AD58DB4005A7164 /* CDB.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CDB.json; sourceTree = "<group>"; };
+		46EEDCE32AD59654005A7164 /* CdbData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CdbData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1015,6 +1017,7 @@
 			children = (
 				460583C02AC48EA000446A6F /* MoneyPhrasesData.swift */,
 				46EEDCCA2AD43655005A7164 /* GoldenRulesData.swift */,
+				46EEDCE32AD59654005A7164 /* CdbData.swift */,
 			);
 			path = "Finance Section";
 			sourceTree = "<group>";
@@ -1393,6 +1396,7 @@
 				46EEDCCB2AD43655005A7164 /* GoldenRulesData.swift in Sources */,
 				461BEF7F2ABB679400C07847 /* HomeViewModel.swift in Sources */,
 				461BEF9C2ABC773E00C07847 /* OnboardingSavesScreen.swift in Sources */,
+				46EEDCE42AD59654005A7164 /* CdbData.swift in Sources */,
 				460583B72AC47ED000446A6F /* SavingMoneyTableViewScreen.swift in Sources */,
 				461BEF7B2ABB677500C07847 /* HomeVC.swift in Sources */,
 				461BEF7D2ABB678900C07847 /* HomeScreen.swift in Sources */,

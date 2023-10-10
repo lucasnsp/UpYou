@@ -1,0 +1,52 @@
+{
+    "cdb": [
+        {
+            "cdbTitle": "O que é CDB?",
+            "cdbTopicOneImage": "priorizar_tarefas",
+            "cdbTopicOne": "O Certificado de Depósito Bancário (CDB) é um investimento de renda fixa emitido pelos bancos com o objetivo de captar recursos para financiar suas atividades, como projetos, crescimento e pagamento de dívidas.",
+            "cdbTopicTwo":"Qualquer investidor pode adquirir um CDB.  E esse tipo de investimento conta com a proteção do Fundo Garantidor de Créditos (FGC) com limite de R$250 mil por CPF ou CNPJ em cada instituição ou conglomerado financeiro, limitado ao saldo existente.",
+            "cdbTopicThree":"Devido a essa proteção, o CDB é considerado um investimento de renda fixa com baixo risco, pois, caso o banco emissor não consiga honrar o pagamento, o FGC reembolsará o investidor até o limite estabelecido."
+        },
+        {
+            "cdbTitle": "Como funciona o CDB?",
+            "cdbTopicOneImage": "setup",
+            "cdbTopicOne": "O CDB funciona como um empréstimo do seu dinheiro para uma instituição bancária e, em troca, você recebe uma taxa de rentabilidade que é definida no momento da compra.",
+            "cdbTopicTwo": "Assim, ao adquirir um CDB, você está emprestando dinheiro ao banco emissor por um determinado prazo. Em troca, o banco paga juros sobre o valor investido, ao final do prazo estabelecido, o investidor recebe de volta o valor investido mais os juros acordados.",
+            "cdbTopicThree": "O investimento de renda fixa em CDB pode ser feito através de bancos ou corretoras de valores. No entanto, nas corretoras de valores, você pode contar com inúmeras alternativas de CDBs e taxas de rentabilidade maiores."
+        },
+        {
+            "cdbTitle": "Quais são os tipos de CDB disponíveis?",
+            "cdbTopicOneImage": "priorizar_tarefas",
+            "cdbTopicOneTitle": "Títulos prefixados",
+            "cdbTopicOne": "Nos títulos prefixados, a taxa de juros é definida no momento da aplicação e se mantém fixa até a data de vencimento, dessa forma, o investidor sabe exatamente qual será a taxa de juros que incidirá sobre o valor investido, independentemente das condições do mercado. Embora os CDBs prefixados ofereçam maior segurança e previsibilidade em relação ao rendimento do investimento, podem apresentar menor rentabilidade se comparados aos CDBs pós-fixados.",
+            "cdbTopicTwoTitle": "Títulos pós-fixados",
+            "cdbTopicTwo": "Neste tipo de ativo, você só tem uma previsão de quanto irá receber no prazo de resgate. É uma opção atrativa para aqueles que desejam acompanhar as oscilações das taxas de juros e obter uma rentabilidade próxima ao desempenho do mercado.",
+            "cdbTopicThreeTitle": "Títulos Híbridos",
+            "cdbTopicThree": "A rentabilidade dos títulos híbridos é composta por uma parte fixa e uma variável: fixa no período inicial do investimento e, após, passam a ter sua rentabilidade vinculada a um indexador da economia, representam uma boa opção para investidores que desejam ter uma combinação de segurança e potencial de ganhos com base nas condições de mercado."
+        },
+        {
+            "cdbTitle": "Vantagens",
+            "cdbTopicOneImage": "priorizar_tarefas",
+            "cdbTopicOneTitle": "Facilidade",
+            "cdbTopicOne": "Para investir em CDB, é necessário ter acesso à internet e uma conta em uma instituição financeira, como a Rico.Como a negociação é totalmente online, basta escolher o título que melhor corresponde às suas expectativas e aplicar em CDB.",
+            "cdbTopicTwoTitle": "Rentabilidade",
+            "cdbTopicTwo": "Um dos fatores de destaque do CDB é a sua rentabilidade, no qual é possível encontrar títulos que oferecem rendimentos acima de 100% do CDI.",
+            "cdbTopicThreeTitle": "Segurança",
+            "cdbTopicThree": "O investimento em CDB conta com a garantia do Fundo Garantidor de Créditos (FGC), como já mencionado anteriormente. Assim, se o emissor falir, você não perde o valor aplicado.",
+            "cdbTopicFourTitle": "Liquidez",
+            "cdbTopicFour": "Com as inúmeras opções disponíveis no mercado, está cada vez mais comum encontrar ativos com prazo de liquidez menor, caso precise utilizar o dinheiro antes da data de vencimento o ideal é optar pelos ativos que possuem liquidez diária."
+        },
+        {
+            "cdbTitle": "Desvantagens",
+            "cdbTopicOneImage": "priorizar_tarefas",
+            "cdbTopicOneTitle": "Tributação",
+            "cdbTopicOne": "A rentabilidade de um CDB sofre um desconto do Imposto de Renda que pode variar entre 15% e 22,5% na data de vencimento do título.",
+            "cdbTopicTwoTitle": "Resgate",
+            "cdbTopicTwo": "O resgate de um CDB pode ser feito somente em sua data de vencimento. Caso você deseje antecipar essa operação, a sua rentabilidade total pode ser afetada.",
+            "cdbTopicThreeTitle": "Risco de crédito",
+            "cdbTopicThree": "O risco de crédito é quando existe a possibilidade de calote do banco emissor. Esse risco pode ser maior com bancos pequenos e mais frágeis. O ideal então é analisar e procurar aprender mais sobre os bancos emissores para não ter problemas no futuro.",
+            "cdbTopicFourTitle": "Valor da aplicação",
+            "cdbTopicFour": "Para começar a investir em CDBs, o valor inicial pode variar de acordo com o potencial de retorno e o risco da aplicação. Nos grandes bancos, é possível encontrar CDBs com um valor mínimo pequeno."
+        }
+    ]
+}
