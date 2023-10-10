@@ -113,6 +113,9 @@
 		46EEDCDC2AD57812005A7164 /* FixedIncomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDCDB2AD57812005A7164 /* FixedIncomeScreen.swift */; };
 		46EEDCE22AD58DB4005A7164 /* CDB.json in Resources */ = {isa = PBXBuildFile; fileRef = 46EEDCE12AD58DB4005A7164 /* CDB.json */; };
 		46EEDCE42AD59654005A7164 /* CdbData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDCE32AD59654005A7164 /* CdbData.swift */; };
+		46EEDCE62AD5B0CD005A7164 /* CdbVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDCE52AD5B0CD005A7164 /* CdbVC.swift */; };
+		46EEDCE82AD5B0DA005A7164 /* CdbScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDCE72AD5B0DA005A7164 /* CdbScreen.swift */; };
+		46EEDCEA2AD5B0EC005A7164 /* CdbViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDCE92AD5B0EC005A7164 /* CdbViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -221,6 +224,9 @@
 		46EEDCDB2AD57812005A7164 /* FixedIncomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedIncomeScreen.swift; sourceTree = "<group>"; };
 		46EEDCE12AD58DB4005A7164 /* CDB.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CDB.json; sourceTree = "<group>"; };
 		46EEDCE32AD59654005A7164 /* CdbData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CdbData.swift; sourceTree = "<group>"; };
+		46EEDCE52AD5B0CD005A7164 /* CdbVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CdbVC.swift; sourceTree = "<group>"; };
+		46EEDCE72AD5B0DA005A7164 /* CdbScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CdbScreen.swift; sourceTree = "<group>"; };
+		46EEDCE92AD5B0EC005A7164 /* CdbViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CdbViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1282,6 +1288,7 @@
 		46EEDCDE2AD58D32005A7164 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				46EEDCE52AD5B0CD005A7164 /* CdbVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1289,6 +1296,7 @@
 		46EEDCDF2AD58D37005A7164 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				46EEDCE72AD5B0DA005A7164 /* CdbScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -1296,6 +1304,7 @@
 		46EEDCE02AD58D3D005A7164 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				46EEDCE92AD5B0EC005A7164 /* CdbViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1413,6 +1422,7 @@
 				461BEF552ABA758100C07847 /* LoginViewModel.swift in Sources */,
 				460B7AE12AC8787F0059EA44 /* EnvironmentVC.swift in Sources */,
 				461BEF4D2ABA756000C07847 /* ThirdInfoViewController.swift in Sources */,
+				46EEDCEA2AD5B0EC005A7164 /* CdbViewModel.swift in Sources */,
 				461C714A2AD1B08400E18558 /* SleepTableViewCellScreen.swift in Sources */,
 				46EEDCC32AD431CF005A7164 /* GoldenRulesVC.swift in Sources */,
 				46DA2CDE2ACC39C900DEA703 /* HabitsViewModel.swift in Sources */,
@@ -1472,6 +1482,8 @@
 				461BEFA72ABF107B00C07847 /* PersonalDevelopmentVC.swift in Sources */,
 				460536AF2AD0421E003FC929 /* StoicismService.swift in Sources */,
 				461BEF4C2ABA756000C07847 /* ThirdInfoScreen.swift in Sources */,
+				46EEDCE82AD5B0DA005A7164 /* CdbScreen.swift in Sources */,
+				46EEDCE62AD5B0CD005A7164 /* CdbVC.swift in Sources */,
 				46DA2CE62ACC426300DEA703 /* HabitsData.swift in Sources */,
 				46EEDCD22AD436CD005A7164 /* GoldenRulesTableViewCellScreen.swift in Sources */,
 				461BEF492ABA756000C07847 /* SecondInfoViewController.swift in Sources */,
