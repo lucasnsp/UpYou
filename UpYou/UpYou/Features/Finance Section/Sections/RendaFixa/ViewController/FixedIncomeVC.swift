@@ -41,8 +41,9 @@ extension FixedIncomeVC: FixedIncomeScreenDelegate {
     }
     
     func tappedLcaButton() {
-        print(#function)
-    }
+        let vc: LcaVC = LcaVC()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)    }
     
     func tappedCdbButton() {
         let vc: CdbVC = CdbVC()
