@@ -36,7 +36,7 @@ class CdbScreen: UIView {
     private lazy var subImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "background")
+        image.image = UIImage(named: "background6")
         return image
     }()
     
@@ -52,7 +52,7 @@ class CdbScreen: UIView {
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-//        tableView.register(GoldenRulesTableViewCell.self, forCellReuseIdentifier: GoldenRulesTableViewCell.identifier)
+        tableView.register(CDBTableViewCell.self, forCellReuseIdentifier: CDBTableViewCell.identifier)
         tableView.backgroundColor = .black.withAlphaComponent(0.6)
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none

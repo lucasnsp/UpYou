@@ -28,7 +28,7 @@ class RegisterScreen: UIView {
     lazy var subImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "background")
+        image.image = UIImage(named: "background6")
         return image
     }()
     

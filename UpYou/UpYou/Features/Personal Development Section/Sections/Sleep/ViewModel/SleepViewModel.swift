@@ -32,7 +32,7 @@ class SleepViewModel {
     }
     
     public var heightForRowAt: CGFloat {
-        return 2800
+        return 2880
     }
     
     public func loadCurrentSleep(indexPath: IndexPath) -> Sleep {

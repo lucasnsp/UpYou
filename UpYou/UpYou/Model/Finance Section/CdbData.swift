@@ -14,7 +14,6 @@ struct CdbDATA: Codable {
 
 // MARK: - Cdb
 struct Cdb: Codable {
-    var cdbTitle, cdbTopicOneImage, cdbTopicOne, cdbTopicTwo: String?
-    var cdbTopicThree, cdbTopicOneTitle, cdbTopicTwoTitle, cdbTopicThreeTitle: String?
-    var cdbTopicFourTitle, cdbTopicFour: String?
+    var cdbTitle, cdbTopicOneImage, cdbTopicOneTitle, cdbTopicOne: String?
+    var cdbTopicTwoTitle, cdbTopicTwo, cdbTopicThreeTitle, cdbTopicThree: String?
 }

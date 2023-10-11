@@ -23,11 +23,11 @@ class TabBarVC: UITabBarController {
         tabBar.isTranslucent = false
         tabBar.tintColor = UIColor.white
         
-//        tabBar.layer.shadowColor = UIColor.purple.withAlphaComponent(0.8).cgColor
-//        tabBar.layer.shadowOffset = CGSize(width: 0, height: -2)
-//        tabBar.layer.shadowRadius = 10
-//        tabBar.layer.shadowOpacity = 0.8
-//        tabBar.layer.masksToBounds = false
+        tabBar.layer.shadowColor = UIColor.black.cgColor
+        tabBar.layer.shadowOffset = CGSize(width: 0, height: -4)
+        tabBar.layer.shadowRadius = 10
+        tabBar.layer.shadowOpacity = 0.8
+        tabBar.layer.masksToBounds = false
 
         let tabBarAppearance: UITabBarAppearance = UITabBarAppearance()
         tabBarAppearance.configureWithDefaultBackground()

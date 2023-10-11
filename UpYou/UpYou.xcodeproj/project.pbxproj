@@ -116,6 +116,9 @@
 		46EEDCE62AD5B0CD005A7164 /* CdbVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDCE52AD5B0CD005A7164 /* CdbVC.swift */; };
 		46EEDCE82AD5B0DA005A7164 /* CdbScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDCE72AD5B0DA005A7164 /* CdbScreen.swift */; };
 		46EEDCEA2AD5B0EC005A7164 /* CdbViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDCE92AD5B0EC005A7164 /* CdbViewModel.swift */; };
+		46EEDCEF2AD6C799005A7164 /* CDBTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDCEE2AD6C799005A7164 /* CDBTableViewCell.swift */; };
+		46EEDCF12AD6C7AB005A7164 /* CDBTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDCF02AD6C7AB005A7164 /* CDBTableViewCellScreen.swift */; };
+		46EEDCF32AD6CD52005A7164 /* CDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDCF22AD6CD52005A7164 /* CDBService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -227,6 +230,9 @@
 		46EEDCE52AD5B0CD005A7164 /* CdbVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CdbVC.swift; sourceTree = "<group>"; };
 		46EEDCE72AD5B0DA005A7164 /* CdbScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CdbScreen.swift; sourceTree = "<group>"; };
 		46EEDCE92AD5B0EC005A7164 /* CdbViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CdbViewModel.swift; sourceTree = "<group>"; };
+		46EEDCEE2AD6C799005A7164 /* CDBTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDBTableViewCell.swift; sourceTree = "<group>"; };
+		46EEDCF02AD6C7AB005A7164 /* CDBTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDBTableViewCellScreen.swift; sourceTree = "<group>"; };
+		46EEDCF22AD6CD52005A7164 /* CDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDBService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -991,6 +997,7 @@
 			children = (
 				460583B12AC47DBE00446A6F /* SavingMoneyCell */,
 				46EEDCCC2AD43690005A7164 /* GoldenRulesCell */,
+				46EEDCEB2AD6C748005A7164 /* CDBCell */,
 			);
 			path = "Finance Section";
 			sourceTree = "<group>";
@@ -1014,6 +1021,7 @@
 			children = (
 				460583AC2AC4784800446A6F /* MoneyPhrasesService.swift */,
 				46EEDCC82AD435F9005A7164 /* GoldenRulesService.swift */,
+				46EEDCF22AD6CD52005A7164 /* CDBService.swift */,
 			);
 			path = "Finance Section";
 			sourceTree = "<group>";
@@ -1309,6 +1317,31 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		46EEDCEB2AD6C748005A7164 /* CDBCell */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDCEC2AD6C75D005A7164 /* TableViewCell */,
+				46EEDCED2AD6C76D005A7164 /* Screen */,
+			);
+			path = CDBCell;
+			sourceTree = "<group>";
+		};
+		46EEDCEC2AD6C75D005A7164 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDCEE2AD6C799005A7164 /* CDBTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		46EEDCED2AD6C76D005A7164 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDCF02AD6C7AB005A7164 /* CDBTableViewCellScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1400,6 +1433,7 @@
 			files = (
 				461BEF602ABA758900C07847 /* RegisterScreen.swift in Sources */,
 				46DA2CD92ACC399C00DEA703 /* HabitsVC.swift in Sources */,
+				46EEDCF12AD6C7AB005A7164 /* CDBTableViewCellScreen.swift in Sources */,
 				461C713F2AD1ADAB00E18558 /* SleepData.swift in Sources */,
 				460583B52AC47EB300446A6F /* SavingMoneyTableViewCell.swift in Sources */,
 				46EEDCCB2AD43655005A7164 /* GoldenRulesData.swift in Sources */,
@@ -1457,6 +1491,7 @@
 				460B7AC12AC849200059EA44 /* DeepWorkVC.swift in Sources */,
 				460536B92AD04B22003FC929 /* SleepViewModel.swift in Sources */,
 				46EEDCC52AD431E6005A7164 /* GoldenRulesScreen.swift in Sources */,
+				46EEDCEF2AD6C799005A7164 /* CDBTableViewCell.swift in Sources */,
 				460583C12AC48EA000446A6F /* MoneyPhrasesData.swift in Sources */,
 				461BEF462ABA756000C07847 /* FirstInfoScreen.swift in Sources */,
 				460B7AC32AC8492E0059EA44 /* DeepWorkScreen.swift in Sources */,
@@ -1465,6 +1500,7 @@
 				46EEDCD02AD436BF005A7164 /* GoldenRulesTableViewCell.swift in Sources */,
 				461C71412AD1AE0D00E18558 /* SleepService.swift in Sources */,
 				460583A22AC4603100446A6F /* SavingMoneyScreen.swift in Sources */,
+				46EEDCF32AD6CD52005A7164 /* CDBService.swift in Sources */,
 				467D1D922AC6F86B009E0B04 /* BooksViewModel.swift in Sources */,
 				460B7AD12AC85B4B0059EA44 /* DeepWorkTableViewCell.swift in Sources */,
 				460536B72AD04B14003FC929 /* SleepScreen.swift in Sources */,
