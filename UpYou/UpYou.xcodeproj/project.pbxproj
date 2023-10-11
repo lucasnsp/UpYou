@@ -127,6 +127,14 @@
 		46EEDD052AD6E1A8005A7164 /* LcaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD042AD6E1A8005A7164 /* LcaViewModel.swift */; };
 		46EEDD0C2AD6E2C3005A7164 /* LCATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD0B2AD6E2C3005A7164 /* LCATableViewCell.swift */; };
 		46EEDD0E2AD6E2D0005A7164 /* LCATableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD0D2AD6E2D0005A7164 /* LCATableViewCellScreen.swift */; };
+		46EEDD102AD6EAD9005A7164 /* LCI.json in Resources */ = {isa = PBXBuildFile; fileRef = 46EEDD0F2AD6EAD9005A7164 /* LCI.json */; };
+		46EEDD162AD6EE3B005A7164 /* LciVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD152AD6EE3B005A7164 /* LciVC.swift */; };
+		46EEDD182AD6EE46005A7164 /* LciScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD172AD6EE46005A7164 /* LciScreen.swift */; };
+		46EEDD1A2AD6EE52005A7164 /* LciViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD192AD6EE52005A7164 /* LciViewModel.swift */; };
+		46EEDD1C2AD6F05C005A7164 /* LciData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD1B2AD6F05C005A7164 /* LciData.swift */; };
+		46EEDD1E2AD6F08D005A7164 /* LCIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD1D2AD6F08D005A7164 /* LCIService.swift */; };
+		46EEDD232AD6F1B8005A7164 /* LCITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD222AD6F1B8005A7164 /* LCITableViewCell.swift */; };
+		46EEDD252AD6F1C4005A7164 /* LCITableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD242AD6F1C4005A7164 /* LCITableViewCellScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -249,6 +257,14 @@
 		46EEDD042AD6E1A8005A7164 /* LcaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LcaViewModel.swift; sourceTree = "<group>"; };
 		46EEDD0B2AD6E2C3005A7164 /* LCATableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCATableViewCell.swift; sourceTree = "<group>"; };
 		46EEDD0D2AD6E2D0005A7164 /* LCATableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCATableViewCellScreen.swift; sourceTree = "<group>"; };
+		46EEDD0F2AD6EAD9005A7164 /* LCI.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LCI.json; sourceTree = "<group>"; };
+		46EEDD152AD6EE3B005A7164 /* LciVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LciVC.swift; sourceTree = "<group>"; };
+		46EEDD172AD6EE46005A7164 /* LciScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LciScreen.swift; sourceTree = "<group>"; };
+		46EEDD192AD6EE52005A7164 /* LciViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LciViewModel.swift; sourceTree = "<group>"; };
+		46EEDD1B2AD6F05C005A7164 /* LciData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LciData.swift; sourceTree = "<group>"; };
+		46EEDD1D2AD6F08D005A7164 /* LCIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCIService.swift; sourceTree = "<group>"; };
+		46EEDD222AD6F1B8005A7164 /* LCITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCITableViewCell.swift; sourceTree = "<group>"; };
+		46EEDD242AD6F1C4005A7164 /* LCITableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCITableViewCellScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1007,6 +1023,7 @@
 				46EEDCCC2AD43690005A7164 /* GoldenRulesCell */,
 				46EEDCEB2AD6C748005A7164 /* CDBCell */,
 				46EEDD062AD6E264005A7164 /* LCACell */,
+				46EEDD1F2AD6F187005A7164 /* LCICell */,
 			);
 			path = "Finance Section";
 			sourceTree = "<group>";
@@ -1032,6 +1049,7 @@
 				46EEDCC82AD435F9005A7164 /* GoldenRulesService.swift */,
 				46EEDCF22AD6CD52005A7164 /* CDBService.swift */,
 				46EEDCFA2AD6E0D4005A7164 /* LCAService.swift */,
+				46EEDD1D2AD6F08D005A7164 /* LCIService.swift */,
 			);
 			path = "Finance Section";
 			sourceTree = "<group>";
@@ -1043,6 +1061,7 @@
 				46EEDCCA2AD43655005A7164 /* GoldenRulesData.swift */,
 				46EEDCE32AD59654005A7164 /* CdbData.swift */,
 				46EEDCF62AD6E05A005A7164 /* LcaData.swift */,
+				46EEDD1B2AD6F05C005A7164 /* LciData.swift */,
 			);
 			path = "Finance Section";
 			sourceTree = "<group>";
@@ -1291,6 +1310,7 @@
 			children = (
 				46EEDCDD2AD58D2A005A7164 /* CDB */,
 				46EEDCFC2AD6E157005A7164 /* LCA */,
+				46EEDD112AD6EE0E005A7164 /* LCI */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -1361,6 +1381,7 @@
 				46EEDCBB2AD42AF4005A7164 /* goldenRules.json */,
 				46EEDCE12AD58DB4005A7164 /* CDB.json */,
 				46EEDCF42AD6DD09005A7164 /* LCA.json */,
+				46EEDD0F2AD6EAD9005A7164 /* LCI.json */,
 			);
 			path = "Finance Section";
 			sourceTree = "<group>";
@@ -1434,6 +1455,65 @@
 			isa = PBXGroup;
 			children = (
 				46EEDD0D2AD6E2D0005A7164 /* LCATableViewCellScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		46EEDD112AD6EE0E005A7164 /* LCI */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDD142AD6EE22005A7164 /* ViewController */,
+				46EEDD132AD6EE1C005A7164 /* Screen */,
+				46EEDD122AD6EE14005A7164 /* ViewModel */,
+			);
+			path = LCI;
+			sourceTree = "<group>";
+		};
+		46EEDD122AD6EE14005A7164 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDD192AD6EE52005A7164 /* LciViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		46EEDD132AD6EE1C005A7164 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDD172AD6EE46005A7164 /* LciScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		46EEDD142AD6EE22005A7164 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDD152AD6EE3B005A7164 /* LciVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		46EEDD1F2AD6F187005A7164 /* LCICell */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDD202AD6F197005A7164 /* TableViewCell */,
+				46EEDD212AD6F19C005A7164 /* Screen */,
+			);
+			path = LCICell;
+			sourceTree = "<group>";
+		};
+		46EEDD202AD6F197005A7164 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDD222AD6F1B8005A7164 /* LCITableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		46EEDD212AD6F19C005A7164 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDD242AD6F1C4005A7164 /* LCITableViewCellScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -1513,6 +1593,7 @@
 				461BEF872ABB914900C07847 /* Quote.json in Resources */,
 				46EEDCE22AD58DB4005A7164 /* CDB.json in Resources */,
 				46EEDCF52AD6DD09005A7164 /* LCA.json in Resources */,
+				46EEDD102AD6EAD9005A7164 /* LCI.json in Resources */,
 				460536BB2AD04E21003FC929 /* Sleep.json in Resources */,
 				461BEF272ABA74F700C07847 /* Assets.xcassets in Resources */,
 				460B7AD92AC8746E0059EA44 /* Environment.json in Resources */,
@@ -1533,6 +1614,7 @@
 				46EEDCF12AD6C7AB005A7164 /* CDBTableViewCellScreen.swift in Sources */,
 				461C713F2AD1ADAB00E18558 /* SleepData.swift in Sources */,
 				46EEDD0C2AD6E2C3005A7164 /* LCATableViewCell.swift in Sources */,
+				46EEDD1A2AD6EE52005A7164 /* LciViewModel.swift in Sources */,
 				460583B52AC47EB300446A6F /* SavingMoneyTableViewCell.swift in Sources */,
 				46EEDCCB2AD43655005A7164 /* GoldenRulesData.swift in Sources */,
 				461BEF7F2ABB679400C07847 /* HomeViewModel.swift in Sources */,
@@ -1563,6 +1645,7 @@
 				46EEDD012AD6E184005A7164 /* LcaVC.swift in Sources */,
 				46DA2CED2ACC46D200DEA703 /* HabitsTableViewCell.swift in Sources */,
 				460536AD2ACEF94F003FC929 /* StoicismTableViewCellScreen.swift in Sources */,
+				46EEDD252AD6F1C4005A7164 /* LCITableViewCellScreen.swift in Sources */,
 				460B7AEC2AC87D750059EA44 /* EnvironmentTableViewCellScreen.swift in Sources */,
 				461BEF202ABA74F500C07847 /* SceneDelegate.swift in Sources */,
 				46EEDCDC2AD57812005A7164 /* FixedIncomeScreen.swift in Sources */,
@@ -1582,15 +1665,19 @@
 				460583912AC1C3E300446A6F /* QuotesService.swift in Sources */,
 				4605839B2AC1C7F900446A6F /* PersonalDevelopmentViewModel.swift in Sources */,
 				461BEF682ABA759A00C07847 /* String+Extension.swift in Sources */,
+				46EEDD1C2AD6F05C005A7164 /* LciData.swift in Sources */,
 				461BEF612ABA758900C07847 /* RegisterVC.swift in Sources */,
 				460B7AD32AC85B620059EA44 /* DeepWorkTableViewCellScreen.swift in Sources */,
+				46EEDD232AD6F1B8005A7164 /* LCITableViewCell.swift in Sources */,
 				460B7ACC2AC857770059EA44 /* DeepWorkService.swift in Sources */,
 				46EEDD052AD6E1A8005A7164 /* LcaViewModel.swift in Sources */,
 				467D1D852AC5B638009E0B04 /* BooksVC.swift in Sources */,
 				4605838D2AC1C1EA00446A6F /* PersonalDevelopmentTableViewScreen.swift in Sources */,
+				46EEDD182AD6EE46005A7164 /* LciScreen.swift in Sources */,
 				46EEDD032AD6E19B005A7164 /* LcaScreen.swift in Sources */,
 				467D1D872AC5B683009E0B04 /* BooksScreen.swift in Sources */,
 				460B7AC12AC849200059EA44 /* DeepWorkVC.swift in Sources */,
+				46EEDD162AD6EE3B005A7164 /* LciVC.swift in Sources */,
 				460536B92AD04B22003FC929 /* SleepViewModel.swift in Sources */,
 				46EEDCC52AD431E6005A7164 /* GoldenRulesScreen.swift in Sources */,
 				46EEDCEF2AD6C799005A7164 /* CDBTableViewCell.swift in Sources */,
@@ -1600,6 +1687,7 @@
 				460536A42ACEF6E8003FC929 /* StoicismScreen.swift in Sources */,
 				460536A62ACEF6F9003FC929 /* StoicismViewModel.swift in Sources */,
 				46EEDCD02AD436BF005A7164 /* GoldenRulesTableViewCell.swift in Sources */,
+				46EEDD1E2AD6F08D005A7164 /* LCIService.swift in Sources */,
 				461C71412AD1AE0D00E18558 /* SleepService.swift in Sources */,
 				46EEDCF72AD6E05A005A7164 /* LcaData.swift in Sources */,
 				460583A22AC4603100446A6F /* SavingMoneyScreen.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  LCAService.swift
+//  LCIService.swift
 //  UpYou
 //
 //  Created by Lucas Neves dos santos pompeu on 11/10/23.
@@ -7,10 +7,10 @@
 
 import UIKit
 
-class LCAService {
+class LCIService {
     
-    func getLcaService(completion: @escaping (LcaDATA?, Error?) -> Void) {
-        let urlString: String = "https://run.mocky.io/v3/ced18438-83c2-4dbc-a87d-f0026c13b762"
+    func getLciService(completion: @escaping (LciDATA?, Error?) -> Void) {
+        let urlString: String = "https://run.mocky.io/v3/5a38b086-0029-449b-bb3e-a59bb65791cb"
         
         guard let url: URL = URL(string: urlString) else { return completion(nil, ErrorDetail.errorURL(urlString: urlString))}
         
@@ -27,9 +27,9 @@ class LCAService {
             
             if response.statusCode == 200 {
                 do {
-                    let lcaData: LcaDATA = try JSONDecoder().decode(LcaDATA.self, from: dataResult)
+                    let lciData: LciDATA = try JSONDecoder().decode(LciDATA.self, from: dataResult)
                     print("SUCCESS -> \(#function)")
-                    completion(lcaData, nil)
+                    completion(lciData, nil)
                 } catch  {
                     print("ERROR -> \(#function)")
                     completion(nil, error)

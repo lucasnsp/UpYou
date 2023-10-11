@@ -1,0 +1,56 @@
+{
+    "lci": [
+        {
+            "lciTitle": "O que é LCI?",
+            "lciTopicOneImage": "oqueeLCI",
+            "lciTopicOneTitle": "Definição de LCI",
+            "lciTopicOne": "A Letra de Crédito Imobiliário (LCI) é um título de crédito emitido por instituições financeiras com o objetivo de captar recursos para financiar o setor imobiliário. Ela representa um crédito concedido a projetos relacionados ao mercado imobiliário.",
+            "lciTopicTwoTitle": "Características das LCIs",
+            "lciTopicTwo":"As LCIs são emitidas por bancos e instituições financeiras autorizadas pelo Banco Central, são isentas de Imposto de Renda para pessoas físicas. Podem ser adquiridas por investidores individuais, e o valor mínimo de investimento pode variar de acordo com a instituição financeira.",
+            "lciTopicThreeTitle": "Garantias e Segurança das LCI",
+            "lciTopicThree":"A segurança das LCIs é baseada na garantia de lastro em créditos imobiliários, como financiamentos imobiliários ou empreendimentos do setor. A falta de garantia do Fundo Garantidor de Créditos (FGC) pode ser compensada pela baixa inadimplência histórica das LCIs."
+        },
+        {
+            "lciTitle": "Como funciona a LCI?",
+            "lciTopicOneImage": "comofuncionaoLCI",
+            "lciTopicOneTitle": "Emissão e Compra de LCIs",
+            "lciTopicOne": "As LCIs são emitidas por instituições financeiras com a finalidade de financiar o mercado imobiliário, Investidores adquirem LCIs diretamente das instituições emissoras, investindo recursos que são direcionados para projetos relacionados ao setor imobiliário.",
+            "lciTopicTwoTitle": "Rendimentos e Prazos",
+            "lciTopicTwo": "Os rendimentos das LCIs podem ser pré-fixados ou pós-fixados, dependendo da escolha do investidor. Os prazos de vencimento podem variar de acordo com o contrato, geralmente variando de meses a anos.",
+            "lciTopicThreeTitle": "Resgate e Liquidez",
+            "lciTopicThree": "As LCIs possuem prazos definidos, e o resgate antes do vencimento pode estar sujeito a penalizações e perda de rendimentos. A liquidez das LCIs pode ser limitada, uma vez que nem todas as instituições permitem resgates antecipados."
+        },
+        {
+            "lciTitle": "Quais são os tipos de LCI?",
+            "lciTopicOneImage": "tiposLci",
+            "lciTopicOneTitle": "LCI Pré-fixada vs LCI Pós-fixada",
+            "lciTopicOne": "LCIs pré-fixadas oferecem rendimentos com taxas definidas no momento da compra, proporcionando rendimentos conhecidos antecipadamente, LCIs pós-fixadas têm seus rendimentos atrelados a índices econômicos, como o CDI, o que torna os rendimentos mais variáveis.",
+            "lciTopicTwoTitle": "LCI Simples vs LCI Composta",
+            "lciTopicTwo": "LCIs simples têm juros que não se acumulam ao montante principal ao longo do tempo. LCIs compostas têm juros que se acumulam ao valor investido, gerando rendimentos sobre rendimentos.",
+            "lciTopicThreeTitle": "LCIs de Emissões Diferentes",
+            "lciTopicThree": "Diferentes instituições financeiras emitem LCAs, e a escolha do emissor pode afetar a taxa de rendimento e a segurança do investimento, é importante verificar a credibilidade do emissor e entender os detalhes de cada oferta."
+        },
+        {
+            "lciTitle": "Vantagens",
+            "lciTopicOneImage": "vantagens",
+            "lciTopicOneTitle": "Baixo Risco",
+            "lciTopicOne": "As LCIs são amplamente reconhecidas por sua segurança, uma vez que são lastreadas em créditos imobiliários, como financiamentos e empreendimentos do setor imobiliário o que proporciona uma garantia substancial. Isso faz delas uma opção de investimento de baixo risco.",
+            "lciTopicTwoTitle": "Isentas de Imposto",
+            "lciTopicTwo": "Uma das vantagens mais atrativas das LCIs é a isenção de Imposto de Renda para pessoas físicas. Isso significa que os rendimentos gerados pelas LCIs não são tributados, o que pode resultar em uma rentabilidade líquida mais favorável em comparação com outros investimentos sujeitos a impostos.",
+            "lciTopicThreeTitle": "Diversificação",
+            "lciTopicThree": "As LCIs podem ser uma excelente opção para diversificar uma carteira de investimentos. Ao incluir LCIs, os investidores podem reduzir a exposição a outros ativos financeiros e, ao mesmo tempo, se beneficiar da estabilidade e dos rendimentos previsíveis que as LCIs oferecem."
+        },
+        {
+            "lciTitle": "Desvantagens",
+            "lciTopicOneImage": "desvantagens",
+            "lciTopicOneTitle": "Liquidez Limitada",
+            "lciTopicOne": "Um dos principais desafios das LCIs é a liquidez limitada. A maioria das LCIs tem prazos definidos e o resgate antecipado pode estar sujeito a penalizações ou à perda de parte dos rendimentos. Isso significa que os investidores que precisam de acesso imediato ao dinheiro podem enfrentar restrições.",
+            "lciTopicTwoTitle": "Rendimentos Variáveis (em LCIs pós-fixadas)",
+            "lciTopicTwo": "LCIs pós-fixadas têm seus rendimentos atrelados a índices econômicos, como o CDI ou o IPCA. Isso significa que os rendimentos em LCIs pós-fixadas podem variar com o tempo, tornando-os menos previsíveis do que os investimentos de renda fixa tradicionais.",
+            "lciTopicThreeTitle": "Falta de Garantia pelo FGC",
+            "lciTopicThree": "Portanto, em caso de problemas financeiros da instituição emissora, o investidor não conta com essa proteção adicional. No entanto, a baixa inadimplência histórica das LCAs ajuda a mitigar esse risco."
+        }
+    ]
+}
+
+
