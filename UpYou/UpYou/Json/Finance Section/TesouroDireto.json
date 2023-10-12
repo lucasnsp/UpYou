@@ -1,0 +1,47 @@
+{
+    "tesouroDireto": [
+        {
+            "tdTitle": "O que é o Tesouro Direto?",
+            "tdTopicOneImage": "oqueetesourodireto",
+            "tdTopicOneTitle": "Definição de Tesouro Direto",
+            "tdTopicOne": "O Tesouro Direto é um programa do governo federal brasileiro que permite que investidores adquiram títulos públicos pela internet. Esses títulos são emitidos pelo governo para captar recursos para financiar suas atividades e projetos.",
+            "tdTopicTwoTitle": "Características do Tesouro Direto",
+            "tdTopicTwo":"O Tesouro Direto oferece diversos tipos de títulos públicos, como Tesouro Selic, Tesouro Prefixado e Tesouro IPCA, cada um com características específicas, Os valores mínimos de investimento variam de acordo com o tipo de título, sendo acessível a pequenos investidores.",
+            "tdTopicThreeTitle": "Garantias e Segurança no Tesouro Direto",
+            "tdTopicThree":"A segurança dos títulos públicos do Tesouro Direto deriva do fato de que são emitidos pelo governo, que possui a capacidade de honrar seus compromissos financeiros, os títulos públicos são considerados investimentos de baixo risco, especialmente aqueles com rentabilidade atrelada à taxa Selic, que possui baixa volatilidade.."
+        },
+        {
+            "tdTitle": "Como funciona o Tesouro Direto??",
+            "tdTopicOneImage": "comofuncionaotesourodireto",
+            "tdTopicOneTitle": "Compra de Títulos no Tesouro Direto",
+            "tdTopicOne": "Os investidores adquirem títulos públicos por meio de uma corretora ou banco habilitado para operar no Tesouro Direto, a compra é realizada pela plataforma online do programa, onde o investidor seleciona o título desejado, a quantidade e efetua o pagamento.",
+            "tdTopicTwoTitle": "Tipos de Rendimentos",
+            "tdTopicTwo": "Os títulos públicos oferecem diferentes tipos de rendimento, como o pré-fixado, que possui a taxa de juros definida na hora da compra, e o pós-fixado, que está vinculado à taxa Selic ou à variação do IPCA.",
+            "tdTopicThreeTitle": "Resgate e Liquidez",
+            "tdTopicThree": "Os títulos públicos do Tesouro Direto podem ser resgatados antes do vencimento, mas é importante estar ciente de que isso pode gerar ganhos ou perdas em relação ao valor de face do título."
+        },
+        {
+            "tdTitle": "Vantagens",
+            "tdTopicOneImage": "vantagens",
+            "tdTopicOneTitle": "Segurança e Baixo Risco",
+            "tdTopicOne": "O Tesouro Direto é considerado um investimento de baixo risco, uma vez que os títulos públicos são emitidos pelo governo federal, que possui a capacidade de honrar seus compromissos financeiros.",
+            "tdTopicTwoTitle": "Acessibilidade e Diversificação",
+            "tdTopicTwo": "O Tesouro Direto é acessível a qualquer pessoa física com CPF e conta em uma instituição financeira habilitada como agente de custódia. Além disso, os valores mínimos de investimento são relativamente baixos.",
+            "tdTopicThreeTitle": "Liquidez e Flexibilidade",
+            "tdTopicThree": "Os títulos públicos do Tesouro Direto oferecem alta liquidez, permitindo que os investidores comprem e vendam seus títulos a qualquer momento, desde que exista interesse no mercado, essa flexibilidade é valiosa para aqueles que podem precisar de acesso ao dinheiro antes do vencimento."
+        },
+        {
+            "tdTitle": "Desvantagens",
+            "tdiTopicOneImage": "desvantagens",
+            "tdiTopicOneTitle": "Volatilidade dos Preços",
+            "tdiTopicOne": "Os títulos públicos prefixados e indexados à inflação podem sofrer variações nos preços no mercado secundário, o que pode afetar o valor dos investimentos antes do vencimento. Isso significa que, se um investidor precisar vender seu título antes do vencimento, ele pode obter ganhos ou perdas em relação ao valor de face do título.",
+            "tdTopicTwoTitle": "Custos e Taxas",
+            "tdTopicTwo": "Existem custos associados ao investimento no Tesouro Direto. A taxa de custódia, que deve ser paga à B3, é um exemplo. Além disso, a taxa de administração cobrada pela corretora ou banco que atua como agente de custódia pode afetar a rentabilidade, especialmente em investimentos de longo prazo.",
+            "tdTopicThreeTitle": "Rentabilidade Variável",
+            "tdTopicThree": "Os títulos pós-fixados, como os Tesouros Selic, têm rendimentos vinculados a índices econômicos, o que torna a rentabilidade mais variável e dependente das flutuações desses índices. ."
+        }
+    ]
+}
+
+
+

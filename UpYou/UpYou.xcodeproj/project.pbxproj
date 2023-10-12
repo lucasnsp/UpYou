@@ -135,6 +135,14 @@
 		46EEDD1E2AD6F08D005A7164 /* LCIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD1D2AD6F08D005A7164 /* LCIService.swift */; };
 		46EEDD232AD6F1B8005A7164 /* LCITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD222AD6F1B8005A7164 /* LCITableViewCell.swift */; };
 		46EEDD252AD6F1C4005A7164 /* LCITableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD242AD6F1C4005A7164 /* LCITableViewCellScreen.swift */; };
+		46EEDD2B2AD82F14005A7164 /* TesouroDiretoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD2A2AD82F14005A7164 /* TesouroDiretoVC.swift */; };
+		46EEDD2D2AD82F23005A7164 /* TesouroDiretoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD2C2AD82F23005A7164 /* TesouroDiretoScreen.swift */; };
+		46EEDD2F2AD82F35005A7164 /* TesouroDiretoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD2E2AD82F34005A7164 /* TesouroDiretoViewModel.swift */; };
+		46EEDD312AD8310A005A7164 /* TesouroDireto.json in Resources */ = {isa = PBXBuildFile; fileRef = 46EEDD302AD8310A005A7164 /* TesouroDireto.json */; };
+		46EEDD332AD83459005A7164 /* TdData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD322AD83459005A7164 /* TdData.swift */; };
+		46EEDD352AD83476005A7164 /* TDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD342AD83476005A7164 /* TDService.swift */; };
+		46EEDD3B2AD835A3005A7164 /* TesouroDiretoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD3A2AD835A3005A7164 /* TesouroDiretoTableViewCell.swift */; };
+		46EEDD3D2AD835B0005A7164 /* TesouroDiretoTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD3C2AD835B0005A7164 /* TesouroDiretoTableViewCellScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -265,6 +273,14 @@
 		46EEDD1D2AD6F08D005A7164 /* LCIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCIService.swift; sourceTree = "<group>"; };
 		46EEDD222AD6F1B8005A7164 /* LCITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCITableViewCell.swift; sourceTree = "<group>"; };
 		46EEDD242AD6F1C4005A7164 /* LCITableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCITableViewCellScreen.swift; sourceTree = "<group>"; };
+		46EEDD2A2AD82F14005A7164 /* TesouroDiretoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesouroDiretoVC.swift; sourceTree = "<group>"; };
+		46EEDD2C2AD82F23005A7164 /* TesouroDiretoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesouroDiretoScreen.swift; sourceTree = "<group>"; };
+		46EEDD2E2AD82F34005A7164 /* TesouroDiretoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesouroDiretoViewModel.swift; sourceTree = "<group>"; };
+		46EEDD302AD8310A005A7164 /* TesouroDireto.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TesouroDireto.json; sourceTree = "<group>"; };
+		46EEDD322AD83459005A7164 /* TdData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TdData.swift; sourceTree = "<group>"; };
+		46EEDD342AD83476005A7164 /* TDService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDService.swift; sourceTree = "<group>"; };
+		46EEDD3A2AD835A3005A7164 /* TesouroDiretoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesouroDiretoTableViewCell.swift; sourceTree = "<group>"; };
+		46EEDD3C2AD835B0005A7164 /* TesouroDiretoTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesouroDiretoTableViewCellScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1019,11 +1035,9 @@
 		461C714C2AD1B77000E18558 /* Finance Section */ = {
 			isa = PBXGroup;
 			children = (
+				46EEDD372AD83557005A7164 /* Renda Fixa Section */,
 				460583B12AC47DBE00446A6F /* SavingMoneyCell */,
 				46EEDCCC2AD43690005A7164 /* GoldenRulesCell */,
-				46EEDCEB2AD6C748005A7164 /* CDBCell */,
-				46EEDD062AD6E264005A7164 /* LCACell */,
-				46EEDD1F2AD6F187005A7164 /* LCICell */,
 			);
 			path = "Finance Section";
 			sourceTree = "<group>";
@@ -1050,6 +1064,7 @@
 				46EEDCF22AD6CD52005A7164 /* CDBService.swift */,
 				46EEDCFA2AD6E0D4005A7164 /* LCAService.swift */,
 				46EEDD1D2AD6F08D005A7164 /* LCIService.swift */,
+				46EEDD342AD83476005A7164 /* TDService.swift */,
 			);
 			path = "Finance Section";
 			sourceTree = "<group>";
@@ -1062,6 +1077,7 @@
 				46EEDCE32AD59654005A7164 /* CdbData.swift */,
 				46EEDCF62AD6E05A005A7164 /* LcaData.swift */,
 				46EEDD1B2AD6F05C005A7164 /* LciData.swift */,
+				46EEDD322AD83459005A7164 /* TdData.swift */,
 			);
 			path = "Finance Section";
 			sourceTree = "<group>";
@@ -1311,6 +1327,7 @@
 				46EEDCDD2AD58D2A005A7164 /* CDB */,
 				46EEDCFC2AD6E157005A7164 /* LCA */,
 				46EEDD112AD6EE0E005A7164 /* LCI */,
+				46EEDD262AD82E3C005A7164 /* Tesouro Direto */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -1382,6 +1399,7 @@
 				46EEDCE12AD58DB4005A7164 /* CDB.json */,
 				46EEDCF42AD6DD09005A7164 /* LCA.json */,
 				46EEDD0F2AD6EAD9005A7164 /* LCI.json */,
+				46EEDD302AD8310A005A7164 /* TesouroDireto.json */,
 			);
 			path = "Finance Section";
 			sourceTree = "<group>";
@@ -1518,6 +1536,76 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
+		46EEDD262AD82E3C005A7164 /* Tesouro Direto */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDD272AD82E4F005A7164 /* ViewController */,
+				46EEDD282AD82E5C005A7164 /* Screen */,
+				46EEDD292AD82E68005A7164 /* ViewModel */,
+			);
+			path = "Tesouro Direto";
+			sourceTree = "<group>";
+		};
+		46EEDD272AD82E4F005A7164 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDD2A2AD82F14005A7164 /* TesouroDiretoVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		46EEDD282AD82E5C005A7164 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDD2C2AD82F23005A7164 /* TesouroDiretoScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		46EEDD292AD82E68005A7164 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDD2E2AD82F34005A7164 /* TesouroDiretoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		46EEDD362AD83536005A7164 /* TDCell */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDD382AD83570005A7164 /* TableViewCell */,
+				46EEDD392AD83576005A7164 /* Screen */,
+			);
+			path = TDCell;
+			sourceTree = "<group>";
+		};
+		46EEDD372AD83557005A7164 /* Renda Fixa Section */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDCEB2AD6C748005A7164 /* CDBCell */,
+				46EEDD062AD6E264005A7164 /* LCACell */,
+				46EEDD1F2AD6F187005A7164 /* LCICell */,
+				46EEDD362AD83536005A7164 /* TDCell */,
+			);
+			path = "Renda Fixa Section";
+			sourceTree = "<group>";
+		};
+		46EEDD382AD83570005A7164 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDD3A2AD835A3005A7164 /* TesouroDiretoTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		46EEDD392AD83576005A7164 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDD3C2AD835B0005A7164 /* TesouroDiretoTableViewCellScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1586,6 +1674,7 @@
 			files = (
 				46DA2CE42ACC3C3D00DEA703 /* Habits.json in Resources */,
 				467D1D892AC5B90B009E0B04 /* Books.json in Resources */,
+				46EEDD312AD8310A005A7164 /* TesouroDireto.json in Resources */,
 				461BEF6A2ABA763A00C07847 /* GoogleService-Info.plist in Resources */,
 				461BEF2A2ABA74F700C07847 /* LaunchScreen.storyboard in Resources */,
 				46EEDCBC2AD42AF4005A7164 /* goldenRules.json in Resources */,
@@ -1612,6 +1701,8 @@
 				461BEF602ABA758900C07847 /* RegisterScreen.swift in Sources */,
 				46DA2CD92ACC399C00DEA703 /* HabitsVC.swift in Sources */,
 				46EEDCF12AD6C7AB005A7164 /* CDBTableViewCellScreen.swift in Sources */,
+				46EEDD332AD83459005A7164 /* TdData.swift in Sources */,
+				46EEDD2B2AD82F14005A7164 /* TesouroDiretoVC.swift in Sources */,
 				461C713F2AD1ADAB00E18558 /* SleepData.swift in Sources */,
 				46EEDD0C2AD6E2C3005A7164 /* LCATableViewCell.swift in Sources */,
 				46EEDD1A2AD6EE52005A7164 /* LciViewModel.swift in Sources */,
@@ -1628,6 +1719,7 @@
 				461BEF482ABA756000C07847 /* SecondInfoScreen.swift in Sources */,
 				460B7AC62AC851C00059EA44 /* DeepWorkViewModel.swift in Sources */,
 				460536B52AD04B05003FC929 /* SleepVC.swift in Sources */,
+				46EEDD2F2AD82F35005A7164 /* TesouroDiretoViewModel.swift in Sources */,
 				4605369C2ACEF65A003FC929 /* StoicismData.swift in Sources */,
 				46EEDCFB2AD6E0D4005A7164 /* LCAService.swift in Sources */,
 				460583B02AC47A5700446A6F /* SavingMoneyViewModel.swift in Sources */,
@@ -1635,7 +1727,9 @@
 				46EEDCDA2AD57804005A7164 /* FixedIncomeVC.swift in Sources */,
 				461BEF1E2ABA74F500C07847 /* AppDelegate.swift in Sources */,
 				461BEF552ABA758100C07847 /* LoginViewModel.swift in Sources */,
+				46EEDD352AD83476005A7164 /* TDService.swift in Sources */,
 				460B7AE12AC8787F0059EA44 /* EnvironmentVC.swift in Sources */,
+				46EEDD2D2AD82F23005A7164 /* TesouroDiretoScreen.swift in Sources */,
 				461BEF4D2ABA756000C07847 /* ThirdInfoViewController.swift in Sources */,
 				46EEDCEA2AD5B0EC005A7164 /* CdbViewModel.swift in Sources */,
 				461C714A2AD1B08400E18558 /* SleepTableViewCellScreen.swift in Sources */,
@@ -1684,6 +1778,7 @@
 				460583C12AC48EA000446A6F /* MoneyPhrasesData.swift in Sources */,
 				461BEF462ABA756000C07847 /* FirstInfoScreen.swift in Sources */,
 				460B7AC32AC8492E0059EA44 /* DeepWorkScreen.swift in Sources */,
+				46EEDD3D2AD835B0005A7164 /* TesouroDiretoTableViewCellScreen.swift in Sources */,
 				460536A42ACEF6E8003FC929 /* StoicismScreen.swift in Sources */,
 				460536A62ACEF6F9003FC929 /* StoicismViewModel.swift in Sources */,
 				46EEDCD02AD436BF005A7164 /* GoldenRulesTableViewCell.swift in Sources */,
@@ -1704,6 +1799,7 @@
 				467D1D972AC700AD009E0B04 /* BooksTableViewCell.swift in Sources */,
 				461C71482AD1B07700E18558 /* SleepTableViewCell.swift in Sources */,
 				460B7AEA2AC87D650059EA44 /* EnvironmentTableViewCell.swift in Sources */,
+				46EEDD3B2AD835A3005A7164 /* TesouroDiretoTableViewCell.swift in Sources */,
 				460583962AC1C4ED00446A6F /* QuoteData.swift in Sources */,
 				46EEDD0E2AD6E2D0005A7164 /* LCATableViewCellScreen.swift in Sources */,
 				467D1D8E2AC6F687009E0B04 /* BooksData.swift in Sources */,

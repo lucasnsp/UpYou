@@ -33,7 +33,9 @@ extension FixedIncomeVC: FixedIncomeScreenDelegate {
     }
     
     func tappedTesouroDiretoButton() {
-        print(#function)
+        let vc: TesouroDiretoVC = TesouroDiretoVC()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
     
     func tappedLciButton() {
