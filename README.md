@@ -12,13 +12,13 @@ UpYou is a comprehensive financial management and personal development project d
 
 ## Features
 
-- **Set a Goal**: Here you will be able to create your goals and predicted how long will take to reach them. (Not ready)
+- **Set a Goal**: Here you will be able to create your goals and predicted how long will take to reach them.
 
-- **Track your expenses**: The biggest problem in people is control their expenses in this section the user will be able to track his expenses and know that 10% of his income should be saved for the future. (Not ready)
+- **Track your expenses**: The biggest problem in people is control their expenses in this section the user will be able to track his expenses and know that 10% of his income should be saved for the future.
 
 - **Finance Educational Area**: Here the user will understand the basics concepts about investiments, like stocks, FIIs, fixed Income, and the golden rules of the Riches Man in Babylon.
 
-- **Self-Development Area**: Here the user will understand the core basics of becoming his best version and improving everyday, learning the power of books, how the enviroment can shape is reality, the power of deep focus, how to create good habits and more. 
+- **Self-Development Educational Area**: Here the user will understand the core basics of becoming his best version and improving everyday, learning the power of books, how the enviroment can shape his reality, the power of deep focus, how to create good habits and more. 
 
 - **Track the Market**: Here combining an API from Brapi.Dev the user will be able to see how the financial market is going. 
 
@@ -55,7 +55,7 @@ To run the UpYou app on your local development environment, follow these steps:
 2. Open the project in Xcode:
 
    ```shell
-   cd becoin
+   cd UpYou
    open UpYou.xcodeproj
    ```
 
@@ -65,7 +65,7 @@ The UpYou app follows the MVVM (Model-View-ViewModel) architecture pattern to se
 
 - **Model**: Represents the data of the app to decode after to display in the view and comunicate with the viewModel.
 
-- **View**: Represents the user interface layer using UIKit views to display the data of the App
+- **View**: Represents the user interface layer using UIKit views to display the data of the App.
 
 - **ViewModel**: Acts as an intermediary between the Model and View, responsible for handling data manipulation, business logic, and interaction with external services.
 
