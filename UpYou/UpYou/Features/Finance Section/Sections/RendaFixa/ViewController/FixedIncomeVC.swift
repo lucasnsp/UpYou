@@ -29,7 +29,9 @@ extension FixedIncomeVC: FixedIncomeScreenDelegate {
     }
     
     func tappedTesouroIpcaButton() {
-        print(#function)
+        let vc: TesouroIpcaVC = TesouroIpcaVC()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
     
     func tappedTesouroDiretoButton() {

@@ -35,7 +35,7 @@ class TesouroDiretoViewModel {
         return 1000
     }
     
-    public func loadCurrentFocus(indexPath: IndexPath) -> TesouroDireto {
+    public func loadCurrentDireto(indexPath: IndexPath) -> TesouroDireto {
         td[indexPath.row]
     }
     

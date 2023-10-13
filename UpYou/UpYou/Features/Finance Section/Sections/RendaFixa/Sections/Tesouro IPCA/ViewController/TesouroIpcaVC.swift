@@ -1,19 +1,19 @@
 //
-//  TesouroDiretoVC.swift
+//  TesouroIpcaVC.swift
 //  UpYou
 //
-//  Created by Lucas Neves dos santos pompeu on 12/10/23.
+//  Created by Lucas Neves dos santos pompeu on 13/10/23.
 //
 
 import UIKit
 
-class TesouroDiretoVC: UIViewController {
+class TesouroIpcaVC: UIViewController {
     
-    var screen: TesouroDiretoScreen?
-    var viewModel: TesouroDiretoViewModel = TesouroDiretoViewModel()
+    var screen: TesouroIpcaScreen?
+    var viewModel: TesouroIpcaViewModel = TesouroIpcaViewModel()
     
     override func loadView() {
-        screen = TesouroDiretoScreen()
+        screen = TesouroIpcaScreen()
         view = screen
     }
 
@@ -26,7 +26,7 @@ class TesouroDiretoVC: UIViewController {
 
 }
 
-extension TesouroDiretoVC: TesouroDiretoViewModelDelegate {
+extension TesouroIpcaVC: TesouroIpcaViewModelDelegate {
     func success() {
         DispatchQueue.main.async {
             self.screen?.configTableViewProtocols(delegate: self, dataSource: self)
@@ -39,14 +39,14 @@ extension TesouroDiretoVC: TesouroDiretoViewModelDelegate {
     }
 }
 
-extension TesouroDiretoVC: UITableViewDelegate, UITableViewDataSource {
+extension TesouroIpcaVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfRowsInSection
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TesouroDiretoTableViewCell.identifier, for: indexPath) as? TesouroDiretoTableViewCell
-        cell?.setupCell(data: viewModel.loadCurrentDireto(indexPath: indexPath))
+        let cell = tableView.dequeueReusableCell(withIdentifier: TesouroIpcaTableViewCell.identifier, for: indexPath) as? TesouroIpcaTableViewCell
+        cell?.setupCell(data: viewModel.loadCurrentIpca(indexPath: indexPath))
         return cell ?? UITableViewCell()
     }
     
@@ -55,7 +55,7 @@ extension TesouroDiretoVC: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension TesouroDiretoVC: TesouroDiretoScreenDelegate {
+extension TesouroIpcaVC: TesouroIpcaScreenDelegate {
     func tappedBackButton() {
         dismiss(animated: true)
     }

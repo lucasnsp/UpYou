@@ -1,0 +1,48 @@
+{
+    "tesouroIpca": [
+        {
+            "tdiTitle": "O que é o Tesouro IPCA?",
+            "tdiTopicOneImage": "tesouroipca1",
+            "tdiTopicOneTitle": "Definição de Tesouro IPCA",
+            "tdiTopicOne": "O Tesouro IPCA é um tipo de título público emitido pelo governo federal, no qual os pagamentos de juros e o valor principal são corrigidos pela inflação, medida pelo Índice de Preços ao Consumidor Amplo (IPCA). Isso permite que os investidores protejam seu poder de compra ao longo do tempo.",
+            "tdiTopicTwoTitle": "Características do Tesouro IPCA",
+            "tdiTopicTwo":"Os títulos Tesouro IPCA oferecem um fluxo de pagamentos que se ajusta à inflação, fornecendo ganhos reais, ou seja, acima da taxa inflacionária. Existem diferentes tipos de títulos Tesouro IPCA, com prazos variados, permitindo que os investidores escolham a maturidade que melhor se adapte às suas necessidades.",
+            "tdiTopicThreeTitle": "Estratégias de Investimento e Diversificação",
+            "tdiTopicThree":"Os títulos Tesouro IPCA são uma ferramenta valiosa para diversificar a carteira, especialmente para investidores preocupados com a proteção contra a inflação, ao escolher títulos Tesouro IPCA, os investidores devem considerar seus objetivos financeiros, horizonte de investimento e tolerância ao risco."
+        },
+        {
+            "tdiTitle": "Como funciona o Tesouro IPCA?",
+            "tdiTopicOneImage": "tesouroipca2",
+            "tdiTopicOneTitle": "Compra de Títulos Tesouro IPCA",
+            "tdiTopicOne": "Investidores adquirem títulos Tesouro IPCA por meio do programa Tesouro Direto, uma plataforma online que permite a compra de títulos diretamente do governo.",
+            "tdiTopicTwoTitle": "Pagamentos de Juros e Correção Monetária",
+            "tdiTopicTwo": "Os títulos Tesouro IPCA pagam juros semestrais, e o valor principal é corrigido pela inflação, a rentabilidade total depende das variações do IPCA durante o período de detenção do título.",
+            "tdiTopicThreeTitle": "Resgate e Liquidez",
+            "tdiTopicThree": "Os títulos Tesouro IPCA podem ser resgatados antes do vencimento, mas a venda no mercado secundário pode gerar ganhos ou perdas em relação ao valor de face do título, a liquidez varia com a oferta e a demanda no mercado."
+        },
+        {
+            "tdiTitle": "Vantagens",
+            "tdiTopicOneImage": "vantagens",
+            "tdiTopicOneTitle": "Proteção contra a Inflação",
+            "tdiTopicOne": "Uma das principais vantagens dos títulos Tesouro IPCA é a proteção contra a inflação. Como os pagamentos de juros e o valor principal são corrigidos pelo IPCA, os investidores mantêm seu poder de compra ao longo do tempo.",
+            "tdiTopicTwoTitle": "Rendimentos Reais",
+            "tdiTopicTwo": "Os títulos Tesouro IPCA oferecem rendimentos reais, ou seja, acima da taxa de inflação. Isso significa que os investidores podem obter ganhos reais em seu investimento, aumentando seu patrimônio líquido ao longo do tempo.",
+            "tdiTopicThreeTitle": "Previsibilidade dos Rendimentos",
+            "tdiTopicThree": "A periodicidade dos pagamentos semestrais de juros proporciona previsibilidade de rendimentos, o que é útil para investidores que dependem de fluxo de caixa regular, como aposentados."
+        },
+        {
+            "tdiTitle": "Desvantagens",
+            "tdiTopicOneImage": "desvantagens",
+            "tdiTopicOneTitle": "Volatilidade dos Preços",
+            "tdiTopicOne": "Os preços dos títulos Tesouro IPCA podem ser voláteis no mercado secundário, o que pode afetar o valor dos investimentos antes do vencimento. Investidores que precisam vender seus títulos antecipadamente podem enfrentar ganhos ou perdas em relação ao valor de face.",
+            "tdiTopicTwoTitle": "Custos e Taxas",
+            "tdiTopicTwo": "Existem custos associados ao investimento em títulos Tesouro IPCA. Isso inclui a taxa de custódia paga à B3 e possíveis taxas de administração cobradas pela instituição financeira intermediária.",
+            "tdiTopicThreeTitle": "Risco de Liquidez",
+            "tdiTopicThree": "A liquidez dos títulos Tesouro IPCA depende da demanda no mercado. Em momentos de menor liquidez, pode ser mais difícil vender os títulos no mercado secundário a preços favoráveis."
+        }
+    ]
+}
+
+
+
+
