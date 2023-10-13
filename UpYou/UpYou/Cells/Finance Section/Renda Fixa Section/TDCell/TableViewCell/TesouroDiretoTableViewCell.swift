@@ -41,7 +41,17 @@ class TesouroDiretoTableViewCell: UITableViewCell {
     }
     
     public func setupCell(data: TesouroDireto) {
+        screen.tdTitleLabel.text = data.tdTitle
         
+        screen.tdOneTitleLabel.text = "• \(data.tdTopicOneTitle ?? "")"
+        screen.tdOneImageView.image = UIImage(named: data.tdTopicOneImage ?? "")
+        screen.tdOneLabel.text = data.tdTopicOne
+        
+        screen.tdTwoTitleLabel.text = "• \(data.tdTopicTwoTitle ?? "")"
+        screen.tdTwoLabel.text = data.tdTopicTwo
+        
+        screen.tdThreeTitleLabel.text = "• \(data.tdTopicThreeTitle ?? "")"
+        screen.tdThreeLabel.text = data.tdTopicThree
     }
 
 }

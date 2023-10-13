@@ -891,8 +891,8 @@
 		461BEF852ABB913100C07847 /* Json */ = {
 			isa = PBXGroup;
 			children = (
-				46EEDCF92AD6E093005A7164 /* Personal Development Section */,
 				46EEDCF82AD6E089005A7164 /* Finance Section */,
+				46EEDCF92AD6E093005A7164 /* Personal Development Section */,
 			);
 			path = Json;
 			sourceTree = "<group>";

@@ -52,7 +52,7 @@ class TesouroDiretoScreen: UIView {
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-//        tableView.register(LCITableViewCell.self, forCellReuseIdentifier: LCITableViewCell.identifier)
+        tableView.register(TesouroDiretoTableViewCell.self, forCellReuseIdentifier: TesouroDiretoTableViewCell.identifier)
         tableView.backgroundColor = .black.withAlphaComponent(0.6)
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none

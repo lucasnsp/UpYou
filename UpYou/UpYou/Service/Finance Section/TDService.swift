@@ -10,7 +10,7 @@ import UIKit
 class TDService {
     
     func getTesouroDiretoService(completion: @escaping (TdData?, Error?) -> Void) {
-        let urlString: String = "https://run.mocky.io/v3/5a38b086-0029-449b-bb3e-a59bb65791cb"
+        let urlString: String = "https://run.mocky.io/v3/234d1980-6295-4943-9b48-3c2887414cf5"
         
         guard let url: URL = URL(string: urlString) else { return completion(nil, ErrorDetail.errorURL(urlString: urlString))}
         

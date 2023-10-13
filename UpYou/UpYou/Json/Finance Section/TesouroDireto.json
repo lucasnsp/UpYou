@@ -32,9 +32,9 @@
         },
         {
             "tdTitle": "Desvantagens",
-            "tdiTopicOneImage": "desvantagens",
-            "tdiTopicOneTitle": "Volatilidade dos Preços",
-            "tdiTopicOne": "Os títulos públicos prefixados e indexados à inflação podem sofrer variações nos preços no mercado secundário, o que pode afetar o valor dos investimentos antes do vencimento. Isso significa que, se um investidor precisar vender seu título antes do vencimento, ele pode obter ganhos ou perdas em relação ao valor de face do título.",
+            "tdTopicOneImage": "desvantagens",
+            "tdTopicOneTitle": "Volatilidade dos Preços",
+            "tdTopicOne": "Os títulos públicos prefixados e indexados à inflação podem sofrer variações nos preços no mercado secundário, o que pode afetar o valor dos investimentos antes do vencimento. Isso significa que, se um investidor precisar vender seu título antes do vencimento, ele pode obter ganhos ou perdas em relação ao valor de face do título.",
             "tdTopicTwoTitle": "Custos e Taxas",
             "tdTopicTwo": "Existem custos associados ao investimento no Tesouro Direto. A taxa de custódia, que deve ser paga à B3, é um exemplo. Além disso, a taxa de administração cobrada pela corretora ou banco que atua como agente de custódia pode afetar a rentabilidade, especialmente em investimentos de longo prazo.",
             "tdTopicThreeTitle": "Rentabilidade Variável",
