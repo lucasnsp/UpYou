@@ -25,7 +25,9 @@ class FixedIncomeVC: UIViewController {
 
 extension FixedIncomeVC: FixedIncomeScreenDelegate {
     func tappedTesouroSelicButton() {
-        print(#function)
+        let vc: TesouroSelicVC = TesouroSelicVC()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
     
     func tappedTesouroIpcaButton() {

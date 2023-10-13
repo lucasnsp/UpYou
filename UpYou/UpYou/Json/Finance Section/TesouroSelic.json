@@ -2,17 +2,17 @@
     "tesouroSelic": [
         {
             "tdsTitle": "O que é o Tesouro Selic?",
-            "tdsTopicOneImage": "tesouroipca1",
+            "tdsTopicOneImage": "tesouroSelic1",
             "tdsTopicOneTitle": "Definição de Tesouro Selic",
             "tdsTopicOne": "O Tesouro Selic é um tipo de título público emitido pelo governo brasileiro, cuja rentabilidade está atrelada à taxa básica de juros da economia, conhecida como taxa Selic. Essa vinculação faz com que seja um investimento de renda fixa pós-fixado, considerado um dos mais seguros no mercado.",
             "tdsTopicTwoTitle": "Características do Tesouro Selic",
-            "tdsTopicTwo":"Os títulos Tesouro Selic oferecem liquidez diária, o que significa que os investidores podem resgatar seus investimentos a qualquer momento, os pagamentos de juros seguem a variação da taxa Selic, tornando a rentabilidade sensível a mudanças na política monetária.",
+            "tdsTopicTwo": "Os títulos Tesouro Selic oferecem liquidez diária, o que significa que os investidores podem resgatar seus investimentos a qualquer momento. Os pagamentos de juros seguem a variação da taxa Selic, tornando a rentabilidade sensível a mudanças na política monetária.",
             "tdsTopicThreeTitle": "Proteção e Reserva de Emergência",
-            "tdsTopicThree":"Os títulos Tesouro Selic são uma opção atraente para construir uma reserva de emergência. Sua liquidez diária permite o acesso rápido a fundos em caso de necessidade imprevista, enquanto os rendimentos são geralmente superiores aos da poupança."
+            "tdsTopicThree": "Os títulos Tesouro Selic são uma opção atraente para construir uma reserva de emergência. Sua liquidez diária permite o acesso rápido a fundos em caso de um imprevisto."
         },
         {
             "tdsTitle": "Como funciona o Tesouro Selic?",
-            "tdsTopicOneImage": "tesouroipca2",
+            "tdsTopicOneImage": "tesouroSelic2",
             "tdsTopicOneTitle": "Compra de Títulos Tesouro Selic",
             "tdsTopicOne": "Os investidores adquirem títulos Tesouro Selic por meio do programa Tesouro Direto, uma plataforma online que facilita a compra e gerenciamento desses títulos.",
             "tdsTopicTwoTitle": "Pagamentos de Juros e Correção Monetária",
@@ -24,26 +24,21 @@
             "tdsTitle": "Vantagens",
             "tdsTopicOneImage": "vantagens",
             "tdsTopicOneTitle": "Segurança e Baixo Risco",
-            "tdsTopicOne": "Os títulos Tesouro Selic são considerados de baixo risco devido à vinculação à taxa Selic e à garantia do governo federal.",
+            "tdsTopicOne": "Os títulos Tesouro Selic são considerados um dos investimentos mais seguros disponíveis no Brasil. Isso se deve à vinculação desses títulos à taxa Selic e à garantia do governo federal.",
             "tdsTopicTwoTitle": "Liquidez Diária",
-            "tdsTopicTwo": "A liquidez diária permite que os investidores acessem seus fundos a qualquer momento, tornando-os flexíveis para necessidades de curto prazo.",
+            "tdsTopicTwo": "A característica de liquidez diária dos títulos Tesouro Selic oferece flexibilidade aos investidores. Isso significa que eles podem acessar seus recursos a qualquer momento, o que é especialmente útil para necessidades de curto prazo, emergências financeiras ou para manter uma reserva de liquidez.",
             "tdsTopicThreeTitle": "Rentabilidade Atrativa em Ambientes de Taxa Selic Elevada",
-            "tdsTopicThree": "Quando a taxa Selic está alta, os títulos Tesouro Selic podem oferecer rendimentos competitivos em comparação com outras opções de renda fixa."
+            "tdsTopicThree": "Quando a taxa Selic está alta, os títulos Tesouro Selic podem oferecer rendimentos atraentes em comparação com outras opções de renda fixa. Isso torna esses títulos particularmente vantajosos em momentos de juros mais elevados, proporcionando ganhos significativos."
         },
         {
             "tdsTitle": "Desvantagens",
             "tdsTopicOneImage": "desvantagens",
             "tdsTopicOneTitle": "Rendimentos Variáveis",
-            "tdsTopicOne": "Os rendimentos dos títulos Tesouro Selic variam diariamente com as mudanças na taxa Selic, tornando a rentabilidade menos previsível em ambientes de queda de taxas.",
+            "tdsTopicOne": "A rentabilidade dos títulos Tesouro Selic varia diariamente de acordo com a variação da taxa Selic. Em ambientes de queda de taxas de juros, os rendimentos podem se tornar menos atrativos.",
             "tdsTopicTwoTitle": "Risco de Mercado",
-            "tdsTopicTwo": "Os preços dos títulos Tesouro Selic podem sofrer variações no mercado secundário, afetando o valor dos investimentos antes do vencimento, embora a volatilidade seja geralmente baixa.",
+            "tdsTopicTwo": "Embora os títulos Tesouro Selic sejam considerados de baixa volatilidade, seus preços podem sofrer variações no mercado secundário. Essas flutuações podem afetar o valor dos investimentos antes do vencimento, embora o risco geralmente seja baixo em comparação com ativos mais voláteis.",
             "tdsTopicThreeTitle": "Influência das Taxas de Juros",
-            "tdsTopicThree": "A rentabilidade dos títulos Tesouro Selic é diretamente ligada à taxa Selic, que é determinada pela política monetária. Mudanças nas taxas de juros podem afetar a rentabilidade dos títulos."
+            "tdsTopicThree": "A rentabilidade dos títulos Tesouro Selic é diretamente vinculada à taxa Selic, que é determinada pela política monetária do Banco Central. Mudanças nas taxas de juros, seja para cima ou para baixo, podem afetar a rentabilidade dos títulos. Investidores devem estar cientes de que a rentabilidade é sensível a essas mudanças."
         }
     ]
 }
-
-
-
-
-

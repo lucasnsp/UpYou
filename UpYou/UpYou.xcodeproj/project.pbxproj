@@ -152,6 +152,13 @@
 		46EEDD542AD9811C005A7164 /* TesouroIpcaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD532AD9811C005A7164 /* TesouroIpcaViewModel.swift */; };
 		46EEDD592AD9820E005A7164 /* TesouroIpcaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD582AD9820E005A7164 /* TesouroIpcaTableViewCell.swift */; };
 		46EEDD5B2AD9821D005A7164 /* TesouroIpcaTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD5A2AD9821D005A7164 /* TesouroIpcaTableViewCellScreen.swift */; };
+		46EEDD5E2AD988D1005A7164 /* TdsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD5D2AD988D1005A7164 /* TdsData.swift */; };
+		46EEDD602AD98901005A7164 /* TDSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD5F2AD98901005A7164 /* TDSService.swift */; };
+		46EEDD662AD9898C005A7164 /* TesouroSelicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD652AD9898C005A7164 /* TesouroSelicVC.swift */; };
+		46EEDD682AD98999005A7164 /* TesouroSelicScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD672AD98999005A7164 /* TesouroSelicScreen.swift */; };
+		46EEDD6A2AD989A8005A7164 /* TesouroSelicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD692AD989A8005A7164 /* TesouroSelicViewModel.swift */; };
+		46EEDD6F2AD98AB3005A7164 /* TesouroSelicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD6E2AD98AB3005A7164 /* TesouroSelicTableViewCell.swift */; };
+		46EEDD712AD98ABC005A7164 /* TesouroSelicTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD702AD98ABC005A7164 /* TesouroSelicTableViewCellScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -299,6 +306,13 @@
 		46EEDD532AD9811C005A7164 /* TesouroIpcaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesouroIpcaViewModel.swift; sourceTree = "<group>"; };
 		46EEDD582AD9820E005A7164 /* TesouroIpcaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesouroIpcaTableViewCell.swift; sourceTree = "<group>"; };
 		46EEDD5A2AD9821D005A7164 /* TesouroIpcaTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesouroIpcaTableViewCellScreen.swift; sourceTree = "<group>"; };
+		46EEDD5D2AD988D1005A7164 /* TdsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TdsData.swift; sourceTree = "<group>"; };
+		46EEDD5F2AD98901005A7164 /* TDSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDSService.swift; sourceTree = "<group>"; };
+		46EEDD652AD9898C005A7164 /* TesouroSelicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesouroSelicVC.swift; sourceTree = "<group>"; };
+		46EEDD672AD98999005A7164 /* TesouroSelicScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesouroSelicScreen.swift; sourceTree = "<group>"; };
+		46EEDD692AD989A8005A7164 /* TesouroSelicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesouroSelicViewModel.swift; sourceTree = "<group>"; };
+		46EEDD6E2AD98AB3005A7164 /* TesouroSelicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesouroSelicTableViewCell.swift; sourceTree = "<group>"; };
+		46EEDD702AD98ABC005A7164 /* TesouroSelicTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesouroSelicTableViewCellScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1084,6 +1098,7 @@
 				46EEDD1D2AD6F08D005A7164 /* LCIService.swift */,
 				46EEDD342AD83476005A7164 /* TDService.swift */,
 				46EEDD492AD97FF3005A7164 /* TDIService.swift */,
+				46EEDD5F2AD98901005A7164 /* TDSService.swift */,
 			);
 			path = "Finance Section";
 			sourceTree = "<group>";
@@ -1093,11 +1108,7 @@
 			children = (
 				460583C02AC48EA000446A6F /* MoneyPhrasesData.swift */,
 				46EEDCCA2AD43655005A7164 /* GoldenRulesData.swift */,
-				46EEDCE32AD59654005A7164 /* CdbData.swift */,
-				46EEDCF62AD6E05A005A7164 /* LcaData.swift */,
-				46EEDD1B2AD6F05C005A7164 /* LciData.swift */,
-				46EEDD322AD83459005A7164 /* TdData.swift */,
-				46EEDD472AD97FB4005A7164 /* TdiData.swift */,
+				46EEDD5C2AD988B5005A7164 /* Renda Fixa */,
 			);
 			path = "Finance Section";
 			sourceTree = "<group>";
@@ -1349,6 +1360,7 @@
 				46EEDD112AD6EE0E005A7164 /* LCI */,
 				46EEDD262AD82E3C005A7164 /* Tesouro Direto */,
 				46EEDD4B2AD98099005A7164 /* Tesouro IPCA */,
+				46EEDD612AD98958005A7164 /* Tesouro Selic */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -1610,6 +1622,7 @@
 				46EEDD1F2AD6F187005A7164 /* LCICell */,
 				46EEDD362AD83536005A7164 /* TDCell */,
 				46EEDD552AD981DD005A7164 /* TDICell */,
+				46EEDD6B2AD98A80005A7164 /* TDSCell */,
 			);
 			path = "Renda Fixa Section";
 			sourceTree = "<group>";
@@ -1685,6 +1698,78 @@
 			isa = PBXGroup;
 			children = (
 				46EEDD5A2AD9821D005A7164 /* TesouroIpcaTableViewCellScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		46EEDD5C2AD988B5005A7164 /* Renda Fixa */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDCE32AD59654005A7164 /* CdbData.swift */,
+				46EEDCF62AD6E05A005A7164 /* LcaData.swift */,
+				46EEDD1B2AD6F05C005A7164 /* LciData.swift */,
+				46EEDD322AD83459005A7164 /* TdData.swift */,
+				46EEDD472AD97FB4005A7164 /* TdiData.swift */,
+				46EEDD5D2AD988D1005A7164 /* TdsData.swift */,
+			);
+			path = "Renda Fixa";
+			sourceTree = "<group>";
+		};
+		46EEDD612AD98958005A7164 /* Tesouro Selic */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDD642AD98977005A7164 /* ViewController */,
+				46EEDD632AD9896F005A7164 /* Screen */,
+				46EEDD622AD98969005A7164 /* ViewModel */,
+			);
+			path = "Tesouro Selic";
+			sourceTree = "<group>";
+		};
+		46EEDD622AD98969005A7164 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDD692AD989A8005A7164 /* TesouroSelicViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		46EEDD632AD9896F005A7164 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDD672AD98999005A7164 /* TesouroSelicScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		46EEDD642AD98977005A7164 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDD652AD9898C005A7164 /* TesouroSelicVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		46EEDD6B2AD98A80005A7164 /* TDSCell */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDD6C2AD98A91005A7164 /* TableViewCell */,
+				46EEDD6D2AD98A97005A7164 /* Screen */,
+			);
+			path = TDSCell;
+			sourceTree = "<group>";
+		};
+		46EEDD6C2AD98A91005A7164 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDD6E2AD98AB3005A7164 /* TesouroSelicTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		46EEDD6D2AD98A97005A7164 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				46EEDD702AD98ABC005A7164 /* TesouroSelicTableViewCellScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -1800,6 +1885,7 @@
 				461BEF7B2ABB677500C07847 /* HomeVC.swift in Sources */,
 				461BEF7D2ABB678900C07847 /* HomeScreen.swift in Sources */,
 				460583A02AC4602200446A6F /* SavingMoneyVC.swift in Sources */,
+				46EEDD602AD98901005A7164 /* TDSService.swift in Sources */,
 				460536AB2ACEF938003FC929 /* StoicismTableViewCell.swift in Sources */,
 				461BEF482ABA756000C07847 /* SecondInfoScreen.swift in Sources */,
 				460B7AC62AC851C00059EA44 /* DeepWorkViewModel.swift in Sources */,
@@ -1809,11 +1895,13 @@
 				46EEDCFB2AD6E0D4005A7164 /* LCAService.swift in Sources */,
 				460583B02AC47A5700446A6F /* SavingMoneyViewModel.swift in Sources */,
 				467D1D992AC700BE009E0B04 /* BooksTableViewCellScreen.swift in Sources */,
+				46EEDD5E2AD988D1005A7164 /* TdsData.swift in Sources */,
 				46EEDCDA2AD57804005A7164 /* FixedIncomeVC.swift in Sources */,
 				461BEF1E2ABA74F500C07847 /* AppDelegate.swift in Sources */,
 				461BEF552ABA758100C07847 /* LoginViewModel.swift in Sources */,
 				46EEDD352AD83476005A7164 /* TDService.swift in Sources */,
 				460B7AE12AC8787F0059EA44 /* EnvironmentVC.swift in Sources */,
+				46EEDD712AD98ABC005A7164 /* TesouroSelicTableViewCellScreen.swift in Sources */,
 				46EEDD2D2AD82F23005A7164 /* TesouroDiretoScreen.swift in Sources */,
 				461BEF4D2ABA756000C07847 /* ThirdInfoViewController.swift in Sources */,
 				46EEDCEA2AD5B0EC005A7164 /* CdbViewModel.swift in Sources */,
@@ -1833,7 +1921,9 @@
 				461BEFAB2ABF121900C07847 /* PersonalDevelopmentScreen.swift in Sources */,
 				461BEFA22ABDD2C900C07847 /* SelfDevelopmentScreen.swift in Sources */,
 				460B7ACA2AC857400059EA44 /* DeepWorkData.swift in Sources */,
+				46EEDD682AD98999005A7164 /* TesouroSelicScreen.swift in Sources */,
 				46DA2CE82ACC429100DEA703 /* HabitsService.swift in Sources */,
+				46EEDD6F2AD98AB3005A7164 /* TesouroSelicTableViewCell.swift in Sources */,
 				460B7AE32AC878990059EA44 /* EnvironmentScreen.swift in Sources */,
 				461BEF9A2ABC772800C07847 /* OnboardingSavesVC.swift in Sources */,
 				460B7ADF2AC877760059EA44 /* EnvironmentService.swift in Sources */,
@@ -1841,6 +1931,7 @@
 				460B7ADD2AC877490059EA44 /* EnvironmentData.swift in Sources */,
 				46DA2CEF2ACC472000DEA703 /* HabitsTableViewCellScreen.swift in Sources */,
 				461BEF642ABA758F00C07847 /* AlertController.swift in Sources */,
+				46EEDD662AD9898C005A7164 /* TesouroSelicVC.swift in Sources */,
 				460583912AC1C3E300446A6F /* QuotesService.swift in Sources */,
 				4605839B2AC1C7F900446A6F /* PersonalDevelopmentViewModel.swift in Sources */,
 				461BEF682ABA759A00C07847 /* String+Extension.swift in Sources */,
@@ -1873,6 +1964,7 @@
 				46EEDCF72AD6E05A005A7164 /* LcaData.swift in Sources */,
 				46EEDD482AD97FB4005A7164 /* TdiData.swift in Sources */,
 				460583A22AC4603100446A6F /* SavingMoneyScreen.swift in Sources */,
+				46EEDD6A2AD989A8005A7164 /* TesouroSelicViewModel.swift in Sources */,
 				46EEDCF32AD6CD52005A7164 /* CDBService.swift in Sources */,
 				467D1D922AC6F86B009E0B04 /* BooksViewModel.swift in Sources */,
 				460B7AD12AC85B4B0059EA44 /* DeepWorkTableViewCell.swift in Sources */,
