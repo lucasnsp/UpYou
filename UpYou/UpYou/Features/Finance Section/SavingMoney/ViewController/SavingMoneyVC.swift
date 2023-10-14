@@ -49,7 +49,9 @@ extension SavingMoneyVC: SavingMoneyScreenDelegate {
     }
     
     func tappedFllsButton() {
-        print(#function)
+        let vc: FiisVC = FiisVC()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
     
     func tappedStocksButton() {

@@ -1,0 +1,45 @@
+{
+    "fundosImobiliarios": [
+        {
+            "fiisTitle": "O que são Fundos Imobiliários (FIIs)?",
+            "fiisTopicOneImage": "fundosimobiliarios1",
+            "fiisTopicOneTitle": "Definição de Fundos Imobiliários",
+            "fiisTopicOne": "Fundos Imobiliários (FIIs) são veículos de investimento coletivo que reúnem recursos de diversos investidores para aplicação no mercado imobiliário. Eles podem investir em diversos tipos de ativos imobiliários, como imóveis comerciais, residenciais, shoppings, e outros.",
+            "fiisTopicTwoTitle": "Características dos Fundos Imobiliários",
+            "fiisTopicTwo": "Cotas e Distribuição de Rendimentos: Os FIIs são divididos em cotas, e cada investidor adquire um número específico de cotas de acordo com o valor do seu investimento. A distribuição de rendimentos ocorre periodicamente, e os cotistas recebem uma parcela dos ganhos proporcionais às suas cotas.",
+            "fiisTopicThreeTitle": "Tipos de Ativos Imobiliários",
+            "fiisTopicThree": "Imóveis Comerciais: Isso inclui escritórios, lojas, galpões industriais e outros imóveis utilizados para fins comerciais, imóveis Residenciais: Podem ser apartamentos ou conjuntos residenciais, imóveis de Renda Fixa: Títulos imobiliários como CRI (Certificados de Recebíveis Imobiliários) e LCI (Letras de Crédito Imobiliário), shoppings: Fundos que investem em shoppings centers, hospitalidade: Hotéis e empreendimentos relacionados a turismo e hospitalidade."
+        },
+        {
+            "fiisTitle": "Como Funcionam os Fundos Imobiliários (FIIs)?",
+            "fiisTopicOneImage": "fundosimobiliarios2",
+            "fiisTopicOneTitle": "Aquisição de Cotas dos FIIs",
+            "fiisTopicOne": "Os investidores adquirem cotas de FIIs por meio de corretoras ou bancos, semelhante à compra de ações. As cotas são adquiridas no mercado secundário, e os preços variam de acordo com a oferta e a demanda.",
+            "fiisTopicTwoTitle": "Gestão e Administração dos FIIs",
+            "fiisTopicTwo": "Os FIIs são administrados por gestores profissionais que tomam decisões de investimento em nome dos cotistas. Os administradores são responsáveis pela gestão dos ativos e pela distribuição de rendimentos. Os gestores têm o papel de buscar oportunidades de investimento, realizar aquisições e gerenciar os imóveis.",
+            "fiisTopicThreeTitle": "Distribuição de Rendimentos",
+            "fiisTopicThree": "Os rendimentos gerados pelos ativos imobiliários do fundo, como aluguéis e lucros na venda de imóveis, são distribuídos regularmente aos cotistas. Os rendimentos são isentos de Imposto de Renda para pessoas físicas, desde que o fundo atenda a certos critérios estabelecidos pela CVM."
+        },
+        {
+            "fiisTitle": "Vantagens",
+            "fiisTopicOneImage": "vantagens",
+            "fiisTopicOneTitle": "Diversificação do Investimento",
+            "fiisTopicOne": "Uma das principais vantagens dos FIIs é a capacidade de diversificar o investimento no mercado imobiliário. Os fundos podem investir em uma variedade de ativos imobiliários, incluindo escritórios, shoppings, hotéis, galpões logísticos e imóveis residenciais.",
+            "fiisTopicTwoTitle": "Rendimento Regula",
+            "fiisTopicTwo": "Muitos FIIs distribuem rendimentos regularmente aos investidores, geralmente na forma de aluguéis recebidos dos inquilinos dos imóveis do fundo. Esses rendimentos periódicos podem ser uma fonte de renda consistente para os investidores, o que os torna atrativos para aqueles que buscam um fluxo de caixa regular.",
+            "fiisTopicThreeTitle": "Liquidez e Facilidade de Negociação",
+            "fiisTopicThree": "As cotas de FIIs são negociadas em bolsas de valores, o que oferece liquidez e facilidade de compra e venda em comparação com a compra direta de imóveis físicos. Os investidores podem vender suas cotas a qualquer momento durante o horário de negociação."
+        },
+        {
+            "fiisTitle": "Desvantagens",
+            "fiisTopicOneImage": "desvantagens",
+            "fiisTopicOneTitle": "Riscos do Mercado Imobiliário",
+            "fiisTopicOne": "Os rendimentos dos FIIs podem ser afetados por flutuações no mercado imobiliário, como variações nos preços de aluguel e na valorização de ativos. Em tempos de desaceleração econômica ou crise imobiliária, os rendimentos dos FIIs podem ser impactados negativamente.",
+            "fiisTopicTwoTitle": "Taxas e Custos",
+            "fiisTopicTwo": "Os FIIs podem cobrar taxas de administração e performance, o que reduz a rentabilidade líquida para os investidores. Além disso, existem custos associados à compra e venda de cotas e à gestão do fundo.",
+            "fiisTopicThreeTitle": "Flutuações de Preço das Cotas",
+            "fiisTopicThree": "As cotas de FIIs estão sujeitas a variações de preço no mercado secundário, o que pode afetar o valor do investimento. Investidores podem sofrer perdas de capital se o preço das cotas cair."
+        }
+    ]
+}
+
