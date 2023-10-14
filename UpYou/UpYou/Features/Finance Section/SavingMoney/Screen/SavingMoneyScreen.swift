@@ -223,7 +223,7 @@ class SavingMoneyScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "As Leis de Ouro da Babilo"
+        label.text = "As Leis de Ouro da Babilônia"
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textAlignment = .left
         return label

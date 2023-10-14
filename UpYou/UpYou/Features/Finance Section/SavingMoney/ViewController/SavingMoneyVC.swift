@@ -65,7 +65,9 @@ extension SavingMoneyVC: SavingMoneyScreenDelegate {
     }
     
     func tappedCryptoButton() {
-        print(#function)
+        let vc: CriptoVC = CriptoVC()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
     
     func tappedExpensesButton() {
