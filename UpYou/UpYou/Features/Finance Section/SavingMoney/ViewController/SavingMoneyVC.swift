@@ -55,7 +55,9 @@ extension SavingMoneyVC: SavingMoneyScreenDelegate {
     }
     
     func tappedStocksButton() {
-        print(#function)
+        let vc: StocksVC = StocksVC()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
     
     func tappedGoldenRulesButton() {

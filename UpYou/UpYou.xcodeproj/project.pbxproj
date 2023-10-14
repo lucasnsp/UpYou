@@ -109,6 +109,10 @@
 		46C9B40F2ADAF88400CC7395 /* CriptoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C9B40E2ADAF88400CC7395 /* CriptoViewModel.swift */; };
 		46C9B4142ADAFA7A00CC7395 /* CriptoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C9B4132ADAFA7A00CC7395 /* CriptoTableViewCell.swift */; };
 		46C9B4162ADAFA8F00CC7395 /* CriptoTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C9B4152ADAFA8F00CC7395 /* CriptoTableViewCellScreen.swift */; };
+		46C9B41C2ADAFFCB00CC7395 /* StocksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C9B41B2ADAFFCB00CC7395 /* StocksVC.swift */; };
+		46C9B41E2ADAFFDD00CC7395 /* StocksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C9B41D2ADAFFDD00CC7395 /* StocksViewModel.swift */; };
+		46C9B4202ADAFFEC00CC7395 /* StocksScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C9B41F2ADAFFEC00CC7395 /* StocksScreen.swift */; };
+		46C9B4222ADB00D900CC7395 /* Stocks.json in Resources */ = {isa = PBXBuildFile; fileRef = 46C9B4212ADB00D900CC7395 /* Stocks.json */; };
 		46DA2CD92ACC399C00DEA703 /* HabitsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DA2CD82ACC399C00DEA703 /* HabitsVC.swift */; };
 		46DA2CDB2ACC39AE00DEA703 /* HabitsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DA2CDA2ACC39AE00DEA703 /* HabitsScreen.swift */; };
 		46DA2CDE2ACC39C900DEA703 /* HabitsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DA2CDD2ACC39C900DEA703 /* HabitsViewModel.swift */; };
@@ -279,6 +283,10 @@
 		46C9B40E2ADAF88400CC7395 /* CriptoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptoViewModel.swift; sourceTree = "<group>"; };
 		46C9B4132ADAFA7A00CC7395 /* CriptoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptoTableViewCell.swift; sourceTree = "<group>"; };
 		46C9B4152ADAFA8F00CC7395 /* CriptoTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptoTableViewCellScreen.swift; sourceTree = "<group>"; };
+		46C9B41B2ADAFFCB00CC7395 /* StocksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksVC.swift; sourceTree = "<group>"; };
+		46C9B41D2ADAFFDD00CC7395 /* StocksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksViewModel.swift; sourceTree = "<group>"; };
+		46C9B41F2ADAFFEC00CC7395 /* StocksScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksScreen.swift; sourceTree = "<group>"; };
+		46C9B4212ADB00D900CC7395 /* Stocks.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Stocks.json; sourceTree = "<group>"; };
 		46DA2CD82ACC399C00DEA703 /* HabitsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsVC.swift; sourceTree = "<group>"; };
 		46DA2CDA2ACC39AE00DEA703 /* HabitsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsScreen.swift; sourceTree = "<group>"; };
 		46DA2CDD2ACC39C900DEA703 /* HabitsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsViewModel.swift; sourceTree = "<group>"; };
@@ -1355,6 +1363,41 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
+		46C9B4172ADAFF9600CC7395 /* Ações */ = {
+			isa = PBXGroup;
+			children = (
+				46C9B41A2ADAFFB200CC7395 /* ViewController */,
+				46C9B4192ADAFFAB00CC7395 /* Screen */,
+				46C9B4182ADAFFA500CC7395 /* ViewModel */,
+			);
+			name = "Ações";
+			path = "Ações";
+			sourceTree = "<group>";
+		};
+		46C9B4182ADAFFA500CC7395 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				46C9B41D2ADAFFDD00CC7395 /* StocksViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		46C9B4192ADAFFAB00CC7395 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				46C9B41F2ADAFFEC00CC7395 /* StocksScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		46C9B41A2ADAFFB200CC7395 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				46C9B41B2ADAFFCB00CC7395 /* StocksVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		46DA2CD42ACC395800DEA703 /* Habits */ = {
 			isa = PBXGroup;
 			children = (
@@ -1417,6 +1460,7 @@
 		46EEDCBD2AD43174005A7164 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				46C9B4172ADAFF9600CC7395 /* Ações */,
 				46C9B4062ADAF83700CC7395 /* CriptoMoedas */,
 				46C9B3ED2ADAE7B900CC7395 /* Fundos Imobiliarios */,
 				46EEDCBE2AD43184005A7164 /* GoldenRules */,
@@ -1595,6 +1639,7 @@
 				46EEDD452AD97C24005A7164 /* TesouroSelic.json */,
 				46C9B3E72ADAE40E00CC7395 /* Fils.json */,
 				46C9B4002ADAF31600CC7395 /* CriptoMoedas.json */,
+				46C9B4212ADB00D900CC7395 /* Stocks.json */,
 			);
 			path = "Finance Section";
 			sourceTree = "<group>";
@@ -2017,6 +2062,7 @@
 				460536BB2AD04E21003FC929 /* Sleep.json in Resources */,
 				461BEF272ABA74F700C07847 /* Assets.xcassets in Resources */,
 				46EEDD462AD97C24005A7164 /* TesouroSelic.json in Resources */,
+				46C9B4222ADB00D900CC7395 /* Stocks.json in Resources */,
 				460B7AD92AC8746E0059EA44 /* Environment.json in Resources */,
 				460583BF2AC48E0400446A6F /* MoneyPhrases.json in Resources */,
 				460B7AC82AC852200059EA44 /* DeepWork.json in Resources */,
@@ -2035,8 +2081,10 @@
 				46EEDCF12AD6C7AB005A7164 /* CDBTableViewCellScreen.swift in Sources */,
 				46EEDD332AD83459005A7164 /* TdData.swift in Sources */,
 				46EEDD2B2AD82F14005A7164 /* TesouroDiretoVC.swift in Sources */,
+				46C9B41E2ADAFFDD00CC7395 /* StocksViewModel.swift in Sources */,
 				461C713F2AD1ADAB00E18558 /* SleepData.swift in Sources */,
 				46EEDD0C2AD6E2C3005A7164 /* LCATableViewCell.swift in Sources */,
+				46C9B4202ADAFFEC00CC7395 /* StocksScreen.swift in Sources */,
 				46EEDD1A2AD6EE52005A7164 /* LciViewModel.swift in Sources */,
 				460583B52AC47EB300446A6F /* SavingMoneyTableViewCell.swift in Sources */,
 				46EEDCCB2AD43655005A7164 /* GoldenRulesData.swift in Sources */,
@@ -2165,6 +2213,7 @@
 				461BEF4C2ABA756000C07847 /* ThirdInfoScreen.swift in Sources */,
 				46EEDD502AD98100005A7164 /* TesouroIpcaVC.swift in Sources */,
 				46EEDCE82AD5B0DA005A7164 /* CdbScreen.swift in Sources */,
+				46C9B41C2ADAFFCB00CC7395 /* StocksVC.swift in Sources */,
 				46EEDCE62AD5B0CD005A7164 /* CdbVC.swift in Sources */,
 				46DA2CE62ACC426300DEA703 /* HabitsData.swift in Sources */,
 				46EEDD4A2AD97FF3005A7164 /* TDIService.swift in Sources */,
