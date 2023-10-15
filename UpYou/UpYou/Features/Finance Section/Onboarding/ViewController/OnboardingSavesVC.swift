@@ -29,10 +29,6 @@ class OnboardingSavesVC: UIViewController {
 }
 
 extension OnboardingSavesVC: OnboardingSavesScreenDelegate {
-    func tappedCloseButton() {
-        print(#function)
-    }
-    
     func tappedContinueButton() {
         let vc = SavingMoneyVC()
         vc.modalPresentationStyle = .fullScreen

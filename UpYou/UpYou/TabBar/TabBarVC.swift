@@ -38,9 +38,9 @@ class TabBarVC: UITabBarController {
         
         guard let items = tabBar.items else { return }
         
-        let homeIcon = items[0]
-        let savingsIcon = items[1]
-        let selfDevIcon = items[2]
+        var homeIcon = items[0]
+        var savingsIcon = items[1]
+        var selfDevIcon = items[2]
         
         homeIcon.image = UIImage(systemName: "building.columns.fill")
         homeIcon.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
