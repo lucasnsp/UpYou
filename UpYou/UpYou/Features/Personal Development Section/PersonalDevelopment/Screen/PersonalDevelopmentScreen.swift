@@ -237,7 +237,7 @@ class PersonalDevelopmentScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Dormir bem é essencial para o sucesso."
+        label.text = "Dormir bem é essencial."
         label.font = UIFont.systemFont(ofSize: 13)
         label.textAlignment = .left
         return label

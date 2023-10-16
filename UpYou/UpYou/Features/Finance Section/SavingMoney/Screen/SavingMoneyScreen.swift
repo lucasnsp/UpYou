@@ -261,7 +261,7 @@ class SavingMoneyScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Crie um patrimônio através de imóveis."
+        label.text = "Crie um patrimônio diferenciado."
         label.font = UIFont.systemFont(ofSize: 13)
         label.textAlignment = .left
         return label

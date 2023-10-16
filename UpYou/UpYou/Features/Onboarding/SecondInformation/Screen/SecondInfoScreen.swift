@@ -40,7 +40,7 @@ class SecondInfoScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Mais que um App de Finanças"
+        label.text = "O empurrão que você precisa!"
         label.font = UIFont.boldSystemFont(ofSize: 28)
         label.textAlignment = .center
         return label
