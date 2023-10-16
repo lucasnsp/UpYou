@@ -79,10 +79,6 @@ extension SavingMoneyVC: SavingMoneyScreenDelegate {
     func tappedSetAGoalButton() {
         print(#function)
     }
-    
-    func tappedBackButton() {
-        dismiss(animated: true)
-    }
 }
 
 extension SavingMoneyVC: UITableViewDelegate, UITableViewDataSource {

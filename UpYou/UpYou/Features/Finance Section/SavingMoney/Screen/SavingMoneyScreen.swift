@@ -8,7 +8,6 @@
 import UIKit
 
 protocol SavingMoneyScreenDelegate: AnyObject {
-    func tappedBackButton()
     func tappedSetAGoalButton()
     func tappedExpensesButton()
     func tappedCryptoButton()
@@ -32,20 +31,6 @@ class SavingMoneyScreen: UIView {
         image.image = UIImage(named: "background6")
         return image
     }()
-    
-    private lazy var backButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.tintColor = .gray
-        button.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
-        button.addTarget(self, action: #selector(tappedBackButton), for: .touchUpInside)
-        return button
-    }()
-    
-    @objc
-    func tappedBackButton() {
-        delegate?.tappedBackButton()
-    }
     
     lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -394,7 +379,6 @@ class SavingMoneyScreen: UIView {
     
     private func addViews() {
         addSubview(subImageView)
-        addSubview(backButton)
         addSubview(tableView)
         addSubview(viewMidBackground)
         viewMidBackground.addSubview(setAGoalImageView)
@@ -435,19 +419,15 @@ class SavingMoneyScreen: UIView {
             subImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
             subImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            backButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 5),
-            backButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
-            backButton.heightAnchor.constraint(equalToConstant: 35),
-            
-            tableView.topAnchor.constraint(equalTo: backButton.bottomAnchor, constant: 20),
+            tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25),
             tableView.heightAnchor.constraint(equalToConstant: 145),
             
-            viewMidBackground.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 40),
+            viewMidBackground.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 10),
             viewMidBackground.leadingAnchor.constraint(equalTo: tableView.leadingAnchor),
             viewMidBackground.trailingAnchor.constraint(equalTo: tableView.trailingAnchor),
-            viewMidBackground.heightAnchor.constraint(equalToConstant: 138),
+            viewMidBackground.heightAnchor.constraint(equalToConstant: 134),
             
             setAGoalImageView.topAnchor.constraint(equalTo: viewMidBackground.topAnchor, constant: 20),
             setAGoalImageView.leadingAnchor.constraint(equalTo: viewMidBackground.leadingAnchor, constant: 12),
@@ -465,7 +445,7 @@ class SavingMoneyScreen: UIView {
             setAGoalButton.heightAnchor.constraint(equalToConstant: 20),
             setAGoalButton.widthAnchor.constraint(equalToConstant: 20),
             
-            expensesImageView.topAnchor.constraint(equalTo: setAGoalImageView.bottomAnchor, constant: 20),
+            expensesImageView.topAnchor.constraint(equalTo: setAGoalImageView.bottomAnchor, constant: 15),
             expensesImageView.leadingAnchor.constraint(equalTo: setAGoalImageView.leadingAnchor),
             expensesImageView.heightAnchor.constraint(equalTo: setAGoalImageView.heightAnchor),
             expensesImageView.widthAnchor.constraint(equalTo: setAGoalImageView.widthAnchor),
@@ -481,7 +461,7 @@ class SavingMoneyScreen: UIView {
             expensesButton.heightAnchor.constraint(equalTo: setAGoalButton.heightAnchor),
             expensesButton.widthAnchor.constraint(equalTo: setAGoalButton.widthAnchor),
             
-            viewBottomBackground.topAnchor.constraint(equalTo: viewMidBackground.bottomAnchor, constant: 40),
+            viewBottomBackground.topAnchor.constraint(equalTo: viewMidBackground.bottomAnchor, constant: 10),
             viewBottomBackground.leadingAnchor.constraint(equalTo: viewMidBackground.leadingAnchor),
             viewBottomBackground.trailingAnchor.constraint(equalTo: viewMidBackground.trailingAnchor),
             viewBottomBackground.heightAnchor.constraint(equalToConstant: 320),

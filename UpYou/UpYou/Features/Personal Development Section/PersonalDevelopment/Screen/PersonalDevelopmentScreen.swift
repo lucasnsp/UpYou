@@ -8,7 +8,6 @@
 import UIKit
 
 protocol PersonalDevelopmentScreenDelegate: AnyObject {
-    func tappedBackButton()
     func tappedBooksButton()
     func tappedDeepWorkButton()
     func tappedEnvironmentButton()
@@ -32,20 +31,6 @@ class PersonalDevelopmentScreen: UIView {
         image.image = UIImage(named: "background6")
         return image
     }()
-    
-    lazy var backButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.tintColor = .gray
-        button.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
-        button.addTarget(self, action: #selector(tappedBackButton), for: .touchUpInside)
-        return button
-    }()
-    
-    @objc
-    func tappedBackButton() {
-        delegate?.tappedBackButton()
-    }
     
     lazy var viewMidBackground: UIView = {
         let view = UIView()
@@ -346,7 +331,6 @@ class PersonalDevelopmentScreen: UIView {
     
     private func addViews() {
         addSubview(subImageView)
-        addSubview(backButton)
         addSubview(tableView)
         addSubview(viewMidBackground)
         viewMidBackground.addSubview(booksImageView)
@@ -382,11 +366,7 @@ class PersonalDevelopmentScreen: UIView {
             subImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
             subImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            backButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 5),
-            backButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
-            backButton.heightAnchor.constraint(equalToConstant: 35),
-            
-            tableView.topAnchor.constraint(equalTo: backButton.bottomAnchor, constant: 25),
+            tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25),
             tableView.heightAnchor.constraint(equalToConstant: 145),

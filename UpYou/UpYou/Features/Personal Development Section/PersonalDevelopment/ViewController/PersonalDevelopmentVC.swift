@@ -77,10 +77,6 @@ extension PersonalDevelopmentVC: PersonalDevelopmentScreenDelegate {
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
     }
-    
-    func tappedBackButton() {
-        dismiss(animated: true)
-    }
 }
 
 extension PersonalDevelopmentVC: UITableViewDelegate, UITableViewDataSource {

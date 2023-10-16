@@ -75,16 +75,16 @@
 		461BEF7F2ABB679400C07847 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BEF7E2ABB679400C07847 /* HomeViewModel.swift */; };
 		461BEF842ABB7D7000C07847 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BEF832ABB7D7000C07847 /* TabBarVC.swift */; };
 		461BEF872ABB914900C07847 /* Quote.json in Resources */ = {isa = PBXBuildFile; fileRef = 461BEF862ABB914900C07847 /* Quote.json */; };
-		461BEF9A2ABC772800C07847 /* OnboardingSavesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BEF992ABC772800C07847 /* OnboardingSavesVC.swift */; };
-		461BEF9C2ABC773E00C07847 /* OnboardingSavesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BEF9B2ABC773E00C07847 /* OnboardingSavesScreen.swift */; };
-		461BEFA02ABDD2B500C07847 /* SelfDevelopmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BEF9F2ABDD2B500C07847 /* SelfDevelopmentViewController.swift */; };
-		461BEFA22ABDD2C900C07847 /* SelfDevelopmentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BEFA12ABDD2C900C07847 /* SelfDevelopmentScreen.swift */; };
 		461BEFA72ABF107B00C07847 /* PersonalDevelopmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BEFA62ABF107B00C07847 /* PersonalDevelopmentVC.swift */; };
 		461BEFAB2ABF121900C07847 /* PersonalDevelopmentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BEFAA2ABF121900C07847 /* PersonalDevelopmentScreen.swift */; };
 		461C713F2AD1ADAB00E18558 /* SleepData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461C713E2AD1ADAB00E18558 /* SleepData.swift */; };
 		461C71412AD1AE0D00E18558 /* SleepService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461C71402AD1AE0D00E18558 /* SleepService.swift */; };
 		461C71482AD1B07700E18558 /* SleepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461C71472AD1B07700E18558 /* SleepTableViewCell.swift */; };
 		461C714A2AD1B08400E18558 /* SleepTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461C71492AD1B08400E18558 /* SleepTableViewCellScreen.swift */; };
+		4646873A2ADD79EE0077269E /* StocksData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464687392ADD79EE0077269E /* StocksData.swift */; };
+		4646873C2ADD7A210077269E /* StocksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4646873B2ADD7A210077269E /* StocksService.swift */; };
+		464687422ADD7B420077269E /* StockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464687412ADD7B420077269E /* StockTableViewCell.swift */; };
+		464687442ADD7B510077269E /* StockTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464687432ADD7B510077269E /* StockTableViewCellScreen.swift */; };
 		467D1D852AC5B638009E0B04 /* BooksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467D1D842AC5B638009E0B04 /* BooksVC.swift */; };
 		467D1D872AC5B683009E0B04 /* BooksScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467D1D862AC5B683009E0B04 /* BooksScreen.swift */; };
 		467D1D892AC5B90B009E0B04 /* Books.json in Resources */ = {isa = PBXBuildFile; fileRef = 467D1D882AC5B90B009E0B04 /* Books.json */; };
@@ -249,16 +249,16 @@
 		461BEF7E2ABB679400C07847 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		461BEF832ABB7D7000C07847 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		461BEF862ABB914900C07847 /* Quote.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Quote.json; sourceTree = "<group>"; };
-		461BEF992ABC772800C07847 /* OnboardingSavesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSavesVC.swift; sourceTree = "<group>"; };
-		461BEF9B2ABC773E00C07847 /* OnboardingSavesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSavesScreen.swift; sourceTree = "<group>"; };
-		461BEF9F2ABDD2B500C07847 /* SelfDevelopmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfDevelopmentViewController.swift; sourceTree = "<group>"; };
-		461BEFA12ABDD2C900C07847 /* SelfDevelopmentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfDevelopmentScreen.swift; sourceTree = "<group>"; };
 		461BEFA62ABF107B00C07847 /* PersonalDevelopmentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDevelopmentVC.swift; sourceTree = "<group>"; };
 		461BEFAA2ABF121900C07847 /* PersonalDevelopmentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDevelopmentScreen.swift; sourceTree = "<group>"; };
 		461C713E2AD1ADAB00E18558 /* SleepData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepData.swift; sourceTree = "<group>"; };
 		461C71402AD1AE0D00E18558 /* SleepService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepService.swift; sourceTree = "<group>"; };
 		461C71472AD1B07700E18558 /* SleepTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepTableViewCell.swift; sourceTree = "<group>"; };
 		461C71492AD1B08400E18558 /* SleepTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepTableViewCellScreen.swift; sourceTree = "<group>"; };
+		464687392ADD79EE0077269E /* StocksData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksData.swift; sourceTree = "<group>"; };
+		4646873B2ADD7A210077269E /* StocksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksService.swift; sourceTree = "<group>"; };
+		464687412ADD7B420077269E /* StockTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTableViewCell.swift; sourceTree = "<group>"; };
+		464687432ADD7B510077269E /* StockTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTableViewCellScreen.swift; sourceTree = "<group>"; };
 		467D1D842AC5B638009E0B04 /* BooksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksVC.swift; sourceTree = "<group>"; };
 		467D1D862AC5B683009E0B04 /* BooksScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksScreen.swift; sourceTree = "<group>"; };
 		467D1D882AC5B90B009E0B04 /* Books.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Books.json; sourceTree = "<group>"; };
@@ -537,15 +537,6 @@
 				460583A12AC4603100446A6F /* SavingMoneyScreen.swift */,
 			);
 			path = Screen;
-			sourceTree = "<group>";
-		};
-		460583A32AC4610900446A6F /* Onboarding */ = {
-			isa = PBXGroup;
-			children = (
-				461BEFA32ABDD2D000C07847 /* ViewController */,
-				461BEFA42ABDD2DB00C07847 /* Screen */,
-			);
-			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		460583AE2AC47A1A00446A6F /* ViewModel */ = {
@@ -981,62 +972,19 @@
 		461BEF952ABC743C00C07847 /* Finance Section */ = {
 			isa = PBXGroup;
 			children = (
-				461BEF982ABC770D00C07847 /* Onboarding */,
 				4605839C2AC45FAC00446A6F /* SavingMoney */,
 				46EEDCBD2AD43174005A7164 /* Sections */,
 			);
 			path = "Finance Section";
 			sourceTree = "<group>";
 		};
-		461BEF962ABC746700C07847 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				461BEF992ABC772800C07847 /* OnboardingSavesVC.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		461BEF972ABC747D00C07847 /* Screen */ = {
-			isa = PBXGroup;
-			children = (
-				461BEF9B2ABC773E00C07847 /* OnboardingSavesScreen.swift */,
-			);
-			path = Screen;
-			sourceTree = "<group>";
-		};
-		461BEF982ABC770D00C07847 /* Onboarding */ = {
-			isa = PBXGroup;
-			children = (
-				461BEF962ABC746700C07847 /* ViewController */,
-				461BEF972ABC747D00C07847 /* Screen */,
-			);
-			path = Onboarding;
-			sourceTree = "<group>";
-		};
 		461BEF9D2ABDD23B00C07847 /* Personal Development Section */ = {
 			isa = PBXGroup;
 			children = (
-				460583A32AC4610900446A6F /* Onboarding */,
 				461BEFA52ABF104A00C07847 /* PersonalDevelopment */,
 				467D1D802AC5B5F3009E0B04 /* Sections */,
 			);
 			path = "Personal Development Section";
-			sourceTree = "<group>";
-		};
-		461BEFA32ABDD2D000C07847 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				461BEF9F2ABDD2B500C07847 /* SelfDevelopmentViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		461BEFA42ABDD2DB00C07847 /* Screen */ = {
-			isa = PBXGroup;
-			children = (
-				461BEFA12ABDD2C900C07847 /* SelfDevelopmentScreen.swift */,
-			);
-			path = Screen;
 			sourceTree = "<group>";
 		};
 		461BEFA52ABF104A00C07847 /* PersonalDevelopment */ = {
@@ -1107,6 +1055,7 @@
 		461C714C2AD1B77000E18558 /* Finance Section */ = {
 			isa = PBXGroup;
 			children = (
+				4646873D2ADD7AFA0077269E /* StockCell */,
 				46C9B4102ADAFA1100CC7395 /* CriptoCell */,
 				460583B12AC47DBE00446A6F /* SavingMoneyCell */,
 				46C9B3F72ADAE94E00CC7395 /* FIIsCell */,
@@ -1143,6 +1092,7 @@
 				46EEDD5F2AD98901005A7164 /* TDSService.swift */,
 				46C9B3EB2ADAE75900CC7395 /* FIIsService.swift */,
 				46C9B4042ADAF79200CC7395 /* CriptoService.swift */,
+				4646873B2ADD7A210077269E /* StocksService.swift */,
 			);
 			path = "Finance Section";
 			sourceTree = "<group>";
@@ -1150,6 +1100,7 @@
 		461C714F2AD1B7CD00E18558 /* Finance Section */ = {
 			isa = PBXGroup;
 			children = (
+				464687392ADD79EE0077269E /* StocksData.swift */,
 				460583C02AC48EA000446A6F /* MoneyPhrasesData.swift */,
 				46EEDCCA2AD43655005A7164 /* GoldenRulesData.swift */,
 				46C9B3E92ADAE71C00CC7395 /* FIIsData.swift */,
@@ -1171,6 +1122,31 @@
 				461C713E2AD1ADAB00E18558 /* SleepData.swift */,
 			);
 			path = "Personal Development Section";
+			sourceTree = "<group>";
+		};
+		4646873D2ADD7AFA0077269E /* StockCell */ = {
+			isa = PBXGroup;
+			children = (
+				4646873E2ADD7B1E0077269E /* TableViewCell */,
+				4646873F2ADD7B280077269E /* Screen */,
+			);
+			path = StockCell;
+			sourceTree = "<group>";
+		};
+		4646873E2ADD7B1E0077269E /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				464687412ADD7B420077269E /* StockTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		4646873F2ADD7B280077269E /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				464687432ADD7B510077269E /* StockTableViewCellScreen.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 		467D1D7F2AC5B5E1009E0B04 /* Books */ = {
@@ -2090,12 +2066,12 @@
 				46EEDCCB2AD43655005A7164 /* GoldenRulesData.swift in Sources */,
 				46C9B40D2ADAF87400CC7395 /* CriptoScreen.swift in Sources */,
 				461BEF7F2ABB679400C07847 /* HomeViewModel.swift in Sources */,
-				461BEF9C2ABC773E00C07847 /* OnboardingSavesScreen.swift in Sources */,
 				46EEDCE42AD59654005A7164 /* CdbData.swift in Sources */,
 				460583B72AC47ED000446A6F /* SavingMoneyTableViewScreen.swift in Sources */,
 				461BEF7B2ABB677500C07847 /* HomeVC.swift in Sources */,
 				461BEF7D2ABB678900C07847 /* HomeScreen.swift in Sources */,
 				460583A02AC4602200446A6F /* SavingMoneyVC.swift in Sources */,
+				4646873A2ADD79EE0077269E /* StocksData.swift in Sources */,
 				46EEDD602AD98901005A7164 /* TDSService.swift in Sources */,
 				460536AB2ACEF938003FC929 /* StoicismTableViewCell.swift in Sources */,
 				461BEF482ABA756000C07847 /* SecondInfoScreen.swift in Sources */,
@@ -2107,6 +2083,7 @@
 				460583B02AC47A5700446A6F /* SavingMoneyViewModel.swift in Sources */,
 				467D1D992AC700BE009E0B04 /* BooksTableViewCellScreen.swift in Sources */,
 				46EEDD5E2AD988D1005A7164 /* TdsData.swift in Sources */,
+				464687442ADD7B510077269E /* StockTableViewCellScreen.swift in Sources */,
 				46EEDCDA2AD57804005A7164 /* FixedIncomeVC.swift in Sources */,
 				461BEF1E2ABA74F500C07847 /* AppDelegate.swift in Sources */,
 				461BEF552ABA758100C07847 /* LoginViewModel.swift in Sources */,
@@ -2130,13 +2107,11 @@
 				461BEF562ABA758100C07847 /* LoginScreen.swift in Sources */,
 				460583AD2AC4784800446A6F /* MoneyPhrasesService.swift in Sources */,
 				461BEFAB2ABF121900C07847 /* PersonalDevelopmentScreen.swift in Sources */,
-				461BEFA22ABDD2C900C07847 /* SelfDevelopmentScreen.swift in Sources */,
 				460B7ACA2AC857400059EA44 /* DeepWorkData.swift in Sources */,
 				46EEDD682AD98999005A7164 /* TesouroSelicScreen.swift in Sources */,
 				46DA2CE82ACC429100DEA703 /* HabitsService.swift in Sources */,
 				46EEDD6F2AD98AB3005A7164 /* TesouroSelicTableViewCell.swift in Sources */,
 				460B7AE32AC878990059EA44 /* EnvironmentScreen.swift in Sources */,
-				461BEF9A2ABC772800C07847 /* OnboardingSavesVC.swift in Sources */,
 				460B7ADF2AC877760059EA44 /* EnvironmentService.swift in Sources */,
 				46C9B4032ADAF75A00CC7395 /* CriptoData.swift in Sources */,
 				46C9B3F42ADAE81700CC7395 /* FiisScreen.swift in Sources */,
@@ -2177,6 +2152,7 @@
 				460B7AC32AC8492E0059EA44 /* DeepWorkScreen.swift in Sources */,
 				46EEDD3D2AD835B0005A7164 /* TesouroDiretoTableViewCellScreen.swift in Sources */,
 				460536A42ACEF6E8003FC929 /* StoicismScreen.swift in Sources */,
+				464687422ADD7B420077269E /* StockTableViewCell.swift in Sources */,
 				460536A62ACEF6F9003FC929 /* StoicismViewModel.swift in Sources */,
 				46EEDCD02AD436BF005A7164 /* GoldenRulesTableViewCell.swift in Sources */,
 				46EEDD1E2AD6F08D005A7164 /* LCIService.swift in Sources */,
@@ -2196,7 +2172,7 @@
 				46DA2CDB2ACC39AE00DEA703 /* HabitsScreen.swift in Sources */,
 				46C9B40B2ADAF86000CC7395 /* CriptoVC.swift in Sources */,
 				461BEF842ABB7D7000C07847 /* TabBarVC.swift in Sources */,
-				461BEFA02ABDD2B500C07847 /* SelfDevelopmentViewController.swift in Sources */,
+				4646873C2ADD7A210077269E /* StocksService.swift in Sources */,
 				46EEDD522AD9810F005A7164 /* TesouroIpcaScreen.swift in Sources */,
 				461BEF5F2ABA758900C07847 /* RegisterViewModel.swift in Sources */,
 				461BEF572ABA758100C07847 /* LoginVC.swift in Sources */,
@@ -2370,6 +2346,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2401,6 +2378,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

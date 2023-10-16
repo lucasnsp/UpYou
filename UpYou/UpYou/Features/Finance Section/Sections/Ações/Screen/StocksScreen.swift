@@ -52,7 +52,7 @@ class StocksScreen: UIView {
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-//        tableView.register(CriptoTableViewCell.self, forCellReuseIdentifier: CriptoTableViewCell.identifier)
+        tableView.register(StockTableViewCell.self, forCellReuseIdentifier: StockTableViewCell.identifier)
         tableView.backgroundColor = .black.withAlphaComponent(0.6)
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
