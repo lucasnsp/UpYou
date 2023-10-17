@@ -417,7 +417,7 @@ class SavingMoneyVC: UIViewController {
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -25),
             tableView.heightAnchor.constraint(equalToConstant: 145),
             
-            viewMidBackground.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 20),
+            viewMidBackground.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 22),
             viewMidBackground.leadingAnchor.constraint(equalTo: tableView.leadingAnchor),
             viewMidBackground.trailingAnchor.constraint(equalTo: tableView.trailingAnchor),
             viewMidBackground.heightAnchor.constraint(equalToConstant: 134),
@@ -454,7 +454,7 @@ class SavingMoneyVC: UIViewController {
             expensesButton.heightAnchor.constraint(equalTo: setAGoalButton.heightAnchor),
             expensesButton.widthAnchor.constraint(equalTo: setAGoalButton.widthAnchor),
             
-            viewBottomBackground.topAnchor.constraint(equalTo: viewMidBackground.bottomAnchor, constant: 10),
+            viewBottomBackground.topAnchor.constraint(equalTo: viewMidBackground.bottomAnchor, constant: 22),
             viewBottomBackground.leadingAnchor.constraint(equalTo: viewMidBackground.leadingAnchor),
             viewBottomBackground.trailingAnchor.constraint(equalTo: viewMidBackground.trailingAnchor),
             viewBottomBackground.heightAnchor.constraint(equalToConstant: 320),
