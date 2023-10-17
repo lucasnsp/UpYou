@@ -9,6 +9,10 @@ import UIKit
 
 class TabBarVC: UITabBarController {
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBar()
@@ -22,16 +26,10 @@ class TabBarVC: UITabBarController {
         setViewControllers([home, savings, selfDev], animated: false)
         tabBar.isTranslucent = false
         tabBar.tintColor = UIColor.white
-        
-        tabBar.layer.shadowColor = UIColor.black.cgColor
-        tabBar.layer.shadowOffset = CGSize(width: 0, height: -4)
-        tabBar.layer.shadowRadius = 10
-        tabBar.layer.shadowOpacity = 0.8
-        tabBar.layer.masksToBounds = false
 
         let tabBarAppearance: UITabBarAppearance = UITabBarAppearance()
         tabBarAppearance.configureWithDefaultBackground()
-        tabBarAppearance.backgroundColor = UIColor.black
+        tabBarAppearance.backgroundColor = UIColor.black.withAlphaComponent(0.9)
         tabBar.standardAppearance = tabBarAppearance
         tabBar.scrollEdgeAppearance = tabBarAppearance
         

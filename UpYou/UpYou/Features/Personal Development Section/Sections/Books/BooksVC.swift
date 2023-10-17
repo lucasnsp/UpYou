@@ -1,15 +1,22 @@
 //
-//  TesouroSelicVC.swift
+//  BooksVC.swift
 //  UpYou
 //
-//  Created by Lucas Neves dos santos pompeu on 13/10/23.
+//  Created by Lucas Neves dos santos pompeu on 28/09/23.
 //
 
 import UIKit
 
-class TesouroSelicVC: UIViewController {
+class BooksVC: UIViewController {
     
-    var viewModel: TesouroSelicViewModel = TesouroSelicViewModel()
+    var viewModel = BooksViewModel()
+    
+    private lazy var subImageView: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(named: "background6")
+        return image
+    }()
     
     private lazy var backButton: UIButton = {
         let button = UIButton()
@@ -25,18 +32,11 @@ class TesouroSelicVC: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    private lazy var subImageView: UIImageView = {
-        let image = UIImageView()
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "background6")
-        return image
-    }()
-    
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Livros"
         label.textColor = .white
-        label.text = "Tesouro Selic"
         label.font = UIFont.boldSystemFont(ofSize: 30)
         return label
     }()
@@ -44,9 +44,8 @@ class TesouroSelicVC: UIViewController {
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(TesouroSelicTableViewCell.self, forCellReuseIdentifier: TesouroSelicTableViewCell.identifier)
+        tableView.register(BooksTableViewCell.self, forCellReuseIdentifier: BooksTableViewCell.identifier)
         tableView.backgroundColor = .black.withAlphaComponent(0.6)
-        tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
         return tableView
     }()
@@ -55,6 +54,7 @@ class TesouroSelicVC: UIViewController {
         tableView.delegate = delegate
         tableView.dataSource = dataSource
     }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,27 +93,27 @@ class TesouroSelicVC: UIViewController {
     }
 }
 
-extension TesouroSelicVC: TesouroSelicViewModelDelegate {
+extension BooksVC: BooksViewModelDelegate {
     func success() {
         DispatchQueue.main.async {
             self.configTableViewProtocols(delegate: self, dataSource: self)
             self.tableView.reloadData()
         }
     }
-    
+
     func error() {
         print(#function)
     }
 }
 
-extension TesouroSelicVC: UITableViewDelegate, UITableViewDataSource {
+extension BooksVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfRowsInSection
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TesouroSelicTableViewCell.identifier, for: indexPath) as? TesouroSelicTableViewCell
-        cell?.setupCell(data: viewModel.loadCurrentSelic(indexPath: indexPath))
+        let cell = tableView.dequeueReusableCell(withIdentifier: BooksTableViewCell.identifier, for: indexPath) as? BooksTableViewCell
+        cell?.setupCell(data: viewModel.loadCurrentBooks(indexPath: indexPath))
         return cell ?? UITableViewCell()
     }
     
@@ -121,3 +121,5 @@ extension TesouroSelicVC: UITableViewDelegate, UITableViewDataSource {
         return viewModel.heightForRowAt
     }
 }
+
+

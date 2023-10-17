@@ -1,15 +1,15 @@
 //
-//  TesouroSelicVC.swift
+//  EnvironmentVC.swift
 //  UpYou
 //
-//  Created by Lucas Neves dos santos pompeu on 13/10/23.
+//  Created by Lucas Neves dos santos pompeu on 30/09/23.
 //
 
 import UIKit
 
-class TesouroSelicVC: UIViewController {
+class EnvironmentVC: UIViewController {
     
-    var viewModel: TesouroSelicViewModel = TesouroSelicViewModel()
+    var viewModel = EnvironmentViewModel()
     
     private lazy var backButton: UIButton = {
         let button = UIButton()
@@ -36,7 +36,7 @@ class TesouroSelicVC: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Tesouro Selic"
+        label.text = "Ambiente"
         label.font = UIFont.boldSystemFont(ofSize: 30)
         return label
     }()
@@ -44,7 +44,7 @@ class TesouroSelicVC: UIViewController {
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(TesouroSelicTableViewCell.self, forCellReuseIdentifier: TesouroSelicTableViewCell.identifier)
+        tableView.register(EnvironmentTableViewCell.self, forCellReuseIdentifier: EnvironmentTableViewCell.identifier)
         tableView.backgroundColor = .black.withAlphaComponent(0.6)
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
@@ -93,7 +93,7 @@ class TesouroSelicVC: UIViewController {
     }
 }
 
-extension TesouroSelicVC: TesouroSelicViewModelDelegate {
+extension EnvironmentVC: EnvironmentViewModelDelegate {
     func success() {
         DispatchQueue.main.async {
             self.configTableViewProtocols(delegate: self, dataSource: self)
@@ -104,16 +104,17 @@ extension TesouroSelicVC: TesouroSelicViewModelDelegate {
     func error() {
         print(#function)
     }
+    
 }
 
-extension TesouroSelicVC: UITableViewDelegate, UITableViewDataSource {
+extension EnvironmentVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfRowsInSection
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TesouroSelicTableViewCell.identifier, for: indexPath) as? TesouroSelicTableViewCell
-        cell?.setupCell(data: viewModel.loadCurrentSelic(indexPath: indexPath))
+        let cell = tableView.dequeueReusableCell(withIdentifier: EnvironmentTableViewCell.identifier, for: indexPath) as? EnvironmentTableViewCell
+        cell?.setupCell(data: viewModel.loadCurrentEnvironment(indexPath: indexPath))
         return cell ?? UITableViewCell()
     }
     

@@ -1,5 +1,5 @@
 //
-//  TesouroSelicVC.swift
+//  TesouroIpcaVC.swift
 //  UpYou
 //
 //  Created by Lucas Neves dos santos pompeu on 13/10/23.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-class TesouroSelicVC: UIViewController {
+class TesouroIpcaVC: UIViewController {
     
-    var viewModel: TesouroSelicViewModel = TesouroSelicViewModel()
+    var viewModel: TesouroIpcaViewModel = TesouroIpcaViewModel()
     
     private lazy var backButton: UIButton = {
         let button = UIButton()
@@ -36,7 +36,7 @@ class TesouroSelicVC: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Tesouro Selic"
+        label.text = "Tesouro IPCA"
         label.font = UIFont.boldSystemFont(ofSize: 30)
         return label
     }()
@@ -44,7 +44,7 @@ class TesouroSelicVC: UIViewController {
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(TesouroSelicTableViewCell.self, forCellReuseIdentifier: TesouroSelicTableViewCell.identifier)
+        tableView.register(TesouroIpcaTableViewCell.self, forCellReuseIdentifier: TesouroIpcaTableViewCell.identifier)
         tableView.backgroundColor = .black.withAlphaComponent(0.6)
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
@@ -55,7 +55,7 @@ class TesouroSelicVC: UIViewController {
         tableView.delegate = delegate
         tableView.dataSource = dataSource
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.fetchAllRequest()
@@ -93,7 +93,7 @@ class TesouroSelicVC: UIViewController {
     }
 }
 
-extension TesouroSelicVC: TesouroSelicViewModelDelegate {
+extension TesouroIpcaVC: TesouroIpcaViewModelDelegate {
     func success() {
         DispatchQueue.main.async {
             self.configTableViewProtocols(delegate: self, dataSource: self)
@@ -106,14 +106,14 @@ extension TesouroSelicVC: TesouroSelicViewModelDelegate {
     }
 }
 
-extension TesouroSelicVC: UITableViewDelegate, UITableViewDataSource {
+extension TesouroIpcaVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfRowsInSection
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TesouroSelicTableViewCell.identifier, for: indexPath) as? TesouroSelicTableViewCell
-        cell?.setupCell(data: viewModel.loadCurrentSelic(indexPath: indexPath))
+        let cell = tableView.dequeueReusableCell(withIdentifier: TesouroIpcaTableViewCell.identifier, for: indexPath) as? TesouroIpcaTableViewCell
+        cell?.setupCell(data: viewModel.loadCurrentIpca(indexPath: indexPath))
         return cell ?? UITableViewCell()
     }
     

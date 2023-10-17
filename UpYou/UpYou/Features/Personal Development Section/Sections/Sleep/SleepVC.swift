@@ -1,15 +1,15 @@
 //
-//  TesouroSelicVC.swift
+//  SleepVC.swift
 //  UpYou
 //
-//  Created by Lucas Neves dos santos pompeu on 13/10/23.
+//  Created by Lucas Neves dos santos pompeu on 06/10/23.
 //
 
 import UIKit
 
-class TesouroSelicVC: UIViewController {
+class SleepVC: UIViewController {
     
-    var viewModel: TesouroSelicViewModel = TesouroSelicViewModel()
+    var viewModel = SleepViewModel()
     
     private lazy var backButton: UIButton = {
         let button = UIButton()
@@ -36,7 +36,7 @@ class TesouroSelicVC: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Tesouro Selic"
+        label.text = "Sono"
         label.font = UIFont.boldSystemFont(ofSize: 30)
         return label
     }()
@@ -44,7 +44,7 @@ class TesouroSelicVC: UIViewController {
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(TesouroSelicTableViewCell.self, forCellReuseIdentifier: TesouroSelicTableViewCell.identifier)
+        tableView.register(SleepTableViewCell.self, forCellReuseIdentifier: SleepTableViewCell.identifier)
         tableView.backgroundColor = .black.withAlphaComponent(0.6)
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
@@ -58,8 +58,8 @@ class TesouroSelicVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.fetchAllRequest()
         viewModel.delegate(delegate: self)
+        viewModel.fetchAllRequest()
         addViews()
         configConstraints()
     }
@@ -93,7 +93,7 @@ class TesouroSelicVC: UIViewController {
     }
 }
 
-extension TesouroSelicVC: TesouroSelicViewModelDelegate {
+extension SleepVC: SleepViewModelDelegate {
     func success() {
         DispatchQueue.main.async {
             self.configTableViewProtocols(delegate: self, dataSource: self)
@@ -106,14 +106,14 @@ extension TesouroSelicVC: TesouroSelicViewModelDelegate {
     }
 }
 
-extension TesouroSelicVC: UITableViewDelegate, UITableViewDataSource {
+extension SleepVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfRowsInSection
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TesouroSelicTableViewCell.identifier, for: indexPath) as? TesouroSelicTableViewCell
-        cell?.setupCell(data: viewModel.loadCurrentSelic(indexPath: indexPath))
+        let cell = tableView.dequeueReusableCell(withIdentifier: SleepTableViewCell.identifier, for: indexPath) as? SleepTableViewCell
+        cell?.setupCell(data: viewModel.loadCurrentSleep(indexPath: indexPath))
         return cell ?? UITableViewCell()
     }
     

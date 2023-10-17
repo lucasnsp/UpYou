@@ -1,15 +1,15 @@
 //
-//  TesouroSelicVC.swift
+//  CdbVC.swift
 //  UpYou
 //
-//  Created by Lucas Neves dos santos pompeu on 13/10/23.
+//  Created by Lucas Neves dos santos pompeu on 10/10/23.
 //
 
 import UIKit
 
-class TesouroSelicVC: UIViewController {
+class CdbVC: UIViewController {
     
-    var viewModel: TesouroSelicViewModel = TesouroSelicViewModel()
+    var viewModel = CdbViewModel()
     
     private lazy var backButton: UIButton = {
         let button = UIButton()
@@ -36,15 +36,15 @@ class TesouroSelicVC: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Tesouro Selic"
+        label.text = "CDB"
         label.font = UIFont.boldSystemFont(ofSize: 30)
         return label
     }()
     
-    private lazy var tableView: UITableView = {
+    lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(TesouroSelicTableViewCell.self, forCellReuseIdentifier: TesouroSelicTableViewCell.identifier)
+        tableView.register(CDBTableViewCell.self, forCellReuseIdentifier: CDBTableViewCell.identifier)
         tableView.backgroundColor = .black.withAlphaComponent(0.6)
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
@@ -91,9 +91,10 @@ class TesouroSelicVC: UIViewController {
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
     }
+
 }
 
-extension TesouroSelicVC: TesouroSelicViewModelDelegate {
+extension CdbVC: CdbViewModelDelegate {
     func success() {
         DispatchQueue.main.async {
             self.configTableViewProtocols(delegate: self, dataSource: self)
@@ -106,14 +107,14 @@ extension TesouroSelicVC: TesouroSelicViewModelDelegate {
     }
 }
 
-extension TesouroSelicVC: UITableViewDelegate, UITableViewDataSource {
+extension CdbVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfRowsInSection
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TesouroSelicTableViewCell.identifier, for: indexPath) as? TesouroSelicTableViewCell
-        cell?.setupCell(data: viewModel.loadCurrentSelic(indexPath: indexPath))
+        let cell = tableView.dequeueReusableCell(withIdentifier: CDBTableViewCell.identifier, for: indexPath) as? CDBTableViewCell
+        cell?.setupCell(data: viewModel.loadCurrentFocus(indexPath: indexPath))
         return cell ?? UITableViewCell()
     }
     

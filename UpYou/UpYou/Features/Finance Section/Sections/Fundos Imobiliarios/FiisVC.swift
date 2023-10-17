@@ -1,15 +1,15 @@
 //
-//  TesouroSelicVC.swift
+//  FiisVC.swift
 //  UpYou
 //
-//  Created by Lucas Neves dos santos pompeu on 13/10/23.
+//  Created by Lucas Neves dos santos pompeu on 14/10/23.
 //
 
 import UIKit
 
-class TesouroSelicVC: UIViewController {
+class FiisVC: UIViewController {
     
-    var viewModel: TesouroSelicViewModel = TesouroSelicViewModel()
+    var viewModel: FiisViewModel = FiisViewModel()
     
     private lazy var backButton: UIButton = {
         let button = UIButton()
@@ -36,7 +36,7 @@ class TesouroSelicVC: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.text = "Tesouro Selic"
+        label.text = "Fundos Imobiliários"
         label.font = UIFont.boldSystemFont(ofSize: 30)
         return label
     }()
@@ -44,7 +44,7 @@ class TesouroSelicVC: UIViewController {
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(TesouroSelicTableViewCell.self, forCellReuseIdentifier: TesouroSelicTableViewCell.identifier)
+        tableView.register(FiisTableViewCell.self, forCellReuseIdentifier: FiisTableViewCell.identifier)
         tableView.backgroundColor = .black.withAlphaComponent(0.6)
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
@@ -93,31 +93,31 @@ class TesouroSelicVC: UIViewController {
     }
 }
 
-extension TesouroSelicVC: TesouroSelicViewModelDelegate {
-    func success() {
-        DispatchQueue.main.async {
-            self.configTableViewProtocols(delegate: self, dataSource: self)
-            self.tableView.reloadData()
-        }
-    }
-    
-    func error() {
-        print(#function)
-    }
-}
-
-extension TesouroSelicVC: UITableViewDelegate, UITableViewDataSource {
+extension FiisVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfRowsInSection
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TesouroSelicTableViewCell.identifier, for: indexPath) as? TesouroSelicTableViewCell
-        cell?.setupCell(data: viewModel.loadCurrentSelic(indexPath: indexPath))
+        let cell = tableView.dequeueReusableCell(withIdentifier: FiisTableViewCell.identifier, for: indexPath) as? FiisTableViewCell
+        cell?.setupCell(data: viewModel.loadCurrentFiis(indexPath: indexPath))
         return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return viewModel.heightForRowAt
+    }
+}
+
+extension FiisVC: FiisViewModelDelegate {
+    func success() {
+        DispatchQueue.main.async { [ weak self ] in
+            self?.configTableViewProtocols(delegate: self!, dataSource: self!)
+            self?.tableView.reloadData()
+        }
+    }
+    
+    func error() {
+        print(#function)
     }
 }
