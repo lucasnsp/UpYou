@@ -151,7 +151,6 @@
 		46EEDD5E2AD988D1005A7164 /* TdsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD5D2AD988D1005A7164 /* TdsData.swift */; };
 		46EEDD602AD98901005A7164 /* TDSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD5F2AD98901005A7164 /* TDSService.swift */; };
 		46EEDD662AD9898C005A7164 /* TesouroSelicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD652AD9898C005A7164 /* TesouroSelicVC.swift */; };
-		46EEDD682AD98999005A7164 /* TesouroSelicScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD672AD98999005A7164 /* TesouroSelicScreen.swift */; };
 		46EEDD6A2AD989A8005A7164 /* TesouroSelicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD692AD989A8005A7164 /* TesouroSelicViewModel.swift */; };
 		46EEDD6F2AD98AB3005A7164 /* TesouroSelicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD6E2AD98AB3005A7164 /* TesouroSelicTableViewCell.swift */; };
 		46EEDD712AD98ABC005A7164 /* TesouroSelicTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD702AD98ABC005A7164 /* TesouroSelicTableViewCellScreen.swift */; };
@@ -301,7 +300,6 @@
 		46EEDD5D2AD988D1005A7164 /* TdsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TdsData.swift; sourceTree = "<group>"; };
 		46EEDD5F2AD98901005A7164 /* TDSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDSService.swift; sourceTree = "<group>"; };
 		46EEDD652AD9898C005A7164 /* TesouroSelicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesouroSelicVC.swift; sourceTree = "<group>"; };
-		46EEDD672AD98999005A7164 /* TesouroSelicScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesouroSelicScreen.swift; sourceTree = "<group>"; };
 		46EEDD692AD989A8005A7164 /* TesouroSelicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesouroSelicViewModel.swift; sourceTree = "<group>"; };
 		46EEDD6E2AD98AB3005A7164 /* TesouroSelicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesouroSelicTableViewCell.swift; sourceTree = "<group>"; };
 		46EEDD702AD98ABC005A7164 /* TesouroSelicTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesouroSelicTableViewCellScreen.swift; sourceTree = "<group>"; };
@@ -1259,35 +1257,10 @@
 		46EEDD612AD98958005A7164 /* Tesouro Selic */ = {
 			isa = PBXGroup;
 			children = (
-				46EEDD642AD98977005A7164 /* ViewController */,
-				46EEDD632AD9896F005A7164 /* Screen */,
-				46EEDD622AD98969005A7164 /* ViewModel */,
-			);
-			path = "Tesouro Selic";
-			sourceTree = "<group>";
-		};
-		46EEDD622AD98969005A7164 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
+				46EEDD652AD9898C005A7164 /* TesouroSelicVC.swift */,
 				46EEDD692AD989A8005A7164 /* TesouroSelicViewModel.swift */,
 			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		46EEDD632AD9896F005A7164 /* Screen */ = {
-			isa = PBXGroup;
-			children = (
-				46EEDD672AD98999005A7164 /* TesouroSelicScreen.swift */,
-			);
-			path = Screen;
-			sourceTree = "<group>";
-		};
-		46EEDD642AD98977005A7164 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				46EEDD652AD9898C005A7164 /* TesouroSelicVC.swift */,
-			);
-			path = ViewController;
+			path = "Tesouro Selic";
 			sourceTree = "<group>";
 		};
 		46EEDD6B2AD98A80005A7164 /* TDSCell */ = {
@@ -1459,7 +1432,6 @@
 				461BEF202ABA74F500C07847 /* SceneDelegate.swift in Sources */,
 				460583AD2AC4784800446A6F /* MoneyPhrasesService.swift in Sources */,
 				460B7ACA2AC857400059EA44 /* DeepWorkData.swift in Sources */,
-				46EEDD682AD98999005A7164 /* TesouroSelicScreen.swift in Sources */,
 				46DA2CE82ACC429100DEA703 /* HabitsService.swift in Sources */,
 				46EEDD6F2AD98AB3005A7164 /* TesouroSelicTableViewCell.swift in Sources */,
 				460B7ADF2AC877760059EA44 /* EnvironmentService.swift in Sources */,
