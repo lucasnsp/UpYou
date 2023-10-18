@@ -11,6 +11,15 @@ class BooksVC: UIViewController {
     
     var viewModel = BooksViewModel()
     
+    init(viewModel: BooksViewModel = BooksViewModel()) {
+        super.init(nibName: nil, bundle: nil)
+        self.viewModel = viewModel
+    }
+    
+    required init?(coder: NSCoder) {
+        return nil
+    }
+    
     private lazy var subImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -95,7 +104,8 @@ class BooksVC: UIViewController {
 
 extension BooksVC: BooksViewModelDelegate {
     func success() {
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
             self.configTableViewProtocols(delegate: self, dataSource: self)
             self.tableView.reloadData()
         }

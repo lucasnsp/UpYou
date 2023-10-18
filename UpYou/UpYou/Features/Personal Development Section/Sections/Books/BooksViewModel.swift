@@ -39,7 +39,8 @@ class BooksViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getBookService { booksData, error in
+        service.getBookService { [weak self ] booksData, error in
+            guard let self else { return }
             if error == nil {
                 self.books = booksData?.books ?? []
                 self.delegate?.success()

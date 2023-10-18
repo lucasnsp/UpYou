@@ -40,7 +40,8 @@ class LcaViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getLcaService { lcaData, error in
+        service.getLcaService { [ weak self ] lcaData, error in
+            guard let self else { return }
             if error == nil {
                 self.lca = lcaData?.lca ?? []
                 self.delegate?.success()

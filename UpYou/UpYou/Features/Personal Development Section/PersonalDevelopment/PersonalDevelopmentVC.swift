@@ -11,6 +11,15 @@ class PersonalDevelopmentVC: UIViewController {
     
     var viewModel = PersonalDevelopmentViewModel()
     
+    init(viewModel: PersonalDevelopmentViewModel = PersonalDevelopmentViewModel()) {
+        super.init(nibName: nil, bundle: nil)
+        self.viewModel = viewModel
+    }
+    
+    required init?(coder: NSCoder) {
+        return nil
+    }
+    
     public func configTableViewProtocols(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
         tableView.delegate = delegate
         tableView.dataSource = dataSource
@@ -470,7 +479,8 @@ class PersonalDevelopmentVC: UIViewController {
 
 extension PersonalDevelopmentVC: PersonalDevelopmentViewModelDelegate {
     func success() {
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
             self.configTableViewProtocols(delegate: self, dataSource: self)
             self.tableView.reloadData()
         }

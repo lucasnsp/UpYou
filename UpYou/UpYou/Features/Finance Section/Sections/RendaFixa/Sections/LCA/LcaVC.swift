@@ -96,7 +96,8 @@ class LcaVC: UIViewController {
 
 extension LcaVC: LcaViewModelDelegate {
     func success() {
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
             self.configTableViewProtocols(delegate: self, dataSource: self)
             self.tableView.reloadData()
         }

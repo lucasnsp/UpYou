@@ -95,7 +95,8 @@ class TesouroIpcaVC: UIViewController {
 
 extension TesouroIpcaVC: TesouroIpcaViewModelDelegate {
     func success() {
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
             self.configTableViewProtocols(delegate: self, dataSource: self)
             self.tableView.reloadData()
         }

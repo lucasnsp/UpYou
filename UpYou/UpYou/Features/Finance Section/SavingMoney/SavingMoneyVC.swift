@@ -178,7 +178,7 @@ class SavingMoneyVC: UIViewController {
     
     @objc
     private func tappedCryptoButton() {
-        let vc: CriptoVC = CriptoVC()
+        let vc: CriptoVC = CriptoVC(viewModel: CriptoViewModel())
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -222,7 +222,7 @@ class SavingMoneyVC: UIViewController {
     
     @objc
     private func tappedGoldenRulesButton() {
-        let vc: GoldenRulesVC = GoldenRulesVC()
+        let vc: GoldenRulesVC = GoldenRulesVC(viewModel: GoldenRulesViewModel())
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -266,7 +266,7 @@ class SavingMoneyVC: UIViewController {
     
     @objc
     private func tappedFllsButton() {
-        let vc: FiisVC = FiisVC()
+        let vc: FiisVC = FiisVC(viewModel: FiisViewModel())
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -310,7 +310,7 @@ class SavingMoneyVC: UIViewController {
     
     @objc
     private func tappedStocksButton() {
-        let vc: StocksVC = StocksVC()
+        let vc: StocksVC = StocksVC(viewModel: StocksViewModel())
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -545,7 +545,8 @@ class SavingMoneyVC: UIViewController {
 
 extension SavingMoneyVC: SavingMoneyViewModelDelegate {
     func success() {
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [ weak self ] in
+            guard let self else { return }
             self.configTableViewProtocols(delegate: self, dataSource: self)
             self.tableView.reloadData()
         }

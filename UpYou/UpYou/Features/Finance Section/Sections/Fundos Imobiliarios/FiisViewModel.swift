@@ -40,7 +40,8 @@ class FiisViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getFiisService { fiisData, error in
+        service.getFiisService { [ weak self ] fiisData, error in
+            guard let self else { return }
             if error == nil {
                 self.fiis = fiisData?.fundosImobiliarios ?? []
                 self.delegate?.success()

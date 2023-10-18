@@ -11,6 +11,15 @@ class CdbVC: UIViewController {
     
     var viewModel = CdbViewModel()
     
+    init(viewModel: CdbViewModel = CdbViewModel()) {
+        super.init(nibName: nil, bundle: nil)
+        self.viewModel = viewModel
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     private lazy var backButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -96,7 +105,8 @@ class CdbVC: UIViewController {
 
 extension CdbVC: CdbViewModelDelegate {
     func success() {
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
             self.configTableViewProtocols(delegate: self, dataSource: self)
             self.tableView.reloadData()
         }

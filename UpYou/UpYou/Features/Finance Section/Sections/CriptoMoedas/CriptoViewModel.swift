@@ -40,7 +40,8 @@ class CriptoViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getCriptoService { criptoData, error in
+        service.getCriptoService { [ weak self ] criptoData, error in
+            guard let self else { return }
             if error == nil {
                 self.cripto = criptoData?.criptoMoedas ?? []
                 self.delegate?.success()

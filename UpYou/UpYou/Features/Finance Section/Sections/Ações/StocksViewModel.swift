@@ -40,7 +40,8 @@ class StocksViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getStockService { stockData, error in
+        service.getStockService { [ weak self ] stockData, error in
+            guard let self else { return }
             if error == nil {
                 self.stock = stockData?.stocks ?? []
                 self.delegate?.success()

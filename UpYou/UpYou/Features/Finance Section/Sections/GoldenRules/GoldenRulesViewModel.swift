@@ -39,7 +39,8 @@ class GoldenRulesViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getGoldenRulesService { goldenRulesData, error in
+        service.getGoldenRulesService { [ weak self ] goldenRulesData, error in
+            guard let self else { return }
             if error == nil {
                 self.rule = goldenRulesData?.rules ?? []
                 self.delegate?.success()

@@ -40,7 +40,8 @@ class EnvironmentViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getEnvironmentService { environmentData, error in
+        service.getEnvironmentService { [ weak self ] environmentData, error in
+            guard let self else { return }
             if error == nil {
                 self.environment = environmentData?.environment ?? []
                 self.delegate?.success()

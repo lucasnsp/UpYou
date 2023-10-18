@@ -40,7 +40,8 @@ class TesouroDiretoViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getTesouroDiretoService { tdData, error in
+        service.getTesouroDiretoService { [ weak self ] tdData, error in
+            guard let self else { return }
             if error == nil {
                 self.td = tdData?.tesouroDireto ?? []
                 self.delegate?.success()

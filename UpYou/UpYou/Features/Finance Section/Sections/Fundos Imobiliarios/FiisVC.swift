@@ -11,6 +11,15 @@ class FiisVC: UIViewController {
     
     var viewModel: FiisViewModel = FiisViewModel()
     
+    init(viewModel: FiisViewModel) {
+        super.init(nibName: nil, bundle: nil)
+        self.viewModel = viewModel
+    }
+    
+    required init?(coder: NSCoder) {
+        return nil
+    }
+    
     private lazy var backButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -111,9 +120,10 @@ extension FiisVC: UITableViewDelegate, UITableViewDataSource {
 
 extension FiisVC: FiisViewModelDelegate {
     func success() {
-        DispatchQueue.main.async { [ weak self ] in
-            self?.configTableViewProtocols(delegate: self!, dataSource: self!)
-            self?.tableView.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
+            self.configTableViewProtocols(delegate: self, dataSource: self)
+            self.tableView.reloadData()
         }
     }
     

@@ -40,7 +40,8 @@ class TesouroSelicViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getTesouroSelicService { tdsData, error in
+        service.getTesouroSelicService { [ weak self ] tdsData, error in
+            guard let self else { return }
             if error == nil {
                 self.tds = tdsData?.tesouroSelic ?? []
                 self.delegate?.success()

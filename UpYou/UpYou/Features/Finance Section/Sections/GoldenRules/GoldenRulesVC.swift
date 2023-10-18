@@ -11,6 +11,15 @@ class GoldenRulesVC: UIViewController {
     
     var viewModel: GoldenRulesViewModel = GoldenRulesViewModel()
     
+    init(viewModel: GoldenRulesViewModel) {
+        super.init(nibName: nil, bundle: nil)
+        self.viewModel = viewModel
+    }
+    
+    required init?(coder: NSCoder) {
+        return nil
+    }
+    
     private lazy var backButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -96,7 +105,8 @@ class GoldenRulesVC: UIViewController {
 
 extension GoldenRulesVC: GoldenRulesViewModelDelegate {
     func success() {
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
             self.configTableViewProtocols(delegate: self, dataSource: self)
             self.tableView.reloadData()
         }

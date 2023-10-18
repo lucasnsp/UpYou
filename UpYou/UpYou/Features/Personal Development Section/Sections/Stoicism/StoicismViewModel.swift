@@ -41,7 +41,8 @@ class StoicismViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getStoicismService { stoicismData, error in
+        service.getStoicismService { [ weak self ]stoicismData, error in
+            guard let self else { return }
             if error == nil {
                 self.stoic = stoicismData?.stoicism ?? []
                 self.delegate?.success()

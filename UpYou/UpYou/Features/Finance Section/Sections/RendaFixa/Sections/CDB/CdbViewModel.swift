@@ -39,7 +39,8 @@ class CdbViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getCdbService { cdbData, error in
+        service.getCdbService { [ weak self ]cdbData, error in
+            guard let self else { return }
             if error == nil {
                 self.cdb = cdbData?.cdb ?? []
                 self.delegate?.success()

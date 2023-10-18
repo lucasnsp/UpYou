@@ -40,7 +40,8 @@ class SleepViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getSleepService { sleepData, error in
+        service.getSleepService { [ weak self ] sleepData, error in
+            guard let self else { return }
             if error == nil {
                 self.sleep = sleepData?.sleep ?? []
                 self.delegate?.success()

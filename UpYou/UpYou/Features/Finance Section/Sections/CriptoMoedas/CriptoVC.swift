@@ -11,6 +11,15 @@ class CriptoVC: UIViewController {
     
     var viewModel: CriptoViewModel = CriptoViewModel()
     
+    init(viewModel: CriptoViewModel) {
+        super.init(nibName: nil, bundle: nil)
+        self.viewModel = viewModel
+    }
+    
+    required init?(coder: NSCoder) {
+        return nil
+    }
+    
     private lazy var backButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -96,9 +105,10 @@ class CriptoVC: UIViewController {
 
 extension CriptoVC: CriptoViewModelDelegate {
     func success() {
-        DispatchQueue.main.async { [ weak self ] in
-            self?.configTableViewProtocols(delegate: self!, dataSource: self!)
-            self?.tableView.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
+            self.configTableViewProtocols(delegate: self, dataSource: self)
+            self.tableView.reloadData()
         }
     }
     

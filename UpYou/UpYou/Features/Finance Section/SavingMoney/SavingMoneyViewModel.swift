@@ -40,7 +40,8 @@ class SavingMoneyViewModel {
     }
     
     public func fetchAllResquest() {
-        service.getMoneyPhrasesService { moneyPhrasesData, error in
+        service.getMoneyPhrasesService { [ weak self ] moneyPhrasesData, error in
+            guard let self else { return }
             if error == nil {
                 if let phrases = moneyPhrasesData?.phrases {
                     self.phrase = [phrases.randomElement()!]

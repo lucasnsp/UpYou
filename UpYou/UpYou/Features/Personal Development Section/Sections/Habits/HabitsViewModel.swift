@@ -40,7 +40,8 @@ class HabitsViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getHabitsService { habitsData, error in
+        service.getHabitsService { [weak self ] habitsData, error in
+            guard let self else { return }
             if error == nil {
                 self.habit = habitsData?.habits ?? []
                 self.delegate?.success()

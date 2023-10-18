@@ -11,6 +11,15 @@ class StoicismVC: UIViewController {
     
     var viewModel = StoicismViewModel()
     
+    init(viewModel: StoicismViewModel = StoicismViewModel()) {
+        super.init(nibName: nil, bundle: nil)
+        self.viewModel = viewModel
+    }
+    
+    required init?(coder: NSCoder) {
+        return nil
+    }
+    
     private lazy var backButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -96,7 +105,8 @@ class StoicismVC: UIViewController {
 
 extension StoicismVC: StoicismViewModelDelegate {
     func success() {
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
             self.configTableViewProtocols(delegate: self, dataSource: self)
             self.tableView.reloadData()
         }

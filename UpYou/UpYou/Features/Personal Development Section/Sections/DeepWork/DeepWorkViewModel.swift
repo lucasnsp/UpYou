@@ -40,7 +40,8 @@ class DeepWorkViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getDeepWorkService { deepWorkData, error in
+        service.getDeepWorkService { [ weak self ] deepWorkData, error in
+            guard let self else { return }
             if error == nil {
                 self.focus = deepWorkData?.focus ?? []
                 self.delegate?.success()

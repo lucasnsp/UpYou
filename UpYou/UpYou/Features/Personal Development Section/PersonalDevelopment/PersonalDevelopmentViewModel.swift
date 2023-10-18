@@ -41,7 +41,8 @@ class PersonalDevelopmentViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getQuoteService { quoteData, error in
+        service.getQuoteService { [ weak self ] quoteData, error in
+            guard let self else { return }
             if error == nil {
                 if let quotes = quoteData?.quotes {
                     self.quote = [quotes.randomElement()!]

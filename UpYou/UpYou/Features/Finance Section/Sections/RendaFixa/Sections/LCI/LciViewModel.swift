@@ -40,7 +40,8 @@ class LciViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getLciService { lciData, error in
+        service.getLciService { [ weak self ] lciData, error in
+            guard let self else { return }
             if error == nil {
                 self.lci = lciData?.lci ?? []
                 self.delegate?.success()
