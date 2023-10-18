@@ -80,7 +80,7 @@ class PersonalDevelopmentVC: UIViewController {
     }()
     
     @objc
-    private func tappedBooksButton() {
+    func tappedBooksButton() {
         let vc: BooksVC = BooksVC()
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -318,10 +318,11 @@ class PersonalDevelopmentVC: UIViewController {
         return tableView
     }()
     
+    
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = true
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.fetchAllRequest()
@@ -474,7 +475,7 @@ class PersonalDevelopmentVC: UIViewController {
             stoicButton.widthAnchor.constraint(equalTo: booksButton.widthAnchor),
         ])
     }
-
+    
 }
 
 extension PersonalDevelopmentVC: PersonalDevelopmentViewModelDelegate {
