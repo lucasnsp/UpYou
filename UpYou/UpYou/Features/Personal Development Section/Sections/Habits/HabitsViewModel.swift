@@ -14,6 +14,10 @@ protocol HabitsViewModelDelegate: AnyObject {
 
 class HabitsViewModel {
     
+    struct Constants {
+        static let height: CGFloat = 3800
+    }
+    
     private var service: HabitsService = HabitsService()
     private var habit = [Habit]()
     
@@ -32,7 +36,7 @@ class HabitsViewModel {
     }
     
     public var heightForRowAt: CGFloat {
-        return 3800
+        return Constants.height
     }
     
     public func loadCurrentHabits(indexPath: IndexPath) -> Habit {

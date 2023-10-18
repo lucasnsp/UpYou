@@ -14,6 +14,10 @@ protocol SleepViewModelDelegate: AnyObject {
 
 class SleepViewModel {
     
+    struct Constants {
+        static let height: CGFloat = 2880
+    }
+    
     private var service: SleepService = SleepService()
     private var sleep = [Sleep]()
     
@@ -32,7 +36,7 @@ class SleepViewModel {
     }
     
     public var heightForRowAt: CGFloat {
-        return 2880
+        return Constants.height
     }
     
     public func loadCurrentSleep(indexPath: IndexPath) -> Sleep {

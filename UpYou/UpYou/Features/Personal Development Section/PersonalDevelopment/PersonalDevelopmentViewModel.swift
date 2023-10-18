@@ -14,6 +14,10 @@ protocol PersonalDevelopmentViewModelDelegate: AnyObject {
 
 class PersonalDevelopmentViewModel {
     
+    struct Constants {
+        static let height: CGFloat = 170
+    }
+    
     private var service: QuotesService = QuotesService()
     private var quote = [Quote]()
     
@@ -37,7 +41,7 @@ class PersonalDevelopmentViewModel {
     }
     
     public var heightForRowAt: CGFloat {
-        return 170
+        return Constants.height
     }
     
     public func fetchAllRequest() {

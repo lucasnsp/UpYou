@@ -14,6 +14,10 @@ protocol SavingMoneyViewModelDelegate: AnyObject {
 
 class SavingMoneyViewModel {
     
+    struct Constants {
+        static let height: CGFloat = 170
+    }
+    
     private var service: MoneyPhrasesService = MoneyPhrasesService()
     private var phrase = [Phrase]()
     
@@ -36,7 +40,7 @@ class SavingMoneyViewModel {
     }
     
     public var heightForRowAt: CGFloat {
-        return 170
+        return Constants.height
     }
     
     public func fetchAllResquest() {

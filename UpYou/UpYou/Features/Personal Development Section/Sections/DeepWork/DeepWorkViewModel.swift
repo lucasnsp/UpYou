@@ -14,6 +14,10 @@ protocol DeepWorkViewModelDelegate: AnyObject {
 
 class DeepWorkViewModel {
     
+    struct Constants {
+        static let height: CGFloat = 2280
+    }
+    
     private var service: DeepWorkService = DeepWorkService()
     private var focus = [Focus]()
     
@@ -32,7 +36,7 @@ class DeepWorkViewModel {
     }
     
     public var heightForRowAt: CGFloat {
-        return 2280
+        return Constants.height
     }
     
     public func loadCurrentFocus(indexPath: IndexPath) -> Focus {

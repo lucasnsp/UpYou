@@ -14,6 +14,10 @@ protocol EnvironmentViewModelDelegate: AnyObject {
 
 class EnvironmentViewModel {
     
+    struct Constants {
+        static let height: CGFloat = 2750
+    }
+    
     private var service: EnvironmentService = EnvironmentService()
     private var environment = [Environment]()
     
@@ -32,7 +36,7 @@ class EnvironmentViewModel {
     }
     
     public var heightForRowAt: CGFloat {
-        return 2750
+        return Constants.height
     }
     
     public func loadCurrentEnvironment(indexPath: IndexPath) -> Environment {

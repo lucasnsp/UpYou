@@ -14,6 +14,10 @@ protocol TesouroIpcaViewModelDelegate: AnyObject{
 
 class TesouroIpcaViewModel {
     
+    struct Constants {
+        static let height: CGFloat = 1000
+    }
+    
     private var service: TDIService = TDIService()
     private var tdi = [TesouroIpca]()
     
@@ -32,7 +36,7 @@ class TesouroIpcaViewModel {
     }
     
     public var heightForRowAt: CGFloat {
-        return 1000
+        return Constants.height
     }
     
     public func loadCurrentIpca(indexPath: IndexPath) -> TesouroIpca {

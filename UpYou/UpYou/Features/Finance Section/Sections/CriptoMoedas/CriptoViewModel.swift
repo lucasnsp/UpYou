@@ -14,6 +14,10 @@ protocol CriptoViewModelDelegate: AnyObject {
 
 class CriptoViewModel {
     
+    struct Constants {
+        static let height: CGFloat = 950
+    }
+    
     private var service: CriptoService = CriptoService()
     private var cripto = [CriptoMoeda]()
     
@@ -32,7 +36,7 @@ class CriptoViewModel {
     }
     
     public var heightForRowAt: CGFloat {
-        return 950
+        return Constants.height
     }
     
     public func loadCurrentCripto(indexPath: IndexPath) -> CriptoMoeda {

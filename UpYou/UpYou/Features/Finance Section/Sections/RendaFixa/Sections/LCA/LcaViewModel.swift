@@ -14,6 +14,10 @@ protocol LcaViewModelDelegate: AnyObject {
 
 class LcaViewModel {
     
+    struct Constants {
+        static let height: CGFloat = 1000
+    }
+    
     private var service: LCAService = LCAService()
     private var lca = [Lca]()
     
@@ -32,7 +36,7 @@ class LcaViewModel {
     }
     
     public var heightForRowAt: CGFloat {
-        return 1000
+        return Constants.height
     }
     
     public func loadCurrentFocus(indexPath: IndexPath) -> Lca {

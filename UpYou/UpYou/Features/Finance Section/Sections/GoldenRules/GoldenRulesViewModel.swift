@@ -13,6 +13,11 @@ protocol GoldenRulesViewModelDelegate: AnyObject {
 }
 
 class GoldenRulesViewModel {
+    
+    struct Constants {
+        static let height: CGFloat = 2650
+    }
+    
     private var service: GoldenRulesService = GoldenRulesService()
     private var rule = [Rule]()
     
@@ -31,7 +36,7 @@ class GoldenRulesViewModel {
     }
     
     public var heightForRowAt: CGFloat {
-        return 2650
+        return Constants.height
     }
     
     public func loadCurrentFocus(indexPath: IndexPath) -> Rule {

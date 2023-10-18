@@ -13,6 +13,11 @@ protocol BooksViewModelDelegate: AnyObject {
 }
 
 class BooksViewModel {
+    
+    struct Constants {
+        static let height: CGFloat = 600
+    }
+    
     private var service: BooksService = BooksService()
     private var books = [Book]()
     
@@ -31,7 +36,7 @@ class BooksViewModel {
     }
     
     public var heightForRowAt: CGFloat {
-        return 600
+        return Constants.height
     }
     
     public func loadCurrentBooks(indexPath: IndexPath) -> Book {

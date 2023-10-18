@@ -14,6 +14,10 @@ protocol StoicismViewModelDelegate: AnyObject {
 
 class StoicismViewModel {
     
+    struct Constants {
+        static let height: CGFloat = 2800
+    }
+    
     private var service = StoicismService()
     private var stoic = [Stoicism]()
     
@@ -33,7 +37,7 @@ class StoicismViewModel {
     }
     
     public var heightForRowAt: CGFloat {
-        return 2800
+        return Constants.height
     }
     
     public func loadCurrentStoic(indexPath: IndexPath) -> Stoicism {

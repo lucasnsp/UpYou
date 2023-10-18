@@ -14,6 +14,10 @@ protocol TesouroDiretoViewModelDelegate: AnyObject {
 
 class TesouroDiretoViewModel {
     
+    struct Constants {
+        static let height: CGFloat = 1000
+    }
+    
     private var service: TDService = TDService()
     private var td = [TesouroDireto]()
     
@@ -32,7 +36,7 @@ class TesouroDiretoViewModel {
     }
     
     public var heightForRowAt: CGFloat {
-        return 1000
+        return Constants.height
     }
     
     public func loadCurrentDireto(indexPath: IndexPath) -> TesouroDireto {

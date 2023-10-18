@@ -14,6 +14,10 @@ protocol FiisViewModelDelegate: AnyObject {
 
 class FiisViewModel {
     
+    struct Constants {
+        static let height: CGFloat = 1080
+    }
+    
     private var service: FIIsService = FIIsService()
     private var fiis = [FundosImobiliario]()
     
@@ -32,7 +36,7 @@ class FiisViewModel {
     }
     
     public var heightForRowAt: CGFloat {
-        return 1080
+        return Constants.height
     }
     
     public func loadCurrentFiis(indexPath: IndexPath) -> FundosImobiliario {

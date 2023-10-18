@@ -14,6 +14,10 @@ protocol TesouroSelicViewModelDelegate: AnyObject {
 
 class TesouroSelicViewModel {
     
+    struct Constants {
+        static let height: CGFloat = 1000
+    }
+    
     private var service: TDSService = TDSService()
     private var tds = [TesouroSelic]()
     
@@ -32,7 +36,7 @@ class TesouroSelicViewModel {
     }
     
     public var heightForRowAt: CGFloat {
-        return 1000
+        return Constants.height
     }
     
     public func loadCurrentSelic(indexPath: IndexPath) -> TesouroSelic {

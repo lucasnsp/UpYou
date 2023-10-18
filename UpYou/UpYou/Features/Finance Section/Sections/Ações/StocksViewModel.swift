@@ -14,6 +14,10 @@ protocol StocksViewModelDelegate: AnyObject {
 
 class StocksViewModel {
     
+    struct Constants {
+        static let height: CGFloat = 950
+    }
+    
     private var service: StocksService = StocksService()
     private var stock = [Stock]()
     
@@ -32,7 +36,7 @@ class StocksViewModel {
     }
     
     public var heightForRowAt: CGFloat {
-        return 950
+        return Constants.height
     }
     
     public func loadCurrentStocks(indexPath: IndexPath) -> Stock {

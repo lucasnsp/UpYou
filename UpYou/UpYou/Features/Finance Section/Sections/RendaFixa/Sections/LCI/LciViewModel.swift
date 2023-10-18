@@ -14,6 +14,10 @@ protocol LciViewModelDelegate: AnyObject {
 
 class LciViewModel {
     
+    struct Constants {
+        static let height: CGFloat = 1000
+    }
+    
     private var service: LCIService = LCIService()
     private var lci = [Lci]()
     
@@ -32,7 +36,7 @@ class LciViewModel {
     }
     
     public var heightForRowAt: CGFloat {
-        return 1000
+        return Constants.height
     }
     
     public func loadCurrentFocus(indexPath: IndexPath) -> Lci {
