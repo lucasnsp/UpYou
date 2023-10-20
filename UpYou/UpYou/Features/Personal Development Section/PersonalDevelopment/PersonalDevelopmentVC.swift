@@ -58,46 +58,45 @@ class PersonalDevelopmentVC: UIViewController {
         variable.translatesAutoresizingMaskIntoConstraints = false
         variable.distribution = .fillEqually
         variable.axis = .vertical
-        variable.spacing = 1
+        variable.spacing = 0.5
         return variable
     }()
     
     private lazy var environmentComponent: CustomButtonView = {
-        let variable = CustomButtonView(image: UIImage(named: "ambiente"), title: "Ambiente", subTitle: "O Ambiente importa muito!", chevronImage: UIImage(systemName: "chevron.right"))
+        let variable = CustomButtonView(image: UIImage(named: "ambiente"), title: "Ambiente", subTitle: "O Ambiente importa muito!")
+        variable.translatesAutoresizingMaskIntoConstraints = false
+        return variable
+    }()
+    
+    private lazy var stoicismComponent: CustomButtonView = {
+        let variable = CustomButtonView(image: UIImage(named: "stoicism"), title: "Estoicismo", subTitle: "Abrace a serenidade e a resiliência.")
+        variable.translatesAutoresizingMaskIntoConstraints = false
+        return variable
+    }()
+    
+    private lazy var habitsComponent: CustomButtonView = {
+        let variable = CustomButtonView(image: UIImage(named: "train"), title: "Hábitos", subTitle: "Bons hábitos mudarão a sua vida.")
         variable.translatesAutoresizingMaskIntoConstraints = false
         return variable
     }()
     
     private lazy var booksComponent: CustomButtonView = {
-        let variable = CustomButtonView(image: UIImage(named: "books"), title: "Livros", subTitle: "Um livro é um sonho na sua mão", chevronImage: UIImage(systemName: "chevron.right"))
+        let variable = CustomButtonView(image: UIImage(named: "books"), title: "Livros", subTitle: "Um livro é um sonho na sua mão")
         variable.translatesAutoresizingMaskIntoConstraints = false
         return variable
     }()
     
-    private lazy var books2Component: CustomButtonView = {
-        let variable = CustomButtonView(image: UIImage(named: "books"), title: "Livros", subTitle: "Um livro é um sonho na sua mão", chevronImage: UIImage(systemName: "chevron.right"))
+    private lazy var sleepComponent: CustomButtonView = {
+        let variable = CustomButtonView(image: UIImage(named: "sono"), title: "Sono", subTitle: "Dormir bem é essencial!")
         variable.translatesAutoresizingMaskIntoConstraints = false
         return variable
     }()
     
-    private lazy var books3Component: CustomButtonView = {
-        let variable = CustomButtonView(image: UIImage(named: "books"), title: "Livros", subTitle: "Um livro é um sonho na sua mão", chevronImage: UIImage(systemName: "chevron.right"))
+    private lazy var deepWorkComponent: CustomButtonView = {
+        let variable = CustomButtonView(image: UIImage(named: "target"), title: "Trabalho Focado", subTitle: "Compreenda o poder do foco.")
         variable.translatesAutoresizingMaskIntoConstraints = false
         return variable
     }()
-    
-    private lazy var books4Component: CustomButtonView = {
-        let variable = CustomButtonView(image: UIImage(named: "books"), title: "Livros", subTitle: "Um livro é um sonho na sua mão", chevronImage: UIImage(systemName: "chevron.right"))
-        variable.translatesAutoresizingMaskIntoConstraints = false
-        return variable
-    }()
-    
-    private lazy var books5Component: CustomButtonView = {
-        let variable = CustomButtonView(image: UIImage(named: "books"), title: "Livros", subTitle: "Um livro é um sonho na sua mão", chevronImage: UIImage(systemName: "chevron.right"))
-        variable.translatesAutoresizingMaskIntoConstraints = false
-        return variable
-    }()
-    
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = true
@@ -117,8 +116,11 @@ class PersonalDevelopmentVC: UIViewController {
         view.addSubview(viewMidBackground)
         viewMidBackground.addSubview(stack)
         stack.addArrangedSubview(environmentComponent)
+        stack.addArrangedSubview(stoicismComponent)
+        stack.addArrangedSubview(habitsComponent)
         stack.addArrangedSubview(booksComponent)
-        stack.addArrangedSubview(books2Component)
+        stack.addArrangedSubview(sleepComponent)
+        stack.addArrangedSubview(deepWorkComponent)
     }
     
     private func configConstraints() {
@@ -141,15 +143,9 @@ class PersonalDevelopmentVC: UIViewController {
             stack.topAnchor.constraint(equalTo: viewMidBackground.topAnchor),
             stack.leadingAnchor.constraint(equalTo: viewMidBackground.leadingAnchor),
             stack.trailingAnchor.constraint(equalTo: viewMidBackground.trailingAnchor),
-            stack.bottomAnchor.constraint(equalTo: viewMidBackground.bottomAnchor),
-            
-//            booksComponent.topAnchor.constraint(equalTo: environmentComponent.bottomAnchor, constant: 20),
-//            booksComponent.leadingAnchor.constraint(equalTo: environmentComponent.leadingAnchor),
-//            booksComponent.trailingAnchor.constraint(equalTo: environmentComponent.trailingAnchor),
-//            booksComponent.heightAnchor.constraint(equalTo: environmentComponent.heightAnchor),
+            stack.bottomAnchor.constraint(equalTo: viewMidBackground.bottomAnchor, constant: -15),
         ])
     }
-    
 }
 
 extension PersonalDevelopmentVC: PersonalDevelopmentViewModelDelegate {

@@ -45,13 +45,12 @@ class CustomButtonView: UIView {
         return imageView
     }()
     
-    init(image: UIImage?, title: String, subTitle: String, chevronImage: UIImage?) {
+    init(image: UIImage?, title: String, subTitle: String) {
         super.init(frame: .zero)
         
         imageView.image = image
         titleLabel.text = title
         subTitleLabel.text = subTitle
-        imageView2.image = chevronImage
         
         setupUI()
         setupConfiguration()
@@ -80,10 +79,6 @@ class CustomButtonView: UIView {
             subTitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5),
             subTitleLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
             
-            imageView2.topAnchor.constraint(equalTo: imageView.topAnchor, constant: 12),
-            imageView2.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
-            imageView2.heightAnchor.constraint(equalToConstant: 20),
-            imageView2.widthAnchor.constraint(equalToConstant: 20), 
         ])
     }
 }
