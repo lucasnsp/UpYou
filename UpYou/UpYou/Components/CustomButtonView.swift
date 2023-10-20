@@ -13,7 +13,11 @@ class CustomButtonView: UIView {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
+        imageView.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: 40).isActive = true
         imageView.layer.cornerRadius = 14
+        imageView.isUserInteractionEnabled = true
+
         return imageView
     }()
     
@@ -35,21 +39,19 @@ class CustomButtonView: UIView {
         return label
     }()
     
-    private lazy var button: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.tintColor = UIColor.white
-        return button
+    private lazy var imageView2: UIImageView = {
+        let imageView = UIImageView()
+        imageView.tintColor = .white
+        return imageView
     }()
     
-    init(image: UIImage?, title: String, subTitle: String, buttonImage: UIImage?, target: Any?, action: Selector) {
+    init(image: UIImage?, title: String, subTitle: String, chevronImage: UIImage?) {
         super.init(frame: .zero)
         
         imageView.image = image
         titleLabel.text = title
         subTitleLabel.text = subTitle
-        button.setImage(buttonImage, for: .normal)
-        button.addTarget(target, action: action, for: .touchUpInside)
+        imageView2.image = chevronImage
         
         setupUI()
         setupConfiguration()
@@ -63,26 +65,25 @@ class CustomButtonView: UIView {
         addSubview(imageView)
         addSubview(titleLabel)
         addSubview(subTitleLabel)
-        addSubview(button)
+        addSubview(imageView2)
     }
     
     private func setupConfiguration() {
         NSLayoutConstraint.activate([
-            imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 12),
             imageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
-            imageView.heightAnchor.constraint(equalToConstant: 40),
-            imageView.widthAnchor.constraint(equalToConstant: 40),
+            imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 14),
             
             titleLabel.topAnchor.constraint(equalTo: imageView.topAnchor),
-            titleLabel.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 15),
+            titleLabel.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 14),
+            titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             
-            subTitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4),
+            subTitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5),
             subTitleLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
             
-            button.topAnchor.constraint(equalTo: imageView.topAnchor, constant: 12),
-            button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 12),
-            button.widthAnchor.constraint(equalToConstant: 20),
-            button.heightAnchor.constraint(equalToConstant: 20)
+            imageView2.topAnchor.constraint(equalTo: imageView.topAnchor, constant: 12),
+            imageView2.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
+            imageView2.heightAnchor.constraint(equalToConstant: 20),
+            imageView2.widthAnchor.constraint(equalToConstant: 20), 
         ])
     }
 }
