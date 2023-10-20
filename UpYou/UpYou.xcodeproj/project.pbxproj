@@ -536,6 +536,7 @@
 				461BEF652ABA759A00C07847 /* Utils */,
 				461BEF852ABB913100C07847 /* Json */,
 				461BEF622ABA758F00C07847 /* Alert */,
+				4648CDDB2AE1772B00BC22C5 /* Components */,
 				461BEF692ABA763A00C07847 /* GoogleService-Info.plist */,
 				461BEF1D2ABA74F500C07847 /* AppDelegate.swift */,
 				461BEF1F2ABA74F500C07847 /* SceneDelegate.swift */,
@@ -586,7 +587,6 @@
 			isa = PBXGroup;
 			children = (
 				461BEF672ABA759A00C07847 /* String+Extension.swift */,
-				4648CDD92AE0256300BC22C5 /* CustomButtonView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -800,6 +800,14 @@
 				464687432ADD7B510077269E /* StockTableViewCellScreen.swift */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		4648CDDB2AE1772B00BC22C5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4648CDD92AE0256300BC22C5 /* CustomButtonView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		467D1D7F2AC5B5E1009E0B04 /* Books */ = {

@@ -7,13 +7,7 @@
 
 import UIKit
 
-protocol CustomButtonViewDelegate: AnyObject {
-    func tappedBooksButton()
-}
-
 class CustomButtonView: UIView {
-    
-    weak var delegate: CustomButtonViewDelegate?
     
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
@@ -58,16 +52,11 @@ class CustomButtonView: UIView {
         button.addTarget(target, action: action, for: .touchUpInside)
         
         setupUI()
+        setupConfiguration()
     }
     
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setupUI()
-    }
-    
-    @objc
-    func tappedButton() {
-        self.delegate?.tappedBooksButton()
+        fatalError("init(coder:) has not been implemented")
     }
     
     private func setupUI() {
