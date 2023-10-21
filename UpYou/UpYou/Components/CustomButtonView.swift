@@ -39,18 +39,33 @@ class CustomButtonView: UIView {
         return label
     }()
     
-    private lazy var imageView2: UIImageView = {
+    private lazy var chevronImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.tintColor = .white
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.tintColor = .white.withAlphaComponent(0.8)
         return imageView
     }()
     
-    init(image: UIImage?, title: String, subTitle: String) {
+    lazy var button: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)
+        return button
+    }()
+    
+    @objc
+    func tappedButton() {
+        print(#function)
+    }
+    
+    init(image: UIImage?, title: String, subTitle: String, target: Any?, action: Selector, chevron: UIImage) {
         super.init(frame: .zero)
         
         imageView.image = image
         titleLabel.text = title
         subTitleLabel.text = subTitle
+        button.addTarget(target, action: action, for: .touchUpInside)
+        chevronImage.image = chevron
         
         setupUI()
         setupConfiguration()
@@ -64,7 +79,8 @@ class CustomButtonView: UIView {
         addSubview(imageView)
         addSubview(titleLabel)
         addSubview(subTitleLabel)
-        addSubview(imageView2)
+        addSubview(chevronImage)
+        addSubview(button)
     }
     
     private func setupConfiguration() {
@@ -78,6 +94,16 @@ class CustomButtonView: UIView {
             
             subTitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5),
             subTitleLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
+            
+            chevronImage.topAnchor.constraint(equalTo: imageView.topAnchor, constant: 12),
+            chevronImage.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -12),
+            chevronImage.heightAnchor.constraint(equalToConstant: 15),
+            chevronImage.widthAnchor.constraint(equalToConstant: 15),
+            
+            button.topAnchor.constraint(equalTo: self.topAnchor),
+            button.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            button.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            button.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
         ])
     }
