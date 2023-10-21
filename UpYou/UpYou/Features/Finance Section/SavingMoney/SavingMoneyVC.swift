@@ -43,42 +43,19 @@ class SavingMoneyVC: UIViewController {
         return view
     }()
     
-    private lazy var setAGoalImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 14
-        imageView.image = UIImage(named: "set_a_goal")
-        return imageView
+    private lazy var stackFinance: UIStackView = {
+        let variable = UIStackView()
+        variable.translatesAutoresizingMaskIntoConstraints = false
+        variable.distribution = .fillEqually
+        variable.axis = .vertical
+        variable.spacing = 0.5
+        return variable
     }()
     
-    private lazy var setAGoalTitleLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.text = "Metas"
-        label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.textAlignment = .left
-        return label
-    }()
-    
-    private lazy var setAGoalSubTitlelabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.text = "Defina objetivos financeiros."
-        label.font = UIFont.systemFont(ofSize: 13)
-        label.textAlignment = .left
-        return label
-    }()
-    
-    private lazy var setAGoalButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
-        button.addTarget(self, action: #selector(tappedSetAGoalButton), for: .touchUpInside)
-        button.tintColor = UIColor.white
-        return button
+    private lazy var setAgoalComponent: CustomButtonView = {
+        let variable = CustomButtonView(image: UIImage(named: "set_a_goal"), title: "Metas", subTitle: "Defina objetivos financeiros.", target: self, action: #selector(tappedSetAGoalButton), chevron: UIImage(systemName: "chevron.right")!)
+        variable.translatesAutoresizingMaskIntoConstraints = false
+        return variable
     }()
     
     @objc
@@ -86,42 +63,10 @@ class SavingMoneyVC: UIViewController {
         print(#function)
     }
     
-    private lazy var expensesImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 14
-        imageView.image = UIImage(named: "expenses2")
-        return imageView
-    }()
-    
-    private lazy var expensesTitleLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.text = "Despesas"
-        label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.textAlignment = .left
-        return label
-    }()
-    
-    private lazy var expensesSubTitlelabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.text = "Organize as suas despesas."
-        label.font = UIFont.systemFont(ofSize: 13)
-        label.textAlignment = .left
-        return label
-    }()
-    
-    private lazy var expensesButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
-        button.addTarget(self, action: #selector(tappedExpensesButton), for: .touchUpInside)
-        button.tintColor = UIColor.white
-        return button
+    private lazy var expenseComponent: CustomButtonView = {
+        let variable = CustomButtonView(image: UIImage(named: "expenses2"), title: "Despesas", subTitle: "Organize as suas despesas.", target: self, action: #selector(tappedExpensesButton), chevron: UIImage(systemName: "chevron.right")!)
+        variable.translatesAutoresizingMaskIntoConstraints = false
+        return variable
     }()
     
     @objc
@@ -138,174 +83,19 @@ class SavingMoneyVC: UIViewController {
         return view
     }()
     
-    private lazy var cryptoImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 14
-        imageView.image = UIImage(named: "crypto")
-        return imageView
+    private lazy var stackEducational: UIStackView = {
+        let variable = UIStackView()
+        variable.translatesAutoresizingMaskIntoConstraints = false
+        variable.distribution = .fillEqually
+        variable.axis = .vertical
+        variable.spacing = 0.5
+        return variable
     }()
     
-    private lazy var cryptoTitleLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.text = "CriptoMoedas"
-        label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.textAlignment = .left
-        return label
-    }()
-    
-    private lazy var cryptoSubTitlelabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.text = "Conheça o futuro agora."
-        label.font = UIFont.systemFont(ofSize: 13)
-        label.textAlignment = .left
-        return label
-    }()
-    
-    private lazy var cryptoButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
-        button.addTarget(self, action: #selector(tappedCryptoButton), for: .touchUpInside)
-        button.tintColor = UIColor.white
-        return button
-    }()
-    
-    @objc
-    private func tappedCryptoButton() {
-        let vc: CriptoVC = CriptoVC(viewModel: CriptoViewModel())
-        navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    private lazy var goldenRulesImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 14
-        imageView.image = UIImage(named: "goldenrules1")
-        return imageView
-    }()
-    
-    private lazy var goldenRulesTitleLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.text = "As Leis de Ouro da Babilônia"
-        label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.textAlignment = .left
-        return label
-    }()
-    
-    private lazy var goldenRulesSubTitlelabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.text = "Dicas que mudam vidas."
-        label.font = UIFont.systemFont(ofSize: 13)
-        label.textAlignment = .left
-        return label
-    }()
-    
-    private lazy var goldenRulesButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
-        button.addTarget(self, action: #selector(tappedGoldenRulesButton), for: .touchUpInside)
-        button.tintColor = UIColor.white
-        return button
-    }()
-    
-    @objc
-    private func tappedGoldenRulesButton() {
-        let vc: GoldenRulesVC = GoldenRulesVC(viewModel: GoldenRulesViewModel())
-        navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    private lazy var fllsImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 14
-        imageView.image = UIImage(named: "flls")
-        return imageView
-    }()
-    
-    private lazy var fllsTitleLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.text = "Fundos Imobiliários"
-        label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.textAlignment = .left
-        return label
-    }()
-    
-    private lazy var fllsSubTitlelabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.text = "Crie um patrimônio diferenciado."
-        label.font = UIFont.systemFont(ofSize: 13)
-        label.textAlignment = .left
-        return label
-    }()
-    
-    private lazy var fllsButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
-        button.addTarget(self, action: #selector(tappedFllsButton), for: .touchUpInside)
-        button.tintColor = UIColor.white
-        return button
-    }()
-    
-    @objc
-    private func tappedFllsButton() {
-        let vc: FiisVC = FiisVC(viewModel: FiisViewModel())
-        navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    private lazy var stocksImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 14
-        imageView.image = UIImage(named: "stocks2")
-        return imageView
-    }()
-    
-    private lazy var stocksTitleLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.text = "Ações"
-        label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.textAlignment = .left
-        return label
-    }()
-    
-    private lazy var stocksSubTitlelabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.text = "Conheça mais sobre ações."
-        label.font = UIFont.systemFont(ofSize: 13)
-        label.textAlignment = .left
-        return label
-    }()
-    
-    private lazy var stocksButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
-        button.addTarget(self, action: #selector(tappedStocksButton), for: .touchUpInside)
-        button.tintColor = UIColor.white
-        return button
+    private lazy var stocksComponent: CustomButtonView = {
+        let variable = CustomButtonView(image: UIImage(named: "stocks2"), title: "Ações", subTitle: "Conheça mais sobre ações.", target: self, action: #selector(tappedStocksButton), chevron: UIImage(systemName: "chevron.right")!)
+        variable.translatesAutoresizingMaskIntoConstraints = false
+        return variable
     }()
     
     @objc
@@ -314,46 +104,50 @@ class SavingMoneyVC: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    private lazy var fixedIncomeImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 14
-        imageView.image = UIImage(named: "fixedIncome")
-        return imageView
-    }()
-    
-    private lazy var fixedIncomeTitleLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.text = "Renda Fixa"
-        label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.textAlignment = .left
-        return label
-    }()
-    
-    private lazy var fixedIncomeSubTitlelabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.text = "Entenda o que é e seus tipos."
-        label.font = UIFont.systemFont(ofSize: 13)
-        label.textAlignment = .left
-        return label
-    }()
-    
-    private lazy var fixedIncomeButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
-        button.addTarget(self, action: #selector(tappedRendaFixaButton), for: .touchUpInside)
-        button.tintColor = UIColor.white
-        return button
+    private lazy var cryptoComponent: CustomButtonView = {
+        let variable = CustomButtonView(image: UIImage(named: "crypto"), title: "CriptoMoedas", subTitle: "Conheça o futuro agora.", target: self, action: #selector(tappedCryptoButton), chevron: UIImage(systemName: "chevron.right")!)
+        variable.translatesAutoresizingMaskIntoConstraints = false
+        return variable
     }()
     
     @objc
-    private func tappedRendaFixaButton() {
+    private func tappedCryptoButton() {
+        let vc: CriptoVC = CriptoVC(viewModel: CriptoViewModel())
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private lazy var fiisComponent: CustomButtonView = {
+        let variable = CustomButtonView(image: UIImage(named: "flls"), title: "Fundos Imobiliários", subTitle: "Crie um patrimônio diferenciado.", target: self, action: #selector(tappedFIIsButton), chevron: UIImage(systemName: "chevron.right")!)
+        variable.translatesAutoresizingMaskIntoConstraints = false
+        return variable
+    }()
+    
+    @objc
+    private func tappedFIIsButton() {
+        let vc: FiisVC = FiisVC(viewModel: FiisViewModel())
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private lazy var goldenRulesComponent: CustomButtonView = {
+        let variable = CustomButtonView(image: UIImage(named: "goldenrules1"), title: "As Leis de Ouro da Babilônia", subTitle: "Dicas que mudam vidas.", target: self, action: #selector(tappedGoldenRulesButton), chevron: UIImage(systemName: "chevron.right")!)
+        variable.translatesAutoresizingMaskIntoConstraints = false
+        return variable
+    }()
+    
+    @objc
+    private func tappedGoldenRulesButton() {
+        let vc: GoldenRulesVC = GoldenRulesVC(viewModel: GoldenRulesViewModel())
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private lazy var fixedIncomeComponent: CustomButtonView = {
+        let variable = CustomButtonView(image: UIImage(named: "fixedIncome"), title: "Renda Fixa", subTitle: "Entenda o que é e seus tipos.", target: self, action: #selector(tappedFixedIncomeButton), chevron: UIImage(systemName: "chevron.right")!)
+        variable.translatesAutoresizingMaskIntoConstraints = false
+        return variable
+    }()
+    
+    @objc
+    private func tappedFixedIncomeButton() {
         let vc: FixedIncomeVC = FixedIncomeVC()
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -374,35 +168,16 @@ class SavingMoneyVC: UIViewController {
         view.addSubview(subImageView)
         view.addSubview(tableView)
         view.addSubview(viewMidBackground)
-        viewMidBackground.addSubview(setAGoalImageView)
-        viewMidBackground.addSubview(setAGoalTitleLabel)
-        viewMidBackground.addSubview(setAGoalSubTitlelabel)
-        viewMidBackground.addSubview(setAGoalButton)
-        viewMidBackground.addSubview(expensesImageView)
-        viewMidBackground.addSubview(expensesTitleLabel)
-        viewMidBackground.addSubview(expensesSubTitlelabel)
-        viewMidBackground.addSubview(expensesButton)
+        viewMidBackground.addSubview(stackFinance)
+        stackFinance.addArrangedSubview(setAgoalComponent)
+        stackFinance.addArrangedSubview(expenseComponent)
         view.addSubview(viewBottomBackground)
-        viewBottomBackground.addSubview(cryptoImageView)
-        viewBottomBackground.addSubview(cryptoTitleLabel)
-        viewBottomBackground.addSubview(cryptoSubTitlelabel)
-        viewBottomBackground.addSubview(cryptoButton)
-        viewBottomBackground.addSubview(goldenRulesImageView)
-        viewBottomBackground.addSubview(goldenRulesTitleLabel)
-        viewBottomBackground.addSubview(goldenRulesSubTitlelabel)
-        viewBottomBackground.addSubview(goldenRulesButton)
-        viewBottomBackground.addSubview(fllsImageView)
-        viewBottomBackground.addSubview(fllsTitleLabel)
-        viewBottomBackground.addSubview(fllsSubTitlelabel)
-        viewBottomBackground.addSubview(fllsButton)
-        viewBottomBackground.addSubview(stocksImageView)
-        viewBottomBackground.addSubview(stocksTitleLabel)
-        viewBottomBackground.addSubview(stocksSubTitlelabel)
-        viewBottomBackground.addSubview(stocksButton)
-        viewBottomBackground.addSubview(fixedIncomeImageView)
-        viewBottomBackground.addSubview(fixedIncomeTitleLabel)
-        viewBottomBackground.addSubview(fixedIncomeSubTitlelabel)
-        viewBottomBackground.addSubview(fixedIncomeButton)
+        viewBottomBackground.addSubview(stackEducational)
+        stackEducational.addArrangedSubview(stocksComponent)
+        stackEducational.addArrangedSubview(cryptoComponent)
+        stackEducational.addArrangedSubview(fiisComponent)
+        stackEducational.addArrangedSubview(goldenRulesComponent)
+        stackEducational.addArrangedSubview(fixedIncomeComponent)
     }
     
     private func configConstraints() {
@@ -422,125 +197,22 @@ class SavingMoneyVC: UIViewController {
             viewMidBackground.trailingAnchor.constraint(equalTo: tableView.trailingAnchor),
             viewMidBackground.heightAnchor.constraint(equalToConstant: 134),
             
-            setAGoalImageView.topAnchor.constraint(equalTo: viewMidBackground.topAnchor, constant: 20),
-            setAGoalImageView.leadingAnchor.constraint(equalTo: viewMidBackground.leadingAnchor, constant: 12),
-            setAGoalImageView.heightAnchor.constraint(equalToConstant: 40),
-            setAGoalImageView.widthAnchor.constraint(equalToConstant: 40),
-            
-            setAGoalTitleLabel.topAnchor.constraint(equalTo: setAGoalImageView.topAnchor),
-            setAGoalTitleLabel.leadingAnchor.constraint(equalTo: setAGoalImageView.trailingAnchor, constant: 15),
-            
-            setAGoalSubTitlelabel.topAnchor.constraint(equalTo: setAGoalTitleLabel.bottomAnchor, constant: 5),
-            setAGoalSubTitlelabel.leadingAnchor.constraint(equalTo: setAGoalTitleLabel.leadingAnchor),
-            
-            setAGoalButton.topAnchor.constraint(equalTo: setAGoalImageView.topAnchor, constant: 12),
-            setAGoalButton.trailingAnchor.constraint(equalTo: viewMidBackground.trailingAnchor, constant: -12),
-            setAGoalButton.heightAnchor.constraint(equalToConstant: 20),
-            setAGoalButton.widthAnchor.constraint(equalToConstant: 20),
-            
-            expensesImageView.topAnchor.constraint(equalTo: setAGoalImageView.bottomAnchor, constant: 15),
-            expensesImageView.leadingAnchor.constraint(equalTo: setAGoalImageView.leadingAnchor),
-            expensesImageView.heightAnchor.constraint(equalTo: setAGoalImageView.heightAnchor),
-            expensesImageView.widthAnchor.constraint(equalTo: setAGoalImageView.widthAnchor),
-            
-            expensesTitleLabel.topAnchor.constraint(equalTo: expensesImageView.topAnchor),
-            expensesTitleLabel.leadingAnchor.constraint(equalTo: expensesImageView.trailingAnchor, constant: 15),
-            
-            expensesSubTitlelabel.topAnchor.constraint(equalTo: expensesTitleLabel.bottomAnchor, constant: 5),
-            expensesSubTitlelabel.leadingAnchor.constraint(equalTo: expensesTitleLabel.leadingAnchor),
-            
-            expensesButton.topAnchor.constraint(equalTo: expensesImageView.topAnchor, constant: 12),
-            expensesButton.trailingAnchor.constraint(equalTo: viewMidBackground.trailingAnchor, constant: -12),
-            expensesButton.heightAnchor.constraint(equalTo: setAGoalButton.heightAnchor),
-            expensesButton.widthAnchor.constraint(equalTo: setAGoalButton.widthAnchor),
+            stackFinance.topAnchor.constraint(equalTo: viewMidBackground.topAnchor),
+            stackFinance.leadingAnchor.constraint(equalTo: viewMidBackground.leadingAnchor),
+            stackFinance.trailingAnchor.constraint(equalTo: viewMidBackground.trailingAnchor),
+            stackFinance.bottomAnchor.constraint(equalTo: viewMidBackground.bottomAnchor, constant: -15),
             
             viewBottomBackground.topAnchor.constraint(equalTo: viewMidBackground.bottomAnchor, constant: 22),
             viewBottomBackground.leadingAnchor.constraint(equalTo: viewMidBackground.leadingAnchor),
             viewBottomBackground.trailingAnchor.constraint(equalTo: viewMidBackground.trailingAnchor),
             viewBottomBackground.heightAnchor.constraint(equalToConstant: 320),
             
-            stocksImageView.topAnchor.constraint(equalTo: viewBottomBackground.topAnchor, constant: 20),
-            stocksImageView.leadingAnchor.constraint(equalTo: viewBottomBackground.leadingAnchor, constant: 12),
-            stocksImageView.heightAnchor.constraint(equalToConstant: 40),
-            stocksImageView.widthAnchor.constraint(equalToConstant: 40),
-            
-            stocksTitleLabel.topAnchor.constraint(equalTo: stocksImageView.topAnchor),
-            stocksTitleLabel.leadingAnchor.constraint(equalTo: stocksImageView.trailingAnchor, constant: 15),
-            
-            stocksSubTitlelabel.topAnchor.constraint(equalTo: stocksTitleLabel.bottomAnchor, constant: 5),
-            stocksSubTitlelabel.leadingAnchor.constraint(equalTo: stocksTitleLabel.leadingAnchor),
-            
-            stocksButton.topAnchor.constraint(equalTo: stocksImageView.topAnchor, constant: 12),
-            stocksButton.trailingAnchor.constraint(equalTo: viewBottomBackground.trailingAnchor, constant: -12),
-            stocksButton.heightAnchor.constraint(equalTo: setAGoalButton.heightAnchor),
-            stocksButton.widthAnchor.constraint(equalTo: setAGoalButton.widthAnchor),
-            
-            cryptoImageView.topAnchor.constraint(equalTo: stocksImageView.bottomAnchor, constant: 20),
-            cryptoImageView.leadingAnchor.constraint(equalTo: viewBottomBackground.leadingAnchor, constant: 12),
-            cryptoImageView.heightAnchor.constraint(equalToConstant: 40),
-            cryptoImageView.widthAnchor.constraint(equalToConstant: 40),
-            
-            cryptoTitleLabel.topAnchor.constraint(equalTo: cryptoImageView.topAnchor),
-            cryptoTitleLabel.leadingAnchor.constraint(equalTo: cryptoImageView.trailingAnchor, constant: 15),
-            
-            cryptoSubTitlelabel.topAnchor.constraint(equalTo: cryptoTitleLabel.bottomAnchor, constant: 5),
-            cryptoSubTitlelabel.leadingAnchor.constraint(equalTo: cryptoTitleLabel.leadingAnchor),
-            
-            cryptoButton.topAnchor.constraint(equalTo: cryptoImageView.topAnchor, constant: 12),
-            cryptoButton.trailingAnchor.constraint(equalTo: viewBottomBackground.trailingAnchor, constant: -12),
-            cryptoButton.heightAnchor.constraint(equalTo: setAGoalButton.heightAnchor),
-            cryptoButton.widthAnchor.constraint(equalTo: setAGoalButton.widthAnchor),
-            
-            fllsImageView.topAnchor.constraint(equalTo: cryptoImageView.bottomAnchor, constant: 20),
-            fllsImageView.leadingAnchor.constraint(equalTo: cryptoImageView.leadingAnchor),
-            fllsImageView.heightAnchor.constraint(equalToConstant: 40),
-            fllsImageView.widthAnchor.constraint(equalToConstant: 40),
-            
-            fllsTitleLabel.topAnchor.constraint(equalTo: fllsImageView.topAnchor),
-            fllsTitleLabel.leadingAnchor.constraint(equalTo: fllsImageView.trailingAnchor, constant: 15),
-            
-            fllsSubTitlelabel.topAnchor.constraint(equalTo: fllsTitleLabel.bottomAnchor, constant: 5),
-            fllsSubTitlelabel.leadingAnchor.constraint(equalTo: fllsTitleLabel.leadingAnchor),
-            
-            fllsButton.topAnchor.constraint(equalTo: fllsImageView.topAnchor, constant: 12),
-            fllsButton.trailingAnchor.constraint(equalTo: cryptoButton.trailingAnchor),
-            fllsButton.heightAnchor.constraint(equalTo: setAGoalButton.heightAnchor),
-            fllsButton.widthAnchor.constraint(equalTo: setAGoalButton.widthAnchor),
-            
-            goldenRulesImageView.topAnchor.constraint(equalTo: fllsImageView.bottomAnchor, constant: 20),
-            goldenRulesImageView.leadingAnchor.constraint(equalTo: cryptoImageView.leadingAnchor),
-            goldenRulesImageView.heightAnchor.constraint(equalToConstant: 40),
-            goldenRulesImageView.widthAnchor.constraint(equalToConstant: 40),
-            
-            goldenRulesTitleLabel.topAnchor.constraint(equalTo: goldenRulesImageView.topAnchor),
-            goldenRulesTitleLabel.leadingAnchor.constraint(equalTo: goldenRulesImageView.trailingAnchor, constant: 15),
-            
-            goldenRulesSubTitlelabel.topAnchor.constraint(equalTo: goldenRulesTitleLabel.bottomAnchor, constant: 5),
-            goldenRulesSubTitlelabel.leadingAnchor.constraint(equalTo: goldenRulesTitleLabel.leadingAnchor),
-            
-            goldenRulesButton.topAnchor.constraint(equalTo: goldenRulesImageView.topAnchor, constant: 12),
-            goldenRulesButton.trailingAnchor.constraint(equalTo: cryptoButton.trailingAnchor),
-            goldenRulesButton.heightAnchor.constraint(equalTo: setAGoalButton.heightAnchor),
-            goldenRulesButton.widthAnchor.constraint(equalTo: setAGoalButton.widthAnchor),
-            
-            fixedIncomeImageView.topAnchor.constraint(equalTo: goldenRulesImageView.bottomAnchor, constant: 20),
-            fixedIncomeImageView.leadingAnchor.constraint(equalTo: cryptoImageView.leadingAnchor),
-            fixedIncomeImageView.heightAnchor.constraint(equalToConstant: 40),
-            fixedIncomeImageView.widthAnchor.constraint(equalToConstant: 40),
-
-            fixedIncomeTitleLabel.topAnchor.constraint(equalTo: fixedIncomeImageView.topAnchor),
-            fixedIncomeTitleLabel.leadingAnchor.constraint(equalTo: fixedIncomeImageView.trailingAnchor, constant: 15),
-
-            fixedIncomeSubTitlelabel.topAnchor.constraint(equalTo: fixedIncomeTitleLabel.bottomAnchor, constant: 5),
-            fixedIncomeSubTitlelabel.leadingAnchor.constraint(equalTo: fixedIncomeTitleLabel.leadingAnchor),
-
-            fixedIncomeButton.topAnchor.constraint(equalTo: fixedIncomeImageView.topAnchor, constant: 12),
-            fixedIncomeButton.trailingAnchor.constraint(equalTo: cryptoButton.trailingAnchor),
-            fixedIncomeButton.heightAnchor.constraint(equalTo: setAGoalButton.heightAnchor),
-            fixedIncomeButton.widthAnchor.constraint(equalTo: setAGoalButton.widthAnchor),
+            stackEducational.topAnchor.constraint(equalTo: viewBottomBackground.topAnchor),
+            stackEducational.leadingAnchor.constraint(equalTo: viewBottomBackground.leadingAnchor),
+            stackEducational.trailingAnchor.constraint(equalTo: viewBottomBackground.trailingAnchor),
+            stackEducational.bottomAnchor.constraint(equalTo: viewBottomBackground.bottomAnchor, constant: -15),
         ])
     }
-
 }
 
 extension SavingMoneyVC: SavingMoneyViewModelDelegate {
