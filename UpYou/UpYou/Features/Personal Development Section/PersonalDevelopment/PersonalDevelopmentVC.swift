@@ -213,3 +213,15 @@ extension PersonalDevelopmentVC: UITableViewDelegate, UITableViewDataSource {
         viewModel.heightForRowAt
     }
 }
+
+#if DEBUG
+  import SwiftUI
+
+  struct PersonalDevelopmentVC_Preview: PreviewProvider {
+    static var previews: some View {
+      return SwiftUIPreview { _ in
+          return PersonalDevelopmentVC().view
+      }
+    }
+  }
+#endif
