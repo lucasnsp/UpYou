@@ -155,6 +155,7 @@
 		46EEDD6A2AD989A8005A7164 /* TesouroSelicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD692AD989A8005A7164 /* TesouroSelicViewModel.swift */; };
 		46EEDD6F2AD98AB3005A7164 /* TesouroSelicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD6E2AD98AB3005A7164 /* TesouroSelicTableViewCell.swift */; };
 		46EEDD712AD98ABC005A7164 /* TesouroSelicTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EEDD702AD98ABC005A7164 /* TesouroSelicTableViewCellScreen.swift */; };
+		A270C5632AE4184E00CB9C47 /* SwiftUIPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = A270C5622AE4184E00CB9C47 /* SwiftUIPreview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -305,6 +306,7 @@
 		46EEDD692AD989A8005A7164 /* TesouroSelicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesouroSelicViewModel.swift; sourceTree = "<group>"; };
 		46EEDD6E2AD98AB3005A7164 /* TesouroSelicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesouroSelicTableViewCell.swift; sourceTree = "<group>"; };
 		46EEDD702AD98ABC005A7164 /* TesouroSelicTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesouroSelicTableViewCellScreen.swift; sourceTree = "<group>"; };
+		A270C5622AE4184E00CB9C47 /* SwiftUIPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -586,6 +588,7 @@
 		461BEF652ABA759A00C07847 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A270C5622AE4184E00CB9C47 /* SwiftUIPreview.swift */,
 				461BEF672ABA759A00C07847 /* String+Extension.swift */,
 			);
 			path = Utils;
@@ -1507,6 +1510,7 @@
 				46EEDD0E2AD6E2D0005A7164 /* LCATableViewCellScreen.swift in Sources */,
 				467D1D8E2AC6F687009E0B04 /* BooksData.swift in Sources */,
 				461BEFA72ABF107B00C07847 /* PersonalDevelopmentVC.swift in Sources */,
+				A270C5632AE4184E00CB9C47 /* SwiftUIPreview.swift in Sources */,
 				460536AF2AD0421E003FC929 /* StoicismService.swift in Sources */,
 				46EEDD502AD98100005A7164 /* TesouroIpcaVC.swift in Sources */,
 				46C9B41C2ADAFFCB00CC7395 /* StocksVC.swift in Sources */,

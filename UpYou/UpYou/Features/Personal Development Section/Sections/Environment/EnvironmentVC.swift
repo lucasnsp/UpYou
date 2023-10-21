@@ -132,3 +132,15 @@ extension EnvironmentVC: UITableViewDelegate, UITableViewDataSource {
         return viewModel.heightForRowAt
     }
 }
+
+#if DEBUG
+  import SwiftUI
+
+  struct EnvironmentVC_Preview: PreviewProvider {
+    static var previews: some View {
+      return SwiftUIPreview { _ in
+          return EnvironmentVC().view
+      }
+    }
+  }
+#endif

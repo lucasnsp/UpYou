@@ -148,3 +148,15 @@ class HomeVC: UIViewController {
         ])
     }
 }
+
+#if DEBUG
+  import SwiftUI
+
+  struct HomeVC_Preview: PreviewProvider {
+    static var previews: some View {
+      return SwiftUIPreview { _ in
+          return HomeVC().view
+      }
+    }
+  }
+#endif
