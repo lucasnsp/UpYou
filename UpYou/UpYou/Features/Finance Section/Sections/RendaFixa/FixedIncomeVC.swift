@@ -48,42 +48,19 @@ class FixedIncomeVC: UIViewController {
         return view
     }()
     
-    private lazy var cdbImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 14
-        imageView.image = UIImage(named: "CDB")
-        return imageView
+    private lazy var stackEducational: UIStackView = {
+        let variable = UIStackView()
+        variable.translatesAutoresizingMaskIntoConstraints = false
+        variable.distribution = .fillEqually
+        variable.axis = .vertical
+        variable.spacing = 0.5
+        return variable
     }()
     
-    private lazy var cdbTitleLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.text = "CDB"
-        label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.textAlignment = .left
-        return label
-    }()
-    
-    private lazy var cdbSubTitlelabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.text = "Certificado de depósito bancário."
-        label.font = UIFont.systemFont(ofSize: 13)
-        label.textAlignment = .left
-        return label
-    }()
-    
-    private lazy var cdbButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
-        button.addTarget(self, action: #selector(tappedCdbButton), for: .touchUpInside)
-        button.tintColor = UIColor.white
-        return button
+    private lazy var cdbComponent: CustomButtonView = {
+        let variable = CustomButtonView(image: UIImage(named: "CDB"), title: "CDB", subTitle: "Certificado de depósito bancário.", target: self, action: #selector(tappedCdbButton), chevron: UIImage(systemName: "chevron.right")!)
+        variable.translatesAutoresizingMaskIntoConstraints = false
+        return variable
     }()
     
     @objc
@@ -92,42 +69,10 @@ class FixedIncomeVC: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    private lazy var lcaImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 14
-        imageView.image = UIImage(named: "LCA")
-        return imageView
-    }()
-    
-    private lazy var lcaTitleLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.text = "LCA"
-        label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.textAlignment = .left
-        return label
-    }()
-    
-    private lazy var lcaSubTitlelabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.text = "Letra de crédito do agronegócio."
-        label.font = UIFont.systemFont(ofSize: 13)
-        label.textAlignment = .left
-        return label
-    }()
-    
-    private lazy var lcaButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
-        button.addTarget(self, action: #selector(tappedLcaButton), for: .touchUpInside)
-        button.tintColor = UIColor.white
-        return button
+    private lazy var lcaComponent: CustomButtonView = {
+        let variable = CustomButtonView(image: UIImage(named: "LCA"), title: "LCA", subTitle: "Letra de crédito do agronegócio.", target: self, action: #selector(tappedLcaButton), chevron: UIImage(systemName: "chevron.right")!)
+        variable.translatesAutoresizingMaskIntoConstraints = false
+        return variable
     }()
     
     @objc
@@ -136,42 +81,10 @@ class FixedIncomeVC: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    private lazy var lciImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 14
-        imageView.image = UIImage(named: "LCI")
-        return imageView
-    }()
-    
-    private lazy var lciTitleLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.text = "LCI"
-        label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.textAlignment = .left
-        return label
-    }()
-    
-    private lazy var lciSubTitlelabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.text = "Letra de Crédito Imobiliário."
-        label.font = UIFont.systemFont(ofSize: 13)
-        label.textAlignment = .left
-        return label
-    }()
-    
-    private lazy var lciButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
-        button.addTarget(self, action: #selector(tappedLciButton), for: .touchUpInside)
-        button.tintColor = UIColor.white
-        return button
+    private lazy var lciComponent: CustomButtonView = {
+        let variable = CustomButtonView(image: UIImage(named: "LCI"), title: "LCI", subTitle: "Letra de Crédito Imobiliário.", target: self, action: #selector(tappedLciButton), chevron: UIImage(systemName: "chevron.right")!)
+        variable.translatesAutoresizingMaskIntoConstraints = false
+        return variable
     }()
     
     @objc
@@ -180,134 +93,38 @@ class FixedIncomeVC: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    private lazy var tesouroDiretoImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 14
-        imageView.image = UIImage(named: "TesouroDireto")
-        return imageView
-    }()
-    
-    private lazy var tesouroDiretoTitleLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.text = "Tesouro Direto"
-        label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.textAlignment = .left
-        return label
-    }()
-    
-    private lazy var tesouroDiretoSubTitlelabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.text = "Compra e venda de Titulos publicos."
-        label.font = UIFont.systemFont(ofSize: 13)
-        label.textAlignment = .left
-        return label
-    }()
-    
-    private lazy var tesouroDiretoButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
-        button.addTarget(self, action: #selector(tappedTesouroDiretoButton), for: .touchUpInside)
-        button.tintColor = UIColor.white
-        return button
+    private lazy var tdComponent: CustomButtonView = {
+        let variable = CustomButtonView(image: UIImage(named: "TesouroDireto"), title: "Tesouro Direto", subTitle: "Compra e venda de Titulos publicos.", target: self, action: #selector(tappedTDButton), chevron: UIImage(systemName: "chevron.right")!)
+        variable.translatesAutoresizingMaskIntoConstraints = false
+        return variable
     }()
     
     @objc
-    private func tappedTesouroDiretoButton() {
+    private func tappedTDButton() {
         let vc: TesouroDiretoVC = TesouroDiretoVC()
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    private lazy var tesouroIpcaImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 14
-        imageView.image = UIImage(named: "TesouroIPCA")
-        return imageView
-    }()
-    
-    private lazy var tesouroIpcaTitleLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.text = "Tesouro IPCA"
-        label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.textAlignment = .left
-        return label
-    }()
-    
-    private lazy var tesouroIpcaSubTitlelabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.text = "Proteção contra a Inflação."
-        label.font = UIFont.systemFont(ofSize: 13)
-        label.textAlignment = .left
-        return label
-    }()
-    
-    private lazy var tesouroIpcaButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
-        button.addTarget(self, action: #selector(tappedTesouroIpcaButton), for: .touchUpInside)
-        button.tintColor = UIColor.white
-        return button
+    private lazy var tipcaComponent: CustomButtonView = {
+        let variable = CustomButtonView(image: UIImage(named: "TesouroIPCA"), title: "Tesouro IPCA", subTitle: "Proteção contra a Inflação.", target: self, action: #selector(tappedTIpcaButton), chevron: UIImage(systemName: "chevron.right")!)
+        variable.translatesAutoresizingMaskIntoConstraints = false
+        return variable
     }()
     
     @objc
-    private func tappedTesouroIpcaButton() {
+    private func tappedTIpcaButton() {
         let vc: TesouroIpcaVC = TesouroIpcaVC()
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    private lazy var tesouroSelicImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 14
-        imageView.image = UIImage(named: "TesouroSelic")
-        return imageView
-    }()
-    
-    private lazy var tesouroSelicTitleLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.text = "Tesouro SELIC"
-        label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.textAlignment = .left
-        return label
-    }()
-    
-    private lazy var tesouroSelicSubTitlelabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.text = "Estabilidade e Liquidez."
-        label.font = UIFont.systemFont(ofSize: 13)
-        label.textAlignment = .left
-        return label
-    }()
-    
-    private lazy var tesouroSelicButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
-        button.addTarget(self, action: #selector(tappedTesouroSelicButton), for: .touchUpInside)
-        button.tintColor = UIColor.white
-        return button
+    private lazy var tselicComponent: CustomButtonView = {
+        let variable = CustomButtonView(image: UIImage(named: "TesouroSelic"), title: "Tesouro SELIC", subTitle: "Estabilidade e Liquidez.", target: self, action: #selector(tappedTSelicButton), chevron: UIImage(systemName: "chevron.right")!)
+        variable.translatesAutoresizingMaskIntoConstraints = false
+        return variable
     }()
     
     @objc
-    private func tappedTesouroSelicButton() {
+    private func tappedTSelicButton() {
         let vc: TesouroSelicVC = TesouroSelicVC()
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -323,31 +140,13 @@ class FixedIncomeVC: UIViewController {
         view.addSubview(backButton)
         view.addSubview(titleLabel)
         view.addSubview(viewBackground)
-        viewBackground.addSubview(cdbTitleLabel)
-        viewBackground.addSubview(cdbSubTitlelabel)
-        viewBackground.addSubview(cdbImageView)
-        viewBackground.addSubview(cdbButton)
-        viewBackground.addSubview(lcaTitleLabel)
-        viewBackground.addSubview(lcaSubTitlelabel)
-        viewBackground.addSubview(lcaImageView)
-        viewBackground.addSubview(lcaButton)
-        viewBackground.addSubview(lciTitleLabel)
-        viewBackground.addSubview(lciSubTitlelabel)
-        viewBackground.addSubview(lciImageView)
-        viewBackground.addSubview(lciButton)
-        viewBackground.addSubview(tesouroDiretoTitleLabel)
-        viewBackground.addSubview(tesouroDiretoSubTitlelabel)
-        viewBackground.addSubview(tesouroDiretoImageView)
-        viewBackground.addSubview(tesouroDiretoButton)
-        viewBackground.addSubview(tesouroIpcaTitleLabel)
-        viewBackground.addSubview(tesouroIpcaSubTitlelabel)
-        viewBackground.addSubview(tesouroIpcaImageView)
-        viewBackground.addSubview(tesouroIpcaButton)
-        viewBackground.addSubview(tesouroSelicTitleLabel)
-        viewBackground.addSubview(tesouroSelicSubTitlelabel)
-        viewBackground.addSubview(tesouroSelicImageView)
-        viewBackground.addSubview(tesouroSelicButton)
-
+        view.addSubview(stackEducational)
+        stackEducational.addArrangedSubview(cdbComponent)
+        stackEducational.addArrangedSubview(lcaComponent)
+        stackEducational.addArrangedSubview(lciComponent)
+        stackEducational.addArrangedSubview(tdComponent)
+        stackEducational.addArrangedSubview(tipcaComponent)
+        stackEducational.addArrangedSubview(tselicComponent)
     }
     
     private func configConstraints() {
@@ -369,102 +168,10 @@ class FixedIncomeVC: UIViewController {
             viewBackground.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -25),
             viewBackground.heightAnchor.constraint(equalToConstant: 384),
             
-            cdbImageView.topAnchor.constraint(equalTo: viewBackground.topAnchor, constant: 20),
-            cdbImageView.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 12),
-            cdbImageView.heightAnchor.constraint(equalToConstant: 40),
-            cdbImageView.widthAnchor.constraint(equalToConstant: 40),
-            
-            cdbTitleLabel.topAnchor.constraint(equalTo: cdbImageView.topAnchor),
-            cdbTitleLabel.leadingAnchor.constraint(equalTo: cdbImageView.trailingAnchor, constant: 15),
-            
-            cdbSubTitlelabel.topAnchor.constraint(equalTo: cdbTitleLabel.bottomAnchor, constant: 5),
-            cdbSubTitlelabel.leadingAnchor.constraint(equalTo: cdbTitleLabel.leadingAnchor),
-            
-            cdbButton.topAnchor.constraint(equalTo: cdbImageView.topAnchor, constant: 12),
-            cdbButton.trailingAnchor.constraint(equalTo: viewBackground.trailingAnchor, constant: -12),
-            cdbButton.heightAnchor.constraint(equalToConstant: 40),
-            cdbButton.widthAnchor.constraint(equalToConstant: 40),
-            
-            lcaImageView.topAnchor.constraint(equalTo: cdbImageView.bottomAnchor, constant: 20),
-            lcaImageView.leadingAnchor.constraint(equalTo: cdbImageView.leadingAnchor),
-            lcaImageView.heightAnchor.constraint(equalTo: cdbImageView.heightAnchor),
-            lcaImageView.widthAnchor.constraint(equalTo: cdbImageView.widthAnchor),
-            
-            lcaTitleLabel.topAnchor.constraint(equalTo: lcaImageView.topAnchor),
-            lcaTitleLabel.leadingAnchor.constraint(equalTo: lcaImageView.trailingAnchor, constant: 15),
-            
-            lcaSubTitlelabel.topAnchor.constraint(equalTo: lcaTitleLabel.bottomAnchor, constant: 5),
-            lcaSubTitlelabel.leadingAnchor.constraint(equalTo: lcaTitleLabel.leadingAnchor),
-            
-            lcaButton.topAnchor.constraint(equalTo: lcaImageView.topAnchor, constant: 12),
-            lcaButton.trailingAnchor.constraint(equalTo: cdbButton.trailingAnchor),
-            lcaButton.heightAnchor.constraint(equalTo: cdbButton.heightAnchor),
-            lcaButton.widthAnchor.constraint(equalTo: cdbButton.widthAnchor),
-            
-            lciImageView.topAnchor.constraint(equalTo: lcaImageView.bottomAnchor, constant: 20),
-            lciImageView.leadingAnchor.constraint(equalTo: cdbImageView.leadingAnchor),
-            lciImageView.heightAnchor.constraint(equalTo: cdbImageView.heightAnchor),
-            lciImageView.widthAnchor.constraint(equalTo: cdbImageView.widthAnchor),
-            
-            lciTitleLabel.topAnchor.constraint(equalTo: lciImageView.topAnchor),
-            lciTitleLabel.leadingAnchor.constraint(equalTo: lciImageView.trailingAnchor, constant: 15),
-            
-            lciSubTitlelabel.topAnchor.constraint(equalTo: lciTitleLabel.bottomAnchor, constant: 5),
-            lciSubTitlelabel.leadingAnchor.constraint(equalTo: lciTitleLabel.leadingAnchor),
-            
-            lciButton.topAnchor.constraint(equalTo: lciImageView.topAnchor, constant: 12),
-            lciButton.trailingAnchor.constraint(equalTo: cdbButton.trailingAnchor),
-            lciButton.heightAnchor.constraint(equalTo: cdbButton.heightAnchor),
-            lciButton.widthAnchor.constraint(equalTo: cdbButton.widthAnchor),
-            
-            tesouroDiretoImageView.topAnchor.constraint(equalTo: lciImageView.bottomAnchor, constant: 20),
-            tesouroDiretoImageView.leadingAnchor.constraint(equalTo: cdbImageView.leadingAnchor),
-            tesouroDiretoImageView.heightAnchor.constraint(equalTo: cdbImageView.heightAnchor),
-            tesouroDiretoImageView.widthAnchor.constraint(equalTo: cdbImageView.widthAnchor),
-            
-            tesouroDiretoTitleLabel.topAnchor.constraint(equalTo: tesouroDiretoImageView.topAnchor),
-            tesouroDiretoTitleLabel.leadingAnchor.constraint(equalTo: tesouroDiretoImageView.trailingAnchor, constant: 15),
-            
-            tesouroDiretoSubTitlelabel.topAnchor.constraint(equalTo: tesouroDiretoTitleLabel.bottomAnchor, constant: 5),
-            tesouroDiretoSubTitlelabel.leadingAnchor.constraint(equalTo: tesouroDiretoTitleLabel.leadingAnchor),
-            
-            tesouroDiretoButton.topAnchor.constraint(equalTo: tesouroDiretoImageView.topAnchor, constant: 12),
-            tesouroDiretoButton.trailingAnchor.constraint(equalTo: cdbButton.trailingAnchor),
-            tesouroDiretoButton.heightAnchor.constraint(equalTo: cdbButton.heightAnchor),
-            tesouroDiretoButton.widthAnchor.constraint(equalTo: cdbButton.widthAnchor),
-            
-            tesouroIpcaImageView.topAnchor.constraint(equalTo: tesouroDiretoImageView.bottomAnchor, constant: 20),
-            tesouroIpcaImageView.leadingAnchor.constraint(equalTo: cdbImageView.leadingAnchor),
-            tesouroIpcaImageView.heightAnchor.constraint(equalTo: cdbImageView.heightAnchor),
-            tesouroIpcaImageView.widthAnchor.constraint(equalTo: cdbImageView.widthAnchor),
-            
-            tesouroIpcaTitleLabel.topAnchor.constraint(equalTo: tesouroIpcaImageView.topAnchor),
-            tesouroIpcaTitleLabel.leadingAnchor.constraint(equalTo: tesouroIpcaImageView.trailingAnchor, constant: 15),
-            
-            tesouroIpcaSubTitlelabel.topAnchor.constraint(equalTo: tesouroIpcaTitleLabel.bottomAnchor, constant: 5),
-            tesouroIpcaSubTitlelabel.leadingAnchor.constraint(equalTo: tesouroIpcaTitleLabel.leadingAnchor),
-            
-            tesouroIpcaButton.topAnchor.constraint(equalTo: tesouroIpcaImageView.topAnchor, constant: 12),
-            tesouroIpcaButton.trailingAnchor.constraint(equalTo: cdbButton.trailingAnchor),
-            tesouroIpcaButton.heightAnchor.constraint(equalTo: cdbButton.heightAnchor),
-            tesouroIpcaButton.widthAnchor.constraint(equalTo: cdbButton.widthAnchor),
-            
-            tesouroSelicImageView.topAnchor.constraint(equalTo: tesouroIpcaImageView.bottomAnchor, constant: 20),
-            tesouroSelicImageView.leadingAnchor.constraint(equalTo: cdbImageView.leadingAnchor),
-            tesouroSelicImageView.heightAnchor.constraint(equalTo: cdbImageView.heightAnchor),
-            tesouroSelicImageView.widthAnchor.constraint(equalTo: cdbImageView.widthAnchor),
-            
-            tesouroSelicTitleLabel.topAnchor.constraint(equalTo: tesouroSelicImageView.topAnchor),
-            tesouroSelicTitleLabel.leadingAnchor.constraint(equalTo: tesouroSelicImageView.trailingAnchor, constant: 15),
-            
-            tesouroSelicSubTitlelabel.topAnchor.constraint(equalTo: tesouroSelicTitleLabel.bottomAnchor, constant: 5),
-            tesouroSelicSubTitlelabel.leadingAnchor.constraint(equalTo: tesouroSelicTitleLabel.leadingAnchor),
-            
-            tesouroSelicButton.topAnchor.constraint(equalTo: tesouroSelicImageView.topAnchor, constant: 12),
-            tesouroSelicButton.trailingAnchor.constraint(equalTo: cdbButton.trailingAnchor),
-            tesouroSelicButton.heightAnchor.constraint(equalTo: cdbButton.heightAnchor),
-            tesouroSelicButton.widthAnchor.constraint(equalTo: cdbButton.widthAnchor),
-
+            stackEducational.topAnchor.constraint(equalTo: viewBackground.topAnchor),
+            stackEducational.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor),
+            stackEducational.trailingAnchor.constraint(equalTo: viewBackground.trailingAnchor),
+            stackEducational.bottomAnchor.constraint(equalTo: viewBackground.bottomAnchor, constant: -15),
         ])
     }
 }
