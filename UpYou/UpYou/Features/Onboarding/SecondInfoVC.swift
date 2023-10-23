@@ -10,19 +10,17 @@ import UIKit
 class SecondInfoVC: UIViewController {
     
     private lazy var subImageView: UIImageView = {
-        let image = UIImageView()
+        let image = UIImageView(image: UIImage.backgroundImage)
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "background6")
         return image
     }()
 
     private lazy var safeImageView: UIImageView = {
-        let imageView = UIImageView()
+        let imageView = UIImageView(image: UIImage.safeImage)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 24
         imageView.contentMode = .scaleAspectFill
-        imageView.image = UIImage(named: "cofre_porquinho")
         return imageView
     }()
     

@@ -26,9 +26,8 @@ class TesouroIpcaVC: UIViewController {
     }
     
     private lazy var subImageView: UIImageView = {
-        let image = UIImageView()
+        let image = UIImageView(image: UIImage.backgroundImage)
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "background6")
         return image
     }()
     

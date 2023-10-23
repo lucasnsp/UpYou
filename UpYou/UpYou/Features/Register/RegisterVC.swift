@@ -17,19 +17,17 @@ class RegisterVC: UIViewController {
     }
     
     lazy var subImageView: UIImageView = {
-        let image = UIImageView()
+        let image = UIImageView(image: UIImage.backgroundImage)
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "background6")
         return image
     }()
     
     lazy var rocketImageView: UIImageView = {
-        let imageView = UIImageView()
+        let imageView = UIImageView(image: UIImage.registerImage)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 16
         imageView.contentMode = .scaleAspectFill
-        imageView.image = UIImage(named: "homem_com_dinheiro")
         return imageView
     }()
     

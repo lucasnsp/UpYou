@@ -10,9 +10,8 @@ import UIKit
 class FixedIncomeVC: UIViewController {
     
     private lazy var subImageView: UIImageView = {
-        let image = UIImageView()
+        let image = UIImageView(image: UIImage.backgroundImage)
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "background6")
         return image
     }()
     
@@ -58,7 +57,7 @@ class FixedIncomeVC: UIViewController {
     }()
     
     private lazy var cdbComponent: CustomButtonView = {
-        let variable = CustomButtonView(image: UIImage(named: "CDB"), title: "CDB", subTitle: "Certificado de depósito bancário.", target: self, action: #selector(tappedCdbButton), chevron: UIImage(systemName: "chevron.right")!)
+        let variable = CustomButtonView(image: UIImage.cdbIcon, title: "CDB", subTitle: "Certificado de depósito bancário.", target: self, action: #selector(tappedCdbButton), chevron: UIImage(systemName: "chevron.right")!)
         variable.translatesAutoresizingMaskIntoConstraints = false
         return variable
     }()
@@ -70,7 +69,7 @@ class FixedIncomeVC: UIViewController {
     }
     
     private lazy var lcaComponent: CustomButtonView = {
-        let variable = CustomButtonView(image: UIImage(named: "LCA"), title: "LCA", subTitle: "Letra de crédito do agronegócio.", target: self, action: #selector(tappedLcaButton), chevron: UIImage(systemName: "chevron.right")!)
+        let variable = CustomButtonView(image: UIImage.lcaIcon, title: "LCA", subTitle: "Letra de crédito do agronegócio.", target: self, action: #selector(tappedLcaButton), chevron: UIImage(systemName: "chevron.right")!)
         variable.translatesAutoresizingMaskIntoConstraints = false
         return variable
     }()
@@ -82,7 +81,7 @@ class FixedIncomeVC: UIViewController {
     }
     
     private lazy var lciComponent: CustomButtonView = {
-        let variable = CustomButtonView(image: UIImage(named: "LCI"), title: "LCI", subTitle: "Letra de Crédito Imobiliário.", target: self, action: #selector(tappedLciButton), chevron: UIImage(systemName: "chevron.right")!)
+        let variable = CustomButtonView(image: UIImage.lciIcon, title: "LCI", subTitle: "Letra de Crédito Imobiliário.", target: self, action: #selector(tappedLciButton), chevron: UIImage(systemName: "chevron.right")!)
         variable.translatesAutoresizingMaskIntoConstraints = false
         return variable
     }()
@@ -94,7 +93,7 @@ class FixedIncomeVC: UIViewController {
     }
     
     private lazy var tdComponent: CustomButtonView = {
-        let variable = CustomButtonView(image: UIImage(named: "TesouroDireto"), title: "Tesouro Direto", subTitle: "Compra e venda de Titulos publicos.", target: self, action: #selector(tappedTDButton), chevron: UIImage(systemName: "chevron.right")!)
+        let variable = CustomButtonView(image: UIImage.tipcaIcon, title: "Tesouro Direto", subTitle: "Compra e venda de Titulos publicos.", target: self, action: #selector(tappedTDButton), chevron: UIImage(systemName: "chevron.right")!)
         variable.translatesAutoresizingMaskIntoConstraints = false
         return variable
     }()
@@ -106,7 +105,7 @@ class FixedIncomeVC: UIViewController {
     }
     
     private lazy var tipcaComponent: CustomButtonView = {
-        let variable = CustomButtonView(image: UIImage(named: "TesouroIPCA"), title: "Tesouro IPCA", subTitle: "Proteção contra a Inflação.", target: self, action: #selector(tappedTIpcaButton), chevron: UIImage(systemName: "chevron.right")!)
+        let variable = CustomButtonView(image: UIImage.tipcaIcon, title: "Tesouro IPCA", subTitle: "Proteção contra a Inflação.", target: self, action: #selector(tappedTIpcaButton), chevron: UIImage(systemName: "chevron.right")!)
         variable.translatesAutoresizingMaskIntoConstraints = false
         return variable
     }()
@@ -118,7 +117,7 @@ class FixedIncomeVC: UIViewController {
     }
     
     private lazy var tselicComponent: CustomButtonView = {
-        let variable = CustomButtonView(image: UIImage(named: "TesouroSelic"), title: "Tesouro SELIC", subTitle: "Estabilidade e Liquidez.", target: self, action: #selector(tappedTSelicButton), chevron: UIImage(systemName: "chevron.right")!)
+        let variable = CustomButtonView(image: UIImage.tselicIcon, title: "Tesouro SELIC", subTitle: "Estabilidade e Liquidez.", target: self, action: #selector(tappedTSelicButton), chevron: UIImage(systemName: "chevron.right")!)
         variable.translatesAutoresizingMaskIntoConstraints = false
         return variable
     }()

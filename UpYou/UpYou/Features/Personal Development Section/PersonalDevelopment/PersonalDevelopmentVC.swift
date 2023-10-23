@@ -26,9 +26,8 @@ class PersonalDevelopmentVC: UIViewController {
     }
     
     private lazy var subImageView: UIImageView = {
-        let image = UIImageView()
+        let image = UIImageView(image: UIImage.backgroundImage)
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "background6")
         return image
     }()
     
@@ -63,7 +62,7 @@ class PersonalDevelopmentVC: UIViewController {
     }()
     
     private lazy var environmentComponent: CustomButtonView = {
-        let variable = CustomButtonView(image: UIImage(named: "ambiente"), title: "Ambiente", subTitle: "O Ambiente importa muito!", target: self, action: #selector(tappedEnvironmentButton), chevron: UIImage(systemName: "chevron.right")!)
+        let variable = CustomButtonView(image: UIImage.environmentIcon, title: "Ambiente", subTitle: "O Ambiente importa muito!", target: self, action: #selector(tappedEnvironmentButton), chevron: UIImage(systemName: "chevron.right")!)
         variable.translatesAutoresizingMaskIntoConstraints = false
         return variable
     }()
@@ -75,7 +74,7 @@ class PersonalDevelopmentVC: UIViewController {
     }
     
     private lazy var stoicismComponent: CustomButtonView = {
-        let variable = CustomButtonView(image: UIImage(named: "stoicism"), title: "Estoicismo", subTitle: "Abrace a serenidade e a resiliência.", target: self, action: #selector(tappedStoicismButton), chevron: UIImage(systemName: "chevron.right")!)
+        let variable = CustomButtonView(image: UIImage.stoicismIcon, title: "Estoicismo", subTitle: "Abrace a serenidade e a resiliência.", target: self, action: #selector(tappedStoicismButton), chevron: UIImage(systemName: "chevron.right")!)
         variable.translatesAutoresizingMaskIntoConstraints = false
         return variable
     }()
@@ -87,7 +86,7 @@ class PersonalDevelopmentVC: UIViewController {
     }
     
     private lazy var habitsComponent: CustomButtonView = {
-        let variable = CustomButtonView(image: UIImage(named: "train"), title: "Hábitos", subTitle: "Bons hábitos mudarão a sua vida.", target: self, action: #selector(tappedHabitsButton), chevron: UIImage(systemName: "chevron.right")!)
+        let variable = CustomButtonView(image: UIImage.habitsIcon, title: "Hábitos", subTitle: "Bons hábitos mudarão a sua vida.", target: self, action: #selector(tappedHabitsButton), chevron: UIImage(systemName: "chevron.right")!)
         variable.translatesAutoresizingMaskIntoConstraints = false
         return variable
     }()
@@ -99,7 +98,7 @@ class PersonalDevelopmentVC: UIViewController {
     }
     
     private lazy var booksComponent: CustomButtonView = {
-        let variable = CustomButtonView(image: UIImage(named: "books"), title: "Livros", subTitle: "Um livro é um sonho na sua mão", target: self, action: #selector(tappedBooksButton), chevron: UIImage(systemName: "chevron.right")!)
+        let variable = CustomButtonView(image: UIImage.booksIcon, title: "Livros", subTitle: "Um livro é um sonho na sua mão", target: self, action: #selector(tappedBooksButton), chevron: UIImage(systemName: "chevron.right")!)
         variable.translatesAutoresizingMaskIntoConstraints = false
         return variable
     }()
@@ -111,7 +110,7 @@ class PersonalDevelopmentVC: UIViewController {
     }
     
     private lazy var sleepComponent: CustomButtonView = {
-        let variable = CustomButtonView(image: UIImage(named: "sono"), title: "Sono", subTitle: "Dormir bem é essencial!", target: self, action: #selector(tappedSleepButton), chevron: UIImage(systemName: "chevron.right")!)
+        let variable = CustomButtonView(image: UIImage.sleepIcon, title: "Sono", subTitle: "Dormir bem é essencial!", target: self, action: #selector(tappedSleepButton), chevron: UIImage(systemName: "chevron.right")!)
         variable.translatesAutoresizingMaskIntoConstraints = false
         return variable
     }()
@@ -123,7 +122,7 @@ class PersonalDevelopmentVC: UIViewController {
     }
     
     private lazy var deepWorkComponent: CustomButtonView = {
-        let variable = CustomButtonView(image: UIImage(named: "target"), title: "Trabalho Focado", subTitle: "Compreenda o poder do foco.", target: self, action: #selector(tappedDeepWorkButton), chevron: UIImage(systemName: "chevron.right")!)
+        let variable = CustomButtonView(image: UIImage.deepWorkIcon, title: "Trabalho Focado", subTitle: "Compreenda o poder do foco.", target: self, action: #selector(tappedDeepWorkButton), chevron: UIImage(systemName: "chevron.right")!)
         variable.translatesAutoresizingMaskIntoConstraints = false
         return variable
     }()

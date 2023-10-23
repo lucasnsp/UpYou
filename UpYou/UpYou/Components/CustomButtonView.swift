@@ -104,7 +104,6 @@ class CustomButtonView: UIView {
             button.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             button.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             button.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            
         ])
     }
 }
