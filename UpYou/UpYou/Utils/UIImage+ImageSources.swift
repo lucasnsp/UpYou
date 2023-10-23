@@ -77,23 +77,23 @@ extension UIImage {
     }
     
     class var stocksIcon: UIImage {
-        return UIImage(named: "ambiente")!
+        return UIImage(named: "stocks2")!
     }
     
     class var cryptoIcon: UIImage {
-        return UIImage(named: "ambiente")!
+        return UIImage(named: "crypto")!
     }
     
     class var fiisIcon: UIImage {
-        return UIImage(named: "ambiente")!
+        return UIImage(named: "flls")!
     }
     
     class var goldenrulesIcon: UIImage {
-        return UIImage(named: "ambiente")!
+        return UIImage(named: "goldenrules1")!
     }
     
     class var fixedIncomeIcon: UIImage {
-        return UIImage(named: "ambiente")!
+        return UIImage(named: "fixedIncome")!
     }
     
     // MARK: - FixedIncomeIcons
