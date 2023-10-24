@@ -82,6 +82,8 @@
 		467D1D922AC6F86B009E0B04 /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467D1D912AC6F86A009E0B04 /* BooksViewModel.swift */; };
 		467D1D972AC700AD009E0B04 /* BooksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467D1D962AC700AD009E0B04 /* BooksTableViewCell.swift */; };
 		467D1D992AC700BE009E0B04 /* BooksTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467D1D982AC700BE009E0B04 /* BooksTableViewCellScreen.swift */; };
+		46A48B592AE7F453007B9863 /* GoalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A48B582AE7F453007B9863 /* GoalsVC.swift */; };
+		46A48B5B2AE808B8007B9863 /* CustomInfoBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A48B5A2AE808B8007B9863 /* CustomInfoBox.swift */; };
 		46C9B3E82ADAE40E00CC7395 /* Fils.json in Resources */ = {isa = PBXBuildFile; fileRef = 46C9B3E72ADAE40E00CC7395 /* Fils.json */; };
 		46C9B3EA2ADAE71C00CC7395 /* FIIsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C9B3E92ADAE71C00CC7395 /* FIIsData.swift */; };
 		46C9B3EC2ADAE75900CC7395 /* FIIsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C9B3EB2ADAE75900CC7395 /* FIIsService.swift */; };
@@ -234,6 +236,8 @@
 		467D1D912AC6F86A009E0B04 /* BooksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewModel.swift; sourceTree = "<group>"; };
 		467D1D962AC700AD009E0B04 /* BooksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksTableViewCell.swift; sourceTree = "<group>"; };
 		467D1D982AC700BE009E0B04 /* BooksTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksTableViewCellScreen.swift; sourceTree = "<group>"; };
+		46A48B582AE7F453007B9863 /* GoalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsVC.swift; sourceTree = "<group>"; };
+		46A48B5A2AE808B8007B9863 /* CustomInfoBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInfoBox.swift; sourceTree = "<group>"; };
 		46C9B3E72ADAE40E00CC7395 /* Fils.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Fils.json; sourceTree = "<group>"; };
 		46C9B3E92ADAE71C00CC7395 /* FIIsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIIsData.swift; sourceTree = "<group>"; };
 		46C9B3EB2ADAE75900CC7395 /* FIIsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIIsService.swift; sourceTree = "<group>"; };
@@ -812,6 +816,7 @@
 			isa = PBXGroup;
 			children = (
 				4648CDD92AE0256300BC22C5 /* CustomButtonView.swift */,
+				46A48B5A2AE808B8007B9863 /* CustomInfoBox.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -863,6 +868,14 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
+		46A48B572AE7F42B007B9863 /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+				46A48B582AE7F453007B9863 /* GoalsVC.swift */,
+			);
+			path = Goals;
+			sourceTree = "<group>";
+		};
 		46C9B3ED2ADAE7B900CC7395 /* Fundos Imobiliarios */ = {
 			isa = PBXGroup;
 			children = (
@@ -897,13 +910,13 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
-		46C9B4062ADAF83700CC7395 /* CriptoMoedas */ = {
+		46C9B4062ADAF83700CC7395 /* Crypto */ = {
 			isa = PBXGroup;
 			children = (
 				46C9B40A2ADAF86000CC7395 /* CriptoVC.swift */,
 				46C9B40E2ADAF88400CC7395 /* CriptoViewModel.swift */,
 			);
-			path = CriptoMoedas;
+			path = Crypto;
 			sourceTree = "<group>";
 		};
 		46C9B4102ADAFA1100CC7395 /* CriptoCell */ = {
@@ -931,13 +944,13 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
-		46C9B4172ADAFF9600CC7395 /* Ações */ = {
+		46C9B4172ADAFF9600CC7395 /* Stocks */ = {
 			isa = PBXGroup;
 			children = (
 				46C9B41B2ADAFFCB00CC7395 /* StocksVC.swift */,
 				46C9B41D2ADAFFDD00CC7395 /* StocksViewModel.swift */,
 			);
-			name = "Ações";
+			name = Stocks;
 			path = "Ações";
 			sourceTree = "<group>";
 		};
@@ -978,8 +991,9 @@
 		46EEDCBD2AD43174005A7164 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				46C9B4172ADAFF9600CC7395 /* Ações */,
-				46C9B4062ADAF83700CC7395 /* CriptoMoedas */,
+				46A48B572AE7F42B007B9863 /* Goals */,
+				46C9B4172ADAFF9600CC7395 /* Stocks */,
+				46C9B4062ADAF83700CC7395 /* Crypto */,
 				46C9B3ED2ADAE7B900CC7395 /* Fundos Imobiliarios */,
 				46EEDCBE2AD43184005A7164 /* GoldenRules */,
 				46EEDCD32AD57780005A7164 /* RendaFixa */,
@@ -1432,6 +1446,7 @@
 				464687442ADD7B510077269E /* StockTableViewCellScreen.swift in Sources */,
 				46EEDCDA2AD57804005A7164 /* FixedIncomeVC.swift in Sources */,
 				461BEF1E2ABA74F500C07847 /* AppDelegate.swift in Sources */,
+				46A48B5B2AE808B8007B9863 /* CustomInfoBox.swift in Sources */,
 				461BEF552ABA758100C07847 /* LoginViewModel.swift in Sources */,
 				46EEDD352AD83476005A7164 /* TDService.swift in Sources */,
 				460B7AE12AC8787F0059EA44 /* EnvironmentVC.swift in Sources */,
@@ -1443,6 +1458,7 @@
 				46DA2CDE2ACC39C900DEA703 /* HabitsViewModel.swift in Sources */,
 				467D1D8B2AC6F571009E0B04 /* BooksService.swift in Sources */,
 				46EEDD012AD6E184005A7164 /* LcaVC.swift in Sources */,
+				46A48B592AE7F453007B9863 /* GoalsVC.swift in Sources */,
 				46DA2CED2ACC46D200DEA703 /* HabitsTableViewCell.swift in Sources */,
 				460536AD2ACEF94F003FC929 /* StoicismTableViewCellScreen.swift in Sources */,
 				46EEDD252AD6F1C4005A7164 /* LCITableViewCellScreen.swift in Sources */,

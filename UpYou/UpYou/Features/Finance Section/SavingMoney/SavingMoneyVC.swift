@@ -59,7 +59,8 @@ class SavingMoneyVC: UIViewController {
     
     @objc
     private func tappedSetAGoalButton() {
-        print(#function)
+        let vc: GoalsVC = GoalsVC()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     private lazy var expenseComponent: CustomButtonView = {
