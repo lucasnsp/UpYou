@@ -1,15 +1,10 @@
-//
-//  GoalsVC.swift
-//  UpYou
-//
-//  Created by Lucas Neves dos santos pompeu on 24/10/23.
-//
-
 import UIKit
 
 class GoalsVC: UIViewController {
     
-    private var currentYPosition: CGFloat = 20
+    private var currentYPosition: CGFloat = 0
+    
+    var goals: [goalsDB] = []
     
     private lazy var backButton: UIButton = {
         let button = UIButton()
@@ -53,7 +48,7 @@ class GoalsVC: UIViewController {
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.setTitle("Criar Caixinha", for: .normal)
         btn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
-        btn.titleLabel?.textColor = .white
+        btn.setTitleColor(.white, for: .normal)
         btn.backgroundColor = .systemGreen
         btn.addTarget(self, action: #selector(tappedAddGoalButton), for: .touchUpInside)
         btn.layer.cornerRadius = 24
@@ -64,13 +59,15 @@ class GoalsVC: UIViewController {
         let alertController = UIAlertController(title: "Adicionar Meta", message: nil, preferredStyle: .alert)
         alertController.addTextField { textField in
             textField.placeholder = "Meta"
+            textField.keyboardType = .alphabet
         }
         alertController.addTextField { textField in
             textField.placeholder = "R$ 0,00"
             textField.keyboardType = .decimalPad
         }
         alertController.addTextField { textField in
-            textField.placeholder = "Tempo"
+            textField.placeholder = "Tempo em meses"
+            textField.keyboardType = .numberPad
         }
         
         let addAction = UIAlertAction(title: "Adicionar", style: .default) { [weak self] _ in
@@ -87,9 +84,66 @@ class GoalsVC: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
+    @objc private func tappedDeleteButton(sender: UIButton) {
+        if let index = sender.tag as Int? {
+            goals.remove(at: index)
+            saveGoals()
+            removeInfoBoxView(at: index)
+        }
+    }
+    
     private func createInfoBox(goal: String, value: String, time: String) {
         print("Creating info box with: Goal: \(goal), Value: \(value), Time: \(time)")
         
+        if let valueWorthy = Int(value), let intValue = Int(time), intValue >= 1 {
+            let monthlySave = valueWorthy / intValue
+            
+            let newGoal = goalsDB(goal: goal, value: valueWorthy, time: intValue, monthlySavings: monthlySave)
+            
+            goals.append(newGoal)
+            saveGoals()
+            createInfoBoxView(for: newGoal)
+            
+            currentYPosition += 160
+            infoContainer.contentSize = CGSize(width: infoContainer.frame.width, height: currentYPosition)
+        } else {
+            print("Invalid value or time format, or time is not a positive integer.")
+        }
+    }
+    
+    func saveGoals() {
+        let userDefaults = UserDefaults.standard
+        do {
+            let encoder = JSONEncoder()
+            let data = try encoder.encode(goals)
+            userDefaults.set(data, forKey: "goalsSaved")
+        } catch {
+            print("Erro ao salvar as metas: \(error)")
+        }
+    }
+    
+    private func loadGoals() {
+        let userDefaults = UserDefaults.standard
+        if let data = userDefaults.data(forKey: "goalsSaved") {
+            do {
+                let decoder = JSONDecoder()
+                let loadedGoals = try decoder.decode([goalsDB].self, from: data)
+                goals = loadedGoals
+                createInfoBoxesForGoals()
+                print("\(goals.count) goals loaded")
+            } catch {
+                print("Erro ao carregar metas: \(error)")
+            }
+        }
+    }
+    
+    private func createInfoBoxesForGoals() {
+        for goal in goals {
+            createInfoBoxView(for: goal)
+        }
+    }
+    
+    private func createInfoBoxView(for goal: goalsDB) {
         lazy var viewBackground: UIView = {
             let view = UIView()
             view.translatesAutoresizingMaskIntoConstraints = false
@@ -100,19 +154,19 @@ class GoalsVC: UIViewController {
         }()
         
         lazy var infoImageBox: UIImageView = {
-            let image = UIImageView(image: UIImage.setAgoalIcon)
+            let image = UIImageView(image: UIImage.randomGoalImages)
             image.translatesAutoresizingMaskIntoConstraints = false
             image.clipsToBounds = true
-            image.layer.cornerRadius = 18
+            image.layer.cornerRadius = 22
             return image
         }()
         
         lazy var goalLabel: UILabel = {
             let label = UILabel()
             label.translatesAutoresizingMaskIntoConstraints = false
-            label.text = "Meta: \(goal)"
+            label.text = goal.goal
             label.textColor = .white
-            label.font = UIFont.systemFont(ofSize: 14)
+            label.font = UIFont.boldSystemFont(ofSize: 20)
             return label
         }()
         
@@ -120,8 +174,8 @@ class GoalsVC: UIViewController {
             let label = UILabel()
             label.translatesAutoresizingMaskIntoConstraints = false
             label.textColor = .white
-            label.text = "Valor: \(value)"
-            label.font = UIFont.systemFont(ofSize: 14)
+            label.text = "Valor: R$ \(goal.value)"
+            label.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
             return label
         }()
         
@@ -129,46 +183,88 @@ class GoalsVC: UIViewController {
             let label = UILabel()
             label.translatesAutoresizingMaskIntoConstraints = false
             label.textColor = .white
-            label.text = "Tempo: \(time)"
-            label.font = UIFont.systemFont(ofSize: 14)
+            label.text = "Tempo: \(goal.time) Meses"
+            label.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
             return label
         }()
         
-        view.addSubview(viewBackground)
+        lazy var economyLabel: UILabel = {
+            let label = UILabel()
+            label.translatesAutoresizingMaskIntoConstraints = false
+            label.textColor = .systemGreen
+            label.font = UIFont.boldSystemFont(ofSize: 14)
+            label.text = "R$ \(goal.monthlySavings) p/Mês"
+            return label
+        }()
+        
+        lazy var deleteButton: UIButton = {
+            let button = UIButton()
+            button.translatesAutoresizingMaskIntoConstraints = false
+            button.setImage(UIImage(systemName: "xmark.seal.fill"), for: .normal)
+            button.tintColor = .red
+            button.addTarget(self, action: #selector(tappedDeleteButton), for: .touchUpInside)
+            button.tag = goals.firstIndex { $0 == goal } ?? 0
+            return button
+        }()
+        
+        infoContainer.addSubview(viewBackground)
         viewBackground.addSubview(infoImageBox)
         viewBackground.addSubview(goalLabel)
         viewBackground.addSubview(valueLabel)
         viewBackground.addSubview(timeLabel)
+        viewBackground.addSubview(economyLabel)
+        viewBackground.addSubview(deleteButton)
         
         NSLayoutConstraint.activate([
             viewBackground.topAnchor.constraint(equalTo: infoContainer.topAnchor, constant: currentYPosition),
-            viewBackground.leadingAnchor.constraint(equalTo: infoContainer.leadingAnchor, constant: 20),
-            viewBackground.trailingAnchor.constraint(equalTo: infoContainer.trailingAnchor, constant: -20),
-            viewBackground.heightAnchor.constraint(equalToConstant: 120),
+            viewBackground.widthAnchor.constraint(equalTo: infoContainer.widthAnchor),
+            viewBackground.heightAnchor.constraint(equalToConstant: 140),
             
-            infoImageBox.centerYAnchor.constraint(equalTo: viewBackground.centerYAnchor),
-            infoImageBox.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 12),
-            infoImageBox.widthAnchor.constraint(equalToConstant: 60),
-            infoImageBox.heightAnchor.constraint(equalToConstant: 60),
+            infoImageBox.topAnchor.constraint(equalTo: viewBackground.topAnchor, constant: 20),
+            infoImageBox.leadingAnchor.constraint(equalTo: viewBackground.leadingAnchor, constant: 15),
+            infoImageBox.widthAnchor.constraint(equalToConstant: 100),
+            infoImageBox.bottomAnchor.constraint(equalTo: viewBackground.bottomAnchor, constant: -20),
             
-            goalLabel.topAnchor.constraint(equalTo: infoImageBox.topAnchor, constant: 10),
-            goalLabel.leadingAnchor.constraint(equalTo: infoImageBox.trailingAnchor, constant: 10),
+            goalLabel.topAnchor.constraint(equalTo: infoImageBox.topAnchor),
+            goalLabel.leadingAnchor.constraint(equalTo: infoImageBox.trailingAnchor, constant: 15),
             
-            valueLabel.topAnchor.constraint(equalTo: goalLabel.bottomAnchor, constant: 8),
+            valueLabel.topAnchor.constraint(equalTo: goalLabel.bottomAnchor, constant: 5),
             valueLabel.leadingAnchor.constraint(equalTo: goalLabel.leadingAnchor),
             
             timeLabel.topAnchor.constraint(equalTo: valueLabel.bottomAnchor, constant: 5),
-            timeLabel.trailingAnchor.constraint(equalTo: viewBackground.trailingAnchor, constant: -12),
+            timeLabel.leadingAnchor.constraint(equalTo: goalLabel.leadingAnchor),
+            
+            economyLabel.topAnchor.constraint(equalTo: timeLabel.bottomAnchor, constant: 5),
+            economyLabel.leadingAnchor.constraint(equalTo: goalLabel.leadingAnchor),
+            
+            deleteButton.topAnchor.constraint(equalTo: viewBackground.topAnchor, constant: 10),
+            deleteButton.trailingAnchor.constraint(equalTo: viewBackground.trailingAnchor, constant: -15),
+            deleteButton.widthAnchor.constraint(equalToConstant: 25),
+            deleteButton.heightAnchor.constraint(equalToConstant: 25),
         ])
-        
-        currentYPosition += 140
-        
+        currentYPosition += 180
         infoContainer.contentSize = CGSize(width: infoContainer.frame.width, height: currentYPosition)
     }
     
+    private func removeInfoBoxView(at index: Int) {
+        if index < infoContainer.subviews.count {
+            let viewToRemove = infoContainer.subviews[index]
+            viewToRemove.removeFromSuperview()
+            
+            for i in index..<infoContainer.subviews.count {
+                let view = infoContainer.subviews[i]
+                view.frame.origin.y -= 160
+            }
+            currentYPosition -= 160
+            infoContainer.contentSize = CGSize(width: infoContainer.frame.width, height: currentYPosition)
+        }
+    }
+    
     override func viewDidLoad() {
+        super.viewDidLoad()
         addViews()
         configConstraints()
+        loadGoals()
     }
     
     private func addViews() {
@@ -194,8 +290,7 @@ class GoalsVC: UIViewController {
             titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             
             infoContainer.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
-            infoContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            infoContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            infoContainer.widthAnchor.constraint(equalTo: view.widthAnchor),
             infoContainer.bottomAnchor.constraint(equalTo: addGoalButton.topAnchor, constant: -20),
             
             addGoalButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 25),

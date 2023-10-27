@@ -121,4 +121,25 @@ extension UIImage {
     class var tselicIcon: UIImage {
         return UIImage(named: "TesouroSelic")!
     }
+    
+    // MARK: - SetaGoalImages
+    
+    class var goalImage1: UIImage {
+        return UIImage(named: "goalimage")!
+    }
+    
+    class var goalImage2: UIImage {
+        return UIImage(named: "goalImage2")!
+    }
+    
+    class var goalImage3: UIImage {
+        return UIImage(named: "goalImage3")!
+    }
+    
+    // MARK: - RandomGoalImages
+    
+    class var randomGoalImages: UIImage {
+        let randomImage = [goalImage1, goalImage2, goalImage3]
+        return randomImage.randomElement() ?? goalImage1
+    }
 }
