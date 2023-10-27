@@ -107,7 +107,9 @@ class GoalsVC: UIViewController {
             currentYPosition += 160
             infoContainer.contentSize = CGSize(width: infoContainer.frame.width, height: currentYPosition)
         } else {
-            print("Invalid value or time format, or time is not a positive integer.")
+            let ac = UIAlertController(title: "Erro na criação da caixinha", message: "Por favor inserir os dados de forma correta, levar em conta que não é necessário o uso de simbolos ou virgulas.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .cancel))
+            present(ac, animated: true)
         }
     }
     
