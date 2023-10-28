@@ -13,6 +13,8 @@ class GoalsVC: UIViewController {
     
     var goals: [goalsDB] = []
     
+    // MARK: - Elements
+    
     private lazy var backButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -62,6 +64,8 @@ class GoalsVC: UIViewController {
         return btn
     }()
     
+    // MARK: - AddGoalButton Logic
+    
     @objc private func tappedAddGoalButton() {
         let alertController = UIAlertController(title: "Adicionar Meta", message: nil, preferredStyle: .alert)
         alertController.addTextField { textField in
@@ -91,6 +95,8 @@ class GoalsVC: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
+    // MARK: - DeleteButton Logic
+    
     @objc private func tappedDeleteButton(sender: UIButton) {
         if let index = sender.tag as Int? {
             goals.remove(at: index)
@@ -99,58 +105,7 @@ class GoalsVC: UIViewController {
         }
     }
     
-    private func createInfoBox(goal: String, value: String, time: String) {
-        print("Creating info box with: Goal: \(goal), Value: \(value), Time: \(time)")
-        
-        if let valueWorthy = Int(value), let intValue = Int(time), intValue >= 1 {
-            let monthlySave = valueWorthy / intValue
-            
-            let newGoal = goalsDB(goal: goal, value: valueWorthy, time: intValue, monthlySavings: monthlySave)
-            
-            goals.append(newGoal)
-            saveGoals()
-            createInfoBoxView(for: newGoal)
-            
-            currentYPosition += 160
-            infoContainer.contentSize = CGSize(width: infoContainer.frame.width, height: currentYPosition)
-        } else {
-            let ac = UIAlertController(title: "Erro na criação da caixinha", message: "Por favor inserir os dados de forma correta, levar em conta que não é necessário o uso de simbolos ou virgulas.", preferredStyle: .alert)
-            ac.addAction(UIAlertAction(title: "OK", style: .cancel))
-            present(ac, animated: true)
-        }
-    }
-    
-    func saveGoals() {
-        let userDefaults = UserDefaults.standard
-        do {
-            let encoder = JSONEncoder()
-            let data = try encoder.encode(goals)
-            userDefaults.set(data, forKey: "goalsSaved")
-        } catch {
-            print("Erro ao salvar as metas: \(error)")
-        }
-    }
-    
-    private func loadGoals() {
-        let userDefaults = UserDefaults.standard
-        if let data = userDefaults.data(forKey: "goalsSaved") {
-            do {
-                let decoder = JSONDecoder()
-                let loadedGoals = try decoder.decode([goalsDB].self, from: data)
-                goals = loadedGoals
-                createInfoBoxesForGoals()
-                print("\(goals.count) goals loaded")
-            } catch {
-                print("Erro ao carregar metas: \(error)")
-            }
-        }
-    }
-    
-    private func createInfoBoxesForGoals() {
-        for goal in goals {
-            createInfoBoxView(for: goal)
-        }
-    }
+    // MARK: - Create Box elements
     
     private func createInfoBoxView(for goal: goalsDB) {
         lazy var viewBackground: UIView = {
@@ -255,6 +210,40 @@ class GoalsVC: UIViewController {
         infoContainer.contentSize = CGSize(width: infoContainer.frame.width, height: currentYPosition)
     }
     
+    // MARK: - Create Box
+    
+    private func createInfoBox(goal: String, value: String, time: String) {
+        print("Creating info box with: Goal: \(goal), Value: \(value), Time: \(time)")
+        
+         if let valueWorthy = Int(value),
+            let intValue = Int(time), intValue >= 1 {
+            let monthlySave = valueWorthy / intValue
+            
+            let newGoal = goalsDB(goal: goal, value: valueWorthy, time: intValue, monthlySavings: monthlySave)
+            
+            goals.append(newGoal)
+            saveGoals()
+            createInfoBoxView(for: newGoal)
+            
+            currentYPosition += 160
+            infoContainer.contentSize = CGSize(width: infoContainer.frame.width, height: currentYPosition)
+        } else {
+            let ac = UIAlertController(title: "Erro na criação da caixinha", message: "Por favor inserir os dados de forma correta, levar em conta que não é necessário o uso de simbolos ou virgulas.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .cancel))
+            present(ac, animated: true)
+        }
+    }
+    
+    // MARK: - Method to create boxes
+    
+    private func createInfoBoxesForGoals() {
+        for goal in goals {
+            createInfoBoxView(for: goal)
+        }
+    }
+    
+    // MARK: - Remove Box
+    
     private func removeInfoBoxView(at index: Int) {
         if index < infoContainer.subviews.count {
             let viewToRemove = infoContainer.subviews[index]
@@ -269,12 +258,46 @@ class GoalsVC: UIViewController {
         }
     }
     
+    // MARK: - Save boxes to UserDefaults
+    
+    func saveGoals() {
+        let userDefaults = UserDefaults.standard
+        do {
+            let encoder = JSONEncoder()
+            let data = try encoder.encode(goals)
+            userDefaults.set(data, forKey: "goalsSaved")
+        } catch {
+            print("Erro ao salvar as metas: \(error)")
+        }
+    }
+    
+    // MARK: - Load existing boxes
+    
+    private func loadGoals() {
+        let userDefaults = UserDefaults.standard
+        if let data = userDefaults.data(forKey: "goalsSaved") {
+            do {
+                let decoder = JSONDecoder()
+                let loadedGoals = try decoder.decode([goalsDB].self, from: data)
+                goals = loadedGoals
+                createInfoBoxesForGoals()
+                print("\(goals.count) goals loaded")
+            } catch {
+                print("Erro ao carregar metas: \(error)")
+            }
+        }
+    }
+    
+    // MARK: - ViewDidLoad
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addViews()
         configConstraints()
         loadGoals()
     }
+    
+    // MARK: - Elements and Constraints
     
     private func addViews() {
         view.addSubview(subImageView)
