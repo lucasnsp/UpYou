@@ -55,7 +55,7 @@ class GoalsVC: UIViewController {
     private lazy var addGoalButton: UIButton = {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.setTitle("Criar Caixinha", for: .normal)
+        btn.setTitle("Configurar Metas", for: .normal)
         btn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
         btn.setTitleColor(.white, for: .normal)
         btn.backgroundColor = .systemGreen
@@ -93,16 +93,6 @@ class GoalsVC: UIViewController {
         
         alertController.addAction(addAction)
         present(alertController, animated: true, completion: nil)
-    }
-    
-    // MARK: - DeleteButton Logic
-    
-    @objc private func tappedDeleteButton(sender: UIButton) {
-        if let index = sender.tag as Int? {
-            goals.remove(at: index)
-            saveGoals()
-            removeInfoBoxView(at: index)
-        }
     }
     
     // MARK: - Create Box elements
@@ -208,6 +198,16 @@ class GoalsVC: UIViewController {
         ])
         currentYPosition += 180
         infoContainer.contentSize = CGSize(width: infoContainer.frame.width, height: currentYPosition)
+    }
+    
+    // MARK: - DeleteButton Logic
+    
+    @objc private func tappedDeleteButton(sender: UIButton) {
+        if let index = sender.tag as Int? {
+            goals.remove(at: index)
+            saveGoals()
+            removeInfoBoxView(at: index)
+        }
     }
     
     // MARK: - Create Box

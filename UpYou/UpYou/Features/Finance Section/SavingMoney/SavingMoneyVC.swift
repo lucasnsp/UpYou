@@ -71,7 +71,8 @@ class SavingMoneyVC: UIViewController {
     
     @objc
     private func tappedExpensesButton() {
-        print(#function)
+        let vc: ExpensesVC = ExpensesVC()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     private lazy var viewBottomBackground: UIView = {

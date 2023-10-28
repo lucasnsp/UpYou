@@ -85,6 +85,7 @@
 		46A48B592AE7F453007B9863 /* GoalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A48B582AE7F453007B9863 /* GoalsVC.swift */; };
 		46A48B5B2AE808B8007B9863 /* CustomInfoBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A48B5A2AE808B8007B9863 /* CustomInfoBox.swift */; };
 		46A48B682AEC4496007B9863 /* GoalsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A48B672AEC4496007B9863 /* GoalsData.swift */; };
+		46A48B6B2AED4FE6007B9863 /* ExpensesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A48B6A2AED4FE6007B9863 /* ExpensesVC.swift */; };
 		46C9B3E82ADAE40E00CC7395 /* Fils.json in Resources */ = {isa = PBXBuildFile; fileRef = 46C9B3E72ADAE40E00CC7395 /* Fils.json */; };
 		46C9B3EA2ADAE71C00CC7395 /* FIIsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C9B3E92ADAE71C00CC7395 /* FIIsData.swift */; };
 		46C9B3EC2ADAE75900CC7395 /* FIIsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C9B3EB2ADAE75900CC7395 /* FIIsService.swift */; };
@@ -240,6 +241,7 @@
 		46A48B582AE7F453007B9863 /* GoalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsVC.swift; sourceTree = "<group>"; };
 		46A48B5A2AE808B8007B9863 /* CustomInfoBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInfoBox.swift; sourceTree = "<group>"; };
 		46A48B672AEC4496007B9863 /* GoalsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsData.swift; sourceTree = "<group>"; };
+		46A48B6A2AED4FE6007B9863 /* ExpensesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesVC.swift; sourceTree = "<group>"; };
 		46C9B3E72ADAE40E00CC7395 /* Fils.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Fils.json; sourceTree = "<group>"; };
 		46C9B3E92ADAE71C00CC7395 /* FIIsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIIsData.swift; sourceTree = "<group>"; };
 		46C9B3EB2ADAE75900CC7395 /* FIIsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIIsService.swift; sourceTree = "<group>"; };
@@ -879,6 +881,14 @@
 			path = Goals;
 			sourceTree = "<group>";
 		};
+		46A48B692AED4FCF007B9863 /* Expenses */ = {
+			isa = PBXGroup;
+			children = (
+				46A48B6A2AED4FE6007B9863 /* ExpensesVC.swift */,
+			);
+			path = Expenses;
+			sourceTree = "<group>";
+		};
 		46C9B3ED2ADAE7B900CC7395 /* Fundos Imobiliarios */ = {
 			isa = PBXGroup;
 			children = (
@@ -995,6 +1005,7 @@
 			isa = PBXGroup;
 			children = (
 				46A48B572AE7F42B007B9863 /* Goals */,
+				46A48B692AED4FCF007B9863 /* Expenses */,
 				46C9B4172ADAFF9600CC7395 /* Stocks */,
 				46C9B4062ADAF83700CC7395 /* Crypto */,
 				46C9B3ED2ADAE7B900CC7395 /* Fundos Imobiliarios */,
@@ -1534,6 +1545,7 @@
 				46EEDD0E2AD6E2D0005A7164 /* LCATableViewCellScreen.swift in Sources */,
 				467D1D8E2AC6F687009E0B04 /* BooksData.swift in Sources */,
 				461BEFA72ABF107B00C07847 /* PersonalDevelopmentVC.swift in Sources */,
+				46A48B6B2AED4FE6007B9863 /* ExpensesVC.swift in Sources */,
 				A270C5632AE4184E00CB9C47 /* SwiftUIPreview.swift in Sources */,
 				460536AF2AD0421E003FC929 /* StoicismService.swift in Sources */,
 				46EEDD502AD98100005A7164 /* TesouroIpcaVC.swift in Sources */,
