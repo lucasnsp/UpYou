@@ -86,6 +86,7 @@
 		46A48B5B2AE808B8007B9863 /* CustomInfoBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A48B5A2AE808B8007B9863 /* CustomInfoBox.swift */; };
 		46A48B682AEC4496007B9863 /* GoalsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A48B672AEC4496007B9863 /* GoalsData.swift */; };
 		46A48B6B2AED4FE6007B9863 /* ExpensesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A48B6A2AED4FE6007B9863 /* ExpensesVC.swift */; };
+		46A48B6D2AED54D0007B9863 /* ExpenseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A48B6C2AED54D0007B9863 /* ExpenseData.swift */; };
 		46C9B3E82ADAE40E00CC7395 /* Fils.json in Resources */ = {isa = PBXBuildFile; fileRef = 46C9B3E72ADAE40E00CC7395 /* Fils.json */; };
 		46C9B3EA2ADAE71C00CC7395 /* FIIsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C9B3E92ADAE71C00CC7395 /* FIIsData.swift */; };
 		46C9B3EC2ADAE75900CC7395 /* FIIsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C9B3EB2ADAE75900CC7395 /* FIIsService.swift */; };
@@ -242,6 +243,7 @@
 		46A48B5A2AE808B8007B9863 /* CustomInfoBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInfoBox.swift; sourceTree = "<group>"; };
 		46A48B672AEC4496007B9863 /* GoalsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsData.swift; sourceTree = "<group>"; };
 		46A48B6A2AED4FE6007B9863 /* ExpensesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesVC.swift; sourceTree = "<group>"; };
+		46A48B6C2AED54D0007B9863 /* ExpenseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseData.swift; sourceTree = "<group>"; };
 		46C9B3E72ADAE40E00CC7395 /* Fils.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Fils.json; sourceTree = "<group>"; };
 		46C9B3E92ADAE71C00CC7395 /* FIIsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIIsData.swift; sourceTree = "<group>"; };
 		46C9B3EB2ADAE75900CC7395 /* FIIsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIIsService.swift; sourceTree = "<group>"; };
@@ -768,6 +770,7 @@
 			isa = PBXGroup;
 			children = (
 				46A48B672AEC4496007B9863 /* GoalsData.swift */,
+				46A48B6C2AED54D0007B9863 /* ExpenseData.swift */,
 				464687392ADD79EE0077269E /* StocksData.swift */,
 				460583C02AC48EA000446A6F /* MoneyPhrasesData.swift */,
 				46EEDCCA2AD43655005A7164 /* GoldenRulesData.swift */,
@@ -1553,6 +1556,7 @@
 				46EEDCE62AD5B0CD005A7164 /* CdbVC.swift in Sources */,
 				46DA2CE62ACC426300DEA703 /* HabitsData.swift in Sources */,
 				46EEDD4A2AD97FF3005A7164 /* TDIService.swift in Sources */,
+				46A48B6D2AED54D0007B9863 /* ExpenseData.swift in Sources */,
 				46EEDCD22AD436CD005A7164 /* GoldenRulesTableViewCellScreen.swift in Sources */,
 				461BEF492ABA756000C07847 /* SecondInfoVC.swift in Sources */,
 				461BEF472ABA756000C07847 /* FirstInfoVC.swift in Sources */,

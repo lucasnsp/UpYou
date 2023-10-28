@@ -67,7 +67,7 @@ class GoalsVC: UIViewController {
     // MARK: - AddGoalButton Logic
     
     @objc private func tappedAddGoalButton() {
-        let alertController = UIAlertController(title: "Adicionar Meta", message: nil, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Adicionar Meta", message: "Crie metas realistas e sempre crie uma reserva de emergência.", preferredStyle: .alert)
         alertController.addTextField { textField in
             textField.placeholder = "Meta"
             textField.keyboardType = .alphabet
@@ -146,8 +146,8 @@ class GoalsVC: UIViewController {
             let label = UILabel()
             label.translatesAutoresizingMaskIntoConstraints = false
             label.textColor = .systemGreen
-            label.font = UIFont.boldSystemFont(ofSize: 14)
-            label.text = "R$ \(goal.monthlySavings) p/Mês"
+            label.font = UIFont.boldSystemFont(ofSize: 16)
+            label.text = "Economizar p/mês: R$ \(goal.monthlySavings)"
             return label
         }()
         
@@ -188,8 +188,8 @@ class GoalsVC: UIViewController {
             timeLabel.topAnchor.constraint(equalTo: valueLabel.bottomAnchor, constant: 5),
             timeLabel.leadingAnchor.constraint(equalTo: goalLabel.leadingAnchor),
             
-            economyLabel.topAnchor.constraint(equalTo: timeLabel.bottomAnchor, constant: 5),
-            economyLabel.leadingAnchor.constraint(equalTo: goalLabel.leadingAnchor),
+            economyLabel.topAnchor.constraint(equalTo: timeLabel.bottomAnchor, constant: 10),
+            economyLabel.trailingAnchor.constraint(equalTo: viewBackground.trailingAnchor, constant: -10),
             
             deleteButton.topAnchor.constraint(equalTo: viewBackground.topAnchor, constant: 10),
             deleteButton.trailingAnchor.constraint(equalTo: viewBackground.trailingAnchor, constant: -15),
@@ -228,7 +228,7 @@ class GoalsVC: UIViewController {
             currentYPosition += 160
             infoContainer.contentSize = CGSize(width: infoContainer.frame.width, height: currentYPosition)
         } else {
-            let ac = UIAlertController(title: "Erro na criação da caixinha", message: "Por favor inserir os dados de forma correta, levar em conta que não é necessário o uso de simbolos ou virgulas.", preferredStyle: .alert)
+            let ac = UIAlertController(title: "Erro na configuração da meta", message: "Por favor inserir os dados de forma correta, levar em conta que não é necessário o uso de simbolos ou virgulas.", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .cancel))
             present(ac, animated: true)
         }
