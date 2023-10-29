@@ -266,6 +266,11 @@ class ExpensesVC: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addViews()

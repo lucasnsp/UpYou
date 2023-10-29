@@ -98,6 +98,48 @@ class HomeVC: UIViewController {
         return tf
     }()
     
+    private lazy var viewMidBackground: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .black.withAlphaComponent(0.6)
+        view.clipsToBounds = true
+        view.layer.cornerRadius = 20
+        return view
+    }()
+    
+    private lazy var stack: UIStackView = {
+        let variable = UIStackView()
+        variable.translatesAutoresizingMaskIntoConstraints = false
+        variable.distribution = .fillEqually
+        variable.axis = .vertical
+        variable.spacing = 1
+        return variable
+    }()
+    
+    private lazy var setAgoalComponent: CustomButtonView = {
+        let variable = CustomButtonView(image: UIImage.setAgoalIcon, title: "Metas", subTitle: "Defina objetivos financeiros.", target: self, action: #selector(tappedSetAGoalButton), chevron: UIImage(systemName: "chevron.right")!)
+        variable.translatesAutoresizingMaskIntoConstraints = false
+        return variable
+    }()
+    
+    @objc
+    private func tappedSetAGoalButton() {
+        let vc: GoalsVC = GoalsVC()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private lazy var expenseComponent: CustomButtonView = {
+        let variable = CustomButtonView(image: UIImage.expensesIcon, title: "Despesas", subTitle: "Organize as suas despesas.", target: self, action: #selector(tappedExpensesButton), chevron: UIImage(systemName: "chevron.right")!)
+        variable.translatesAutoresizingMaskIntoConstraints = false
+        return variable
+    }()
+    
+    @objc
+    private func tappedExpensesButton() {
+        let vc: ExpensesVC = ExpensesVC()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = true
     }
@@ -106,7 +148,6 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         addViews()
         configConstraints()
-        
     }
     
     private func addViews() {
@@ -116,6 +157,10 @@ class HomeVC: UIViewController {
         viewTopBackground.addSubview(balanceLabel)
         viewTopBackground.addSubview(addIncomeButton)
         viewTopBackground.addSubview(incomeTextField)
+        view.addSubview(viewMidBackground)
+        viewMidBackground.addSubview(stack)
+        stack.addArrangedSubview(setAgoalComponent)
+        stack.addArrangedSubview(expenseComponent)
     }
     
     private func configConstraints() {
@@ -139,23 +184,33 @@ class HomeVC: UIViewController {
             incomeTextField.topAnchor.constraint(equalTo: balanceLabel.topAnchor, constant: 35),
             incomeTextField.leadingAnchor.constraint(equalTo: viewTopBackground.leadingAnchor, constant: 17),
             incomeTextField.trailingAnchor.constraint(equalTo: viewTopBackground.trailingAnchor, constant: -10),
-
+            
             addIncomeButton.bottomAnchor.constraint(equalTo: viewTopBackground.bottomAnchor, constant: -20),
             addIncomeButton.heightAnchor.constraint(equalToConstant: 50),
             addIncomeButton.leadingAnchor.constraint(equalTo: viewTopBackground.leadingAnchor, constant: 40),
             addIncomeButton.trailingAnchor.constraint(equalTo: viewTopBackground.trailingAnchor, constant: -40),
+            
+            viewMidBackground.topAnchor.constraint(equalTo: viewTopBackground.bottomAnchor, constant: 50),
+            viewMidBackground.leadingAnchor.constraint(equalTo: viewTopBackground.leadingAnchor),
+            viewMidBackground.trailingAnchor.constraint(equalTo: viewTopBackground.trailingAnchor),
+            viewMidBackground.heightAnchor.constraint(equalToConstant: 134),
+            
+            stack.topAnchor.constraint(equalTo: viewMidBackground.topAnchor),
+            stack.leadingAnchor.constraint(equalTo: viewMidBackground.leadingAnchor),
+            stack.trailingAnchor.constraint(equalTo: viewMidBackground.trailingAnchor),
+            stack.bottomAnchor.constraint(equalTo: viewMidBackground.bottomAnchor, constant: -15),
         ])
     }
 }
 
 #if DEBUG
-  import SwiftUI
+import SwiftUI
 
-  struct HomeVC_Preview: PreviewProvider {
+struct HomeVC_Preview: PreviewProvider {
     static var previews: some View {
-      return SwiftUIPreview { _ in
-          return HomeVC().view
-      }
+        return SwiftUIPreview { _ in
+            return HomeVC().view
+        }
     }
-  }
+}
 #endif

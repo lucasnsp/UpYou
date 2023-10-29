@@ -82,6 +82,7 @@
 		467D1D922AC6F86B009E0B04 /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467D1D912AC6F86A009E0B04 /* BooksViewModel.swift */; };
 		467D1D972AC700AD009E0B04 /* BooksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467D1D962AC700AD009E0B04 /* BooksTableViewCell.swift */; };
 		467D1D992AC700BE009E0B04 /* BooksTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467D1D982AC700BE009E0B04 /* BooksTableViewCellScreen.swift */; };
+		468CACC22AEEF12200F30E49 /* CustomButtonLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468CACC12AEEF12200F30E49 /* CustomButtonLayout.swift */; };
 		46A48B592AE7F453007B9863 /* GoalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A48B582AE7F453007B9863 /* GoalsVC.swift */; };
 		46A48B5B2AE808B8007B9863 /* CustomInfoBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A48B5A2AE808B8007B9863 /* CustomInfoBox.swift */; };
 		46A48B682AEC4496007B9863 /* GoalsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A48B672AEC4496007B9863 /* GoalsData.swift */; };
@@ -239,6 +240,7 @@
 		467D1D912AC6F86A009E0B04 /* BooksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewModel.swift; sourceTree = "<group>"; };
 		467D1D962AC700AD009E0B04 /* BooksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksTableViewCell.swift; sourceTree = "<group>"; };
 		467D1D982AC700BE009E0B04 /* BooksTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksTableViewCellScreen.swift; sourceTree = "<group>"; };
+		468CACC12AEEF12200F30E49 /* CustomButtonLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonLayout.swift; sourceTree = "<group>"; };
 		46A48B582AE7F453007B9863 /* GoalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsVC.swift; sourceTree = "<group>"; };
 		46A48B5A2AE808B8007B9863 /* CustomInfoBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInfoBox.swift; sourceTree = "<group>"; };
 		46A48B672AEC4496007B9863 /* GoalsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsData.swift; sourceTree = "<group>"; };
@@ -825,6 +827,7 @@
 			children = (
 				4648CDD92AE0256300BC22C5 /* CustomButtonView.swift */,
 				46A48B5A2AE808B8007B9863 /* CustomInfoBox.swift */,
+				468CACC12AEEF12200F30E49 /* CustomButtonLayout.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1561,6 +1564,7 @@
 				461BEF492ABA756000C07847 /* SecondInfoVC.swift in Sources */,
 				461BEF472ABA756000C07847 /* FirstInfoVC.swift in Sources */,
 				46EEDD5B2AD9821D005A7164 /* TesouroIpcaTableViewCellScreen.swift in Sources */,
+				468CACC22AEEF12200F30E49 /* CustomButtonLayout.swift in Sources */,
 				4605838B2AC1C0E900446A6F /* PersonalDevelopmentTableViewCell.swift in Sources */,
 				460B7AE52AC878D40059EA44 /* EnvironmentViewModel.swift in Sources */,
 				460536A22ACEF6D0003FC929 /* StoicismVC.swift in Sources */,

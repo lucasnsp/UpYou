@@ -288,6 +288,11 @@ class GoalsVC: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
+    }
+
+    
     // MARK: - ViewDidLoad
     
     override func viewDidLoad() {
