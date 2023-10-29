@@ -111,31 +111,27 @@ class HomeVC: UIViewController {
         let variable = UIStackView()
         variable.translatesAutoresizingMaskIntoConstraints = false
         variable.distribution = .fillEqually
-        variable.axis = .vertical
+        variable.axis = .horizontal
         variable.spacing = 1
         return variable
     }()
     
-    private lazy var setAgoalComponent: CustomButtonView = {
-        let variable = CustomButtonView(image: UIImage.setAgoalIcon, title: "Metas", subTitle: "Defina objetivos financeiros.", target: self, action: #selector(tappedSetAGoalButton), chevron: UIImage(systemName: "chevron.right")!)
-        variable.translatesAutoresizingMaskIntoConstraints = false
-        return variable
+    private lazy var goalsComponent: CustomButtonLayout = {
+        let component = CustomButtonLayout(image: UIImage.randomGoalImages, title: "Metas", target: self, action: #selector(tappedAddGoalButton), chevron: UIImage(systemName: "chevron.right")!)
+        return component
     }()
     
-    @objc
-    private func tappedSetAGoalButton() {
+    @objc private func tappedAddGoalButton() {
         let vc: GoalsVC = GoalsVC()
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    private lazy var expenseComponent: CustomButtonView = {
-        let variable = CustomButtonView(image: UIImage.expensesIcon, title: "Despesas", subTitle: "Organize as suas despesas.", target: self, action: #selector(tappedExpensesButton), chevron: UIImage(systemName: "chevron.right")!)
-        variable.translatesAutoresizingMaskIntoConstraints = false
-        return variable
+    private lazy var expensesComponent: CustomButtonLayout = {
+        let component = CustomButtonLayout(image: UIImage.randomGoalImages, title: "Despesas", target: self, action: #selector(tappedExpenseButton), chevron: UIImage(systemName: "chevron.right")!)
+        return component
     }()
     
-    @objc
-    private func tappedExpensesButton() {
+    @objc private func tappedExpenseButton() {
         let vc: ExpensesVC = ExpensesVC()
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -159,8 +155,8 @@ class HomeVC: UIViewController {
         viewTopBackground.addSubview(incomeTextField)
         view.addSubview(viewMidBackground)
         viewMidBackground.addSubview(stack)
-        stack.addArrangedSubview(setAgoalComponent)
-        stack.addArrangedSubview(expenseComponent)
+        stack.addArrangedSubview(goalsComponent)
+        stack.addArrangedSubview(expensesComponent)
     }
     
     private func configConstraints() {
@@ -193,9 +189,9 @@ class HomeVC: UIViewController {
             viewMidBackground.topAnchor.constraint(equalTo: viewTopBackground.bottomAnchor, constant: 50),
             viewMidBackground.leadingAnchor.constraint(equalTo: viewTopBackground.leadingAnchor),
             viewMidBackground.trailingAnchor.constraint(equalTo: viewTopBackground.trailingAnchor),
-            viewMidBackground.heightAnchor.constraint(equalToConstant: 134),
+            viewMidBackground.heightAnchor.constraint(equalToConstant: 280),
             
-            stack.topAnchor.constraint(equalTo: viewMidBackground.topAnchor),
+            stack.topAnchor.constraint(equalTo: viewMidBackground.topAnchor, constant: 15),
             stack.leadingAnchor.constraint(equalTo: viewMidBackground.leadingAnchor),
             stack.trailingAnchor.constraint(equalTo: viewMidBackground.trailingAnchor),
             stack.bottomAnchor.constraint(equalTo: viewMidBackground.bottomAnchor, constant: -15),
