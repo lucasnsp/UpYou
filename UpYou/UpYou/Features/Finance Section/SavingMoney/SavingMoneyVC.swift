@@ -33,48 +33,6 @@ class SavingMoneyVC: UIViewController {
         tableView.dataSource = dataSource
     }
     
-    private lazy var viewMidBackground: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .black.withAlphaComponent(0.6)
-        view.clipsToBounds = true
-        view.layer.cornerRadius = 20
-        return view
-    }()
-    
-    private lazy var stackFinance: UIStackView = {
-        let variable = UIStackView()
-        variable.translatesAutoresizingMaskIntoConstraints = false
-        variable.distribution = .fillEqually
-        variable.axis = .vertical
-        variable.spacing = 0.5
-        return variable
-    }()
-    
-    private lazy var setAgoalComponent: CustomButtonView = {
-        let variable = CustomButtonView(image: UIImage.setAgoalIcon, title: "Metas", subTitle: "Defina objetivos financeiros.", target: self, action: #selector(tappedSetAGoalButton), chevron: UIImage(systemName: "chevron.right")!)
-        variable.translatesAutoresizingMaskIntoConstraints = false
-        return variable
-    }()
-    
-    @objc
-    private func tappedSetAGoalButton() {
-        let vc: GoalsVC = GoalsVC()
-        navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    private lazy var expenseComponent: CustomButtonView = {
-        let variable = CustomButtonView(image: UIImage.expensesIcon, title: "Despesas", subTitle: "Organize as suas despesas.", target: self, action: #selector(tappedExpensesButton), chevron: UIImage(systemName: "chevron.right")!)
-        variable.translatesAutoresizingMaskIntoConstraints = false
-        return variable
-    }()
-    
-    @objc
-    private func tappedExpensesButton() {
-        let vc: ExpensesVC = ExpensesVC()
-        navigationController?.pushViewController(vc, animated: true)
-    }
-    
     private lazy var viewBottomBackground: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -168,10 +126,6 @@ class SavingMoneyVC: UIViewController {
     private func addViews() {
         view.addSubview(subImageView)
         view.addSubview(tableView)
-        view.addSubview(viewMidBackground)
-        viewMidBackground.addSubview(stackFinance)
-        stackFinance.addArrangedSubview(setAgoalComponent)
-        stackFinance.addArrangedSubview(expenseComponent)
         view.addSubview(viewBottomBackground)
         viewBottomBackground.addSubview(stackEducational)
         stackEducational.addArrangedSubview(stocksComponent)
@@ -193,19 +147,9 @@ class SavingMoneyVC: UIViewController {
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -25),
             tableView.heightAnchor.constraint(equalToConstant: 145),
             
-            viewMidBackground.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 22),
-            viewMidBackground.leadingAnchor.constraint(equalTo: tableView.leadingAnchor),
-            viewMidBackground.trailingAnchor.constraint(equalTo: tableView.trailingAnchor),
-            viewMidBackground.heightAnchor.constraint(equalToConstant: 134),
-            
-            stackFinance.topAnchor.constraint(equalTo: viewMidBackground.topAnchor),
-            stackFinance.leadingAnchor.constraint(equalTo: viewMidBackground.leadingAnchor),
-            stackFinance.trailingAnchor.constraint(equalTo: viewMidBackground.trailingAnchor),
-            stackFinance.bottomAnchor.constraint(equalTo: viewMidBackground.bottomAnchor, constant: -15),
-            
-            viewBottomBackground.topAnchor.constraint(equalTo: viewMidBackground.bottomAnchor, constant: 22),
-            viewBottomBackground.leadingAnchor.constraint(equalTo: viewMidBackground.leadingAnchor),
-            viewBottomBackground.trailingAnchor.constraint(equalTo: viewMidBackground.trailingAnchor),
+            viewBottomBackground.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 40),
+            viewBottomBackground.leadingAnchor.constraint(equalTo: tableView.leadingAnchor),
+            viewBottomBackground.trailingAnchor.constraint(equalTo: tableView.trailingAnchor),
             viewBottomBackground.heightAnchor.constraint(equalToConstant: 320),
             
             stackEducational.topAnchor.constraint(equalTo: viewBottomBackground.topAnchor),
