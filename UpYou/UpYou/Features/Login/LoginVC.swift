@@ -126,6 +126,10 @@ class LoginVC: UIViewController {
         configConstraints()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
+    }
+    
     private func addViews() {
         view.addSubview(subImageView)
         view.addSubview(rocketImageView)

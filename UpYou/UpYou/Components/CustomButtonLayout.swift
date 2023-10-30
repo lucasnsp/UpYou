@@ -8,13 +8,21 @@
 import UIKit
 
 class CustomButtonLayout: UIView {
+    
+    lazy var view: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .black
+        view.clipsToBounds = true
+        view.layer.cornerRadius = 22
+        return view
+    }()
+    
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
-//        imageView.heightAnchor.constraint(equalToConstant: 80).isActive = true
-//        imageView.widthAnchor.constraint(equalToConstant: 80).isActive = true
-        imageView.layer.cornerRadius = 18
+        imageView.layer.cornerRadius = 12
         imageView.isUserInteractionEnabled = true
         return imageView
     }()
@@ -23,7 +31,7 @@ class CustomButtonLayout: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.font = UIFont.boldSystemFont(ofSize: 24)
+        label.font = UIFont.boldSystemFont(ofSize: 20)
         label.textAlignment = .left
         return label
     }()
@@ -31,7 +39,7 @@ class CustomButtonLayout: UIView {
     private lazy var chevronImage: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.tintColor = .white.withAlphaComponent(0.8)
+        imageView.tintColor = .gray
         return imageView
     }()
     
@@ -64,26 +72,32 @@ class CustomButtonLayout: UIView {
     }
     
     private func setupUI() {
-        addSubview(titleLabel)
-        addSubview(chevronImage)
-        addSubview(imageView)
-        addSubview(button)
+        addSubview(view)
+        view.addSubview(titleLabel)
+        view.addSubview(chevronImage)
+        view.addSubview(imageView)
+        view.addSubview(button)
     }
     
     private func setupConfiguration() {
         NSLayoutConstraint.activate([
+            view.topAnchor.constraint(equalTo: self.topAnchor),
+            view.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            view.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            view.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            
             titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
             titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             
-            chevronImage.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
+            chevronImage.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
             chevronImage.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
-            chevronImage.widthAnchor.constraint(equalToConstant: 15),
-            chevronImage.heightAnchor.constraint(equalToConstant: 15),
+            chevronImage.widthAnchor.constraint(equalToConstant: 13),
+            chevronImage.heightAnchor.constraint(equalToConstant: 13),
             
-            imageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 35),
-            imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
-            imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15),
-            imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20),
+            imageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
+            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
             
             button.topAnchor.constraint(equalTo: self.topAnchor),
             button.leadingAnchor.constraint(equalTo: self.leadingAnchor),

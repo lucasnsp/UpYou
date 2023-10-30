@@ -152,10 +152,6 @@ class SavingMoneyVC: UIViewController {
         let vc: FixedIncomeVC = FixedIncomeVC()
         navigationController?.pushViewController(vc, animated: true)
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.isHidden = true
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -163,6 +159,10 @@ class SavingMoneyVC: UIViewController {
         viewModel.fetchAllResquest()
         addViews()
         configConstraints()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
     }
     
     private func addViews() {

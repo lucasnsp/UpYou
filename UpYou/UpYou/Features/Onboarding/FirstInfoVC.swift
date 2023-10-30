@@ -68,7 +68,10 @@ class FirstInfoVC: UIViewController {
         super.viewDidLoad()
         addViews()
         configConstraints()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
     }
     
     private func addViews() {

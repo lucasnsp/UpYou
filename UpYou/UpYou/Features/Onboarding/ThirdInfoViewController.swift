@@ -64,14 +64,14 @@ class ThirdInfoVC: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.isHidden = true
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         addViews()
         configConstraints()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
     }
     
     private func addViews() {

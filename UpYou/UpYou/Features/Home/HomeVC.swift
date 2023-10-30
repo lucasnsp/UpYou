@@ -101,9 +101,9 @@ class HomeVC: UIViewController {
     private lazy var viewMidBackground: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .black.withAlphaComponent(0.6)
+        view.backgroundColor = .black.withAlphaComponent(0.3)
         view.clipsToBounds = true
-        view.layer.cornerRadius = 20
+        view.layer.cornerRadius = 22
         return view
     }()
     
@@ -112,12 +112,12 @@ class HomeVC: UIViewController {
         variable.translatesAutoresizingMaskIntoConstraints = false
         variable.distribution = .fillEqually
         variable.axis = .horizontal
-        variable.spacing = 1
+        variable.spacing = 20
         return variable
     }()
     
     private lazy var goalsComponent: CustomButtonLayout = {
-        let component = CustomButtonLayout(image: UIImage.randomGoalImages, title: "Metas", target: self, action: #selector(tappedAddGoalButton), chevron: UIImage(systemName: "chevron.right")!)
+        let component = CustomButtonLayout(image: UIImage(named: "escadasucesso"), title: "Metas", target: self, action: #selector(tappedAddGoalButton), chevron: UIImage(systemName: "chevron.right")!)
         return component
     }()
     
@@ -127,7 +127,7 @@ class HomeVC: UIViewController {
     }
     
     private lazy var expensesComponent: CustomButtonLayout = {
-        let component = CustomButtonLayout(image: UIImage.randomGoalImages, title: "Despesas", target: self, action: #selector(tappedExpenseButton), chevron: UIImage(systemName: "chevron.right")!)
+        let component = CustomButtonLayout(image: UIImage(named: "Despesas"), title: "Despesas", target: self, action: #selector(tappedExpenseButton), chevron: UIImage(systemName: "chevron.right")!)
         return component
     }()
     
@@ -136,14 +136,14 @@ class HomeVC: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.isHidden = true
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         addViews()
         configConstraints()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
     }
     
     private func addViews() {
@@ -170,8 +170,8 @@ class HomeVC: UIViewController {
             homeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             
             viewTopBackground.topAnchor.constraint(equalTo: homeLabel.bottomAnchor, constant: 30),
-            viewTopBackground.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            viewTopBackground.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            viewTopBackground.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
+            viewTopBackground.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
             viewTopBackground.heightAnchor.constraint(equalToConstant: 180),
             
             balanceLabel.topAnchor.constraint(equalTo: viewTopBackground.topAnchor, constant: 15),
@@ -186,15 +186,15 @@ class HomeVC: UIViewController {
             addIncomeButton.leadingAnchor.constraint(equalTo: viewTopBackground.leadingAnchor, constant: 40),
             addIncomeButton.trailingAnchor.constraint(equalTo: viewTopBackground.trailingAnchor, constant: -40),
             
-            viewMidBackground.topAnchor.constraint(equalTo: viewTopBackground.bottomAnchor, constant: 50),
+            viewMidBackground.topAnchor.constraint(equalTo: viewTopBackground.bottomAnchor, constant: 65),
             viewMidBackground.leadingAnchor.constraint(equalTo: viewTopBackground.leadingAnchor),
             viewMidBackground.trailingAnchor.constraint(equalTo: viewTopBackground.trailingAnchor),
-            viewMidBackground.heightAnchor.constraint(equalToConstant: 280),
+            viewMidBackground.heightAnchor.constraint(equalToConstant: 190),
             
-            stack.topAnchor.constraint(equalTo: viewMidBackground.topAnchor, constant: 15),
+            stack.topAnchor.constraint(equalTo: viewMidBackground.topAnchor),
             stack.leadingAnchor.constraint(equalTo: viewMidBackground.leadingAnchor),
             stack.trailingAnchor.constraint(equalTo: viewMidBackground.trailingAnchor),
-            stack.bottomAnchor.constraint(equalTo: viewMidBackground.bottomAnchor, constant: -15),
+            stack.bottomAnchor.constraint(equalTo: viewMidBackground.bottomAnchor),
         ])
     }
 }

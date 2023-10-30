@@ -117,16 +117,16 @@ class RegisterVC: UIViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Já tem uma conta? Iniciar sessão", style: .plain, target: nil, action: nil)
         navigationController?.pushViewController(vc, animated: true)
     }
-
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.isHidden = true
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel?.delegate(delegate: self)
         addViews()
         configConstraints()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
     }
     
     private func addViews() {
