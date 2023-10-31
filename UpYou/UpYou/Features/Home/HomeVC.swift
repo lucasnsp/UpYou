@@ -10,6 +10,7 @@ import UIKit
 class HomeVC: UIViewController {
     
     var viewModel: HomeViewModel = HomeViewModel()
+    var income: [incomeDB] = []
     
     private lazy var subImageView: UIImageView = {
         let image = UIImageView(image: UIImage.backgroundImage)
@@ -60,6 +61,9 @@ class HomeVC: UIViewController {
     
     @objc
     private func tappedAddIncomeButton() {
+        
+        var updatedIncome = income
+        
         let alertController = UIAlertController(title: "Adicionar Renda", message: "Digite a sua Renda Mensal", preferredStyle: .alert)
         
         alertController.addTextField { textField in
@@ -76,6 +80,8 @@ class HomeVC: UIViewController {
                 
                 if let formattedIncome = formatter.string(from: NSNumber(value: income)) {
                     self?.incomeTextField.text = formattedIncome
+                    
+                    UserDefaults.standard.set(income, forKey: "userIncome")
                 }
             }
         }
@@ -97,6 +103,31 @@ class HomeVC: UIViewController {
         tf.translatesAutoresizingMaskIntoConstraints = false
         return tf
     }()
+    
+    func saveGoals() {
+        let userDefaults = UserDefaults.standard
+        do {
+            let encoder = JSONEncoder()
+            let data = try encoder.encode(income)
+            userDefaults.set(data, forKey: "incomeSaved")
+        } catch {
+            print("Erro ao salvar as metas: \(error)")
+        }
+    }
+    
+    private func loadGoals() {
+        let userDefaults = UserDefaults.standard
+        if let data = userDefaults.data(forKey: "incomeSaved") {
+            do {
+                let decoder = JSONDecoder()
+                let loadedGoals = try decoder.decode([incomeDB].self, from: data)
+                income = loadedGoals
+                print("\(income.count) goals loaded")
+            } catch {
+                print("Erro ao carregar metas: \(error)")
+            }
+        }
+    }
     
     private lazy var viewMidBackground: UIView = {
         let view = UIView()
@@ -140,6 +171,19 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         addViews()
         configConstraints()
+        
+        if let savedIncome = UserDefaults.standard.value(forKey: "userIncome") as? Double {
+            let formatter = NumberFormatter()
+            formatter.numberStyle = .currency
+            formatter.currencySymbol = "R$"
+            formatter.locale = Locale(identifier: "pt_BR")
+            
+            if let formattedIncome = formatter.string(from: NSNumber(value: savedIncome)) {
+                incomeTextField.text = formattedIncome
+            }
+        }
+        
+        loadGoals()
     }
     
     override func viewWillAppear(_ animated: Bool) {

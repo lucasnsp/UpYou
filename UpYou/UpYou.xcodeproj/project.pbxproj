@@ -84,6 +84,7 @@
 		46268DAE2AF12EFC003EEE3B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 46268DAD2AF12EFC003EEE3B /* FirebaseFirestore */; };
 		46268DB02AF12EFC003EEE3B /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 46268DAF2AF12EFC003EEE3B /* FirebaseFirestoreCombine-Community */; };
 		46268DB22AF12EFC003EEE3B /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 46268DB12AF12EFC003EEE3B /* FirebaseFirestoreSwift */; };
+		46268DB42AF13FC2003EEE3B /* IncomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46268DB32AF13FC2003EEE3B /* IncomeData.swift */; };
 		462FD0B32AE6B358007F2423 /* UIImage+ImageSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462FD0B22AE6B358007F2423 /* UIImage+ImageSources.swift */; };
 		4646873A2ADD79EE0077269E /* StocksData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464687392ADD79EE0077269E /* StocksData.swift */; };
 		4646873C2ADD7A210077269E /* StocksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4646873B2ADD7A210077269E /* StocksService.swift */; };
@@ -242,6 +243,7 @@
 		461C71472AD1B07700E18558 /* SleepTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepTableViewCell.swift; sourceTree = "<group>"; };
 		461C71492AD1B08400E18558 /* SleepTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepTableViewCellScreen.swift; sourceTree = "<group>"; };
 		46268D932AF12EC3003EEE3B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		46268DB32AF13FC2003EEE3B /* IncomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeData.swift; sourceTree = "<group>"; };
 		462FD0B22AE6B358007F2423 /* UIImage+ImageSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ImageSources.swift"; sourceTree = "<group>"; };
 		464687392ADD79EE0077269E /* StocksData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksData.swift; sourceTree = "<group>"; };
 		4646873B2ADD7A210077269E /* StocksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksService.swift; sourceTree = "<group>"; };
@@ -801,6 +803,7 @@
 		461C714F2AD1B7CD00E18558 /* Finance Section */ = {
 			isa = PBXGroup;
 			children = (
+				46268DB32AF13FC2003EEE3B /* IncomeData.swift */,
 				46A48B672AEC4496007B9863 /* GoalsData.swift */,
 				46A48B6C2AED54D0007B9863 /* ExpenseData.swift */,
 				464687392ADD79EE0077269E /* StocksData.swift */,
@@ -1493,6 +1496,7 @@
 				460583B52AC47EB300446A6F /* SavingMoneyTableViewCell.swift in Sources */,
 				46EEDCCB2AD43655005A7164 /* GoldenRulesData.swift in Sources */,
 				461BEF7F2ABB679400C07847 /* HomeViewModel.swift in Sources */,
+				46268DB42AF13FC2003EEE3B /* IncomeData.swift in Sources */,
 				46EEDCE42AD59654005A7164 /* CdbData.swift in Sources */,
 				460583B72AC47ED000446A6F /* SavingMoneyTableViewScreen.swift in Sources */,
 				461BEF7B2ABB677500C07847 /* HomeVC.swift in Sources */,
