@@ -194,7 +194,8 @@ extension LoginVC: UITextFieldDelegate {
 
 extension LoginVC: LoginViewModelDelegate {
     func loginSuccess() {
-        print("login com sucesso")
+        let vc: TabBarVC = TabBarVC()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func loginError(errorMessage: String) {

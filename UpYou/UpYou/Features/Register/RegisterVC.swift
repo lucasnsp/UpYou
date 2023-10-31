@@ -98,7 +98,7 @@ class RegisterVC: UIViewController {
     
     @objc
     func tappedRegisterButton() {
-        viewModel?.registerUser(email: emailTextField.text ?? "", password: emailTextField.text ?? "")
+        viewModel?.registerUser(email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
     }
     
     lazy var loginButton: UIButton = {

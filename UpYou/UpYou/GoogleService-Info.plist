@@ -9,7 +9,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.lucas.UpYou</string>
+	<string>com.lucas.UpYou2</string>
 	<key>PROJECT_ID</key>
 	<string>upyou-f6287</string>
 	<key>STORAGE_BUCKET</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:123311600584:ios:76e9ba8b0d1b8a9ec8c6fd</string>
+	<string>1:123311600584:ios:c94f3c7d17c254c4c8c6fd</string>
 </dict>
 </plist>
