@@ -60,8 +60,10 @@ class FirstInfoVC: UIViewController {
     
     @objc
     func tappedContinueButton() {
-        let vc: SecondInfoVC = SecondInfoVC()
-        navigationController?.pushViewController(vc, animated: true)
+        DispatchQueue.main.async { [ weak self ] in
+            let vc: SecondInfoVC = SecondInfoVC()
+            self?.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 
     override func viewDidLoad() {

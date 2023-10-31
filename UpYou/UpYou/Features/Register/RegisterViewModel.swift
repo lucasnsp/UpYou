@@ -33,7 +33,6 @@ class RegisterViewModel {
                 self.delegate?.errorRegister(errorMessage: error?.localizedDescription ?? "")
             }
         }
-        print(password)
     }
     
     public func textFieldRegisterScreenLayout(_ textField: UITextField) {

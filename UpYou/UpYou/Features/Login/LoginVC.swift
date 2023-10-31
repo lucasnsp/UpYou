@@ -114,10 +114,11 @@ class LoginVC: UIViewController {
     
     @objc
     private func tappedSignUpButton() {
-        let vc: RegisterVC = RegisterVC()
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Não tem uma conta? Registre-se", style: .plain, target: nil, action: nil)
-        navigationController?.pushViewController(vc, animated: true)}
-
+        DispatchQueue.main.async { [ weak self ] in
+            let vc: RegisterVC = RegisterVC()
+            self?.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -194,8 +195,10 @@ extension LoginVC: UITextFieldDelegate {
 
 extension LoginVC: LoginViewModelDelegate {
     func loginSuccess() {
-        let vc: TabBarVC = TabBarVC()
-        navigationController?.pushViewController(vc, animated: true)
+        DispatchQueue.main.async { [ weak self ] in
+            let vc: TabBarVC = TabBarVC()
+            self?.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     func loginError(errorMessage: String) {
