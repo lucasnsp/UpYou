@@ -73,5 +73,7 @@ The UpYou app follows the MVVM (Model-View-ViewModel) architecture pattern to se
 
 - Swift
 - UIKit
-- FireBase
+- FireBase authentication
 - Capturing data of API with URLSession.
+- UserDefaults to save local Data
+- UI components programmatically
