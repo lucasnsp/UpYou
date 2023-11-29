@@ -34,11 +34,11 @@ UpYou is a comprehensive financial management and personal development project d
 
 - **TabBar**:
 
-![TabBar](https://github.com/lucasnsp/UpYou/assets/122572631/c091e6b1-c89b-4453-9e61-a7a3daa1661a)
+![Design sem nome (14)](https://github.com/lucasnsp/SoloProjects/assets/122572631/b53ada1d-2c27-40b4-8e67-1f7c47f3f421)
 
-- **Savings and Self-Development**:
+- **Goals and Expenses**:
 
-![features](https://github.com/lucasnsp/UpYou/assets/122572631/0417d848-b522-4a4c-af94-529337cfa717)
+![Design sem nome (15)](https://github.com/lucasnsp/SoloProjects/assets/122572631/7c813f5a-1069-4bb4-b03d-08fa2d97b670)
 
 ## Getting Started
 
