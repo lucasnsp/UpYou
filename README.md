@@ -67,7 +67,7 @@ The UpYou app follows the MVVM (Model-View-ViewModel) architecture pattern to se
 
 - **View**: Represents the user interface layer using UIKit views to display the data of the App.
 
-- **ViewModel**: Acts as an intermediary between the Model and View, responsible for handling data manipulation, business logic, and interaction with external services.\
+- **ViewModel**: Acts as an intermediary between the Model and View, responsible for handling data manipulation, business logic, and interaction with external services.
 
 ## Technologies
 
