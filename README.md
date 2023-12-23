@@ -3,7 +3,6 @@
 UpYou is a comprehensive financial management and personal development project designed to help individuals take control of their finances, achieve their goals, and continuously improve themselves on their journey towards their best version. The project is still in development but will be released in the AppStore soon.
 
 ## Table of Contents
-
 - [Features](#features)
 - [Screenshots](#screenshots)
 - [Getting Started](#getting-started)
