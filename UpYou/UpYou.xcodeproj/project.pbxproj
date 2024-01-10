@@ -374,6 +374,7 @@
 			children = (
 				460536A12ACEF6D0003FC929 /* StoicismVC.swift */,
 				460536A52ACEF6F9003FC929 /* StoicismViewModel.swift */,
+				460536AE2AD0421E003FC929 /* StoicismService.swift */,
 			);
 			path = Stoicism;
 			sourceTree = "<group>";
@@ -408,6 +409,7 @@
 			children = (
 				460536B42AD04B05003FC929 /* SleepVC.swift */,
 				460536B82AD04B22003FC929 /* SleepViewModel.swift */,
+				461C71402AD1AE0D00E18558 /* SleepService.swift */,
 			);
 			path = Sleep;
 			sourceTree = "<group>";
@@ -440,8 +442,6 @@
 		4605838E2AC1C3A600446A6F /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				461C714E2AD1B7A300E18558 /* Finance Section */,
-				461C714D2AD1B79500E18558 /* Personal Development Section */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -460,6 +460,7 @@
 			children = (
 				4605839F2AC4602200446A6F /* SavingMoneyVC.swift */,
 				460583AF2AC47A5700446A6F /* SavingMoneyViewModel.swift */,
+				460583AC2AC4784800446A6F /* MoneyPhrasesService.swift */,
 			);
 			path = SavingMoney;
 			sourceTree = "<group>";
@@ -494,6 +495,7 @@
 			children = (
 				460B7AC02AC849200059EA44 /* DeepWorkVC.swift */,
 				460B7AC52AC851C00059EA44 /* DeepWorkViewModel.swift */,
+				460B7ACB2AC857770059EA44 /* DeepWorkService.swift */,
 			);
 			path = DeepWork;
 			sourceTree = "<group>";
@@ -528,6 +530,7 @@
 			children = (
 				460B7AE02AC8787F0059EA44 /* EnvironmentVC.swift */,
 				460B7AE42AC878D40059EA44 /* EnvironmentViewModel.swift */,
+				460B7ADE2AC877760059EA44 /* EnvironmentService.swift */,
 			);
 			path = Environment;
 			sourceTree = "<group>";
@@ -712,6 +715,7 @@
 			children = (
 				461BEFA62ABF107B00C07847 /* PersonalDevelopmentVC.swift */,
 				4605839A2AC1C7F900446A6F /* PersonalDevelopmentViewModel.swift */,
+				460583902AC1C3E300446A6F /* QuotesService.swift */,
 			);
 			path = PersonalDevelopment;
 			sourceTree = "<group>";
@@ -764,38 +768,6 @@
 				46C9B3F72ADAE94E00CC7395 /* FIIsCell */,
 				46EEDCCC2AD43690005A7164 /* GoldenRulesCell */,
 				46EEDD372AD83557005A7164 /* Renda Fixa Section */,
-			);
-			path = "Finance Section";
-			sourceTree = "<group>";
-		};
-		461C714D2AD1B79500E18558 /* Personal Development Section */ = {
-			isa = PBXGroup;
-			children = (
-				467D1D8A2AC6F571009E0B04 /* BooksService.swift */,
-				460583902AC1C3E300446A6F /* QuotesService.swift */,
-				460B7ACB2AC857770059EA44 /* DeepWorkService.swift */,
-				460B7ADE2AC877760059EA44 /* EnvironmentService.swift */,
-				46DA2CE72ACC429100DEA703 /* HabitsService.swift */,
-				460536AE2AD0421E003FC929 /* StoicismService.swift */,
-				461C71402AD1AE0D00E18558 /* SleepService.swift */,
-			);
-			path = "Personal Development Section";
-			sourceTree = "<group>";
-		};
-		461C714E2AD1B7A300E18558 /* Finance Section */ = {
-			isa = PBXGroup;
-			children = (
-				460583AC2AC4784800446A6F /* MoneyPhrasesService.swift */,
-				46EEDCC82AD435F9005A7164 /* GoldenRulesService.swift */,
-				46EEDCF22AD6CD52005A7164 /* CDBService.swift */,
-				46EEDCFA2AD6E0D4005A7164 /* LCAService.swift */,
-				46EEDD1D2AD6F08D005A7164 /* LCIService.swift */,
-				46EEDD342AD83476005A7164 /* TDService.swift */,
-				46EEDD492AD97FF3005A7164 /* TDIService.swift */,
-				46EEDD5F2AD98901005A7164 /* TDSService.swift */,
-				46C9B3EB2ADAE75900CC7395 /* FIIsService.swift */,
-				46C9B4042ADAF79200CC7395 /* CriptoService.swift */,
-				4646873B2ADD7A210077269E /* StocksService.swift */,
 			);
 			path = "Finance Section";
 			sourceTree = "<group>";
@@ -870,6 +842,7 @@
 			children = (
 				467D1D842AC5B638009E0B04 /* BooksVC.swift */,
 				467D1D912AC6F86A009E0B04 /* BooksViewModel.swift */,
+				467D1D8A2AC6F571009E0B04 /* BooksService.swift */,
 			);
 			path = Books;
 			sourceTree = "<group>";
@@ -933,6 +906,7 @@
 			children = (
 				46C9B3F12ADAE80700CC7395 /* FiisVC.swift */,
 				46C9B3F52ADAE82D00CC7395 /* FiisViewModel.swift */,
+				46C9B3EB2ADAE75900CC7395 /* FIIsService.swift */,
 			);
 			path = "Fundos Imobiliarios";
 			sourceTree = "<group>";
@@ -967,6 +941,7 @@
 			children = (
 				46C9B40A2ADAF86000CC7395 /* CriptoVC.swift */,
 				46C9B40E2ADAF88400CC7395 /* CriptoViewModel.swift */,
+				46C9B4042ADAF79200CC7395 /* CriptoService.swift */,
 			);
 			path = Crypto;
 			sourceTree = "<group>";
@@ -1001,6 +976,7 @@
 			children = (
 				46C9B41B2ADAFFCB00CC7395 /* StocksVC.swift */,
 				46C9B41D2ADAFFDD00CC7395 /* StocksViewModel.swift */,
+				4646873B2ADD7A210077269E /* StocksService.swift */,
 			);
 			name = Stocks;
 			path = "Ações";
@@ -1011,6 +987,7 @@
 			children = (
 				46DA2CD82ACC399C00DEA703 /* HabitsVC.swift */,
 				46DA2CDD2ACC39C900DEA703 /* HabitsViewModel.swift */,
+				46DA2CE72ACC429100DEA703 /* HabitsService.swift */,
 			);
 			path = Habits;
 			sourceTree = "<group>";
@@ -1059,6 +1036,7 @@
 			children = (
 				46EEDCC22AD431CF005A7164 /* GoldenRulesVC.swift */,
 				46EEDCC62AD431F4005A7164 /* GoldenRulesViewModel.swift */,
+				46EEDCC82AD435F9005A7164 /* GoldenRulesService.swift */,
 			);
 			path = GoldenRules;
 			sourceTree = "<group>";
@@ -1115,6 +1093,7 @@
 			children = (
 				46EEDCE52AD5B0CD005A7164 /* CdbVC.swift */,
 				46EEDCE92AD5B0EC005A7164 /* CdbViewModel.swift */,
+				46EEDCF22AD6CD52005A7164 /* CDBService.swift */,
 			);
 			path = CDB;
 			sourceTree = "<group>";
@@ -1181,6 +1160,7 @@
 			children = (
 				46EEDD002AD6E184005A7164 /* LcaVC.swift */,
 				46EEDD042AD6E1A8005A7164 /* LcaViewModel.swift */,
+				46EEDCFA2AD6E0D4005A7164 /* LCAService.swift */,
 			);
 			path = LCA;
 			sourceTree = "<group>";
@@ -1215,6 +1195,7 @@
 			children = (
 				46EEDD152AD6EE3B005A7164 /* LciVC.swift */,
 				46EEDD192AD6EE52005A7164 /* LciViewModel.swift */,
+				46EEDD1D2AD6F08D005A7164 /* LCIService.swift */,
 			);
 			path = LCI;
 			sourceTree = "<group>";
@@ -1249,6 +1230,7 @@
 			children = (
 				46EEDD2A2AD82F14005A7164 /* TesouroDiretoVC.swift */,
 				46EEDD2E2AD82F34005A7164 /* TesouroDiretoViewModel.swift */,
+				46EEDD342AD83476005A7164 /* TDService.swift */,
 			);
 			path = "Tesouro Direto";
 			sourceTree = "<group>";
@@ -1296,6 +1278,7 @@
 			children = (
 				46EEDD4F2AD98100005A7164 /* TesouroIpcaVC.swift */,
 				46EEDD532AD9811C005A7164 /* TesouroIpcaViewModel.swift */,
+				46EEDD492AD97FF3005A7164 /* TDIService.swift */,
 			);
 			path = "Tesouro IPCA";
 			sourceTree = "<group>";
@@ -1343,6 +1326,7 @@
 			children = (
 				46EEDD652AD9898C005A7164 /* TesouroSelicVC.swift */,
 				46EEDD692AD989A8005A7164 /* TesouroSelicViewModel.swift */,
+				46EEDD5F2AD98901005A7164 /* TDSService.swift */,
 			);
 			path = "Tesouro Selic";
 			sourceTree = "<group>";
