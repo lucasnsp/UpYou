@@ -68,6 +68,8 @@
 		461C71412AD1AE0D00E18558 /* SleepService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461C71402AD1AE0D00E18558 /* SleepService.swift */; };
 		461C71482AD1B07700E18558 /* SleepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461C71472AD1B07700E18558 /* SleepTableViewCell.swift */; };
 		461C714A2AD1B08400E18558 /* SleepTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461C71492AD1B08400E18558 /* SleepTableViewCellScreen.swift */; };
+		462663892B4EF23D001B876F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462663882B4EF23D001B876F /* NetworkError.swift */; };
+		4626638B2B4EF253001B876F /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4626638A2B4EF253001B876F /* NetworkLogger.swift */; };
 		46268D942AF12EC3003EEE3B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46268D932AF12EC3003EEE3B /* GoogleService-Info.plist */; };
 		46268D962AF12EFC003EEE3B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 46268D952AF12EFC003EEE3B /* FirebaseAnalytics */; };
 		46268D982AF12EFC003EEE3B /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 46268D972AF12EFC003EEE3B /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -242,6 +244,8 @@
 		461C71402AD1AE0D00E18558 /* SleepService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepService.swift; sourceTree = "<group>"; };
 		461C71472AD1B07700E18558 /* SleepTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepTableViewCell.swift; sourceTree = "<group>"; };
 		461C71492AD1B08400E18558 /* SleepTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepTableViewCellScreen.swift; sourceTree = "<group>"; };
+		462663882B4EF23D001B876F /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		4626638A2B4EF253001B876F /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		46268D932AF12EC3003EEE3B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		46268DB32AF13FC2003EEE3B /* IncomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeData.swift; sourceTree = "<group>"; };
 		462FD0B22AE6B358007F2423 /* UIImage+ImageSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ImageSources.swift"; sourceTree = "<group>"; };
@@ -442,6 +446,8 @@
 		4605838E2AC1C3A600446A6F /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				462663882B4EF23D001B876F /* NetworkError.swift */,
+				4626638A2B4EF253001B876F /* NetworkLogger.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -1483,6 +1489,7 @@
 				46268DB42AF13FC2003EEE3B /* IncomeData.swift in Sources */,
 				46EEDCE42AD59654005A7164 /* CdbData.swift in Sources */,
 				460583B72AC47ED000446A6F /* SavingMoneyTableViewScreen.swift in Sources */,
+				4626638B2B4EF253001B876F /* NetworkLogger.swift in Sources */,
 				461BEF7B2ABB677500C07847 /* HomeVC.swift in Sources */,
 				460583A02AC4602200446A6F /* SavingMoneyVC.swift in Sources */,
 				4646873A2ADD79EE0077269E /* StocksData.swift in Sources */,
@@ -1519,6 +1526,7 @@
 				461BEF202ABA74F500C07847 /* SceneDelegate.swift in Sources */,
 				460583AD2AC4784800446A6F /* MoneyPhrasesService.swift in Sources */,
 				460B7ACA2AC857400059EA44 /* DeepWorkData.swift in Sources */,
+				462663892B4EF23D001B876F /* NetworkError.swift in Sources */,
 				46DA2CE82ACC429100DEA703 /* HabitsService.swift in Sources */,
 				46EEDD6F2AD98AB3005A7164 /* TesouroSelicTableViewCell.swift in Sources */,
 				460B7ADF2AC877760059EA44 /* EnvironmentService.swift in Sources */,
