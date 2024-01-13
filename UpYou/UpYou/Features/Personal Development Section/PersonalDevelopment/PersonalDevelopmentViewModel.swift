@@ -9,7 +9,7 @@ import UIKit
 
 protocol PersonalDevelopmentViewModelDelegate: AnyObject {
     func success()
-    func error()
+    func error(message: String)
 }
 
 class PersonalDevelopmentViewModel {
@@ -45,17 +45,14 @@ class PersonalDevelopmentViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getQuoteService { [ weak self ] quoteData, error in
+        service.getQuoteService { [weak self] result in
             guard let self else { return }
-            if error == nil {
-                if let quotes = quoteData?.quotes {
-                    self.quote = [quotes.randomElement()!]
-                    self.delegate?.success()
-                } else {
-                    self.delegate?.error()
-                }
-            } else {
-                self.delegate?.error()
+            switch result {
+            case .success(let success):
+                quote = success
+                delegate?.success()
+            case .failure(let failure):
+                delegate?.error(message: failure.errorDescription ?? "")
             }
         }
     }
