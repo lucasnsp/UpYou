@@ -9,36 +9,18 @@ import UIKit
 
 class EnvironmentService: NSObject {
     
-    func getEnvironmentService(completion: @escaping (EnvironmentData?, Error?) -> Void) {
-        let urlString: String = "https://run.mocky.io/v3/ca31da38-8fc3-4279-b65a-c74ccf5a8bc4"
+    func getEnvironmentService(completion: @escaping (Result<[Environment],NetworkError>) -> Void) {
+        let urlString: String = "ca31da38-8fc3-4279-b65a-c74ccf5a8bc4"
         
-        guard let url: URL = URL(string: urlString) else { return completion(nil, ErrorDetail.errorURL(urlString: urlString))}
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            
-            guard let dataResult = data else { return completion(nil, ErrorDetail.detailError(detail: "Error Data"))}
-            
-            let json = try? JSONSerialization.jsonObject(with: dataResult, options: [])
-            print(json as Any)
-            
-            guard let response = response as? HTTPURLResponse else { return }
-            
-            if response.statusCode == 200 {
-                do {
-                    let environmentData: EnvironmentData = try JSONDecoder().decode(EnvironmentData.self, from: dataResult)
-                    print("SUCCESS -> \(#function)")
-                    completion(environmentData, nil)
-                } catch  {
-                    print("ERROR -> \(#function)")
-                    completion(nil, error)
-                }
-            } else {
-                print("ERROR -> \(#function)")
-                completion(nil, error)
+        let endPoint = Endpoint(url: urlString)
+
+        ServiceManager.shared.request(with: endPoint, decodeType: EnvironmentData.self) { result in
+            switch result {
+            case .success(let success):
+                completion(.success(success.environment ?? []))
+            case .failure(let failure):
+                completion(.failure(failure))
             }
         }
-        task.resume()
     }
 }

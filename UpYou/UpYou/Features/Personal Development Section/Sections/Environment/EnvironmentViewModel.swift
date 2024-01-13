@@ -9,7 +9,7 @@ import UIKit
 
 protocol EnvironmentViewModelDelegate: AnyObject {
     func success()
-    func error()
+    func error(message: String)
 }
 
 class EnvironmentViewModel {
@@ -44,13 +44,14 @@ class EnvironmentViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getEnvironmentService { [ weak self ] environmentData, error in
+        service.getEnvironmentService { [weak self ] result in
             guard let self else { return }
-            if error == nil {
-                self.environment = environmentData?.environment ?? []
-                self.delegate?.success()
-            } else {
-                self.delegate?.error()
+            switch result {
+            case .success(let success):
+                environment = success
+                delegate?.success()
+            case .failure(let failure):
+                delegate?.error(message: failure.errorDescription ?? "")
             }
         }
     }
