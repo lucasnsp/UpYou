@@ -96,6 +96,9 @@
 		465FBBBE2B52CD3C00EE1F66 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465FBBBD2B52CD3C00EE1F66 /* ServiceManager.swift */; };
 		465FBBC02B52D0E300EE1F66 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465FBBBF2B52D0E300EE1F66 /* HTTPMethod.swift */; };
 		465FBBC22B52D11600EE1F66 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465FBBC12B52D11600EE1F66 /* Endpoint.swift */; };
+		465FBBC42B52D17900EE1F66 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465FBBC32B52D17900EE1F66 /* RequestBuilder.swift */; };
+		465FBBC62B52D1A400EE1F66 /* DefaultRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465FBBC52B52D1A400EE1F66 /* DefaultRequestBuilder.swift */; };
+		465FBBC82B52D1D900EE1F66 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465FBBC72B52D1D900EE1F66 /* NetworkLayer.swift */; };
 		467D1D852AC5B638009E0B04 /* BooksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467D1D842AC5B638009E0B04 /* BooksVC.swift */; };
 		467D1D892AC5B90B009E0B04 /* Books.json in Resources */ = {isa = PBXBuildFile; fileRef = 467D1D882AC5B90B009E0B04 /* Books.json */; };
 		467D1D8B2AC6F571009E0B04 /* BooksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467D1D8A2AC6F571009E0B04 /* BooksService.swift */; };
@@ -260,6 +263,9 @@
 		465FBBBD2B52CD3C00EE1F66 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		465FBBBF2B52D0E300EE1F66 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		465FBBC12B52D11600EE1F66 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		465FBBC32B52D17900EE1F66 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		465FBBC52B52D1A400EE1F66 /* DefaultRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRequestBuilder.swift; sourceTree = "<group>"; };
+		465FBBC72B52D1D900EE1F66 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		467D1D842AC5B638009E0B04 /* BooksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksVC.swift; sourceTree = "<group>"; };
 		467D1D882AC5B90B009E0B04 /* Books.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Books.json; sourceTree = "<group>"; };
 		467D1D8A2AC6F571009E0B04 /* BooksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksService.swift; sourceTree = "<group>"; };
@@ -455,8 +461,11 @@
 				465FBBBD2B52CD3C00EE1F66 /* ServiceManager.swift */,
 				462663882B4EF23D001B876F /* NetworkError.swift */,
 				4626638A2B4EF253001B876F /* NetworkLogger.swift */,
+				465FBBC72B52D1D900EE1F66 /* NetworkLayer.swift */,
 				465FBBBF2B52D0E300EE1F66 /* HTTPMethod.swift */,
 				465FBBC12B52D11600EE1F66 /* Endpoint.swift */,
+				465FBBC32B52D17900EE1F66 /* RequestBuilder.swift */,
+				465FBBC52B52D1A400EE1F66 /* DefaultRequestBuilder.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -1540,6 +1549,7 @@
 				462663892B4EF23D001B876F /* NetworkError.swift in Sources */,
 				46DA2CE82ACC429100DEA703 /* HabitsService.swift in Sources */,
 				46EEDD6F2AD98AB3005A7164 /* TesouroSelicTableViewCell.swift in Sources */,
+				465FBBC82B52D1D900EE1F66 /* NetworkLayer.swift in Sources */,
 				460B7ADF2AC877760059EA44 /* EnvironmentService.swift in Sources */,
 				46C9B4032ADAF75A00CC7395 /* CriptoData.swift in Sources */,
 				46EEDCC72AD431F4005A7164 /* GoldenRulesViewModel.swift in Sources */,
@@ -1552,6 +1562,7 @@
 				4605839B2AC1C7F900446A6F /* PersonalDevelopmentViewModel.swift in Sources */,
 				46C9B40F2ADAF88400CC7395 /* CriptoViewModel.swift in Sources */,
 				461BEF682ABA759A00C07847 /* String+Extension.swift in Sources */,
+				465FBBC42B52D17900EE1F66 /* RequestBuilder.swift in Sources */,
 				46C9B3F62ADAE82D00CC7395 /* FiisViewModel.swift in Sources */,
 				46C9B4162ADAFA8F00CC7395 /* CriptoTableViewCellScreen.swift in Sources */,
 				46EEDD1C2AD6F05C005A7164 /* LciData.swift in Sources */,
@@ -1597,6 +1608,7 @@
 				461C71482AD1B07700E18558 /* SleepTableViewCell.swift in Sources */,
 				46A48B682AEC4496007B9863 /* GoalsData.swift in Sources */,
 				460B7AEA2AC87D650059EA44 /* EnvironmentTableViewCell.swift in Sources */,
+				465FBBC62B52D1A400EE1F66 /* DefaultRequestBuilder.swift in Sources */,
 				46EEDD3B2AD835A3005A7164 /* TesouroDiretoTableViewCell.swift in Sources */,
 				46C9B3F22ADAE80700CC7395 /* FiisVC.swift in Sources */,
 				460583962AC1C4ED00446A6F /* QuoteData.swift in Sources */,
