@@ -9,7 +9,7 @@ import UIKit
 
 protocol StocksViewModelDelegate: AnyObject {
     func success()
-    func error()
+    func error(message: String)
 }
 
 class StocksViewModel {
@@ -44,13 +44,14 @@ class StocksViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getStockService { [ weak self ] stockData, error in
+        service.getStockService { [weak self] result in
             guard let self else { return }
-            if error == nil {
-                self.stock = stockData?.stocks ?? []
-                self.delegate?.success()
-            } else {
-                self.delegate?.error()
+            switch result {
+            case .success(let success):
+                stock = success
+                delegate?.success()
+            case .failure(let failure):
+                delegate?.error(message: failure.errorDescription ?? "")
             }
         }
     }
