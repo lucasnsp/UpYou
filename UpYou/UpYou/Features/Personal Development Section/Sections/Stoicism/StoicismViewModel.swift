@@ -9,7 +9,7 @@ import UIKit
 
 protocol StoicismViewModelDelegate: AnyObject {
     func success()
-    func error()
+    func error(message: String)
 }
 
 class StoicismViewModel {
@@ -45,13 +45,14 @@ class StoicismViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getStoicismService { [ weak self ]stoicismData, error in
+        service.getStoicismService { [weak self] result in
             guard let self else { return }
-            if error == nil {
-                self.stoic = stoicismData?.stoicism ?? []
-                self.delegate?.success()
-            } else {
-                self.delegate?.error()
+            switch result {
+            case .success(let success):
+                stoic = success
+                delegate?.success()
+            case .failure(let failure):
+                delegate?.error(message: failure.errorDescription ?? "")
             }
         }
     }

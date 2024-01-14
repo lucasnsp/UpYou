@@ -7,11 +7,6 @@
 
 import UIKit
 
-enum ErrorDetail: Swift.Error {
-    case errorURL(urlString: String)
-    case detailError(detail: String)
-}
-
 class QuotesService {
     
     func getQuoteService(completion: @escaping (Result<[Quote],NetworkError>) -> Void) {

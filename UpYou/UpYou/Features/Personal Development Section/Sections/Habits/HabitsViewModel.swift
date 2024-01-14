@@ -9,7 +9,7 @@ import UIKit
 
 protocol HabitsViewModelDelegate: AnyObject {
     func success()
-    func error()
+    func error(message: String)
 }
 
 class HabitsViewModel {
@@ -44,16 +44,17 @@ class HabitsViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getHabitsService { [weak self ] habitsData, error in
+        service.getHabitsService { [weak self] result in
             guard let self else { return }
-            if error == nil {
-                self.habit = habitsData?.habits ?? []
-                self.delegate?.success()
-            } else {
-                self.delegate?.error()
+            switch result {
+            case .success(let success):
+                habit = success
+                delegate?.success()
+            case .failure(let failure):
+                delegate?.error(message: failure.errorDescription ?? "")
             }
         }
-        
+
     }
 
 }
