@@ -9,7 +9,7 @@ import UIKit
 
 protocol BooksViewModelDelegate: AnyObject {
     func success()
-    func error()
+    func error(message: String)
 }
 
 class BooksViewModel {
@@ -44,13 +44,14 @@ class BooksViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getBookService { [weak self ] booksData, error in
+        service.getBookService { [weak self] result in
             guard let self else { return }
-            if error == nil {
-                self.books = booksData?.books ?? []
-                self.delegate?.success()
-            } else {
-                self.delegate?.error()
+            switch result {
+            case .success(let success):
+                books = success
+                delegate?.success()
+            case .failure(let failure):
+                delegate?.error(message: failure.errorDescription ?? "")
             }
         }
     }
