@@ -9,7 +9,7 @@ import UIKit
 
 protocol DeepWorkViewModelDelegate: AnyObject {
     func success()
-    func error()
+    func error(message: String)
 }
 
 class DeepWorkViewModel {
@@ -44,13 +44,14 @@ class DeepWorkViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getDeepWorkService { [ weak self ] deepWorkData, error in
+        service.getDeepWorkService { [weak self] result in
             guard let self else { return }
-            if error == nil {
-                self.focus = deepWorkData?.focus ?? []
-                self.delegate?.success()
-            } else {
-                self.delegate?.error()
+            switch result {
+            case .success(let success):
+                focus = success
+                delegate?.success()
+            case .failure(let failure):
+                delegate?.error(message: failure.errorDescription ?? "")
             }
         }
     }
