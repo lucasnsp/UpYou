@@ -9,7 +9,7 @@ import Foundation
 
 protocol LcaViewModelDelegate: AnyObject {
     func success()
-    func error()
+    func error(message: String)
 }
 
 class LcaViewModel {
@@ -44,13 +44,14 @@ class LcaViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getLcaService { [ weak self ] lcaData, error in
+        service.getLcaService { [weak self] result in
             guard let self else { return }
-            if error == nil {
-                self.lca = lcaData?.lca ?? []
-                self.delegate?.success()
-            } else {
-                self.delegate?.error()
+            switch result {
+            case .success(let success):
+                lca = success
+                delegate?.success()
+            case .failure(let failure):
+                delegate?.error(message: failure.errorDescription ?? "")
             }
         }
     }

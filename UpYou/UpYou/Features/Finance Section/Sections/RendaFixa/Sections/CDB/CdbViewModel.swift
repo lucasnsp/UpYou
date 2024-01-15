@@ -9,7 +9,7 @@ import Foundation
 
 protocol CdbViewModelDelegate: AnyObject {
     func success()
-    func error()
+    func error(message: String)
 }
 
 class CdbViewModel {
@@ -39,13 +39,14 @@ class CdbViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getCdbService { [ weak self ]cdbData, error in
+        service.getCdbService { [weak self] result in
             guard let self else { return }
-            if error == nil {
-                self.cdb = cdbData?.cdb ?? []
-                self.delegate?.success()
-            } else {
-                self.delegate?.error()
+            switch result {
+            case .success(let success):
+                cdb = success
+                delegate?.success()
+            case .failure(let failure):
+                delegate?.error(message: failure.errorDescription ?? "")
             }
         }
     }

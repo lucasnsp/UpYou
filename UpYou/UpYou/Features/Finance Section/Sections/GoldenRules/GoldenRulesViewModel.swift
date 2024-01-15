@@ -9,7 +9,7 @@ import Foundation
 
 protocol GoldenRulesViewModelDelegate: AnyObject {
     func success()
-    func error()
+    func error(message: String)
 }
 
 class GoldenRulesViewModel {
@@ -44,13 +44,14 @@ class GoldenRulesViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getGoldenRulesService { [ weak self ] goldenRulesData, error in
+        service.getGoldenRulesService { [weak self] result in
             guard let self else { return }
-            if error == nil {
-                self.rule = goldenRulesData?.rules ?? []
-                self.delegate?.success()
-            } else {
-                self.delegate?.error()
+            switch result {
+            case .success(let success):
+                rule = success
+                delegate?.success()
+            case .failure(let failure):
+                delegate?.error(message: failure.errorDescription ?? "")
             }
         }
     }
