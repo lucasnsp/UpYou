@@ -5,11 +5,11 @@
 //  Created by Lucas Neves dos santos pompeu on 27/09/23.
 //
 
-import UIKit
+import Foundation
 
 protocol SavingMoneyViewModelDelegate: AnyObject {
     func success()
-    func error()
+    func error(message: String)
 }
 
 class SavingMoneyViewModel {
@@ -44,17 +44,14 @@ class SavingMoneyViewModel {
     }
     
     public func fetchAllResquest() {
-        service.getMoneyPhrasesService { [ weak self ] moneyPhrasesData, error in
+        service.getMoneyPhrasesService { [weak self] result in
             guard let self else { return }
-            if error == nil {
-                if let phrases = moneyPhrasesData?.phrases {
-                    self.phrase = [phrases.randomElement()!]
-                    self.delegate?.success()
-                } else {
-                    self.delegate?.error()
-                }
-            } else {
-                self.delegate?.error()
+            switch result {
+            case .success(let success):
+                phrase = success
+                delegate?.success()
+            case .failure(let failure):
+                delegate?.error(message: failure.errorDescription ?? "")
             }
         }
     }

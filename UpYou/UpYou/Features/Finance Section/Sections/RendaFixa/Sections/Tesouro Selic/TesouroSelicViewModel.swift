@@ -5,11 +5,11 @@
 //  Created by Lucas Neves dos santos pompeu on 13/10/23.
 //
 
-import UIKit
+import Foundation
 
 protocol TesouroSelicViewModelDelegate: AnyObject {
     func success()
-    func error()
+    func error(message: String)
 }
 
 class TesouroSelicViewModel {
@@ -44,13 +44,14 @@ class TesouroSelicViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getTesouroSelicService { [ weak self ] tdsData, error in
+        service.getTesouroSelicService { [weak self] result in
             guard let self else { return }
-            if error == nil {
-                self.tds = tdsData?.tesouroSelic ?? []
-                self.delegate?.success()
-            } else {
-                self.delegate?.error()
+            switch result {
+            case .success(let success):
+                tds = success
+                delegate?.success()
+            case .failure(let failure):
+                delegate?.error(message: failure.errorDescription ?? "")
             }
         }
     }

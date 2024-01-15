@@ -5,11 +5,11 @@
 //  Created by Lucas Neves dos santos pompeu on 14/10/23.
 //
 
-import UIKit
+import Foundation
 
 protocol FiisViewModelDelegate: AnyObject {
     func success()
-    func error()
+    func error(message: String)
 }
 
 class FiisViewModel {
@@ -44,13 +44,14 @@ class FiisViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getFiisService { [ weak self ] fiisData, error in
+        service.getFiisService { [weak self] result in
             guard let self else { return }
-            if error == nil {
-                self.fiis = fiisData?.fundosImobiliarios ?? []
-                self.delegate?.success()
-            } else {
-                self.delegate?.error()
+            switch result {
+            case .success(let success):
+                fiis = success
+                delegate?.success()
+            case .failure(let failure):
+                delegate?.error(message: failure.errorDescription ?? "")
             }
         }
     }
