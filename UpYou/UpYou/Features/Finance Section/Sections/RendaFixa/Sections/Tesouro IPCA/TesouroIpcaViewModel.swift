@@ -9,7 +9,7 @@ import Foundation
 
 protocol TesouroIpcaViewModelDelegate: AnyObject{
     func success()
-    func error()
+    func error(message: String)
 }
 
 class TesouroIpcaViewModel {
@@ -44,13 +44,14 @@ class TesouroIpcaViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getTesouroIpcaService { [ weak self ] tdiData, error in
+        service.getTesouroIpcaService { [weak self] result in
             guard let self else { return }
-            if error == nil {
-                self.tdi = tdiData?.tesouroIpca ?? []
-                self.delegate?.success()
-            } else {
-                self.delegate?.error()
+            switch result {
+            case .success(let success):
+                tdi = success
+                delegate?.success()
+            case .failure(let failure):
+                delegate?.error(message: failure.errorDescription ?? "")
             }
         }
     }
