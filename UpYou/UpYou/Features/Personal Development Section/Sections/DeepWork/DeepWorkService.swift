@@ -5,40 +5,21 @@
 //  Created by Lucas Neves dos santos pompeu on 30/09/23.
 //
 
-import UIKit
+import Foundation
 
 class DeepWorkService: NSObject {
     
-    func getDeepWorkService(completion: @escaping (DeepWorkData?, Error?) -> Void) {
-        let urlString: String = "https://run.mocky.io/v3/8586546f-e86c-442e-a998-548bf4813c66"
-        
-        guard let url: URL = URL(string: urlString) else { return completion(nil, ErrorDetail.errorURL(urlString: urlString))}
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            
-            guard let dataResult = data else { return completion(nil, ErrorDetail.detailError(detail: "Error Data"))}
-            
-            let json = try? JSONSerialization.jsonObject(with: dataResult, options: [])
-            print(json as Any)
-            
-            guard let response = response as? HTTPURLResponse else { return }
-            
-            if response.statusCode == 200 {
-                do {
-                    let deepWorkData: DeepWorkData = try JSONDecoder().decode(DeepWorkData.self, from: dataResult)
-                    print("SUCCESS -> \(#function)")
-                    completion(deepWorkData, nil)
-                } catch  {
-                    print("ERROR -> \(#function)")
-                    completion(nil, error)
-                }
-            } else {
-                print("ERROR -> \(#function)")
-                completion(nil, error)
+    func getDeepWorkService(completion: @escaping (Result<[Focus], NetworkError>) -> Void) {
+        let urlString: String = "8586546f-e86c-442e-a998-548bf4813c66"
+        let endpoint = Endpoint(url: urlString)
+
+        ServiceManager.shared.request(with: endpoint, decodeType: DeepWorkData.self) { result in
+            switch result {
+            case .success(let success):
+                completion(.success(success.focus ?? []))
+            case .failure(let failure):
+                completion(.failure(failure))
             }
         }
-        task.resume()
     }
 }

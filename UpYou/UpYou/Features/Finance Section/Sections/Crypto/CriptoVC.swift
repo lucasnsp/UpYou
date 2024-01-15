@@ -103,16 +103,19 @@ class CriptoVC: UIViewController {
 }
 
 extension CriptoVC: CriptoViewModelDelegate {
+    func error(message: String) {
+        let alertController: UIAlertController = UIAlertController(title: "Sorry, we had a problem", message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Ok", style: .cancel)
+        alertController.addAction(ok)
+        present(alertController, animated: true)
+    }
+    
     func success() {
         DispatchQueue.main.async { [weak self] in
             guard let self else { return }
             self.configTableViewProtocols(delegate: self, dataSource: self)
             self.tableView.reloadData()
         }
-    }
-    
-    func error() {
-        print(#function)
     }
 }
 

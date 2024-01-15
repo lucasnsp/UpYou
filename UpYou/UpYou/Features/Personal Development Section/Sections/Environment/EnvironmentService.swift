@@ -5,7 +5,7 @@
 //  Created by Lucas Neves dos santos pompeu on 30/09/23.
 //
 
-import UIKit
+import Foundation
 
 class EnvironmentService: NSObject {
     

@@ -458,6 +458,7 @@
 		4605838E2AC1C3A600446A6F /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				465FBBC92B52D2D700EE1F66 /* ServiceManager.swift */,
 				462663882B4EF23D001B876F /* NetworkError.swift */,
 				4626638A2B4EF253001B876F /* NetworkLogger.swift */,
 				465FBBC72B52D1D900EE1F66 /* NetworkLayer.swift */,
@@ -465,7 +466,6 @@
 				465FBBC12B52D11600EE1F66 /* Endpoint.swift */,
 				465FBBC32B52D17900EE1F66 /* RequestBuilder.swift */,
 				465FBBC52B52D1A400EE1F66 /* DefaultRequestBuilder.swift */,
-				465FBBC92B52D2D700EE1F66 /* ServiceManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";

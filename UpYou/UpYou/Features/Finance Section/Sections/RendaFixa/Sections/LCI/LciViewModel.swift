@@ -5,11 +5,11 @@
 //  Created by Lucas Neves dos santos pompeu on 11/10/23.
 //
 
-import UIKit
+import Foundation
 
 protocol LciViewModelDelegate: AnyObject {
     func success()
-    func error()
+    func error(message: String)
 }
 
 class LciViewModel {
@@ -44,13 +44,14 @@ class LciViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getLciService { [ weak self ] lciData, error in
+        service.getLciService { [weak self] result in
             guard let self else { return }
-            if error == nil {
-                self.lci = lciData?.lci ?? []
-                self.delegate?.success()
-            } else {
-                self.delegate?.error()
+            switch result {
+            case .success(let success):
+                lci = success
+                delegate?.success()
+            case .failure(let failure):
+                delegate?.error(message: failure.errorDescription ?? "")
             }
         }
     }
