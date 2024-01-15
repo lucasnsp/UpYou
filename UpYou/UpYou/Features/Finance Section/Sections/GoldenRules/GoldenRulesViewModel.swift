@@ -5,7 +5,7 @@
 //  Created by Lucas Neves dos santos pompeu on 09/10/23.
 //
 
-import UIKit
+import Foundation
 
 protocol GoldenRulesViewModelDelegate: AnyObject {
     func success()

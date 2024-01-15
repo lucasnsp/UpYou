@@ -5,7 +5,7 @@
 //  Created by Lucas Neves dos santos pompeu on 27/09/23.
 //
 
-import UIKit
+import Foundation
 
 protocol SavingMoneyViewModelDelegate: AnyObject {
     func success()

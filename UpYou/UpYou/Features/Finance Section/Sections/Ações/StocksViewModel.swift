@@ -5,7 +5,7 @@
 //  Created by Lucas Neves dos santos pompeu on 14/10/23.
 //
 
-import UIKit
+import Foundation
 
 protocol StocksViewModelDelegate: AnyObject {
     func success()
