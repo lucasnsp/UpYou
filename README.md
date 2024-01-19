@@ -12,7 +12,7 @@ UpYou is a comprehensive financial management and personal development project d
 
 ## Features
 
-- **Set a Goal**: Here you will be able to create your goals and predicted how long will take to reach them.
+- **Set a Goal**: Here you will be able to create your goals and predicted how long will take to reach them
 
 - **Track your expenses**: The biggest problem in people is control their expenses in this section the user will be able to track his expenses and know that 10% of his income should be saved for the future.
 
