@@ -1,6 +1,6 @@
 # UpYou - Finance and Educational App
 
-UpYou is a comprehensive financial management and personal development project designed to help individuals take control of their finances, achieve their goals, and continuously improve themselves on their journey towards their best version. 
+UpYou is a comprehensive financial management and personal development project designed to help individuals take control of their finances, achieve their goals, and continuously improve themselves on their journey towards their best version.
 
 ## Table of Contents
 
