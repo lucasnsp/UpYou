@@ -44,7 +44,7 @@ class StocksViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getStockService { [weak self] result in
+        service.getStocksService { [weak self] result in
             guard let self else { return }
             switch result {
             case .success(let success):
