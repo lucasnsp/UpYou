@@ -31,33 +31,4 @@ final class NetworkLoggerTests: XCTestCase {
 
         XCTAssert((request.url != nil))
     }
-
-    // Teste para verificar se o log é gerado corretamente para uma resposta JSON
-    func testLogJSONResponse() {
-        let request = URLRequest(url: URL(string: "https://example.com")!)
-        let response = HTTPURLResponse(url: URL(string: "https://example.com")!, statusCode: 200, httpVersion: nil, headerFields: nil)
-        let data = "{\"key\":\"value\"}".data(using: .utf8)
-
-        NetworkLogger.log(request: request, response: response, data: data, error: nil)
-
-        // Assert
-        // Verifique se os logs foram impressos corretamente
-        // Você pode adicionar mais asserções conforme necessário
-    }
-
-    // Teste para verificar se o log é gerado corretamente para uma resposta JSON inválida
-    func testLogInvalidJSONResponse() {
-        // Arrange
-        let request = URLRequest(url: URL(string: "https://example.com")!)
-        let response = HTTPURLResponse(url: URL(string: "https://example.com")!, statusCode: 200, httpVersion: nil, headerFields: nil)
-        let data = "Invalid JSON".data(using: .utf8)
-
-        // Act
-        NetworkLogger.log(request: request, response: response, data: data, error: nil)
-
-        // Assert
-        // Verifique se os logs foram impressos corretamente
-        // Você pode adicionar mais asserções conforme necessário
-    }
-
 }
