@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct NetworkLogger {
+struct NetworkLogger: Equatable {
 
     static func log(request: URLRequest?, response: URLResponse?, data: Data?, error: Error?, verbose: Bool = true) {
         print("--------- 🚀 START OF REQUEST 🚀 ---------")
